@@ -1,0 +1,339 @@
+{
+  "weapon": "M16",
+  "overview": {
+    "weapon_class": "gas-operated assault rifle",
+    "cartridge": "5.56x45mm NATO",
+    "peak_pressure": "430 MPa (est.)",
+    "material_era": "aluminum alloy + steel + polymer",
+    "design_philosophy": "The M16 was designed to be a lightweight, reliable, and accurate rifle, with a focus on minimizing weight while maintaining durability and performance.",
+    "summary": "The M16 is a gas-operated, magazine-fed assault rifle made from a combination of aluminum alloy, steel, and polymer materials. Its design prioritizes weight reduction while maintaining reliability and accuracy. The rifle's components are carefully selected to balance strength, durability, and cost."
+  },
+  "components": [
+    {
+      "part": "Barrel",
+      "material": "4150 chrome-moly steel",
+      "family": "alloy steel",
+      "role": "contains the chamber and guides the bullet",
+      "why": "chosen for its high strength, toughness, and resistance to heat and erosion",
+      "properties": {
+        "tensile_strength": "1000 MPa (est.)",
+        "yield_strength": "700 MPa (est.)",
+        "hardness": "28-32 HRC",
+        "density": "7.85 g/cm3",
+        "operating_load": "430 MPa internal pressure",
+        "temp_range": "sustained 400-600 C in rapid fire"
+      },
+      "failure_mode": "bore erosion, throat wear, and potential brittle fracture",
+      "safety_factor": "~2.5x on burst",
+      "cost_tier": "HIGH",
+      "sources": [
+        1,
+        5
+      ]
+    },
+    {
+      "part": "Receiver",
+      "material": "7075 aluminum alloy",
+      "family": "aluminum alloy",
+      "role": "houses the bolt, bolt carrier, and firing mechanism",
+      "why": "chosen for its high strength-to-weight ratio, corrosion resistance, and ease of manufacturing",
+      "properties": {
+        "tensile_strength": "500 MPa (est.)",
+        "yield_strength": "300 MPa (est.)",
+        "hardness": "150-200 HB",
+        "density": "2.7 g/cm3",
+        "operating_load": "tensile and compressive stresses from bolt and firing mechanism",
+        "temp_range": "ambient to 100 C"
+      },
+      "failure_mode": "cracking, corrosion, and potential failure of threaded interfaces",
+      "safety_factor": "~2x on yield",
+      "cost_tier": "MEDIUM",
+      "sources": [
+        2,
+        7
+      ]
+    },
+    {
+      "part": "Bolt",
+      "material": "4140 steel",
+      "family": "alloy steel",
+      "role": "extracts the spent cartridge and chambers a new round",
+      "why": "chosen for its high strength, toughness, and resistance to wear and corrosion",
+      "properties": {
+        "tensile_strength": "900 MPa (est.)",
+        "yield_strength": "600 MPa (est.)",
+        "hardness": "25-30 HRC",
+        "density": "7.85 g/cm3",
+        "operating_load": "tensile and compressive stresses from firing and extraction",
+        "temp_range": "ambient to 200 C"
+      },
+      "failure_mode": "wear, cracking, and potential failure of locking lugs",
+      "safety_factor": "~2x on yield",
+      "cost_tier": "MEDIUM",
+      "sources": [
+        5,
+        9
+      ]
+    },
+    {
+      "part": "Handguard",
+      "material": "polymer",
+      "family": "polymer",
+      "role": "protects the user's hand from heat and provides a mounting point for accessories",
+      "why": "chosen for its low weight, high strength-to-weight ratio, and resistance to corrosion and wear",
+      "properties": {
+        "tensile_strength": "50 MPa (est.)",
+        "yield_strength": "20 MPa (est.)",
+        "hardness": "80-100 Shore D",
+        "density": "1.2 g/cm3",
+        "operating_load": "tensile and compressive stresses from user handling and accessory mounting",
+        "temp_range": "ambient to 50 C"
+      },
+      "failure_mode": "cracking, breaking, and potential failure of mounting points",
+      "safety_factor": "~2x on yield",
+      "cost_tier": "LOW",
+      "sources": [
+        1,
+        7
+      ]
+    },
+    {
+      "part": "Stock",
+      "material": "polymer",
+      "family": "polymer",
+      "role": "provides a mounting point for the receiver and a comfortable interface for the user",
+      "why": "chosen for its low weight, high strength-to-weight ratio, and resistance to corrosion and wear",
+      "properties": {
+        "tensile_strength": "50 MPa (est.)",
+        "yield_strength": "20 MPa (est.)",
+        "hardness": "80-100 Shore D",
+        "density": "1.2 g/cm3",
+        "operating_load": "tensile and compressive stresses from user handling and recoil",
+        "temp_range": "ambient to 50 C"
+      },
+      "failure_mode": "cracking, breaking, and potential failure of mounting points",
+      "safety_factor": "~2x on yield",
+      "cost_tier": "LOW",
+      "sources": [
+        1,
+        7
+      ]
+    },
+    {
+      "part": "Pistol grip",
+      "material": "polymer",
+      "family": "polymer",
+      "role": "provides a comfortable interface for the user's hand",
+      "why": "chosen for its low weight, high strength-to-weight ratio, and resistance to corrosion and wear",
+      "properties": {
+        "tensile_strength": "50 MPa (est.)",
+        "yield_strength": "20 MPa (est.)",
+        "hardness": "80-100 Shore D",
+        "density": "1.2 g/cm3",
+        "operating_load": "tensile and compressive stresses from user handling",
+        "temp_range": "ambient to 50 C"
+      },
+      "failure_mode": "cracking, breaking, and potential failure of mounting points",
+      "safety_factor": "~2x on yield",
+      "cost_tier": "LOW",
+      "sources": [
+        1,
+        7
+      ]
+    },
+    {
+      "part": "Bolt carrier",
+      "material": "4140 steel",
+      "family": "alloy steel",
+      "role": "guides the bolt and provides a mounting point for the firing mechanism",
+      "why": "chosen for its high strength, toughness, and resistance to wear and corrosion",
+      "properties": {
+        "tensile_strength": "900 MPa (est.)",
+        "yield_strength": "600 MPa (est.)",
+        "hardness": "25-30 HRC",
+        "density": "7.85 g/cm3",
+        "operating_load": "tensile and compressive stresses from firing and extraction",
+        "temp_range": "ambient to 200 C"
+      },
+      "failure_mode": "wear, cracking, and potential failure of locking lugs",
+      "safety_factor": "~2x on yield",
+      "cost_tier": "MEDIUM",
+      "sources": [
+        5,
+        9
+      ]
+    },
+    {
+      "part": "Firing mechanism",
+      "material": "4140 steel",
+      "family": "alloy steel",
+      "role": "strikes the primer and ignites the propellant",
+      "why": "chosen for its high strength, toughness, and resistance to wear and corrosion",
+      "properties": {
+        "tensile_strength": "900 MPa (est.)",
+        "yield_strength": "600 MPa (est.)",
+        "hardness": "25-30 HRC",
+        "density": "7.85 g/cm3",
+        "operating_load": "tensile and compressive stresses from firing",
+        "temp_range": "ambient to 200 C"
+      },
+      "failure_mode": "wear, cracking, and potential failure of components",
+      "safety_factor": "~2x on yield",
+      "cost_tier": "MEDIUM",
+      "sources": [
+        5,
+        9
+      ]
+    }
+  ],
+  "selection": {
+    "criteria": [
+      {
+        "factor": "Strength-to-weight",
+        "importance": 5,
+        "rationale": "minimizing weight while maintaining durability and performance"
+      },
+      {
+        "factor": "Cost",
+        "importance": 4,
+        "rationale": "balancing material and manufacturing costs with performance requirements"
+      },
+      {
+        "factor": "Manufacturability",
+        "importance": 3,
+        "rationale": "ensuring ease of production and assembly"
+      },
+      {
+        "factor": "Corrosion resistance",
+        "importance": 2,
+        "rationale": "maintaining performance in various environments"
+      },
+      {
+        "factor": "Strategic supply",
+        "importance": 1,
+        "rationale": "ensuring availability of materials and components"
+      }
+    ],
+    "doctrine": "The M16's material selection balances strength, durability, and cost, prioritizing weight reduction while maintaining performance. The use of aluminum alloy, steel, and polymer materials reflects a focus on minimizing weight while ensuring reliability and accuracy."
+  },
+  "cost": {
+    "drivers": [
+      "raw materials",
+      "machining hours",
+      "heat treatment",
+      "coating"
+    ],
+    "breakdown": [
+      {
+        "part": "Barrel",
+        "share": 25,
+        "tier": "HIGH"
+      },
+      {
+        "part": "Receiver",
+        "share": 20,
+        "tier": "MEDIUM"
+      },
+      {
+        "part": "Bolt and bolt carrier",
+        "share": 15,
+        "tier": "MEDIUM"
+      },
+      {
+        "part": "Handguard and stock",
+        "share": 10,
+        "tier": "LOW"
+      },
+      {
+        "part": "Pistol grip and other components",
+        "share": 30,
+        "tier": "LOW"
+      }
+    ],
+    "narrative": "The M16's cost is driven by the raw materials, machining hours, and heat treatment required for its components. The barrel and receiver are the most expensive components, due to the high-strength materials and complex manufacturing processes involved."
+  },
+  "strength": {
+    "critical_parts": [
+      {
+        "part": "Locking lugs",
+        "stress": "shear and bearing at lock-up",
+        "safety_factor": "~2x",
+        "note": "potential failure mode"
+      },
+      {
+        "part": "Bolt and bolt carrier",
+        "stress": "tensile and compressive stresses from firing and extraction",
+        "safety_factor": "~2x",
+        "note": "potential failure mode"
+      },
+      {
+        "part": "Receiver",
+        "stress": "tensile and compressive stresses from bolt and firing mechanism",
+        "safety_factor": "~2x",
+        "note": "potential failure mode"
+      }
+    ],
+    "narrative": "The M16's strength is critical to its performance and reliability. The locking lugs, bolt and bolt carrier, and receiver are the most stressed parts, and their safety factors are carefully designed to ensure durability and resistance to failure."
+  },
+  "recommendations": [
+    {
+      "title": "Cold hammer-forged barrel",
+      "benefit": "improved accuracy and durability",
+      "tradeoff": "increased cost and manufacturing complexity",
+      "maturity": "PROVEN",
+      "sources": [
+        2
+      ]
+    },
+    {
+      "title": "Nitride coating for bolt and bolt carrier",
+      "benefit": "improved corrosion resistance and wear resistance",
+      "tradeoff": "increased cost and potential for coating failure",
+      "maturity": "FIELDED",
+      "sources": [
+        5
+      ]
+    },
+    {
+      "title": "Advanced polymer materials for handguard and stock",
+      "benefit": "reduced weight and improved durability",
+      "tradeoff": "increased cost and potential for material failure",
+      "maturity": "FIELDED",
+      "sources": [
+        7
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "M16 Rifle General Information, M16, M16A1, M16A2, M16A3, M16A4 - BravoCompanyUSA.com",
+      "url": "https://bravocompanyusa.com/blog/m16-rifle-general-information-m16-m16a1-m16a2-m16a3-m16a4",
+      "domain": "bravocompanyusa.com"
+    },
+    {
+      "id": 2,
+      "title": "M16 rifle",
+      "url": "https://en.wikipedia.org/wiki/M16_rifle",
+      "domain": "en.wikipedia.org"
+    },
+    {
+      "id": 5,
+      "title": "Gun Parts: What Are Guns Made Of?",
+      "url": "https://www.huyett.com/blog/what-are-guns-made-of",
+      "domain": "huyett.com"
+    },
+    {
+      "id": 7,
+      "title": "The History of the M16 with Fun Facts & Trivia",
+      "url": "https://www.secureitgunstorage.com/the-history-of-the-m16-with-fun-facts-trivia",
+      "domain": "secureitgunstorage.com"
+    },
+    {
+      "id": 9,
+      "title": "DK9384_C000 1..12",
+      "url": "https://api.pageplace.de/preview/DT0400.9780849384523_A25114824/preview-9780849384523_A25114824.pdf",
+      "domain": "api.pageplace.de"
+    }
+  ]
+}

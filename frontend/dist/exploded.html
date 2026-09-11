@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exploded Assembly Viewer</title>
+  <style>
+    /* Full-screen canvas with a minimal overlaid control bar */
+    html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #ffffff; }
+    #app { width: 100vw; height: 100vh; }
+    #controls {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(8px);
+      border: 1px solid #d0d0d0;
+      border-radius: 12px;
+      padding: 12px 24px;
+      min-width: 340px;
+      font-family: ui-monospace, Consolas, monospace;
+      z-index: 10;
+    }
+    #controls label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #888; }
+    #explodeSlider { width: 100%; cursor: pointer; accent-color: #0066ff; }
+    #status { font-size: 9px; color: #aaa; }
+    #buttons { display: flex; gap: 10px; width: 100%; }
+    #buttons button {
+      flex: 1; padding: 8px 14px; border-radius: 8px; cursor: pointer;
+      font-family: inherit; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+    }
+    #btnAssemble { border: 1px solid #d0d0d0; background: #fff; color: #222; }
+    #btnDisassemble { border: none; background: #0066ff; color: #fff; }
+  </style>
+
+  <!-- Modern ES-module setup: import map resolves bare "three" specifiers.
+       No deprecated examples/js scripts — addons come from three/addons/. -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <div id="controls">
+    <label for="explodeSlider">Exploded View — <span id="pct">0</span>%</label>
+    <div id="buttons">
+      <button id="btnAssemble">Assemble</button>
+      <button id="btnDisassemble">Disassemble</button>
+    </div>
+    <input id="explodeSlider" type="range" min="0" max="1" step="0.01" value="0" />
+    <div id="status">Loading assembly…</div>
+  </div>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+    // The GLB to load: ?glb=/generated/models/xxx.glb, defaults to master_assembly.glb
+    const params = new URLSearchParams(window.location.search);
+    const GLB_URL = params.get('glb') || './master_assembly.glb';
+
+    const SHELL_NAME = 'Outer_Shell';
+    const PART_PREFIX = 'Inner_Part_';
+
+    // ---------- Standard scene setup ----------
+    const container = document.getElementById('app');
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0xffffff);
+
+    const camera = new THREE.PerspectiveCamera(50, innerWidth / innerHeight, 0.1, 1000);
+    camera.position.set(6, 4, 6);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(innerWidth, innerHeight);
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    container.appendChild(renderer.domElement);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+
+    // Directional + ambient lighting
+    scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+    const key = new THREE.DirectionalLight(0xffffff, 1.6);
+    key.position.set(8, 12, 8);
+    scene.add(key);
+    const fill = new THREE.DirectionalLight(0xe8eae7, 0.6);
+    fill.position.set(-5, 6, -5);
+    scene.add(fill);
+    scene.add(new THREE.GridHelper(30, 60, 0xd0d0d0, 0xececec));
+
+    // ---------- Load the assembly and index its named nodes ----------
+    // Each entry: { node, rest, offset (parent-local, slider=1 delta), order }
+    // Explode math mirrors ExplodedAssemblyViewer.jsx: shell lifts +Y first,
+    // then parts cascade into evenly spaced slots along the longitudinal axis.
+    const animTargets = [];
+    const CASCADE_OVERLAP = 0.45;
+    const statusEl = document.getElementById('status');
+
+    const easeInOutCubic = (t) =>
+      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+    function cascadeProgress(factor, order, count) {
+      if (count <= 1) return easeInOutCubic(factor);
+      const win = 1 / (1 + (count - 1) * (1 - CASCADE_OVERLAP));
+      const start = order * (1 - CASCADE_OVERLAP) * win;
+      return easeInOutCubic(Math.min(Math.max((factor - start) / win, 0), 1));
+    }
+
+    // trimesh GLBs carry a Y-up root rotation — convert world offsets into
+    // each node's parent space before applying them to node.position.
+    function worldOffsetToParentLocal(node, worldOffset) {
+      const q = new THREE.Quaternion();
+      node.parent.getWorldQuaternion(q);
+      const s = new THREE.Vector3();
+      node.parent.getWorldScale(s);
+      return worldOffset.clone().applyQuaternion(q.invert()).divide(s);
+    }
+
+    new GLTFLoader().load(
+      GLB_URL,
+      (gltf) => {
+        const root = gltf.scene;
+        scene.add(root);
+
+        // Normalize: scale to ~6 world units and rest on the ground plane
+        const box = new THREE.Box3().setFromObject(root);
+        const size = box.getSize(new THREE.Vector3());
+        const maxDim = Math.max(size.x, size.y, size.z);
+        root.scale.setScalar(maxDim > 0 ? 6 / maxDim : 1);
+        root.updateMatrixWorld(true);
+        box.setFromObject(root);
+        const center = box.getCenter(new THREE.Vector3());
+        root.position.set(-center.x, -box.min.y, -center.z);
+        root.updateMatrixWorld(true);
+        box.setFromObject(root);
+        box.getCenter(center);
+        box.getSize(size);
+
+        // Only the topmost node of each name chain should move (a node and its
+        // child mesh often share a name after GLTF import).
+        const matched = new Set();
+        const hasMatchedAncestor = (obj) => {
+          for (let p = obj.parent; p; p = p.parent) if (matched.has(p)) return true;
+          return false;
+        };
+        let shellNode = null;
+        const partNodes = [];
+        root.traverse((child) => {
+          const name = child.name || '';
+          if (hasMatchedAncestor(child)) return;
+          if (name.startsWith(SHELL_NAME)) { matched.add(child); shellNode = child; }
+          else if (name.startsWith(PART_PREFIX)) { matched.add(child); partNodes.push(child); }
+        });
+
+        // Longitudinal axis = larger horizontal footprint (never Y)
+        const axisIndex = size.x >= size.z ? 0 : 2;
+        const axisDir = new THREE.Vector3().setComponent(axisIndex, 1);
+        const axisLength = size.getComponent(axisIndex);
+
+        if (shellNode) {
+          animTargets.push({
+            node: shellNode,
+            rest: shellNode.position.clone(),
+            offset: worldOffsetToParentLocal(shellNode, new THREE.Vector3(0, size.y * 1.15 + 1.6, 0)),
+            order: 0,
+          });
+        }
+
+        // Parts into evenly spaced slots, keeping left-to-right order so
+        // explode paths never cross.
+        const info = partNodes.map((node) => {
+          const b = new THREE.Box3().setFromObject(node);
+          const c = b.getCenter(new THREE.Vector3());
+          const s = b.getSize(new THREE.Vector3());
+          return { node, center: c, extent: s.getComponent(axisIndex) };
+        }).sort((a, b) => a.center.getComponent(axisIndex) - b.center.getComponent(axisIndex));
+
+        const maxExtent = Math.max(0.6, ...info.map((p) => p.extent));
+        const spacing = Math.max(maxExtent * 1.45, axisLength * 0.26);
+        info.forEach((p, i) => {
+          const slotCoord = (i - (info.length - 1) / 2) * spacing;
+          const worldOffset = axisDir.clone().multiplyScalar(
+            slotCoord + center.getComponent(axisIndex) - p.center.getComponent(axisIndex));
+          animTargets.push({
+            node: p.node,
+            rest: p.node.position.clone(),
+            offset: worldOffsetToParentLocal(p.node, worldOffset),
+            order: i + 1,
+          });
+        });
+
+        statusEl.textContent = `${animTargets.length} assembly nodes tracked`;
+      },
+      undefined,
+      (err) => { statusEl.textContent = `Failed to load: ${err.message || err}`; }
+    );
+
+    // ---------- Slider → staggered cascade of node positions ----------
+    const slider = document.getElementById('explodeSlider');
+    const pctEl = document.getElementById('pct');
+
+    function applyExplode(t) {
+      pctEl.textContent = Math.round(t * 100);
+      for (const target of animTargets) {
+        const p = cascadeProgress(t, target.order, animTargets.length);
+        target.node.position.set(
+          target.rest.x + target.offset.x * p,
+          target.rest.y + target.offset.y * p,
+          target.rest.z + target.offset.z * p,
+        );
+      }
+    }
+
+    slider.oninput = () => applyExplode(parseFloat(slider.value));
+
+    // ---------- Assemble / Disassemble tweened animations ----------
+    let animFrame = null;
+    function animateTo(target) {
+      if (animFrame) cancelAnimationFrame(animFrame);
+      const from = parseFloat(slider.value);
+      const duration = 2400 * Math.abs(target - from) + 300;
+      const startTime = performance.now();
+      const step = (now) => {
+        // linear here — the per-part cascade applies its own easing
+        const t = Math.min((now - startTime) / duration, 1);
+        const value = from + (target - from) * t;
+        slider.value = value;
+        applyExplode(value);
+        if (t < 1) animFrame = requestAnimationFrame(step);
+      };
+      animFrame = requestAnimationFrame(step);
+    }
+
+    document.getElementById('btnAssemble').onclick = () => animateTo(0);
+    document.getElementById('btnDisassemble').onclick = () => animateTo(1);
+
+    // ---------- Render loop + resize ----------
+    addEventListener('resize', () => {
+      camera.aspect = innerWidth / innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(innerWidth, innerHeight);
+    });
+
+    renderer.setAnimationLoop(() => {
+      controls.update();
+      renderer.render(scene, camera);
+    });
+  </script>
+</body>
+</html>

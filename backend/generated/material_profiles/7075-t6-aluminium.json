@@ -1,0 +1,177 @@
+{
+  "material": "7075-T6 Aluminium",
+  "overview": {
+    "family": "aluminium alloy",
+    "designation": "AA 7075-T6",
+    "composition": "Al base, 5.1-6.1%Zn, 2.1-2.9%Mg, 1.2-2%Cu, 0.18-0.28%Cr",
+    "military_use": "Aircraft structures, gun receivers, and vehicle components",
+    "summary": "7075-T6 aluminium is a high-strength, low-weight alloy with excellent fatigue resistance, used in aerospace, defense, and high-performance applications. It has a high strength-to-weight ratio, but lower corrosion resistance and higher cost compared to other aluminium alloys."
+  },
+  "properties": [
+    {
+      "property": "Ultimate tensile strength",
+      "value": "510-540 MPa",
+      "sources": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "property": "Yield strength",
+      "value": "430-480 MPa",
+      "sources": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "property": "Hardness",
+      "value": "87 HRB",
+      "sources": [
+        1
+      ]
+    },
+    {
+      "property": "Density",
+      "value": "2.81 g/cm3",
+      "sources": [
+        1,
+        4
+      ]
+    },
+    {
+      "property": "Elongation",
+      "value": "5-11%",
+      "sources": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "property": "Fracture toughness",
+      "value": "60 MPa*m^0.5 (est.)",
+      "sources": []
+    }
+  ],
+  "ratings": [
+    {
+      "axis": "Strength",
+      "score": 90,
+      "note": "High ultimate tensile strength"
+    },
+    {
+      "axis": "Toughness",
+      "score": 70,
+      "note": "Moderate fracture toughness"
+    },
+    {
+      "axis": "Hardness",
+      "score": 80,
+      "note": "High hardness"
+    },
+    {
+      "axis": "Corrosion resistance",
+      "score": 40,
+      "note": "Lower corrosion resistance"
+    },
+    {
+      "axis": "Lightness",
+      "score": 90,
+      "note": "Low density"
+    },
+    {
+      "axis": "Heat resistance",
+      "score": 60,
+      "note": "Moderate heat resistance"
+    },
+    {
+      "axis": "Machinability",
+      "score": 70,
+      "note": "Fair machinability"
+    },
+    {
+      "axis": "Cost efficiency",
+      "score": 30,
+      "note": "Higher cost"
+    }
+  ],
+  "strength_analysis": {
+    "load_behaviour": "Elastic-plastic, with high strength and moderate ductility",
+    "failure_modes": [
+      "Fatigue cracking",
+      "Stress corrosion cracking"
+    ],
+    "fatigue": "High fatigue strength, but sensitive to stress concentrations",
+    "temperature": "Moderate heat resistance, with reduced strength at high temperatures",
+    "narrative": "7075-T6 aluminium has high strength and moderate ductility, but is sensitive to stress concentrations and corrosion. It is suitable for high-performance applications where strength-to-weight ratio is critical."
+  },
+  "applications": [
+    {
+      "component": "Aircraft structures",
+      "examples": "Wing spars, fuselage components",
+      "why": "High strength-to-weight ratio"
+    },
+    {
+      "component": "Gun receivers",
+      "examples": "M4, AK pattern",
+      "why": "High strength and corrosion resistance"
+    },
+    {
+      "component": "Vehicle components",
+      "examples": "Racing car chassis",
+      "why": "High strength-to-weight ratio and corrosion resistance"
+    }
+  ],
+  "processing": {
+    "heat_treatment": "T6 temper, with solution heat treatment and artificial aging",
+    "forming": "Hammer forging, machining",
+    "coating": "Anodizing, with nickel acetate sealant"
+  },
+  "pros": [
+    "High strength-to-weight ratio",
+    "Excellent fatigue resistance",
+    "Good machinability"
+  ],
+  "cons": [
+    "Lower corrosion resistance",
+    "Higher cost",
+    "Sensitive to stress concentrations"
+  ],
+  "alternatives": [
+    {
+      "material": "2024-T3 Aluminium",
+      "tradeoff": "Lower strength, but higher corrosion resistance and lower cost"
+    },
+    {
+      "material": "6061-T6 Aluminium",
+      "tradeoff": "Lower strength, but higher corrosion resistance and lower cost"
+    },
+    {
+      "material": "17-4 PH Stainless Steel",
+      "tradeoff": "Higher strength and corrosion resistance, but higher cost and density"
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "7075 aluminium alloy - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/7075_aluminium_alloy",
+      "domain": "en.wikipedia.org"
+    },
+    {
+      "id": 2,
+      "title": "7075-T6 Aluminum :: MakeItFrom.com",
+      "url": "https://www.makeitfrom.com/material-properties/7075-T6-Aluminum",
+      "domain": "makeitfrom.com"
+    },
+    {
+      "id": 4,
+      "title": "[PDF] 7075 Aluminum Alloy: Properties | Gabrian International",
+      "url": "https://www.gabrian.com/wp-content/uploads/2018/09/7075-Aluminum-Alloy-Properties.pdf",
+      "domain": "gabrian.com"
+    }
+  ]
+}

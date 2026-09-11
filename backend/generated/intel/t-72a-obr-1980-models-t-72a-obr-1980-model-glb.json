@@ -1,0 +1,358 @@
+{
+ "name": "T 72A Obr 1980",
+ "url": "/models/t-72a-obr-1980/model.glb",
+ "designation": "T-72A (obr. 1980) main battle tank",
+ "platform": "tank",
+ "axis_orientation": "rear-end is the engine deck / exhaust, front-end is the glacis and gun muzzle",
+ "operating_principle": "The T-72A main battle tank is a tracked vehicle powered by a 840hp diesel engine, featuring torsion bar suspension and a 125mm smoothbore gun. It is operated by a crew of three, including a driver, a gunner, and a commander.",
+ "identified": 12,
+ "part_count": 12,
+ "components": [
+  {
+   "part_name": "Hull & glacis armour",
+   "description": "The hull structure of the vehicle houses a driver\u2019s cab at the front, a fighting section in the centre and a power pack at the rear.",
+   "material_dependency": "welded steel",
+   "risk_score": 80,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Turret & mantlet",
+   "description": "The turret features cast steel with laminate armor and additional neutron absorbing layers from 1984.",
+   "material_dependency": "cast steel",
+   "risk_score": 90,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Main gun barrel with thermal sleeve",
+   "description": "The tank is equipped with a 125mm smoothbore gun.",
+   "material_dependency": "high-strength steel",
+   "risk_score": 95,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Autoloader/ammunition stowage",
+   "description": "The tank features an automatic loading system.",
+   "material_dependency": "aluminum alloy",
+   "risk_score": 70,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Powerpack (engine + transmission)",
+   "description": "The tank is powered by a 840hp diesel engine and features a hydraulically assisted manual transmission.",
+   "material_dependency": "steel alloy",
+   "risk_score": 85,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "The tank features torsion bar suspension and a live track system.",
+   "material_dependency": "steel alloy",
+   "risk_score": 60,
+   "risk_tier": "STABLE"
+  },
+  {
+   "part_name": "Fire-control & sights",
+   "description": "The tank features a 1A40 fire control system and various sights, including a TPD-K1 laser range finder.",
+   "material_dependency": "electronics",
+   "risk_score": 80,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "ERA / composite armour packages",
+   "description": "The tank features additional neutron absorbing layers and laminate armor.",
+   "material_dependency": "composite materials",
+   "risk_score": 85,
+   "risk_tier": "ELEVATED"
+  }
+ ],
+ "intel": {
+  "part_0": {
+   "part_name": "Rear belly plate",
+   "assembly": "Hull & glacis armour",
+   "description": "Protects the underside of the hull",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 10,
+   "confidence": "medium",
+   "geometry_cue": "rear-end, hangs BELOW the centreline (underside), on the centreline plane, bulky, REAR-MOST part",
+   "mesh_name": "Section 3"
+  },
+  "Section 3": {
+   "part_name": "Rear belly plate",
+   "assembly": "Hull & glacis armour",
+   "description": "Protects the underside of the hull",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 10,
+   "confidence": "medium",
+   "geometry_cue": "rear-end, hangs BELOW the centreline (underside), on the centreline plane, bulky, REAR-MOST part",
+   "mesh_name": "Section 3"
+  },
+  "part_1": {
+   "part_name": "Right rear road wheel",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "rear-end, hangs BELOW the centreline (underside), offset to the right, MIRRORED PAIR with part_2",
+   "mesh_name": "Section 6"
+  },
+  "Section 6": {
+   "part_name": "Right rear road wheel",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "rear-end, hangs BELOW the centreline (underside), offset to the right, MIRRORED PAIR with part_2",
+   "mesh_name": "Section 6"
+  },
+  "part_2": {
+   "part_name": "Left rear road wheel",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "rear-end, hangs BELOW the centreline (underside), offset to the left, MIRRORED PAIR with part_1",
+   "mesh_name": "Section 2"
+  },
+  "Section 2": {
+   "part_name": "Left rear road wheel",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "rear-end, hangs BELOW the centreline (underside), offset to the left, MIRRORED PAIR with part_1",
+   "mesh_name": "Section 2"
+  },
+  "part_3": {
+   "part_name": "Rear idler axle",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 9,
+   "confidence": "medium",
+   "geometry_cue": "rear-end, just below the centreline, on the centreline plane, small fitting",
+   "mesh_name": "Section 4"
+  },
+  "Section 4": {
+   "part_name": "Rear idler axle",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 9,
+   "confidence": "medium",
+   "geometry_cue": "rear-end, just below the centreline, on the centreline plane, small fitting",
+   "mesh_name": "Section 4"
+  },
+  "part_4": {
+   "part_name": "Belly plate",
+   "assembly": "Hull & glacis armour",
+   "description": "Protects the underside of the hull",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 11,
+   "confidence": "medium",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), on the centreline plane, bulky",
+   "mesh_name": "Section 1"
+  },
+  "Section 1": {
+   "part_name": "Belly plate",
+   "assembly": "Hull & glacis armour",
+   "description": "Protects the underside of the hull",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 11,
+   "confidence": "medium",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), on the centreline plane, bulky",
+   "mesh_name": "Section 1"
+  },
+  "part_5": {
+   "part_name": "Right track return roller",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), offset to the right, MIRRORED PAIR with part_6, long and thin",
+   "mesh_name": "Section 9"
+  },
+  "Section 9": {
+   "part_name": "Right track return roller",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), offset to the right, MIRRORED PAIR with part_6, long and thin",
+   "mesh_name": "Section 9"
+  },
+  "part_6": {
+   "part_name": "Left track return roller",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), offset to the left, MIRRORED PAIR with part_5, long and thin",
+   "mesh_name": "Section 7"
+  },
+  "Section 7": {
+   "part_name": "Left track return roller",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), offset to the left, MIRRORED PAIR with part_5, long and thin",
+   "mesh_name": "Section 7"
+  },
+  "part_7": {
+   "part_name": "Centre idler axle",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 9,
+   "confidence": "medium",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), on the centreline plane, small fitting",
+   "mesh_name": "Section 8"
+  },
+  "Section 8": {
+   "part_name": "Centre idler axle",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 9,
+   "confidence": "medium",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), on the centreline plane, small fitting",
+   "mesh_name": "Section 8"
+  },
+  "part_8": {
+   "part_name": "Hull",
+   "assembly": "Hull & glacis armour",
+   "description": "Provides the main structural body of the tank",
+   "material_dependency": "welded steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 80,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "forward-of-centre, on the centreline, on the centreline plane, bulky, LARGEST VOLUME \u2014 the main structural body, LONGEST part",
+   "mesh_name": "Section 12"
+  },
+  "Section 12": {
+   "part_name": "Hull",
+   "assembly": "Hull & glacis armour",
+   "description": "Provides the main structural body of the tank",
+   "material_dependency": "welded steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 80,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "forward-of-centre, on the centreline, on the centreline plane, bulky, LARGEST VOLUME \u2014 the main structural body, LONGEST part",
+   "mesh_name": "Section 12"
+  },
+  "part_9": {
+   "part_name": "Right front road wheel",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "forward-of-centre, hangs BELOW the centreline (underside), offset to the right, MIRRORED PAIR with part_10",
+   "mesh_name": "Section 10"
+  },
+  "Section 10": {
+   "part_name": "Right front road wheel",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "forward-of-centre, hangs BELOW the centreline (underside), offset to the right, MIRRORED PAIR with part_10",
+   "mesh_name": "Section 10"
+  },
+  "part_10": {
+   "part_name": "Left front road wheel",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "forward-of-centre, hangs BELOW the centreline (underside), offset to the left, MIRRORED PAIR with part_9",
+   "mesh_name": "Section 11"
+  },
+  "Section 11": {
+   "part_name": "Left front road wheel",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "forward-of-centre, hangs BELOW the centreline (underside), offset to the left, MIRRORED PAIR with part_9",
+   "mesh_name": "Section 11"
+  },
+  "part_11": {
+   "part_name": "Front idler axle",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 5,
+   "confidence": "medium",
+   "geometry_cue": "forward-of-centre, hangs BELOW the centreline (underside), on the centreline plane, FRONT-MOST part",
+   "mesh_name": "Section 5"
+  },
+  "Section 5": {
+   "part_name": "Front idler axle",
+   "assembly": "Running gear (drive sprocket, road wheels, idler, tracks, to",
+   "description": "Supports the track system",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 5,
+   "confidence": "medium",
+   "geometry_cue": "forward-of-centre, hangs BELOW the centreline (underside), on the centreline plane, FRONT-MOST part",
+   "mesh_name": "Section 5"
+  }
+ }
+}

@@ -1,0 +1,216 @@
+{
+ "name": "AK-47 Internals",
+ "url": "/models/ak-47-internals/model.glb",
+ "components": [
+  {
+   "part_name": "Receiver Assembly",
+   "description": "The main body of the AK-47, housing the other components and providing the structural framework for the weapon. It is typically made of steel or other durable materials.",
+   "material_dependency": "Steel",
+   "risk_score": 90,
+   "risk_tier": "CRITICAL",
+   "placement": {
+    "axis_position": 0.0,
+    "vertical_position": 0.0,
+    "length_fraction": 0.2,
+    "orientation": "compact"
+   }
+  },
+  {
+   "part_name": "Barrel Assembly",
+   "description": "The part of the AK-47 where the bullet is fired from, responsible for directing the projectile towards its target. It is typically made of chrome-lined steel to reduce wear and corrosion.",
+   "material_dependency": "Chrome-lined steel",
+   "risk_score": 95,
+   "risk_tier": "CRITICAL",
+   "placement": {
+    "axis_position": 0.5,
+    "vertical_position": 0.2,
+    "length_fraction": 0.45,
+    "orientation": "longitudinal"
+   }
+  },
+  {
+   "part_name": "Bolt Carrier Assembly",
+   "description": "The component responsible for cycling the action of the AK-47, extracting the spent cartridge and chambering a new round. It works in conjunction with the recoil spring to return the bolt to its forward position.",
+   "material_dependency": "Steel",
+   "risk_score": 80,
+   "risk_tier": "ELEVATED",
+   "placement": {
+    "axis_position": 0.3,
+    "vertical_position": 0.0,
+    "length_fraction": 0.15,
+    "orientation": "longitudinal"
+   }
+  },
+  {
+   "part_name": "Recoil Spring Assembly",
+   "description": "The component that stores energy as the bolt recoils, then releases it to return the bolt to its forward position, thus cycling the action of the AK-47.",
+   "material_dependency": "Steel",
+   "risk_score": 70,
+   "risk_tier": "ELEVATED",
+   "placement": {
+    "axis_position": 0.2,
+    "vertical_position": 0.0,
+    "length_fraction": 0.1,
+    "orientation": "longitudinal"
+   }
+  },
+  {
+   "part_name": "Firing Mechanism Assembly",
+   "description": "The component responsible for striking the primer to ignite the cartridge, thus firing the AK-47. It includes the hammer and trigger components.",
+   "material_dependency": "Steel",
+   "risk_score": 85,
+   "risk_tier": "ELEVATED",
+   "placement": {
+    "axis_position": -0.1,
+    "vertical_position": 0.0,
+    "length_fraction": 0.05,
+    "orientation": "compact"
+   }
+  }
+ ],
+ "intel": {
+  "Outer Shell": {
+   "part_name": "Receiver Assembly",
+   "description": "The main body of the AK-47, housing the other components and providing the structural framework for the weapon. It is typically made of steel or other durable materials.",
+   "material_dependency": "Steel",
+   "risk_score": 90,
+   "risk_tier": "CRITICAL",
+   "placement": {
+    "axis_position": 0.0,
+    "vertical_position": 0.0,
+    "length_fraction": 0.2,
+    "orientation": "compact"
+   }
+  },
+  "Inner Part 1": {
+   "part_name": "Bolt Carrier Assembly",
+   "description": "The component responsible for cycling the action of the AK-47, extracting the spent cartridge and chambering a new round. It works in conjunction with the recoil spring to return the bolt to its forward position.",
+   "material_dependency": "Steel",
+   "risk_score": 80,
+   "risk_tier": "ELEVATED",
+   "placement": {
+    "axis_position": 0.3,
+    "vertical_position": 0.0,
+    "length_fraction": 0.15,
+    "orientation": "longitudinal"
+   }
+  },
+  "Inner Part 2": {
+   "part_name": "Bolt Carrier Assembly",
+   "description": "The component responsible for cycling the action of the AK-47, extracting the spent cartridge and chambering a new round. It works in conjunction with the recoil spring to return the bolt to its forward position.",
+   "material_dependency": "Steel",
+   "risk_score": 80,
+   "risk_tier": "ELEVATED",
+   "placement": {
+    "axis_position": 0.3,
+    "vertical_position": 0.0,
+    "length_fraction": 0.15,
+    "orientation": "longitudinal"
+   }
+  },
+  "Inner Part 3": {
+   "part_name": "Bolt Carrier Assembly",
+   "description": "The component responsible for cycling the action of the AK-47, extracting the spent cartridge and chambering a new round. It works in conjunction with the recoil spring to return the bolt to its forward position.",
+   "material_dependency": "Steel",
+   "risk_score": 80,
+   "risk_tier": "ELEVATED",
+   "placement": {
+    "axis_position": 0.3,
+    "vertical_position": 0.0,
+    "length_fraction": 0.15,
+    "orientation": "longitudinal"
+   }
+  },
+  "Inner Part 4": {
+   "part_name": "Recoil Spring Assembly",
+   "description": "The component that stores energy as the bolt recoils, then releases it to return the bolt to its forward position, thus cycling the action of the AK-47.",
+   "material_dependency": "Steel",
+   "risk_score": 70,
+   "risk_tier": "ELEVATED",
+   "placement": {
+    "axis_position": 0.2,
+    "vertical_position": 0.0,
+    "length_fraction": 0.1,
+    "orientation": "longitudinal"
+   }
+  },
+  "Inner Part 5": {
+   "part_name": "Recoil Spring Assembly",
+   "description": "The component that stores energy as the bolt recoils, then releases it to return the bolt to its forward position, thus cycling the action of the AK-47.",
+   "material_dependency": "Steel",
+   "risk_score": 70,
+   "risk_tier": "ELEVATED",
+   "placement": {
+    "axis_position": 0.2,
+    "vertical_position": 0.0,
+    "length_fraction": 0.1,
+    "orientation": "longitudinal"
+   }
+  },
+  "Inner Part 6": {
+   "part_name": "Barrel Assembly",
+   "description": "The part of the AK-47 where the bullet is fired from, responsible for directing the projectile towards its target. It is typically made of chrome-lined steel to reduce wear and corrosion.",
+   "material_dependency": "Chrome-lined steel",
+   "risk_score": 95,
+   "risk_tier": "CRITICAL",
+   "placement": {
+    "axis_position": 0.5,
+    "vertical_position": 0.2,
+    "length_fraction": 0.45,
+    "orientation": "longitudinal"
+   }
+  },
+  "Inner Part 7": {
+   "part_name": "Barrel Assembly",
+   "description": "The part of the AK-47 where the bullet is fired from, responsible for directing the projectile towards its target. It is typically made of chrome-lined steel to reduce wear and corrosion.",
+   "material_dependency": "Chrome-lined steel",
+   "risk_score": 95,
+   "risk_tier": "CRITICAL",
+   "placement": {
+    "axis_position": 0.5,
+    "vertical_position": 0.2,
+    "length_fraction": 0.45,
+    "orientation": "longitudinal"
+   }
+  },
+  "Inner Part 8": {
+   "part_name": "Firing Mechanism Assembly",
+   "description": "The component responsible for striking the primer to ignite the cartridge, thus firing the AK-47. It includes the hammer and trigger components.",
+   "material_dependency": "Steel",
+   "risk_score": 85,
+   "risk_tier": "ELEVATED",
+   "placement": {
+    "axis_position": -0.1,
+    "vertical_position": 0.0,
+    "length_fraction": 0.05,
+    "orientation": "compact"
+   }
+  },
+  "Inner Part 9": {
+   "part_name": "Firing Mechanism Assembly",
+   "description": "The component responsible for striking the primer to ignite the cartridge, thus firing the AK-47. It includes the hammer and trigger components.",
+   "material_dependency": "Steel",
+   "risk_score": 85,
+   "risk_tier": "ELEVATED",
+   "placement": {
+    "axis_position": -0.1,
+    "vertical_position": 0.0,
+    "length_fraction": 0.05,
+    "orientation": "compact"
+   }
+  },
+  "Inner Part 10": {
+   "part_name": "Firing Mechanism Assembly",
+   "description": "The component responsible for striking the primer to ignite the cartridge, thus firing the AK-47. It includes the hammer and trigger components.",
+   "material_dependency": "Steel",
+   "risk_score": 85,
+   "risk_tier": "ELEVATED",
+   "placement": {
+    "axis_position": -0.1,
+    "vertical_position": 0.0,
+    "length_fraction": 0.05,
+    "orientation": "compact"
+   }
+  }
+ }
+}

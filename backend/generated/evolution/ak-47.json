@@ -1,0 +1,315 @@
+{
+  "weapon": "AK-47",
+  "profile": {
+    "designer": "Mikhail Kalashnikov",
+    "origin": "Soviet Union",
+    "weapon_class": "gas-operated assault rifle",
+    "concept_year": "1946",
+    "service_year": "1949",
+    "span": "1949-present",
+    "units": "75-100 million",
+    "status": "In service"
+  },
+  "through_line": "The design idea of a reliable, simple, and rugged assault rifle that survived every revision",
+  "stages": [
+    {
+      "id": 1,
+      "stage": "CONCEPT",
+      "designation": "Avtomat Kalashnikova",
+      "year": "1946",
+      "title": "Initial Design Concept",
+      "summary": "Mikhail Kalashnikov began designing an assault rifle in response to the Soviet need for a reliable and simple weapon. The design was influenced by previous advancements and the need for a rifle that could fire the 7.62-mm intermediate cartridge.",
+      "driver": "Soviet search for a reliable and simple assault rifle",
+      "impact": "Led to the development of a new infantry rifle",
+      "changes": [
+        {
+          "type": "ADDED",
+          "part": "gas-operated mechanism",
+          "detail": "allowed for a more reliable and simple design",
+          "sources": [
+            1,
+            2
+          ]
+        }
+      ],
+      "sources": [
+        1,
+        2,
+        5
+      ],
+      "image": "https://onlyhdwallpapers.com/wallpaper/weapons-avtomat-kalashnikova-3J8o.jpg"
+    },
+    {
+      "id": 2,
+      "stage": "PROTOTYPE",
+      "designation": "AK-47",
+      "year": "1947",
+      "title": "First Prototype",
+      "summary": "The first prototype of the AK-47 was designed and tested, featuring a short-stroke gas piston and a rotary bolt. The design was refined and improved based on feedback from trials.",
+      "driver": "Need for a reliable and accurate rifle",
+      "impact": "Led to the adoption of the AK-47 by the Soviet military",
+      "changes": [
+        {
+          "type": "ADDED",
+          "part": "short-stroke gas piston",
+          "detail": "improved reliability and reduced recoil",
+          "sources": [
+            8
+          ]
+        },
+        {
+          "type": "ADDED",
+          "part": "rotary bolt",
+          "detail": "improved accuracy and reliability",
+          "sources": [
+            8
+          ]
+        }
+      ],
+      "sources": [
+        1,
+        3,
+        8
+      ],
+      "image": "https://lojareidasespadas.com/872-large_default/kalashnikov-ak-47-1947-rifle-ak-47-mikhail-kalashnikov-concebido-en-1947-el-representa-a-ak-47-avtomat-kalashnikova-modelo-1947-.jpg"
+    },
+    {
+      "id": 3,
+      "stage": "TRIALS",
+      "designation": "AK-47",
+      "year": "1949",
+      "title": "Field Trials and Adoption",
+      "summary": "The AK-47 underwent field trials and was adopted by the Soviet military as their standard issue assault rifle. The design was proven to be reliable and rugged, with a high volume of fire and reasonable accuracy.",
+      "driver": "Soviet military's need for a reliable and simple rifle",
+      "impact": "Led to the widespread adoption of the AK-47",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "receiver",
+          "detail": "changed from milled to stamped steel",
+          "sources": [
+            10
+          ]
+        }
+      ],
+      "sources": [
+        1,
+        4,
+        6
+      ],
+      "image": "https://cdn.kalashnikovgroup.ru/ogimages/b692d2ad8c69f442790be35ab17e4caf.jpg"
+    },
+    {
+      "id": 4,
+      "stage": "MODERNIZATION",
+      "designation": "AKM",
+      "year": "1959",
+      "title": "Modernization and Simplification",
+      "summary": "The AKM was introduced, featuring a stamped steel receiver and other simplifications to reduce production costs and weight. The design was further refined and improved based on feedback from users.",
+      "driver": "Need to reduce production costs and weight",
+      "impact": "Led to the widespread adoption of the AKM",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "receiver",
+          "detail": "changed from milled to stamped steel",
+          "sources": [
+            10
+          ]
+        },
+        {
+          "type": "REMOVED",
+          "part": "machined parts",
+          "detail": "reduced production costs and weight",
+          "sources": [
+            10
+          ]
+        }
+      ],
+      "sources": [
+        10,
+        16
+      ],
+      "image": "https://cdnb.artstation.com/p/assets/covers/images/029/755/251/large/diego-llacer-diego-llacer-akm-22.jpg?1598540653"
+    },
+    {
+      "id": 5,
+      "stage": "VARIANT",
+      "designation": "AK-74",
+      "year": "1974",
+      "title": "Introduction of the AK-74",
+      "summary": "The AK-74 was introduced, featuring a new cartridge (5.45x39mm) and other improvements to the design. The AK-74 was designed to be more accurate and reliable than the AK-47.",
+      "driver": "Need for a more accurate and reliable rifle",
+      "impact": "Led to the adoption of the AK-74 by the Soviet military",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "cartridge",
+          "detail": "changed from 7.62x39mm to 5.45x39mm",
+          "sources": [
+            11
+          ]
+        },
+        {
+          "type": "CHANGED",
+          "part": "gas system",
+          "detail": "adjusted to correspond with altered pressure dynamics",
+          "sources": [
+            11
+          ]
+        }
+      ],
+      "sources": [
+        11,
+        12
+      ],
+      "image": "https://www.armedconflicts.com/attachments/3140/ak_74.jpg"
+    },
+    {
+      "id": 6,
+      "stage": "MODERNIZATION",
+      "designation": "AK-12",
+      "year": "2010",
+      "title": "Introduction of the AK-12",
+      "summary": "The AK-12 was introduced, featuring a modernized design with a folding stock, rails for accessories, and other improvements. The AK-12 was designed to be more ergonomic and adaptable to modern warfare.",
+      "driver": "Need for a more modern and adaptable rifle",
+      "impact": "Led to the adoption of the AK-12 by the Russian military",
+      "changes": [
+        {
+          "type": "ADDED",
+          "part": "folding stock",
+          "detail": "improved ergonomics and adaptability",
+          "sources": [
+            12
+          ]
+        },
+        {
+          "type": "ADDED",
+          "part": "rails for accessories",
+          "detail": "improved adaptability to modern warfare",
+          "sources": [
+            12
+          ]
+        }
+      ],
+      "sources": [
+        9,
+        12,
+        14
+      ],
+      "image": "https://img.freepik.com/premium-photo/modern-russian-weapon-ak-12-with-tactical-kit_652999-1824.jpg?w=2000"
+    },
+    {
+      "id": 7,
+      "stage": "CURRENT",
+      "designation": "AK-12",
+      "year": "2020",
+      "title": "Current Production and Use",
+      "summary": "The AK-12 is currently in production and use by the Russian military and other countries. The design continues to evolve with new improvements and variants being developed.",
+      "driver": "Ongoing need for a reliable and adaptable rifle",
+      "impact": "Continued use and adoption of the AK-12",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "manufacturing process",
+          "detail": "use of modern manufacturing processes and materials",
+          "sources": [
+            10
+          ]
+        }
+      ],
+      "sources": [
+        10,
+        14,
+        15
+      ],
+      "image": "https://www.imfdb.org/images/archive/3/35/20220125170456!AK-12_2020.jpg"
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "AK-47 - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/AK-47",
+      "domain": "en.wikipedia.org"
+    },
+    {
+      "id": 2,
+      "title": "How was the AK-47 created?",
+      "url": "https://www.quora.com/How-was-the-AK-47-created",
+      "domain": "quora.com"
+    },
+    {
+      "id": 3,
+      "title": "Mikhail Kalashnikov - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mikhail_Kalashnikov",
+      "domain": "en.wikipedia.org"
+    },
+    {
+      "id": 4,
+      "title": "AK-47 | Definition, History, Operation, & Facts | Britannica",
+      "url": "https://www.britannica.com/technology/AK-47",
+      "domain": "britannica.com"
+    },
+    {
+      "id": 5,
+      "title": "Everyman\u2019s Gun\u2013The AK-47",
+      "url": "https://historynet.com/everymans-gun-ak-47",
+      "domain": "historynet.com"
+    },
+    {
+      "id": 6,
+      "title": "6th July 1947: The Kalashnikov AK-47 assault rifle goes into production",
+      "url": "https://www.youtube.com/watch?v=aXbjaCx-V0Q",
+      "domain": "youtube.com"
+    },
+    {
+      "id": 8,
+      "title": "The Story of the AK-47: The World's Most Famous and ...",
+      "url": "https://historyguild.org/the-story-of-the-ak-47-the-worlds-most-famous-and-deadliest-rifle",
+      "domain": "historyguild.org"
+    },
+    {
+      "id": 9,
+      "title": "The Unknown History of Russian AK-12 Kalashnikov Rifle: Part 1 | thefirearmblog.com",
+      "url": "https://www.thefirearmblog.com/blog/2022/01/05/unknown-history-new-russian-ak-12-kalashnikov-rifle-part-1",
+      "domain": "thefirearmblog.com"
+    },
+    {
+      "id": 10,
+      "title": "Comparison of the AK-47 and M16 - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Comparison_of_the_AK-47_and_M16",
+      "domain": "en.wikipedia.org"
+    },
+    {
+      "id": 11,
+      "title": "AK-47 vs AK-74: What Actually Changed and Why | Redacted Arms LLC",
+      "url": "https://redactedarmsllc.com/ak-47-vs-ak-74",
+      "domain": "redactedarmsllc.com"
+    },
+    {
+      "id": 12,
+      "title": "What Are All the AK Variants?",
+      "url": "https://www.guns.com/news/what-are-ak-variants",
+      "domain": "guns.com"
+    },
+    {
+      "id": 14,
+      "title": "AK Models: Ultimate Guide to Kalashnikov Rifles",
+      "url": "https://www.pewpewtactical.com/ak-models",
+      "domain": "pewpewtactical.com"
+    },
+    {
+      "id": 15,
+      "title": "Top 10 Modern AK-47 Rifles That Leave AR-15 in The Dust!",
+      "url": "https://www.youtube.com/watch?v=Waoba1_Wpok&vl=en",
+      "domain": "youtube.com"
+    },
+    {
+      "id": 16,
+      "title": "Best AK-47 Buyer\u2019s Guide 2026 [Field Tested]",
+      "url": "https://gundigest.com/rifles/the-best-ak-47-rifles-you-can-find-in-the-u-s",
+      "domain": "gundigest.com"
+    }
+  ]
+}

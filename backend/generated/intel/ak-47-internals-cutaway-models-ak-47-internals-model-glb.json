@@ -1,0 +1,565 @@
+{
+ "name": "AK-47 \u2014 Internals (Cutaway)",
+ "url": "/models/ak-47-internals/model.glb",
+ "designation": "AK-47 / AKM 7.62x39mm gas-operated assault rifle",
+ "platform": "firearm",
+ "axis_orientation": "muzzle at +X, buttstock at -X",
+ "operating_principle": "Long-stroke gas piston: propellant gas tapped from the barrel drives the piston and bolt carrier rearward, the rotating bolt unlocks, the spent case ejects and the recoil spring returns the group into battery.",
+ "identified": 19,
+ "part_count": 19,
+ "components": [
+  {
+   "part_name": "Magazine",
+   "description": "Detachable curved box magazine feeding 7.62x39mm rounds.",
+   "material_dependency": "Bakelite / steel",
+   "risk_tier": "STABLE",
+   "risk_score": 30
+  },
+  {
+   "part_name": "Dust Cover",
+   "description": "Stamped top cover enclosing the bolt carrier and recoil spring.",
+   "material_dependency": "Stamped steel",
+   "risk_tier": "STABLE",
+   "risk_score": 28
+  },
+  {
+   "part_name": "Recoil Spring Assembly",
+   "description": "Return spring and guide rod that drive the bolt carrier back into battery.",
+   "material_dependency": "Spring steel",
+   "risk_tier": "STABLE",
+   "risk_score": 34
+  },
+  {
+   "part_name": "Bolt Carrier",
+   "description": "Long-stroke carrier driven by the gas piston; cams the bolt to lock and unlock.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90
+  },
+  {
+   "part_name": "Gas Piston",
+   "description": "Piston fixed to the carrier; expanding propellant gas drives it rearward.",
+   "material_dependency": "Chrome-lined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 64
+  },
+  {
+   "part_name": "Bolt",
+   "description": "Rotating bolt with locking lugs that seals the chamber at the moment of firing.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 88
+  },
+  {
+   "part_name": "Gas Tube & Upper Handguard",
+   "description": "Channels tapped gas back to the piston; the wood upper handguard shields the hand.",
+   "material_dependency": "Steel / wood",
+   "risk_tier": "ELEVATED",
+   "risk_score": 55
+  },
+  {
+   "part_name": "Lower Handguard",
+   "description": "Wooden fore-end that insulates the shooter from barrel heat.",
+   "material_dependency": "Laminated wood",
+   "risk_tier": "STABLE",
+   "risk_score": 22
+  },
+  {
+   "part_name": "Gas Block",
+   "description": "Taps combustion gas from the barrel port and redirects it into the gas tube.",
+   "material_dependency": "Forged steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60
+  },
+  {
+   "part_name": "Front Sight Base",
+   "description": "Muzzle-end post protected by wings; sets elevation/windage zero.",
+   "material_dependency": "Forged steel",
+   "risk_tier": "STABLE",
+   "risk_score": 26
+  },
+  {
+   "part_name": "Barrel",
+   "description": "Chrome-lined, rifled bore that accelerates and stabilises the projectile.",
+   "material_dependency": "Chrome-lined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 95
+  },
+  {
+   "part_name": "Rear Sight Block",
+   "description": "Tangent leaf sight graduated in hundreds of metres.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 25
+  },
+  {
+   "part_name": "Buttstock",
+   "description": "Shoulder stock that sets length of pull and absorbs recoil.",
+   "material_dependency": "Laminated wood",
+   "risk_tier": "STABLE",
+   "risk_score": 20
+  },
+  {
+   "part_name": "Buttplate",
+   "description": "Ribbed steel plate; often houses a cleaning-kit trap.",
+   "material_dependency": "Stamped steel",
+   "risk_tier": "STABLE",
+   "risk_score": 18
+  },
+  {
+   "part_name": "Pistol Grip",
+   "description": "Firing-hand grip angled for control.",
+   "material_dependency": "Bakelite",
+   "risk_tier": "STABLE",
+   "risk_score": 20
+  },
+  {
+   "part_name": "Trigger",
+   "description": "Releases the hammer; part of the sheet-metal AK fire-control group.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 58
+  },
+  {
+   "part_name": "Hammer",
+   "description": "Spring-driven hammer that strikes the firing pin.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 62
+  },
+  {
+   "part_name": "Selector Lever",
+   "description": "Right-side safety/selector that blocks the trigger and covers the dust-cover gap.",
+   "material_dependency": "Stamped steel",
+   "risk_tier": "STABLE",
+   "risk_score": 30
+  },
+  {
+   "part_name": "Magazine Catch",
+   "description": "Sprung paddle that locks the magazine into the well.",
+   "material_dependency": "Stamped steel",
+   "risk_tier": "STABLE",
+   "risk_score": 24
+  }
+ ],
+ "intel": {
+  "Inner_Part_1": {
+   "part_name": "Magazine",
+   "assembly": "Feed system",
+   "description": "Detachable curved box magazine feeding 7.62x39mm rounds.",
+   "material_dependency": "Bakelite / steel",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Magazine": {
+   "part_name": "Magazine",
+   "assembly": "Feed system",
+   "description": "Detachable curved box magazine feeding 7.62x39mm rounds.",
+   "material_dependency": "Bakelite / steel",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_2": {
+   "part_name": "Dust Cover",
+   "assembly": "Receiver cover",
+   "description": "Stamped top cover enclosing the bolt carrier and recoil spring.",
+   "material_dependency": "Stamped steel",
+   "risk_tier": "STABLE",
+   "risk_score": 28,
+   "disassembly_order": 2,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Dust Cover": {
+   "part_name": "Dust Cover",
+   "assembly": "Receiver cover",
+   "description": "Stamped top cover enclosing the bolt carrier and recoil spring.",
+   "material_dependency": "Stamped steel",
+   "risk_tier": "STABLE",
+   "risk_score": 28,
+   "disassembly_order": 2,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_3": {
+   "part_name": "Recoil Spring Assembly",
+   "assembly": "Recoil system",
+   "description": "Return spring and guide rod that drive the bolt carrier back into battery.",
+   "material_dependency": "Spring steel",
+   "risk_tier": "STABLE",
+   "risk_score": 34,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Recoil Spring Assembly": {
+   "part_name": "Recoil Spring Assembly",
+   "assembly": "Recoil system",
+   "description": "Return spring and guide rod that drive the bolt carrier back into battery.",
+   "material_dependency": "Spring steel",
+   "risk_tier": "STABLE",
+   "risk_score": 34,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_4": {
+   "part_name": "Bolt Carrier",
+   "assembly": "Bolt group",
+   "description": "Long-stroke carrier driven by the gas piston; cams the bolt to lock and unlock.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 4,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Bolt Carrier": {
+   "part_name": "Bolt Carrier",
+   "assembly": "Bolt group",
+   "description": "Long-stroke carrier driven by the gas piston; cams the bolt to lock and unlock.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 4,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_5": {
+   "part_name": "Gas Piston",
+   "assembly": "Gas system",
+   "description": "Piston fixed to the carrier; expanding propellant gas drives it rearward.",
+   "material_dependency": "Chrome-lined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 64,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Gas Piston": {
+   "part_name": "Gas Piston",
+   "assembly": "Gas system",
+   "description": "Piston fixed to the carrier; expanding propellant gas drives it rearward.",
+   "material_dependency": "Chrome-lined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 64,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_6": {
+   "part_name": "Bolt",
+   "assembly": "Bolt group",
+   "description": "Rotating bolt with locking lugs that seals the chamber at the moment of firing.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 88,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Bolt": {
+   "part_name": "Bolt",
+   "assembly": "Bolt group",
+   "description": "Rotating bolt with locking lugs that seals the chamber at the moment of firing.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 88,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_7": {
+   "part_name": "Gas Tube & Upper Handguard",
+   "assembly": "Gas system",
+   "description": "Channels tapped gas back to the piston; the wood upper handguard shields the hand.",
+   "material_dependency": "Steel / wood",
+   "risk_tier": "ELEVATED",
+   "risk_score": 55,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Gas Tube & Upper Handguard": {
+   "part_name": "Gas Tube & Upper Handguard",
+   "assembly": "Gas system",
+   "description": "Channels tapped gas back to the piston; the wood upper handguard shields the hand.",
+   "material_dependency": "Steel / wood",
+   "risk_tier": "ELEVATED",
+   "risk_score": 55,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_8": {
+   "part_name": "Lower Handguard",
+   "assembly": "Furniture",
+   "description": "Wooden fore-end that insulates the shooter from barrel heat.",
+   "material_dependency": "Laminated wood",
+   "risk_tier": "STABLE",
+   "risk_score": 22,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Lower Handguard": {
+   "part_name": "Lower Handguard",
+   "assembly": "Furniture",
+   "description": "Wooden fore-end that insulates the shooter from barrel heat.",
+   "material_dependency": "Laminated wood",
+   "risk_tier": "STABLE",
+   "risk_score": 22,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_9": {
+   "part_name": "Gas Block",
+   "assembly": "Gas system",
+   "description": "Taps combustion gas from the barrel port and redirects it into the gas tube.",
+   "material_dependency": "Forged steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 9,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Gas Block": {
+   "part_name": "Gas Block",
+   "assembly": "Gas system",
+   "description": "Taps combustion gas from the barrel port and redirects it into the gas tube.",
+   "material_dependency": "Forged steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 9,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_10": {
+   "part_name": "Front Sight Base",
+   "assembly": "Sights",
+   "description": "Muzzle-end post protected by wings; sets elevation/windage zero.",
+   "material_dependency": "Forged steel",
+   "risk_tier": "STABLE",
+   "risk_score": 26,
+   "disassembly_order": 10,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Front Sight Base": {
+   "part_name": "Front Sight Base",
+   "assembly": "Sights",
+   "description": "Muzzle-end post protected by wings; sets elevation/windage zero.",
+   "material_dependency": "Forged steel",
+   "risk_tier": "STABLE",
+   "risk_score": 26,
+   "disassembly_order": 10,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_11": {
+   "part_name": "Barrel",
+   "assembly": "Barrel group",
+   "description": "Chrome-lined, rifled bore that accelerates and stabilises the projectile.",
+   "material_dependency": "Chrome-lined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 95,
+   "disassembly_order": 11,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Barrel": {
+   "part_name": "Barrel",
+   "assembly": "Barrel group",
+   "description": "Chrome-lined, rifled bore that accelerates and stabilises the projectile.",
+   "material_dependency": "Chrome-lined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 95,
+   "disassembly_order": 11,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_12": {
+   "part_name": "Rear Sight Block",
+   "assembly": "Sights",
+   "description": "Tangent leaf sight graduated in hundreds of metres.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 12,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Rear Sight Block": {
+   "part_name": "Rear Sight Block",
+   "assembly": "Sights",
+   "description": "Tangent leaf sight graduated in hundreds of metres.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 12,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_13": {
+   "part_name": "Buttstock",
+   "assembly": "Furniture",
+   "description": "Shoulder stock that sets length of pull and absorbs recoil.",
+   "material_dependency": "Laminated wood",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 13,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Buttstock": {
+   "part_name": "Buttstock",
+   "assembly": "Furniture",
+   "description": "Shoulder stock that sets length of pull and absorbs recoil.",
+   "material_dependency": "Laminated wood",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 13,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_14": {
+   "part_name": "Buttplate",
+   "assembly": "Furniture",
+   "description": "Ribbed steel plate; often houses a cleaning-kit trap.",
+   "material_dependency": "Stamped steel",
+   "risk_tier": "STABLE",
+   "risk_score": 18,
+   "disassembly_order": 14,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Buttplate": {
+   "part_name": "Buttplate",
+   "assembly": "Furniture",
+   "description": "Ribbed steel plate; often houses a cleaning-kit trap.",
+   "material_dependency": "Stamped steel",
+   "risk_tier": "STABLE",
+   "risk_score": 18,
+   "disassembly_order": 14,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_15": {
+   "part_name": "Pistol Grip",
+   "assembly": "Furniture",
+   "description": "Firing-hand grip angled for control.",
+   "material_dependency": "Bakelite",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 15,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Pistol Grip": {
+   "part_name": "Pistol Grip",
+   "assembly": "Furniture",
+   "description": "Firing-hand grip angled for control.",
+   "material_dependency": "Bakelite",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 15,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_16": {
+   "part_name": "Trigger",
+   "assembly": "Fire-control group",
+   "description": "Releases the hammer; part of the sheet-metal AK fire-control group.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 58,
+   "disassembly_order": 16,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Trigger": {
+   "part_name": "Trigger",
+   "assembly": "Fire-control group",
+   "description": "Releases the hammer; part of the sheet-metal AK fire-control group.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 58,
+   "disassembly_order": 16,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_17": {
+   "part_name": "Hammer",
+   "assembly": "Fire-control group",
+   "description": "Spring-driven hammer that strikes the firing pin.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 62,
+   "disassembly_order": 17,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Hammer": {
+   "part_name": "Hammer",
+   "assembly": "Fire-control group",
+   "description": "Spring-driven hammer that strikes the firing pin.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 62,
+   "disassembly_order": 17,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_18": {
+   "part_name": "Selector Lever",
+   "assembly": "Fire-control group",
+   "description": "Right-side safety/selector that blocks the trigger and covers the dust-cover gap.",
+   "material_dependency": "Stamped steel",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 18,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Selector Lever": {
+   "part_name": "Selector Lever",
+   "assembly": "Fire-control group",
+   "description": "Right-side safety/selector that blocks the trigger and covers the dust-cover gap.",
+   "material_dependency": "Stamped steel",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 18,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_19": {
+   "part_name": "Magazine Catch",
+   "assembly": "Feed system",
+   "description": "Sprung paddle that locks the magazine into the well.",
+   "material_dependency": "Stamped steel",
+   "risk_tier": "STABLE",
+   "risk_score": 24,
+   "disassembly_order": 19,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Magazine Catch": {
+   "part_name": "Magazine Catch",
+   "assembly": "Feed system",
+   "description": "Sprung paddle that locks the magazine into the well.",
+   "material_dependency": "Stamped steel",
+   "risk_tier": "STABLE",
+   "risk_score": 24,
+   "disassembly_order": 19,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  }
+ }
+}

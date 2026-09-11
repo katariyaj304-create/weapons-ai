@@ -1,0 +1,184 @@
+{
+  "material": "4150 Chrome-Moly Steel",
+  "overview": {
+    "family": "alloy steel",
+    "designation": "AISI 4150 / UNS G41500",
+    "composition": "Fe base, 0.48-0.53%C, 0.80-1.10%Cr, 0.15-0.25%Mo, 0.75-1.00%Mn, 0.15-0.30%Si",
+    "military_use": "M16 rifle and M4 carbine barrels",
+    "summary": "4150 Chrome-Moly Steel is a high-strength, low-alloy steel with excellent toughness, fatigue resistance, and wearability. It is widely used in military and civilian applications, including firearms, aircraft, and automotive components. The steel's high carbon content and chromium-molybdenum alloying elements provide a unique combination of strength, hardness, and corrosion resistance."
+  },
+  "properties": [
+    {
+      "property": "Ultimate tensile strength",
+      "value": "731 MPa",
+      "sources": [
+        1,
+        3
+      ]
+    },
+    {
+      "property": "Yield strength",
+      "value": "380 MPa",
+      "sources": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "property": "Hardness",
+      "value": "197 HB",
+      "sources": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "property": "Density",
+      "value": "7.85 g/cm3",
+      "sources": [
+        2,
+        5
+      ]
+    },
+    {
+      "property": "Elongation",
+      "value": "20.20%",
+      "sources": [
+        1,
+        3
+      ]
+    },
+    {
+      "property": "Fracture toughness",
+      "value": "60 MPa*m^0.5 (est.)",
+      "sources": []
+    }
+  ],
+  "ratings": [
+    {
+      "axis": "Strength",
+      "score": 90,
+      "note": "high tensile and yield strength"
+    },
+    {
+      "axis": "Toughness",
+      "score": 80,
+      "note": "good impact resistance"
+    },
+    {
+      "axis": "Hardness",
+      "score": 85,
+      "note": "high hardness, resistant to wear"
+    },
+    {
+      "axis": "Corrosion resistance",
+      "score": 60,
+      "note": "moderate corrosion resistance"
+    },
+    {
+      "axis": "Lightness",
+      "score": 40,
+      "note": "relatively high density"
+    },
+    {
+      "axis": "Heat resistance",
+      "score": 70,
+      "note": "good high-temperature stability"
+    },
+    {
+      "axis": "Machinability",
+      "score": 55,
+      "note": "moderate machinability"
+    },
+    {
+      "axis": "Cost efficiency",
+      "score": 50,
+      "note": "moderate cost, relatively high production cost"
+    }
+  ],
+  "strength_analysis": {
+    "load_behaviour": "ductile, with a high degree of plasticity before failure",
+    "failure_modes": [
+      "fatigue cracking at stress risers",
+      "ductile overload"
+    ],
+    "fatigue": "good fatigue resistance, with a high endurance limit",
+    "temperature": "stable up to 500\u00b0C, with a decrease in strength at higher temperatures",
+    "narrative": "4150 Chrome-Moly Steel exhibits excellent strength and toughness, making it suitable for high-stress applications. However, its relatively high density and moderate corrosion resistance may limit its use in certain environments. The steel's high carbon content and chromium-molybdenum alloying elements provide a unique combination of strength, hardness, and wear resistance."
+  },
+  "applications": [
+    {
+      "component": "Rifle barrels",
+      "examples": "M16, M4",
+      "why": "high strength, toughness, and wear resistance"
+    },
+    {
+      "component": "Aircraft parts",
+      "examples": "structural tubing, gears",
+      "why": "high strength, toughness, and fatigue resistance"
+    },
+    {
+      "component": "Automotive components",
+      "examples": "crankshafts, piston wrist pins",
+      "why": "high strength, toughness, and wear resistance"
+    }
+  ],
+  "processing": {
+    "heat_treatment": "quenching and tempering to achieve high strength and toughness",
+    "forming": "hot rolling, forging, and machining",
+    "coating": "nitriding, chrome plating, or other surface treatments to enhance corrosion resistance"
+  },
+  "pros": [
+    "high strength and toughness",
+    "good fatigue resistance",
+    "excellent wear resistance",
+    "moderate machinability"
+  ],
+  "cons": [
+    "relatively high density",
+    "moderate corrosion resistance",
+    "high production cost"
+  ],
+  "alternatives": [
+    {
+      "material": "4140 Chrome-Moly Steel",
+      "tradeoff": "lower carbon content, lower strength and hardness, but better machinability"
+    },
+    {
+      "material": "4130 Chrome-Moly Steel",
+      "tradeoff": "lower carbon content, lower strength and hardness, but better weldability and corrosion resistance"
+    },
+    {
+      "material": "17-4 PH Stainless Steel",
+      "tradeoff": "higher corrosion resistance, but lower strength and toughness, and higher cost"
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "AISI 4150 Alloy Steel (UNS G41500)",
+      "url": "https://www.azom.com/article.aspx?ArticleID=6770",
+      "domain": "azom.com"
+    },
+    {
+      "id": 2,
+      "title": "4150 Steel: Uses, Composition, Properties | Xometry",
+      "url": "https://www.xometry.com/resources/materials/4150-alloy-steel",
+      "domain": "xometry.com"
+    },
+    {
+      "id": 3,
+      "title": "AISI 4150 Alloy Steel Round Bar Supplier | Stanford Advanced Materials",
+      "url": "https://www.samaterials.com/exotic-metals/2187-aisi-4150-alloy-steel-round-bar.html",
+      "domain": "samaterials.com"
+    },
+    {
+      "id": 5,
+      "title": "All About 4130 Steel (Properties, Strength, and Uses)",
+      "url": "https://www.fushunspecialsteel.com/all-about-4130-steel-properties-strength-and-uses",
+      "domain": "fushunspecialsteel.com"
+    }
+  ]
+}

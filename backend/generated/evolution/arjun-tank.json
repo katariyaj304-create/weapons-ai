@@ -1,0 +1,265 @@
+{
+  "weapon": "Arjun",
+  "profile": {
+    "designer": "Combat Vehicles Research and Development Establishment (CVRDE)",
+    "origin": "India",
+    "weapon_class": "main battle tank",
+    "concept_year": "1974",
+    "service_year": "2004",
+    "span": "2004-present",
+    "units": "242",
+    "status": "In service"
+  },
+  "through_line": "The design idea of a third-generation main battle tank with a focus on indigenous development and technological advancements has survived every revision of the Arjun tank.",
+  "stages": [
+    {
+      "id": 1,
+      "stage": "CONCEPT",
+      "designation": "Arjun",
+      "year": "1974",
+      "title": "Initial Conceptualization",
+      "summary": "The Indian Ministry of Defence initiated the development of a new main battle tank to elevate its armored corps, with the Combat Vehicles Research and Development Establishment (CVRDE) leading the project. The initial plan was to develop a tank with a 105mm gun.",
+      "driver": "Need for a modern main battle tank",
+      "impact": "Marked the beginning of India's indigenous tank development program",
+      "changes": [
+        {
+          "type": "ADDED",
+          "part": "105mm gun",
+          "detail": "initial gun caliber",
+          "sources": [
+            6
+          ]
+        }
+      ],
+      "sources": [
+        5,
+        6
+      ],
+      "image": "https://static.toiimg.com/thumb/imgsize-23456,msid-97356265,width-600,resizemode-4/97356265.jpg"
+    },
+    {
+      "id": 2,
+      "stage": "PROTOTYPE",
+      "designation": "Arjun Prototype",
+      "year": "1989",
+      "title": "First Prototype Development",
+      "summary": "The first prototype of the Arjun tank was rolled out, resembling the German Leopard 2A4 tank. The prototype underwent extensive trials, highlighting major issues such as engine overheating and suboptimal performance of the weapon system.",
+      "driver": "Technical difficulties and design issues",
+      "impact": "Led to significant delays and redesigns",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "gun caliber",
+          "detail": "changed from 105mm to 120mm",
+          "sources": [
+            6
+          ]
+        },
+        {
+          "type": "ADDED",
+          "part": "Kanchan armor",
+          "detail": "indigenously developed armor",
+          "sources": [
+            4,
+            8
+          ]
+        }
+      ],
+      "sources": [
+        1,
+        8
+      ],
+      "image": "https://static.toiimg.com/thumb/msid-47868639,width-1070,height-580,imgsize-126483,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
+    },
+    {
+      "id": 3,
+      "stage": "TRIALS",
+      "designation": "Arjun Mk1",
+      "year": "1993-1996",
+      "title": "Extensive Trials and Testing",
+      "summary": "The Indian Army carried out extensive trials of the Arjun tank, identifying major shortcomings and leading to further design changes and improvements.",
+      "driver": "Need for improved performance and reliability",
+      "impact": "Resulted in significant improvements to the tank's design and capabilities",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "engine",
+          "detail": "improved engine performance",
+          "sources": [
+            8
+          ]
+        },
+        {
+          "type": "ADDED",
+          "part": "fire control system",
+          "detail": "improved fire control system",
+          "sources": [
+            5
+          ]
+        }
+      ],
+      "sources": [
+        8,
+        1
+      ],
+      "image": "https://static.toiimg.com/thumb/127681890.jpg?photoid=127681890&width=600&resizemode=4"
+    },
+    {
+      "id": 4,
+      "stage": "ADOPTION",
+      "designation": "Arjun Mk1",
+      "year": "2004",
+      "title": "Initial Operational Capability",
+      "summary": "The Arjun tank entered service with the Indian Army, marking a significant milestone in India's indigenous tank development program.",
+      "driver": "Need for a modern main battle tank",
+      "impact": "Enhanced India's armored capabilities",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "production process",
+          "detail": "initiated mass production",
+          "sources": [
+            1
+          ]
+        }
+      ],
+      "sources": [
+        1,
+        5
+      ],
+      "image": "https://static.toiimg.com/thumb/127681890.jpg?photoid=127681890&width=600&resizemode=4"
+    },
+    {
+      "id": 5,
+      "stage": "VARIANT",
+      "designation": "Arjun Mk2",
+      "year": "2005/2006",
+      "title": "Improved Variant Development",
+      "summary": "The Arjun Mk2 variant was introduced, featuring major and minor improvements to the armored vehicle's design, including a re-designed turret and improved armor.",
+      "driver": "Need for improved performance and capabilities",
+      "impact": "Enhanced the tank's combat effectiveness",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "turret design",
+          "detail": "re-designed turret",
+          "sources": [
+            8,
+            9
+          ]
+        },
+        {
+          "type": "ADDED",
+          "part": "Non-Explosive reactive armor (NERA)",
+          "detail": "improved armor protection",
+          "sources": [
+            8
+          ]
+        }
+      ],
+      "sources": [
+        8,
+        9
+      ],
+      "image": "https://filmymantra.com/wp-content/uploads/2017/08/Arjun_Mark_II.jpg"
+    },
+    {
+      "id": 6,
+      "stage": "MODERNIZATION",
+      "designation": "Arjun Mk1A",
+      "year": "2018",
+      "title": "Modernization and Upgrades",
+      "summary": "The Arjun Mk1A variant was introduced, featuring further improvements and upgrades, including a completely re-designed turret and improved armor protection.",
+      "driver": "Need for continued modernization and improvement",
+      "impact": "Enhanced the tank's capabilities and effectiveness",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "turret design",
+          "detail": "completely re-designed turret",
+          "sources": [
+            8,
+            9
+          ]
+        },
+        {
+          "type": "ADDED",
+          "part": "improved fire control system",
+          "detail": "enhanced fire control capabilities",
+          "sources": [
+            5
+          ]
+        }
+      ],
+      "sources": [
+        8,
+        9
+      ],
+      "image": "https://im.indiatimes.in/photogallery/2021/Feb/Arjun-Main-Battle-Tank-mk1a3_602cce4cd5523.jpg"
+    },
+    {
+      "id": 7,
+      "stage": "CURRENT",
+      "designation": "Arjun Mk1A",
+      "year": "present",
+      "title": "Current Status and Future Developments",
+      "summary": "The Arjun tank remains in service with the Indian Army, with ongoing efforts to improve and upgrade its capabilities. The Indian Ministry of Defence has ordered 118 Mk1A battle tanks, with a focus on continued indigenous development and technological advancements.",
+      "driver": "Need for continued modernization and improvement",
+      "impact": "Will continue to enhance India's armored capabilities",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "production process",
+          "detail": "ongoing production and upgrades",
+          "sources": [
+            5,
+            9
+          ]
+        }
+      ],
+      "sources": [
+        5,
+        9
+      ],
+      "image": "https://static.toiimg.com/thumb/127681893.jpg?photoid=127681893&width=600&resizemode=4"
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "Arjun (tank) - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Arjun_(tank)",
+      "domain": "en.wikipedia.org"
+    },
+    {
+      "id": 4,
+      "title": "Armored Failures \u2013 Part 1: Arjun | Armored Warfare - Official Website",
+      "url": "https://armoredwarfare.com/en/news/general/armored-failures-part-1-arjun",
+      "domain": "armoredwarfare.com"
+    },
+    {
+      "id": 5,
+      "title": "Arjun Main Battle Tank - Army Technology",
+      "url": "https://www.army-technology.com/projects/arjun-mbt",
+      "domain": "army-technology.com"
+    },
+    {
+      "id": 6,
+      "title": "Why DRDO Took Decades to Build India's Arjun Tank",
+      "url": "https://www.youtube.com/watch?v=y3qYxi3lCJA",
+      "domain": "youtube.com"
+    },
+    {
+      "id": 8,
+      "title": "ARJUN TANK: A Journey of India\u2019s Main Battle Tank \u00bb DefenceXP - Indian Defence Network",
+      "url": "https://www.defencexp.com/arjun-tank-a-journey-of-indias-main-battle-tank",
+      "domain": "defencexp.com"
+    },
+    {
+      "id": 9,
+      "title": "Arjun",
+      "url": "https://www.deagel.com/armies/arjun/a000323",
+      "domain": "deagel.com"
+    }
+  ]
+}

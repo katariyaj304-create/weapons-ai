@@ -1,0 +1,172 @@
+{
+  "material": "RHA Armor Steel, MIL-A-12560",
+  "overview": {
+    "family": "alloy steel",
+    "designation": "MIL-A-12560",
+    "composition": "Fe base, 0.30%C, 1.00%Mn, 1.00%Ni",
+    "military_use": "Armored vehicle and protective structure production",
+    "summary": "RHA steel is a medium-carbon alloy steel designed for military applications, providing superior resistance to penetration and deformation under high-stress conditions. It has high tensile strength, excellent toughness, and good weldability, making it an ideal choice for military and defense applications."
+  },
+  "properties": [
+    {
+      "property": "Ultimate tensile strength",
+      "value": "1250 MPa",
+      "sources": [
+        4
+      ]
+    },
+    {
+      "property": "Yield strength",
+      "value": "1000 MPa",
+      "sources": [
+        4
+      ]
+    },
+    {
+      "property": "Hardness",
+      "value": "250-410 HB",
+      "sources": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "property": "Density",
+      "value": "7.9 g/cm3 (est.)",
+      "sources": []
+    },
+    {
+      "property": "Elongation",
+      "value": "10-15%",
+      "sources": []
+    },
+    {
+      "property": "Fracture toughness",
+      "value": "50-70 MPa*m^0.5 (est.)",
+      "sources": []
+    }
+  ],
+  "ratings": [
+    {
+      "axis": "Strength",
+      "score": 90,
+      "note": "High tensile strength"
+    },
+    {
+      "axis": "Toughness",
+      "score": 80,
+      "note": "Excellent toughness"
+    },
+    {
+      "axis": "Hardness",
+      "score": 85,
+      "note": "High hardness range"
+    },
+    {
+      "axis": "Corrosion resistance",
+      "score": 40,
+      "note": "Limited corrosion resistance"
+    },
+    {
+      "axis": "Lightness",
+      "score": 20,
+      "note": "High density"
+    },
+    {
+      "axis": "Heat resistance",
+      "score": 60,
+      "note": "Good heat resistance"
+    },
+    {
+      "axis": "Machinability",
+      "score": 50,
+      "note": "Moderate machinability"
+    },
+    {
+      "axis": "Cost efficiency",
+      "score": 70,
+      "note": "Relatively affordable"
+    }
+  ],
+  "strength_analysis": {
+    "load_behaviour": "RHA steel exhibits elastic-plastic behavior under load, with a high degree of toughness and resistance to deformation",
+    "failure_modes": [
+      "Fatigue cracking at stress risers",
+      "Ductile fracture"
+    ],
+    "fatigue": "RHA steel has good fatigue resistance, but can be susceptible to fatigue cracking at stress risers",
+    "temperature": "RHA steel has good heat resistance, but can be affected by high temperatures",
+    "narrative": "RHA steel is designed to provide maximum protection for ballistic purposes, and its strength and toughness make it an ideal choice for military and defense applications. However, it can be susceptible to fatigue cracking and has limited corrosion resistance."
+  },
+  "applications": [
+    {
+      "component": "Armored vehicle hulls",
+      "examples": "Tanks, infantry fighting vehicles",
+      "why": "High ballistic protection"
+    },
+    {
+      "component": "Protective structures",
+      "examples": "Bunkers, fortifications",
+      "why": "High strength and toughness"
+    },
+    {
+      "component": "Ballistic doors",
+      "examples": "Armored vehicles, secure facilities",
+      "why": "High hardness and toughness"
+    }
+  ],
+  "processing": {
+    "heat_treatment": "Quenching and tempering to achieve desired hardness range",
+    "forming": "Rolling and forging to achieve desired shape and structure",
+    "coating": "Optional coatings for corrosion resistance or other properties"
+  },
+  "pros": [
+    "High tensile strength",
+    "Excellent toughness",
+    "Good weldability",
+    "Relatively affordable"
+  ],
+  "cons": [
+    "Limited corrosion resistance",
+    "High density",
+    "Susceptible to fatigue cracking"
+  ],
+  "alternatives": [
+    {
+      "material": "High Hardness Armor (HHA) steel",
+      "tradeoff": "Higher hardness, but more expensive and less weldable"
+    },
+    {
+      "material": "Composite armor",
+      "tradeoff": "Lighter and more corrosion-resistant, but more expensive and complex to manufacture"
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "Rolled homogeneous armour - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Rolled_homogeneous_armour",
+      "domain": "en.wikipedia.org"
+    },
+    {
+      "id": 2,
+      "title": "The Mechanical Metallurgy of Armour Steels - DTIC",
+      "url": "https://apps.dtic.mil/sti/pdfs/AD1027340.pdf",
+      "domain": "apps.dtic.mil"
+    },
+    {
+      "id": 3,
+      "title": "The Mechanical Metallurgy of Armour Steels",
+      "url": "https://www.dst.defence.gov.au/sites/default/files/publications/documents/DST-Group-TR-3305_0.pdf",
+      "domain": "dst.defence.gov.au"
+    },
+    {
+      "id": 4,
+      "title": "Armor Plated Steel: MIL DTL 12560K and DEF STAN 95-24",
+      "url": "https://www.azom.com/article.aspx?ArticleID=14297",
+      "domain": "azom.com"
+    }
+  ]
+}

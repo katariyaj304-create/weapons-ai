@@ -1,0 +1,20 @@
+node_modules/
+# dist/ included for 1-turn Render deploy
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+*.log
+video/
+*.zip
+extracted_zip*/
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/generated/models/*
+backend/generated/images/*
+frontend/public/models/**/source/
+scripts/_spec_tmp/
+

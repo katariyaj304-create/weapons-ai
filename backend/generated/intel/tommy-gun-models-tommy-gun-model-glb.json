@@ -1,0 +1,334 @@
+{
+ "name": "Tommy Gun",
+ "url": "/models/tommy-gun/model.glb",
+ "designation": "Thompson M1928A1.45 ACP submachine gun",
+ "platform": "firearm",
+ "axis_orientation": "muzzle at +1, rear at -1",
+ "operating_principle": "The Thompson M1928A1 submachine gun operates on the blowback principle, where the breech is not locked and the cartridge is fired by the recoil of the bolt. The Blish lock, a friction-based locking system, helps to delay the opening of the breech.",
+ "identified": 11,
+ "part_count": 11,
+ "components": [
+  {
+   "part_name": "Barrel group",
+   "description": "The barrel group consists of the barrel and the compensator.",
+   "material_dependency": "Steel",
+   "risk_score": 80,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Bolt and bolt carrier group",
+   "description": "The bolt and bolt carrier group includes the bolt, bolt carrier, and associated components.",
+   "material_dependency": "Steel",
+   "risk_score": 90,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Receiver and dust cover",
+   "description": "The receiver and dust cover house the bolt and bolt carrier group, and provide a mounting point for the barrel and other components.",
+   "material_dependency": "Steel",
+   "risk_score": 95,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Fire control group",
+   "description": "The fire control group includes the trigger, sear, and other components that control the firing of the weapon.",
+   "material_dependency": "Steel",
+   "risk_score": 85,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Feed system",
+   "description": "The feed system includes the magazine and magazine catch, and is responsible for feeding cartridges into the weapon.",
+   "material_dependency": "Steel",
+   "risk_score": 70,
+   "risk_tier": "STABLE"
+  },
+  {
+   "part_name": "Furniture",
+   "description": "The furniture includes the stock, grip, and other components that provide a comfortable and stable platform for the shooter.",
+   "material_dependency": "Wood/Steel",
+   "risk_score": 60,
+   "risk_tier": "STABLE"
+  },
+  {
+   "part_name": "Sights",
+   "description": "The sights include the rear sight and other components that provide aiming references for the shooter.",
+   "material_dependency": "Steel",
+   "risk_score": 50,
+   "risk_tier": "STABLE"
+  },
+  {
+   "part_name": "Recoil/return spring assembly",
+   "description": "The recoil/return spring assembly includes the recoil spring and other components that help to return the bolt to its forward position after firing.",
+   "material_dependency": "Steel",
+   "risk_score": 75,
+   "risk_tier": "ELEVATED"
+  }
+ ],
+ "intel": {
+  "part_0": {
+   "part_name": "Buttstock",
+   "assembly": "Furniture",
+   "description": "Provides a comfortable and stable platform for the shooter",
+   "material_dependency": "Wood",
+   "risk_tier": "STABLE",
+   "risk_score": 40,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "rear-end, just below the centreline, offset to the left, long and thin",
+   "mesh_name": "Section 10"
+  },
+  "Section 10": {
+   "part_name": "Buttstock",
+   "assembly": "Furniture",
+   "description": "Provides a comfortable and stable platform for the shooter",
+   "material_dependency": "Wood",
+   "risk_tier": "STABLE",
+   "risk_score": 40,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "rear-end, just below the centreline, offset to the left, long and thin",
+   "mesh_name": "Section 10"
+  },
+  "part_1": {
+   "part_name": "Rear sight",
+   "assembly": "Sights",
+   "description": "Provides an aiming reference for the shooter",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 2,
+   "confidence": "high",
+   "geometry_cue": "rear-end, on the TOPLINE (upper surface), offset to the left, small fitting",
+   "mesh_name": "Section 3"
+  },
+  "Section 3": {
+   "part_name": "Rear sight",
+   "assembly": "Sights",
+   "description": "Provides an aiming reference for the shooter",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 2,
+   "confidence": "high",
+   "geometry_cue": "rear-end, on the TOPLINE (upper surface), offset to the left, small fitting",
+   "mesh_name": "Section 3"
+  },
+  "part_2": {
+   "part_name": "Bolt handle",
+   "assembly": "Bolt and bolt carrier group",
+   "description": "Provides a means of charging the weapon",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 70,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, on the TOPLINE (upper surface), offset to the left, long and thin",
+   "mesh_name": "Section 2"
+  },
+  "Section 2": {
+   "part_name": "Bolt handle",
+   "assembly": "Bolt and bolt carrier group",
+   "description": "Provides a means of charging the weapon",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 70,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, on the TOPLINE (upper surface), offset to the left, long and thin",
+   "mesh_name": "Section 2"
+  },
+  "part_3": {
+   "part_name": "Ejector",
+   "assembly": "Bolt and bolt carrier group",
+   "description": "Ejects spent cartridges from the weapon",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 65,
+   "disassembly_order": 4,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, on the TOPLINE (upper surface), offset to the left, small fitting",
+   "mesh_name": "Section 9"
+  },
+  "Section 9": {
+   "part_name": "Ejector",
+   "assembly": "Bolt and bolt carrier group",
+   "description": "Ejects spent cartridges from the weapon",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 65,
+   "disassembly_order": 4,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, on the TOPLINE (upper surface), offset to the left, small fitting",
+   "mesh_name": "Section 9"
+  },
+  "part_4": {
+   "part_name": "Magazine catch",
+   "assembly": "Feed system",
+   "description": "Secures the magazine in place",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 45,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, just below the centreline, offset to the left, small fitting",
+   "mesh_name": "Section 6"
+  },
+  "Section 6": {
+   "part_name": "Magazine catch",
+   "assembly": "Feed system",
+   "description": "Secures the magazine in place",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 45,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, just below the centreline, offset to the left, small fitting",
+   "mesh_name": "Section 6"
+  },
+  "part_5": {
+   "part_name": "Dust cover",
+   "assembly": "Receiver and dust cover",
+   "description": "Covers the bolt and bolt carrier group",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "centre, on the TOPLINE (upper surface), offset to the left, small fitting",
+   "mesh_name": "Section 5"
+  },
+  "Section 5": {
+   "part_name": "Dust cover",
+   "assembly": "Receiver and dust cover",
+   "description": "Covers the bolt and bolt carrier group",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "centre, on the TOPLINE (upper surface), offset to the left, small fitting",
+   "mesh_name": "Section 5"
+  },
+  "part_6": {
+   "part_name": "Receiver",
+   "assembly": "Receiver and dust cover",
+   "description": "Houses the bolt and bolt carrier group, and provides a mounting point for the barrel and other components",
+   "material_dependency": "Steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 95,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "centre, on the centreline, offset to the left, bulky, LARGEST VOLUME \u2014 the main structural body, LONGEST part",
+   "mesh_name": "Section 1"
+  },
+  "Section 1": {
+   "part_name": "Receiver",
+   "assembly": "Receiver and dust cover",
+   "description": "Houses the bolt and bolt carrier group, and provides a mounting point for the barrel and other components",
+   "material_dependency": "Steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 95,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "centre, on the centreline, offset to the left, bulky, LARGEST VOLUME \u2014 the main structural body, LONGEST part",
+   "mesh_name": "Section 1"
+  },
+  "part_7": {
+   "part_name": "Magazine",
+   "assembly": "Feed system",
+   "description": "Feeds cartridges into the weapon",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 50,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), offset to the right, small fitting, LOWEST part",
+   "mesh_name": "Section 11"
+  },
+  "Section 11": {
+   "part_name": "Magazine",
+   "assembly": "Feed system",
+   "description": "Feeds cartridges into the weapon",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 50,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), offset to the right, small fitting, LOWEST part",
+   "mesh_name": "Section 11"
+  },
+  "part_8": {
+   "part_name": "Pawl",
+   "assembly": "Fire control group",
+   "description": "Engages the sear to prevent accidental discharge",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 75,
+   "disassembly_order": 9,
+   "confidence": "medium",
+   "geometry_cue": "centre, just below the centreline, offset to the left",
+   "mesh_name": "Section 8"
+  },
+  "Section 8": {
+   "part_name": "Pawl",
+   "assembly": "Fire control group",
+   "description": "Engages the sear to prevent accidental discharge",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 75,
+   "disassembly_order": 9,
+   "confidence": "medium",
+   "geometry_cue": "centre, just below the centreline, offset to the left",
+   "mesh_name": "Section 8"
+  },
+  "part_9": {
+   "part_name": "Firing pin",
+   "assembly": "Bolt and bolt carrier group",
+   "description": "Strikes the primer to ignite the cartridge",
+   "material_dependency": "Steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 10,
+   "confidence": "high",
+   "geometry_cue": "forward-of-centre, just below the centreline, offset to the left, small fitting",
+   "mesh_name": "Section 7"
+  },
+  "Section 7": {
+   "part_name": "Firing pin",
+   "assembly": "Bolt and bolt carrier group",
+   "description": "Strikes the primer to ignite the cartridge",
+   "material_dependency": "Steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 10,
+   "confidence": "high",
+   "geometry_cue": "forward-of-centre, just below the centreline, offset to the left, small fitting",
+   "mesh_name": "Section 7"
+  },
+  "part_10": {
+   "part_name": "Barrel",
+   "assembly": "Barrel group",
+   "description": "Contains the cartridge and directs the projectile",
+   "material_dependency": "Steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 98,
+   "disassembly_order": 11,
+   "confidence": "high",
+   "geometry_cue": "front-end, on the TOPLINE (upper surface), offset to the left, long and thin, FRONT-MOST part",
+   "mesh_name": "Section 4"
+  },
+  "Section 4": {
+   "part_name": "Barrel",
+   "assembly": "Barrel group",
+   "description": "Contains the cartridge and directs the projectile",
+   "material_dependency": "Steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 98,
+   "disassembly_order": 11,
+   "confidence": "high",
+   "geometry_cue": "front-end, on the TOPLINE (upper surface), offset to the left, long and thin, FRONT-MOST part",
+   "mesh_name": "Section 4"
+  }
+ }
+}

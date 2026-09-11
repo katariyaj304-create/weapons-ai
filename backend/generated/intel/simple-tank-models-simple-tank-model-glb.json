@@ -1,0 +1,310 @@
+{
+ "name": "Simple Tank",
+ "url": "/models/simple-tank/model.glb",
+ "designation": "Main Battle Tank",
+ "platform": "tank",
+ "axis_orientation": "Rear-to-front, with the muzzle at the front (+1) and the engine deck at the rear (-1)",
+ "operating_principle": "The main battle tank operates by using its powerful engine and transmission to propel the vehicle, while the turret and gun system provide firepower and maneuverability. The tank's armor and running gear work together to protect the crew and maintain mobility in various environments.",
+ "identified": 10,
+ "part_count": 10,
+ "components": [
+  {
+   "part_name": "Hull",
+   "description": "The main structural body of the tank, housing the engine, crew, and ammunition.",
+   "material_dependency": "Steel",
+   "risk_score": 90,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Turret",
+   "description": "The rotating structure that houses the gun and turret crew.",
+   "material_dependency": "Steel",
+   "risk_score": 80,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Gun",
+   "description": "The main armament of the tank, capable of firing anti-armor and anti-personnel rounds.",
+   "material_dependency": "Steel",
+   "risk_score": 95,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Running Gear",
+   "description": "The system of wheels, tracks, and suspension that allows the tank to move.",
+   "material_dependency": "Steel",
+   "risk_score": 70,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Powerpack",
+   "description": "The combination of the engine and transmission that powers the tank.",
+   "material_dependency": "Steel",
+   "risk_score": 85,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Fire-Control System",
+   "description": "The system that stabilizes and aims the gun, allowing for accurate firing on the move.",
+   "material_dependency": "Electronics",
+   "risk_score": 92,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Armor",
+   "description": "The protective plating that covers the tank, including composite armor and reactive armor.",
+   "material_dependency": "Composite materials",
+   "risk_score": 88,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Commander's Cupola",
+   "description": "The raised structure that provides the commander with a view of the surroundings.",
+   "material_dependency": "Steel",
+   "risk_score": 60,
+   "risk_tier": "STABLE"
+  }
+ ],
+ "intel": {
+  "part_0": {
+   "part_name": "Engine Deck",
+   "assembly": "Hull",
+   "description": "Houses the engine and transmission",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 75,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, just below the centreline, on the centreline plane, bulky, *** REAR-MOST part ***",
+   "mesh_name": "C1 3"
+  },
+  "C1 3": {
+   "part_name": "Engine Deck",
+   "assembly": "Hull",
+   "description": "Houses the engine and transmission",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 75,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, just below the centreline, on the centreline plane, bulky, *** REAR-MOST part ***",
+   "mesh_name": "C1 3"
+  },
+  "part_1": {
+   "part_name": "Rear Ventilation Grille",
+   "assembly": "Hull",
+   "description": "Provides ventilation for the engine compartment",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 40,
+   "disassembly_order": 2,
+   "confidence": "medium",
+   "geometry_cue": "rear-of-centre, on the TOPLINE (upper surface), offset to the right, small fitting",
+   "mesh_name": "C1 2"
+  },
+  "C1 2": {
+   "part_name": "Rear Ventilation Grille",
+   "assembly": "Hull",
+   "description": "Provides ventilation for the engine compartment",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 40,
+   "disassembly_order": 2,
+   "confidence": "medium",
+   "geometry_cue": "rear-of-centre, on the TOPLINE (upper surface), offset to the right, small fitting",
+   "mesh_name": "C1 2"
+  },
+  "part_2": {
+   "part_name": "Transmission Housing",
+   "assembly": "Powerpack",
+   "description": "Houses the transmission and connects to the engine",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 80,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, on the centreline, on the centreline plane, bulky",
+   "mesh_name": "C1 9"
+  },
+  "C1 9": {
+   "part_name": "Transmission Housing",
+   "assembly": "Powerpack",
+   "description": "Houses the transmission and connects to the engine",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 80,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, on the centreline, on the centreline plane, bulky",
+   "mesh_name": "C1 9"
+  },
+  "part_3": {
+   "part_name": "Road Wheel",
+   "assembly": "Running Gear",
+   "description": "Supports the tank's weight and facilitates movement",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 65,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), on the centreline plane, bulky",
+   "mesh_name": "C1 6"
+  },
+  "C1 6": {
+   "part_name": "Road Wheel",
+   "assembly": "Running Gear",
+   "description": "Supports the tank's weight and facilitates movement",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 65,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), on the centreline plane, bulky",
+   "mesh_name": "C1 6"
+  },
+  "part_4": {
+   "part_name": "Idler Wheel",
+   "assembly": "Running Gear",
+   "description": "Guides the track and maintains tension",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 4,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), on the centreline plane, bulky",
+   "mesh_name": "C1 7"
+  },
+  "C1 7": {
+   "part_name": "Idler Wheel",
+   "assembly": "Running Gear",
+   "description": "Guides the track and maintains tension",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 4,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), on the centreline plane, bulky",
+   "mesh_name": "C1 7"
+  },
+  "part_5": {
+   "part_name": "Belly Plate",
+   "assembly": "Hull",
+   "description": "Protects the underside of the tank",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 50,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), on the centreline plane, bulky, *** LOWEST part ***",
+   "mesh_name": "C1 8"
+  },
+  "C1 8": {
+   "part_name": "Belly Plate",
+   "assembly": "Hull",
+   "description": "Protects the underside of the tank",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 50,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), on the centreline plane, bulky, *** LOWEST part ***",
+   "mesh_name": "C1 8"
+  },
+  "part_6": {
+   "part_name": "Torsion Bar",
+   "assembly": "Running Gear",
+   "description": "Provides suspension and supports the road wheels",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 70,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), on the centreline plane, bulky",
+   "mesh_name": "C1 4"
+  },
+  "C1 4": {
+   "part_name": "Torsion Bar",
+   "assembly": "Running Gear",
+   "description": "Provides suspension and supports the road wheels",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 70,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), on the centreline plane, bulky",
+   "mesh_name": "C1 4"
+  },
+  "part_7": {
+   "part_name": "Hull",
+   "assembly": "Hull",
+   "description": "Provides the main structure and protection for the crew",
+   "material_dependency": "Steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 95,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "centre, just below the centreline, on the centreline plane, bulky, *** LARGEST VOLUME \u2014 the main structural body ***, *** LONGEST part ***",
+   "mesh_name": "C1 5"
+  },
+  "C1 5": {
+   "part_name": "Hull",
+   "assembly": "Hull",
+   "description": "Provides the main structure and protection for the crew",
+   "material_dependency": "Steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 95,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "centre, just below the centreline, on the centreline plane, bulky, *** LARGEST VOLUME \u2014 the main structural body ***, *** LONGEST part ***",
+   "mesh_name": "C1 5"
+  },
+  "part_8": {
+   "part_name": "Ammunition Stowage",
+   "assembly": "Hull",
+   "description": "Stores the tank's ammunition",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 75,
+   "disassembly_order": 9,
+   "confidence": "medium",
+   "geometry_cue": "centre, just below the centreline, on the centreline plane, bulky",
+   "mesh_name": "C1 1"
+  },
+  "C1 1": {
+   "part_name": "Ammunition Stowage",
+   "assembly": "Hull",
+   "description": "Stores the tank's ammunition",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 75,
+   "disassembly_order": 9,
+   "confidence": "medium",
+   "geometry_cue": "centre, just below the centreline, on the centreline plane, bulky",
+   "mesh_name": "C1 1"
+  },
+  "part_9": {
+   "part_name": "Main Gun Barrel",
+   "assembly": "Gun",
+   "description": "Fires anti-armor and anti-personnel rounds",
+   "material_dependency": "Steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 98,
+   "disassembly_order": 10,
+   "confidence": "high",
+   "geometry_cue": "front-end, on the centreline, on the centreline plane, long and thin, *** FRONT-MOST part ***",
+   "mesh_name": "C1"
+  },
+  "C1": {
+   "part_name": "Main Gun Barrel",
+   "assembly": "Gun",
+   "description": "Fires anti-armor and anti-personnel rounds",
+   "material_dependency": "Steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 98,
+   "disassembly_order": 10,
+   "confidence": "high",
+   "geometry_cue": "front-end, on the centreline, on the centreline plane, long and thin, *** FRONT-MOST part ***",
+   "mesh_name": "C1"
+  }
+ }
+}

@@ -1,0 +1,71 @@
+TripoSR on Kaggle GPU — paste these THREE blocks into THREE separate code cells.
+Do NOT paste this whole file into one cell. Do NOT paste any {, "cell_type", or null text.
+
+New Kaggle Notebook -> Settings: Accelerator = GPU T4 x2, Internet = On -> paste cells -> Run All.
+When the last cell prints  Running on public URL: https://xxxx.gradio.live  copy that URL.
+
+=====================================================================
+CELL 1  (install — takes ~3-5 min)
+=====================================================================
+import os
+if not os.path.exists('TripoSR'):
+    !git clone -q https://github.com/VAST-AI-Research/TripoSR.git
+%cd TripoSR
+!pip install -q -r requirements.txt
+!pip install -q git+https://github.com/tatsy/torchmcubes.git
+!pip install -q gradio==4.44.0 rembg onnxruntime trimesh
+print('Dependencies installed.')
+
+=====================================================================
+CELL 2  (load the model onto the GPU)
+=====================================================================
+import torch, numpy as np, rembg
+from PIL import Image
+from tsr.system import TSR
+from tsr.utils import remove_background, resize_foreground
+
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+print('Device:', device)
+
+model = TSR.from_pretrained(
+    'stabilityai/TripoSR',
+    config_name='config.yaml',
+    weight_name='model.ckpt',
+)
+model.renderer.set_chunk_size(8192)
+model.to(device)
+rembg_session = rembg.new_session()
+print('Model ready.')
+
+=====================================================================
+CELL 3  (launch the public endpoint)
+=====================================================================
+import gradio as gr, tempfile
+
+def generate_3d(image_path, mc_resolution=256, do_remove_background=True, foreground_ratio=0.85):
+    image = Image.open(image_path)
+    if do_remove_background:
+        image = remove_background(image, rembg_session)
+        image = resize_foreground(image, foreground_ratio)
+        arr = np.array(image).astype(np.float32) / 255.0
+        arr = arr[:, :, :3] * arr[:, :, 3:4] + (1 - arr[:, :, 3:4]) * 0.5
+        image = Image.fromarray((arr * 255.0).astype(np.uint8))
+    else:
+        image = image.convert('RGB')
+    with torch.no_grad():
+        scene_codes = model([image], device=device)
+    mesh = model.extract_mesh(scene_codes, True, resolution=int(mc_resolution))[0]
+    out_path = tempfile.mktemp(suffix='.glb')
+    mesh.export(out_path)
+    return out_path
+
+with gr.Blocks(title='TripoSR GPU') as demo:
+    gr.Markdown('### TripoSR image-to-3D — Ivory Command backend')
+    with gr.Row():
+        inp = gr.Image(type='filepath', label='Input image')
+        out = gr.Model3D(label='Output GLB')
+    res = gr.Slider(64, 320, value=256, step=32, label='MC resolution')
+    btn = gr.Button('Generate 3D', variant='primary')
+    btn.click(generate_3d, inputs=[inp, res], outputs=out, api_name='generate_3d')
+
+demo.queue(max_size=8).launch(share=True)

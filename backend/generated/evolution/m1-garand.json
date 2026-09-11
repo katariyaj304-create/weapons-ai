@@ -1,0 +1,232 @@
+{
+  "weapon": "M1 Garand",
+  "profile": {
+    "designer": "John C. Garand",
+    "origin": "United States",
+    "weapon_class": "gas-operated semi-automatic rifle",
+    "concept_year": "1919",
+    "service_year": "1936",
+    "span": "1936-1957",
+    "units": "5,468,772",
+    "status": "Out of service, replaced by M14"
+  },
+  "through_line": "The M1 Garand's design idea of a gas-operated, semi-automatic rifle with a rotating bolt and en-bloc clip feeding system survived every revision.",
+  "stages": [
+    {
+      "id": 1,
+      "stage": "CONCEPT",
+      "designation": "Model 1919",
+      "year": "1919",
+      "title": "Initial Design",
+      "summary": "John Garand developed the first prototype of the M1 Garand, utilizing a primer-actuated system. The design was mechanically efficient, with parts organized into compact, self-contained units.",
+      "driver": "Need for a semi-automatic rifle",
+      "impact": "Led to further development and refinement of the design",
+      "changes": [
+        {
+          "type": "ADDED",
+          "part": "primer-actuated system",
+          "detail": "allowed for semi-automatic operation",
+          "sources": [
+            3
+          ]
+        }
+      ],
+      "sources": [
+        3,
+        4
+      ],
+      "image": "https://ids.si.edu/ids/deliveryService?id=NMAH-2004-25307-02"
+    },
+    {
+      "id": 2,
+      "stage": "PROTOTYPE",
+      "designation": "M1924",
+      "year": "1924",
+      "title": "Refined Prototype",
+      "summary": "Garand refined his design, creating the M1924 prototype, which was sent to U.S. infantry and cavalry units for field trials. The M1924 used a primer-actuated blowback system.",
+      "driver": "Need for a more reliable and efficient design",
+      "impact": "Led to the development of the T1E1 prototype",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "operating system",
+          "detail": "from primer-actuated to gas-operated",
+          "sources": [
+            5
+          ]
+        }
+      ],
+      "sources": [
+        3,
+        5
+      ],
+      "image": "https://media.iwm.org.uk/ciim5/247/376/large_000000.jpg"
+    },
+    {
+      "id": 3,
+      "stage": "TRIALS",
+      "designation": "T1E1",
+      "year": "1931",
+      "title": "Gas-Operated Prototype",
+      "summary": "The T1E1 prototype was developed, featuring a gas-operated system. The T1E1 was manufactured at Springfield Armory and underwent testing.",
+      "driver": "Need for a more reliable and efficient design",
+      "impact": "Led to the adoption of the M1 Garand",
+      "changes": [
+        {
+          "type": "ADDED",
+          "part": "gas cylinder",
+          "detail": "allowed for gas operation",
+          "sources": [
+            6
+          ]
+        }
+      ],
+      "sources": [
+        5,
+        6
+      ],
+      "image": "https://thenorthlines.com/wp-content/uploads/2025/09/iphone.png"
+    },
+    {
+      "id": 4,
+      "stage": "ADOPTION",
+      "designation": "M1 Garand",
+      "year": "1936",
+      "title": "Standard-Issue Rifle",
+      "summary": "The M1 Garand was adopted as the standard-issue rifle for the U.S. military, replacing the M1903 Springfield. The M1 Garand used a gas-operated, closed rotating bolt system.",
+      "driver": "Need for a semi-automatic rifle for military use",
+      "impact": " Became the primary rifle for the U.S. military during World War II and the Korean War",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "muzzle extension",
+          "detail": "from a gas trap to a drilled gas port",
+          "sources": [
+            1
+          ]
+        }
+      ],
+      "sources": [
+        1,
+        2
+      ],
+      "image": "https://cdn.britannica.com/74/143874-050-BFB34A89/Garand-rifle-1945.jpg"
+    },
+    {
+      "id": 5,
+      "stage": "VARIANT",
+      "designation": "M1C",
+      "year": "1944",
+      "title": "Sniper Variant",
+      "summary": "The M1C sniper variant was developed, featuring a scope mount attached to the receiver. However, the procedure for installing the mounts reduced accuracy.",
+      "driver": "Need for a sniper variant",
+      "impact": "Led to the development of the M1D variant",
+      "changes": [
+        {
+          "type": "ADDED",
+          "part": "scope mount",
+          "detail": "attached to the receiver",
+          "sources": [
+            2
+          ]
+        }
+      ],
+      "sources": [
+        2
+      ],
+      "image": "https://westland.nl/uploads/products/DSC_0438.JPG"
+    },
+    {
+      "id": 6,
+      "stage": "MODERNIZATION",
+      "designation": "M1D",
+      "year": "1944",
+      "title": "Improved Sniper Variant",
+      "summary": "The M1D variant was developed, featuring a mount attached to the barrel instead of the receiver, improving accuracy.",
+      "driver": "Need for a more accurate sniper variant",
+      "impact": " Became the standard sniper rifle for the U.S. military",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "scope mount",
+          "detail": "from receiver to barrel",
+          "sources": [
+            2
+          ]
+        }
+      ],
+      "sources": [
+        2
+      ],
+      "image": "https://images.gunsinternational.com/listings_sub/acc_98192/gi_101651425/1944-Springfield-M1D-Sniper-Rifle_101651425_98192_CF2FFE586578C0E7.jpeg"
+    },
+    {
+      "id": 7,
+      "stage": "CURRENT",
+      "designation": "M1 Garand",
+      "year": "1957",
+      "title": "Final Form",
+      "summary": "The M1 Garand was replaced by the M14 rifle, marking the end of its service life. However, the M1 Garand remains popular among collectors and civilian shooters.",
+      "driver": "Need for a more modern and selective-fire rifle",
+      "impact": "Led to the development of new rifles, such as the M14 and M16",
+      "changes": [
+        {
+          "type": "REMOVED",
+          "part": "from military service",
+          "detail": "replaced by the M14",
+          "sources": [
+            10
+          ]
+        }
+      ],
+      "sources": [
+        10
+      ],
+      "image": "https://media.defense.gov/2025/Jul/03/2003748447/-1/-1/0/250703-M-BD822-1011.JPG"
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "M1 Garand",
+      "url": "https://en.wikipedia.org/wiki/M1_Garand",
+      "domain": "en.wikipedia.org"
+    },
+    {
+      "id": 2,
+      "title": "The M1 Garand: A Piece of History",
+      "url": "https://www.dvidshub.net/news/287277/m1-garand-piece-history",
+      "domain": "dvidshub.net"
+    },
+    {
+      "id": 3,
+      "title": "Garand Model 1924: Before the M1 Garand | Rock Island Auction",
+      "url": "https://www.rockislandauction.com/riac-blog/garand-model-1924-before-m1-garand",
+      "domain": "rockislandauction.com"
+    },
+    {
+      "id": 4,
+      "title": "John Garand - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/John_Garand",
+      "domain": "en.wikipedia.org"
+    },
+    {
+      "id": 5,
+      "title": "The History of the M1 - Dupage Trading Company",
+      "url": "https://dupagetrading.com/blog/the-history-of-the-m1-",
+      "domain": "dupagetrading.com"
+    },
+    {
+      "id": 6,
+      "title": "PERSEVERANCE PAYS OFF - USAASC",
+      "url": "https://asc.army.mil/web/news-perseverance-pays-off",
+      "domain": "asc.army.mil"
+    },
+    {
+      "id": 10,
+      "title": "Introducing the M1 Garand by CMP: A New Chapter Begins!",
+      "url": "https://thecmp.org/introducing-the-m1-garand-by-cmp-a-new-chapter-begins",
+      "domain": "thecmp.org"
+    }
+  ]
+}

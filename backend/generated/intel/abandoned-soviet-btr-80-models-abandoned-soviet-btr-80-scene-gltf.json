@@ -1,0 +1,214 @@
+{
+ "name": "Abandoned Soviet Btr   80",
+ "url": "/models/abandoned_soviet_btr_-_80/scene.gltf",
+ "designation": "BTR-80",
+ "platform": "armored_vehicle",
+ "axis_orientation": "front-end is the muzzle/nose/bow, rear-end is the troop ramp/engine",
+ "operating_principle": "The BTR-80 is an 8x8 wheeled amphibious armoured personnel carrier that uses its diesel engine to propel itself on land and water, providing protection and transportation for its crew and passengers.",
+ "identified": 6,
+ "part_count": 6,
+ "components": [
+  {
+   "part_name": "Hull",
+   "description": "The main structural body of the vehicle, providing protection and support for the crew and passengers.",
+   "material_dependency": "high-hardness steel",
+   "risk_score": 80,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Turret",
+   "description": "The rotating structure that houses the main armament, providing protection and firepower for the crew.",
+   "material_dependency": "high-hardness steel",
+   "risk_score": 90,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Drivetrain",
+   "description": "The system that transmits power from the engine to the wheels, enabling the vehicle to move.",
+   "material_dependency": "steel alloy",
+   "risk_score": 70,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Wheel stations",
+   "description": "The components that make up the vehicle's wheeled suspension system, providing mobility and stability.",
+   "material_dependency": "steel alloy",
+   "risk_score": 50,
+   "risk_tier": "STABLE"
+  },
+  {
+   "part_name": "Suspension",
+   "description": "The system that connects the wheels to the hull, providing a smooth ride and stability.",
+   "material_dependency": "steel alloy",
+   "risk_score": 60,
+   "risk_tier": "STABLE"
+  },
+  {
+   "part_name": "Troop compartment",
+   "description": "The area that houses the passengers, providing protection and comfort.",
+   "material_dependency": "high-hardness steel",
+   "risk_score": 80,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Powerpack",
+   "description": "The system that generates power for the vehicle, including the engine and transmission.",
+   "material_dependency": "steel alloy",
+   "risk_score": 85,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Vision blocks/optics",
+   "description": "The components that provide visibility and situational awareness for the crew.",
+   "material_dependency": "glass or polycarbonate",
+   "risk_score": 40,
+   "risk_tier": "STABLE"
+  }
+ ],
+ "intel": {
+  "part_0": {
+   "part_name": "Rear wheel station",
+   "assembly": "Wheel stations",
+   "description": "provides mobility and stability",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 50,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), on the centreline plane, bulky, REAR-MOST part, LOWEST part",
+   "mesh_name": "Wheels"
+  },
+  "Wheels": {
+   "part_name": "Rear wheel station",
+   "assembly": "Wheel stations",
+   "description": "provides mobility and stability",
+   "material_dependency": "steel alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 50,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), on the centreline plane, bulky, REAR-MOST part, LOWEST part",
+   "mesh_name": "Wheels"
+  },
+  "part_1": {
+   "part_name": "Hull",
+   "assembly": "Hull",
+   "description": "provides protection and support for the crew and passengers",
+   "material_dependency": "high-hardness steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 80,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "centre, on the centreline, on the centreline plane, bulky, LARGEST VOLUME \u2014 the main structural body, LONGEST part",
+   "mesh_name": "MainFrame Details 0"
+  },
+  "MainFrame Details 0": {
+   "part_name": "Hull",
+   "assembly": "Hull",
+   "description": "provides protection and support for the crew and passengers",
+   "material_dependency": "high-hardness steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 80,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "centre, on the centreline, on the centreline plane, bulky, LARGEST VOLUME \u2014 the main structural body, LONGEST part",
+   "mesh_name": "MainFrame Details 0"
+  },
+  "part_2": {
+   "part_name": "Belly plate",
+   "assembly": "Hull",
+   "description": "provides protection from underside threats",
+   "material_dependency": "high-hardness steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 70,
+   "disassembly_order": 3,
+   "confidence": "medium",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), on the centreline plane, bulky",
+   "mesh_name": "MainFrame MetalBase 0"
+  },
+  "MainFrame MetalBase 0": {
+   "part_name": "Belly plate",
+   "assembly": "Hull",
+   "description": "provides protection from underside threats",
+   "material_dependency": "high-hardness steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 70,
+   "disassembly_order": 3,
+   "confidence": "medium",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), on the centreline plane, bulky",
+   "mesh_name": "MainFrame MetalBase 0"
+  },
+  "part_3": {
+   "part_name": "Floor plate",
+   "assembly": "Hull",
+   "description": "provides a platform for the crew and passengers",
+   "material_dependency": "high-hardness steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 4,
+   "confidence": "medium",
+   "geometry_cue": "centre, just below the centreline, on the centreline plane, bulky",
+   "mesh_name": "MainFrame Lights 0"
+  },
+  "MainFrame Lights 0": {
+   "part_name": "Floor plate",
+   "assembly": "Hull",
+   "description": "provides a platform for the crew and passengers",
+   "material_dependency": "high-hardness steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 4,
+   "confidence": "medium",
+   "geometry_cue": "centre, just below the centreline, on the centreline plane, bulky",
+   "mesh_name": "MainFrame Lights 0"
+  },
+  "part_4": {
+   "part_name": "Turret base",
+   "assembly": "Turret",
+   "description": "provides a rotating structure for the main armament",
+   "material_dependency": "high-hardness steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "forward-of-centre, on the centreline, on the centreline plane, long and thin",
+   "mesh_name": "Turret MetalBase 0"
+  },
+  "Turret MetalBase 0": {
+   "part_name": "Turret base",
+   "assembly": "Turret",
+   "description": "provides a rotating structure for the main armament",
+   "material_dependency": "high-hardness steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "forward-of-centre, on the centreline, on the centreline plane, long and thin",
+   "mesh_name": "Turret MetalBase 0"
+  },
+  "part_5": {
+   "part_name": "Turret",
+   "assembly": "Turret",
+   "description": "houses the main armament and provides protection for the crew",
+   "material_dependency": "high-hardness steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 95,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "forward-of-centre, on the centreline, offset to the right, long and thin, FRONT-MOST part",
+   "mesh_name": "Turret Details 0"
+  },
+  "Turret Details 0": {
+   "part_name": "Turret",
+   "assembly": "Turret",
+   "description": "houses the main armament and provides protection for the crew",
+   "material_dependency": "high-hardness steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 95,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "forward-of-centre, on the centreline, offset to the right, long and thin, FRONT-MOST part",
+   "mesh_name": "Turret Details 0"
+  }
+ }
+}

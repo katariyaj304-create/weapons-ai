@@ -1,0 +1,358 @@
+{
+ "name": "Jet Fighter",
+ "url": "/models/jet-fighter/model.glb",
+ "designation": "Supersonic Multirole Jet Fighter Aircraft",
+ "platform": "aircraft",
+ "axis_orientation": "nose at +1, tail at -1",
+ "operating_principle": "The aircraft uses a combination of advanced propulsion systems, including variable intake nozzles and thrust vectoring, to achieve supersonic speeds and high maneuverability. The empennage and fuselage are designed to reduce drag and provide stability during flight.",
+ "identified": 12,
+ "part_count": 12,
+ "components": [
+  {
+   "part_name": "Fuselage",
+   "description": "The main structural body of the aircraft, providing a streamlined shape for reduced drag.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_score": 80,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Empennage",
+   "description": "The tail section of the aircraft, consisting of the horizontal and vertical stabilizers, which provide stability and control during flight.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_score": 70,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Wing",
+   "description": "The lifting surface of the aircraft, providing the necessary lift for flight.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_score": 90,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Landing Gear",
+   "description": "The system of wheels, struts, and other components that support the aircraft during takeoff, landing, and taxiing.",
+   "material_dependency": "Steel or titanium alloys",
+   "risk_score": 40,
+   "risk_tier": "STABLE"
+  },
+  {
+   "part_name": "Propulsion System",
+   "description": "The system of engines, fuel tanks, and other components that provide the power for the aircraft.",
+   "material_dependency": "High-temperature alloys",
+   "risk_score": 95,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Avionics",
+   "description": "The electronic systems that provide navigation, communication, and other functions for the aircraft.",
+   "material_dependency": "Electronic components",
+   "risk_score": 60,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Armament",
+   "description": "The weapons and other systems used for combat and defense.",
+   "material_dependency": "High-strength alloys",
+   "risk_score": 85,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Control Surfaces",
+   "description": "The ailerons, elevators, and rudder that provide control during flight.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_score": 75,
+   "risk_tier": "ELEVATED"
+  }
+ ],
+ "intel": {
+  "part_0": {
+   "part_name": "Rear Fairing",
+   "assembly": "Empennage",
+   "description": "Provides a streamlined shape for reduced drag at the rear of the aircraft.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 1,
+   "confidence": "medium",
+   "geometry_cue": "rear-end, on the centreline, on the centreline plane, small fitting",
+   "mesh_name": "Section 12"
+  },
+  "Section 12": {
+   "part_name": "Rear Fairing",
+   "assembly": "Empennage",
+   "description": "Provides a streamlined shape for reduced drag at the rear of the aircraft.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 1,
+   "confidence": "medium",
+   "geometry_cue": "rear-end, on the centreline, on the centreline plane, small fitting",
+   "mesh_name": "Section 12"
+  },
+  "part_1": {
+   "part_name": "Vertical Stabilizer Tip",
+   "assembly": "Empennage",
+   "description": "Provides additional stability during flight.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 2,
+   "confidence": "medium",
+   "geometry_cue": "rear-end, on the centreline, on the centreline plane, small fitting",
+   "mesh_name": "Section 2"
+  },
+  "Section 2": {
+   "part_name": "Vertical Stabilizer Tip",
+   "assembly": "Empennage",
+   "description": "Provides additional stability during flight.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 2,
+   "confidence": "medium",
+   "geometry_cue": "rear-end, on the centreline, on the centreline plane, small fitting",
+   "mesh_name": "Section 2"
+  },
+  "part_2": {
+   "part_name": "Engine Nozzle",
+   "assembly": "Propulsion System",
+   "description": "Directs the exhaust gases from the engine.",
+   "material_dependency": "High-temperature alloys",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, on the centreline, on the centreline plane",
+   "mesh_name": "Section 3"
+  },
+  "Section 3": {
+   "part_name": "Engine Nozzle",
+   "assembly": "Propulsion System",
+   "description": "Directs the exhaust gases from the engine.",
+   "material_dependency": "High-temperature alloys",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, on the centreline, on the centreline plane",
+   "mesh_name": "Section 3"
+  },
+  "part_3": {
+   "part_name": "Landing Gear Strut",
+   "assembly": "Landing Gear",
+   "description": "Supports the aircraft during takeoff, landing, and taxiing.",
+   "material_dependency": "Steel or titanium alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 4,
+   "confidence": "medium",
+   "geometry_cue": "rear-of-centre, just below the centreline, on the centreline plane, long and thin",
+   "mesh_name": "Section 11"
+  },
+  "Section 11": {
+   "part_name": "Landing Gear Strut",
+   "assembly": "Landing Gear",
+   "description": "Supports the aircraft during takeoff, landing, and taxiing.",
+   "material_dependency": "Steel or titanium alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 4,
+   "confidence": "medium",
+   "geometry_cue": "rear-of-centre, just below the centreline, on the centreline plane, long and thin",
+   "mesh_name": "Section 11"
+  },
+  "part_4": {
+   "part_name": "Fuselage",
+   "assembly": "Fuselage",
+   "description": "Provides the main structural body of the aircraft.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "CRITICAL",
+   "risk_score": 95,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "centre, on the centreline, on the centreline plane, bulky, *** LARGEST VOLUME \u2014 the main structural body ***",
+   "mesh_name": "Section 1"
+  },
+  "Section 1": {
+   "part_name": "Fuselage",
+   "assembly": "Fuselage",
+   "description": "Provides the main structural body of the aircraft.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "CRITICAL",
+   "risk_score": 95,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "centre, on the centreline, on the centreline plane, bulky, *** LARGEST VOLUME \u2014 the main structural body ***",
+   "mesh_name": "Section 1"
+  },
+  "part_5": {
+   "part_name": "Landing Gear Bay",
+   "assembly": "Landing Gear",
+   "description": "Houses the landing gear when retracted.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 6,
+   "confidence": "medium",
+   "geometry_cue": "forward-of-centre, hangs BELOW the centreline (underside), on the centreline plane, bulky",
+   "mesh_name": "Section 10"
+  },
+  "Section 10": {
+   "part_name": "Landing Gear Bay",
+   "assembly": "Landing Gear",
+   "description": "Houses the landing gear when retracted.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 6,
+   "confidence": "medium",
+   "geometry_cue": "forward-of-centre, hangs BELOW the centreline (underside), on the centreline plane, bulky",
+   "mesh_name": "Section 10"
+  },
+  "part_6": {
+   "part_name": "Right Wing Tip",
+   "assembly": "Wing",
+   "description": "Provides additional lift during flight.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "ELEVATED",
+   "risk_score": 65,
+   "disassembly_order": 7,
+   "confidence": "medium",
+   "geometry_cue": "front-end, just below the centreline, offset to the right, MIRRORED PAIR with part_7, small fitting",
+   "mesh_name": "Section 4"
+  },
+  "Section 4": {
+   "part_name": "Right Wing Tip",
+   "assembly": "Wing",
+   "description": "Provides additional lift during flight.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "ELEVATED",
+   "risk_score": 65,
+   "disassembly_order": 7,
+   "confidence": "medium",
+   "geometry_cue": "front-end, just below the centreline, offset to the right, MIRRORED PAIR with part_7, small fitting",
+   "mesh_name": "Section 4"
+  },
+  "part_7": {
+   "part_name": "Left Wing Tip",
+   "assembly": "Wing",
+   "description": "Provides additional lift during flight.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "ELEVATED",
+   "risk_score": 65,
+   "disassembly_order": 8,
+   "confidence": "medium",
+   "geometry_cue": "front-end, just below the centreline, offset to the left, MIRRORED PAIR with part_6, small fitting",
+   "mesh_name": "Section 5"
+  },
+  "Section 5": {
+   "part_name": "Left Wing Tip",
+   "assembly": "Wing",
+   "description": "Provides additional lift during flight.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "ELEVATED",
+   "risk_score": 65,
+   "disassembly_order": 8,
+   "confidence": "medium",
+   "geometry_cue": "front-end, just below the centreline, offset to the left, MIRRORED PAIR with part_6, small fitting",
+   "mesh_name": "Section 5"
+  },
+  "part_8": {
+   "part_name": "Air Intake",
+   "assembly": "Propulsion System",
+   "description": "Directs air into the engine.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "CRITICAL",
+   "risk_score": 85,
+   "disassembly_order": 9,
+   "confidence": "high",
+   "geometry_cue": "front-end, just below the centreline, on the centreline plane",
+   "mesh_name": "Section 6"
+  },
+  "Section 6": {
+   "part_name": "Air Intake",
+   "assembly": "Propulsion System",
+   "description": "Directs air into the engine.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "CRITICAL",
+   "risk_score": 85,
+   "disassembly_order": 9,
+   "confidence": "high",
+   "geometry_cue": "front-end, just below the centreline, on the centreline plane",
+   "mesh_name": "Section 6"
+  },
+  "part_9": {
+   "part_name": "Left Aileron",
+   "assembly": "Control Surfaces",
+   "description": "Provides roll control during flight.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "ELEVATED",
+   "risk_score": 70,
+   "disassembly_order": 10,
+   "confidence": "medium",
+   "geometry_cue": "front-end, just below the centreline, offset to the left, MIRRORED PAIR with part_10, small fitting",
+   "mesh_name": "Section 7"
+  },
+  "Section 7": {
+   "part_name": "Left Aileron",
+   "assembly": "Control Surfaces",
+   "description": "Provides roll control during flight.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "ELEVATED",
+   "risk_score": 70,
+   "disassembly_order": 10,
+   "confidence": "medium",
+   "geometry_cue": "front-end, just below the centreline, offset to the left, MIRRORED PAIR with part_10, small fitting",
+   "mesh_name": "Section 7"
+  },
+  "part_10": {
+   "part_name": "Right Aileron",
+   "assembly": "Control Surfaces",
+   "description": "Provides roll control during flight.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "ELEVATED",
+   "risk_score": 70,
+   "disassembly_order": 11,
+   "confidence": "medium",
+   "geometry_cue": "front-end, on the centreline, offset to the right, MIRRORED PAIR with part_9, small fitting",
+   "mesh_name": "Section 9"
+  },
+  "Section 9": {
+   "part_name": "Right Aileron",
+   "assembly": "Control Surfaces",
+   "description": "Provides roll control during flight.",
+   "material_dependency": "Aluminum or titanium alloys",
+   "risk_tier": "ELEVATED",
+   "risk_score": 70,
+   "disassembly_order": 11,
+   "confidence": "medium",
+   "geometry_cue": "front-end, on the centreline, offset to the right, MIRRORED PAIR with part_9, small fitting",
+   "mesh_name": "Section 9"
+  },
+  "part_11": {
+   "part_name": "Radome",
+   "assembly": "Fuselage",
+   "description": "Houses the radar antenna.",
+   "material_dependency": "Radar-absorbent materials",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 12,
+   "confidence": "high",
+   "geometry_cue": "front-end, on the centreline, offset to the left, MIRRORED PAIR with part_8, small fitting, *** FRONT-MOST part ***",
+   "mesh_name": "Section 8"
+  },
+  "Section 8": {
+   "part_name": "Radome",
+   "assembly": "Fuselage",
+   "description": "Houses the radar antenna.",
+   "material_dependency": "Radar-absorbent materials",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 12,
+   "confidence": "high",
+   "geometry_cue": "front-end, on the centreline, offset to the left, MIRRORED PAIR with part_8, small fitting, *** FRONT-MOST part ***",
+   "mesh_name": "Section 8"
+  }
+ }
+}

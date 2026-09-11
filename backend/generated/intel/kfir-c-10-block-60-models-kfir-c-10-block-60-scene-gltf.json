@@ -1,0 +1,334 @@
+{
+ "name": "Kfir C.10 Block 60",
+ "url": "/models/kfir_c.10_block_60/scene.gltf",
+ "designation": "IAI Kfir C.10 (Block 60)",
+ "platform": "aircraft",
+ "axis_orientation": "nose is at +1, tail is at -1",
+ "operating_principle": "The IAI Kfir C.10 is a delta-wing multirole fighter powered by a General Electric J79-J1E turbojet engine, featuring advanced avionics and a robust airframe designed for high-speed and high-maneuverability performance.",
+ "identified": 11,
+ "part_count": 11,
+ "components": [
+  {
+   "part_name": "Fuselage",
+   "description": "The main structural body of the aircraft, housing the cockpit, engine, and fuel tanks.",
+   "material_dependency": "Aluminum alloys",
+   "risk_score": 90,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Wing",
+   "description": "The delta-wing configuration provides high lift and maneuverability, with multiple hardpoints for carrying payloads.",
+   "material_dependency": "Aluminum alloys",
+   "risk_score": 80,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Empennage",
+   "description": "The tail section, comprising the vertical stabilizer and rudder, provides stability and control during flight.",
+   "material_dependency": "Aluminum alloys",
+   "risk_score": 70,
+   "risk_tier": "STABLE"
+  },
+  {
+   "part_name": "Engine Bay",
+   "description": "The compartment housing the General Electric J79-J1E turbojet engine, providing the necessary power for flight.",
+   "material_dependency": "Titanium alloys",
+   "risk_score": 95,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Landing Gear",
+   "description": "The retractable landing gear system, enabling the aircraft to take off and land safely.",
+   "material_dependency": "Steel alloys",
+   "risk_score": 60,
+   "risk_tier": "STABLE"
+  },
+  {
+   "part_name": "Avionics Bay",
+   "description": "The compartment housing the advanced avionics systems, including the Elta EL/M-2032 multimode radar.",
+   "material_dependency": "Electronic components",
+   "risk_score": 85,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Cockpit",
+   "description": "The compartment housing the pilot and flight control systems, providing a safe and efficient working environment.",
+   "material_dependency": "Aluminum alloys",
+   "risk_score": 75,
+   "risk_tier": "STABLE"
+  },
+  {
+   "part_name": "Air Intake",
+   "description": "The system providing air to the engine, ensuring efficient combustion and power generation.",
+   "material_dependency": "Aluminum alloys",
+   "risk_score": 65,
+   "risk_tier": "STABLE"
+  }
+ ],
+ "intel": {
+  "part_0": {
+   "part_name": "Rear Fuselage Section",
+   "assembly": "Fuselage",
+   "description": "Provides structural support and housing for the engine and fuel tanks.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 40,
+   "disassembly_order": 10,
+   "confidence": "medium",
+   "geometry_cue": "rear-end, on the centreline, offset to the right, bulky",
+   "mesh_name": "Section 9"
+  },
+  "Section 9": {
+   "part_name": "Rear Fuselage Section",
+   "assembly": "Fuselage",
+   "description": "Provides structural support and housing for the engine and fuel tanks.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 40,
+   "disassembly_order": 10,
+   "confidence": "medium",
+   "geometry_cue": "rear-end, on the centreline, offset to the right, bulky",
+   "mesh_name": "Section 9"
+  },
+  "part_1": {
+   "part_name": "Rear Landing Gear Bay",
+   "assembly": "Landing Gear",
+   "description": "Houses the retractable landing gear system.",
+   "material_dependency": "Steel alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "rear-end, hangs BELOW the centreline (underside), on the centreline plane",
+   "mesh_name": "Section 10"
+  },
+  "Section 10": {
+   "part_name": "Rear Landing Gear Bay",
+   "assembly": "Landing Gear",
+   "description": "Houses the retractable landing gear system.",
+   "material_dependency": "Steel alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "rear-end, hangs BELOW the centreline (underside), on the centreline plane",
+   "mesh_name": "Section 10"
+  },
+  "part_2": {
+   "part_name": "Rear Gear Door",
+   "assembly": "Landing Gear",
+   "description": "Covers the rear landing gear bay.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 4,
+   "confidence": "high",
+   "geometry_cue": "rear-end, hangs BELOW the centreline (underside), on the centreline plane, small fitting",
+   "mesh_name": "Section 1"
+  },
+  "Section 1": {
+   "part_name": "Rear Gear Door",
+   "assembly": "Landing Gear",
+   "description": "Covers the rear landing gear bay.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 4,
+   "confidence": "high",
+   "geometry_cue": "rear-end, hangs BELOW the centreline (underside), on the centreline plane, small fitting",
+   "mesh_name": "Section 1"
+  },
+  "part_3": {
+   "part_name": "Left Rear Gear Door",
+   "assembly": "Landing Gear",
+   "description": "Covers the left rear landing gear bay.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "rear-end, hangs BELOW the centreline (underside), offset to the left, small fitting",
+   "mesh_name": "Section 2"
+  },
+  "Section 2": {
+   "part_name": "Left Rear Gear Door",
+   "assembly": "Landing Gear",
+   "description": "Covers the left rear landing gear bay.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "rear-end, hangs BELOW the centreline (underside), offset to the left, small fitting",
+   "mesh_name": "Section 2"
+  },
+  "part_4": {
+   "part_name": "Left Main Landing Gear Door",
+   "assembly": "Landing Gear",
+   "description": "Covers the left main landing gear bay.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 2,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), offset to the left, MIRRORED PAIR with part_5, small fitting",
+   "mesh_name": "Section 6"
+  },
+  "Section 6": {
+   "part_name": "Left Main Landing Gear Door",
+   "assembly": "Landing Gear",
+   "description": "Covers the left main landing gear bay.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 2,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), offset to the left, MIRRORED PAIR with part_5, small fitting",
+   "mesh_name": "Section 6"
+  },
+  "part_5": {
+   "part_name": "Right Main Landing Gear Door",
+   "assembly": "Landing Gear",
+   "description": "Covers the right main landing gear bay.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), offset to the right, MIRRORED PAIR with part_4, small fitting",
+   "mesh_name": "Section 7"
+  },
+  "Section 7": {
+   "part_name": "Right Main Landing Gear Door",
+   "assembly": "Landing Gear",
+   "description": "Covers the right main landing gear bay.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 25,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "rear-of-centre, hangs BELOW the centreline (underside), offset to the right, MIRRORED PAIR with part_4, small fitting",
+   "mesh_name": "Section 7"
+  },
+  "part_6": {
+   "part_name": "Right Engine Bay Section",
+   "assembly": "Engine Bay",
+   "description": "Provides structural support and housing for the engine.",
+   "material_dependency": "Titanium alloys",
+   "risk_tier": "CRITICAL",
+   "risk_score": 80,
+   "disassembly_order": 9,
+   "confidence": "medium",
+   "geometry_cue": "rear-of-centre, just below the centreline, offset to the right, MIRRORED PAIR with part_7, bulky",
+   "mesh_name": "Section 8"
+  },
+  "Section 8": {
+   "part_name": "Right Engine Bay Section",
+   "assembly": "Engine Bay",
+   "description": "Provides structural support and housing for the engine.",
+   "material_dependency": "Titanium alloys",
+   "risk_tier": "CRITICAL",
+   "risk_score": 80,
+   "disassembly_order": 9,
+   "confidence": "medium",
+   "geometry_cue": "rear-of-centre, just below the centreline, offset to the right, MIRRORED PAIR with part_7, bulky",
+   "mesh_name": "Section 8"
+  },
+  "part_7": {
+   "part_name": "Centre Fuselage Section",
+   "assembly": "Fuselage",
+   "description": "Provides structural support and housing for the cockpit and avionics.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 50,
+   "disassembly_order": 8,
+   "confidence": "medium",
+   "geometry_cue": "rear-of-centre, on the centreline, on the centreline plane, bulky",
+   "mesh_name": "Section 11"
+  },
+  "Section 11": {
+   "part_name": "Centre Fuselage Section",
+   "assembly": "Fuselage",
+   "description": "Provides structural support and housing for the cockpit and avionics.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 50,
+   "disassembly_order": 8,
+   "confidence": "medium",
+   "geometry_cue": "rear-of-centre, on the centreline, on the centreline plane, bulky",
+   "mesh_name": "Section 11"
+  },
+  "part_8": {
+   "part_name": "Main Fuselage Section",
+   "assembly": "Fuselage",
+   "description": "Provides primary structural support and housing for the cockpit, engine, and fuel tanks.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 11,
+   "confidence": "high",
+   "geometry_cue": "centre, on the centreline, on the centreline plane, bulky, *** LARGEST VOLUME \u2014 the main structural body ***",
+   "mesh_name": "Section 4"
+  },
+  "Section 4": {
+   "part_name": "Main Fuselage Section",
+   "assembly": "Fuselage",
+   "description": "Provides primary structural support and housing for the cockpit, engine, and fuel tanks.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 11,
+   "confidence": "high",
+   "geometry_cue": "centre, on the centreline, on the centreline plane, bulky, *** LARGEST VOLUME \u2014 the main structural body ***",
+   "mesh_name": "Section 4"
+  },
+  "part_9": {
+   "part_name": "Centre Belly Section",
+   "assembly": "Fuselage",
+   "description": "Provides structural support and housing for the avionics and fuel tanks.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 45,
+   "disassembly_order": 7,
+   "confidence": "medium",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), on the centreline plane, bulky",
+   "mesh_name": "Section 3"
+  },
+  "Section 3": {
+   "part_name": "Centre Belly Section",
+   "assembly": "Fuselage",
+   "description": "Provides structural support and housing for the avionics and fuel tanks.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "STABLE",
+   "risk_score": 45,
+   "disassembly_order": 7,
+   "confidence": "medium",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), on the centreline plane, bulky",
+   "mesh_name": "Section 3"
+  },
+  "part_10": {
+   "part_name": "Right Wing Section",
+   "assembly": "Wing",
+   "description": "Provides lift and structural support for the aircraft.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "ELEVATED",
+   "risk_score": 70,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), offset to the right, MIRRORED PAIR with part_9, long and thin",
+   "mesh_name": "Section 5"
+  },
+  "Section 5": {
+   "part_name": "Right Wing Section",
+   "assembly": "Wing",
+   "description": "Provides lift and structural support for the aircraft.",
+   "material_dependency": "Aluminum alloys",
+   "risk_tier": "ELEVATED",
+   "risk_score": 70,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), offset to the right, MIRRORED PAIR with part_9, long and thin",
+   "mesh_name": "Section 5"
+  }
+ }
+}

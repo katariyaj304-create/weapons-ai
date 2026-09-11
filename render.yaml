@@ -1,0 +1,41 @@
+﻿services:
+  # Backend Web Service
+  - type: web
+    name: weapons-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: HF_API_KEY
+        sync: false
+      - key: TAVILY_API_KEY
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: SKETCHFAB_API_TOKEN
+        sync: false
+      - key: KAGGLE_3D_ENDPOINT
+        sync: false
+
+  # Frontend Static Site
+  - type: static
+    name: weapons-frontend
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /api/*
+        destination: https://weapons-backend.onrender.com/api/*
+      - type: rewrite
+        source: /uploads/*
+        destination: https://weapons-backend.onrender.com/uploads/*
+      - type: rewrite
+        source: /generated/*
+        destination: https://weapons-backend.onrender.com/generated/*
+      - type: rewrite
+        source: /*
+        destination: /index.html

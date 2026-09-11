@@ -1,0 +1,146 @@
+/* VoiceAgent.css */
+.voice-agent-sidebar-widget {
+  width: 100%;
+  padding: 16px;
+  background: var(--surface-container-low);
+  border-top: 1px solid var(--outline-variant);
+  border-bottom: 1px solid var(--outline-variant);
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.voice-agent-header {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voice-agent-header h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.voice-agent-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ElevenLabs Globe Animation */
+.globe-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.globe-orb {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #a0c4ff, #4ea8de, #0077b6);
+  filter: blur(10px);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.globe-ring {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Animations based on state */
+.globe-container.idle .globe-orb {
+  animation: pulse-idle 4s ease-in-out infinite;
+}
+
+.globe-container.listening .globe-orb {
+  background: radial-gradient(circle at 30% 30%, #90e0ef, #00b4d8, #0077b6);
+  filter: blur(15px);
+  animation: pulse-listen 1.5s ease-in-out infinite;
+}
+
+.globe-container.speaking .globe-orb {
+  background: radial-gradient(circle at 30% 30%, #caf0f8, #90e0ef, #00b4d8);
+  filter: blur(8px);
+  animation: pulse-speak 0.8s ease-in-out infinite alternate;
+}
+
+.globe-container.speaking .globe-ring {
+  border-color: rgba(0, 180, 216, 0.3);
+}
+
+.globe-container.speaking .ring-1 { animation: spin 4s linear infinite; width: 140px; height: 140px; }
+.globe-container.speaking .ring-2 { animation: spin-reverse 3s linear infinite; width: 130px; height: 130px; }
+.globe-container.speaking .ring-3 { animation: spin 5s linear infinite; width: 150px; height: 150px; }
+
+@keyframes pulse-idle {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+@keyframes pulse-listen {
+  0%, 100% { transform: scale(1.1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+@keyframes pulse-speak {
+  0% { transform: scale(1) rotate(0deg); }
+  100% { transform: scale(1.15) rotate(5deg); }
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+  100% { transform: rotate(-360deg); }
+}
+
+.call-btn {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: #151c27;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.call-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.voice-transcript {
+  font-size: 13px;
+  color: var(--on-surface-variant);
+  text-align: center;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+}

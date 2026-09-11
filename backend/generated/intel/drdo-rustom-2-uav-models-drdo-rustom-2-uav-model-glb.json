@@ -1,0 +1,262 @@
+{
+ "name": "Drdo Rustom 2 Uav",
+ "url": "/models/drdo-rustom-2-uav/model.glb",
+ "designation": "DRDO Rustom-2 (TAPAS-BH-201) MALE UAV",
+ "platform": "aircraft",
+ "axis_orientation": "nose at +1, tail at -1",
+ "operating_principle": "The DRDO Rustom-2 is a medium-altitude long-endurance unmanned aerial vehicle that uses two NPO Saturn 36MT turboprop engines to generate power, allowing it to fly for up to 24 hours at a maximum speed of 225 km/h. It is designed for aerial surveillance and can carry various payloads, including electronic intelligence systems and situational awareness systems.",
+ "identified": 8,
+ "part_count": 8,
+ "components": [
+  {
+   "part_name": "Fuselage",
+   "description": "The main structural body of the aircraft",
+   "material_dependency": "Aluminum alloy",
+   "risk_score": 80,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Wings",
+   "description": "Shoulder-mounted wings that provide lift",
+   "material_dependency": "Carbon fiber",
+   "risk_score": 70,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Empennage",
+   "description": "T-shaped tail assembly that provides stability",
+   "material_dependency": "Aluminum alloy",
+   "risk_score": 60,
+   "risk_tier": "STABLE"
+  },
+  {
+   "part_name": "Landing Gear",
+   "description": "Tricycle nose wheel type retractable landing gear system",
+   "material_dependency": "Steel",
+   "risk_score": 50,
+   "risk_tier": "STABLE"
+  },
+  {
+   "part_name": "Avionics Bay",
+   "description": "Houses the aircraft's electronic systems",
+   "material_dependency": "Electronic components",
+   "risk_score": 90,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Engine Bay",
+   "description": "Houses the two NPO Saturn 36MT turboprop engines",
+   "material_dependency": "Aluminum alloy",
+   "risk_score": 85,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Payload Bay",
+   "description": "Carries various payloads, including electronic intelligence systems and situational awareness systems",
+   "material_dependency": "Aluminum alloy",
+   "risk_score": 75,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Air Intake",
+   "description": "Provides air to the engines",
+   "material_dependency": "Aluminum alloy",
+   "risk_score": 40,
+   "risk_tier": "STABLE"
+  }
+ ],
+ "intel": {
+  "part_0": {
+   "part_name": "Rear Fairing",
+   "assembly": "Empennage",
+   "description": "Provides a smooth airflow over the tail section",
+   "material_dependency": "Aluminum alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 10,
+   "confidence": "medium",
+   "geometry_cue": "rear-end, on the centreline, on the centreline plane, small fitting",
+   "mesh_name": "Empty003"
+  },
+  "Empty003": {
+   "part_name": "Rear Fairing",
+   "assembly": "Empennage",
+   "description": "Provides a smooth airflow over the tail section",
+   "material_dependency": "Aluminum alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 10,
+   "confidence": "medium",
+   "geometry_cue": "rear-end, on the centreline, on the centreline plane, small fitting",
+   "mesh_name": "Empty003"
+  },
+  "part_1": {
+   "part_name": "Left Wing Tip",
+   "assembly": "Wings",
+   "description": "Provides additional lift and stability",
+   "material_dependency": "Carbon fiber",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "centre, on the TOPLINE (upper surface), offset to the left, MIRRORED PAIR with part_5, small fitting",
+   "mesh_name": "Empty007"
+  },
+  "Empty007": {
+   "part_name": "Left Wing Tip",
+   "assembly": "Wings",
+   "description": "Provides additional lift and stability",
+   "material_dependency": "Carbon fiber",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "centre, on the TOPLINE (upper surface), offset to the left, MIRRORED PAIR with part_5, small fitting",
+   "mesh_name": "Empty007"
+  },
+  "part_2": {
+   "part_name": "Left Winglet",
+   "assembly": "Wings",
+   "description": "Reduces drag and improves fuel efficiency",
+   "material_dependency": "Carbon fiber",
+   "risk_tier": "STABLE",
+   "risk_score": 40,
+   "disassembly_order": 6,
+   "confidence": "medium",
+   "geometry_cue": "centre, on the TOPLINE (upper surface), offset to the left, MIRRORED PAIR with part_5, small fitting",
+   "mesh_name": "Empty011"
+  },
+  "Empty011": {
+   "part_name": "Left Winglet",
+   "assembly": "Wings",
+   "description": "Reduces drag and improves fuel efficiency",
+   "material_dependency": "Carbon fiber",
+   "risk_tier": "STABLE",
+   "risk_score": 40,
+   "disassembly_order": 6,
+   "confidence": "medium",
+   "geometry_cue": "centre, on the TOPLINE (upper surface), offset to the left, MIRRORED PAIR with part_5, small fitting",
+   "mesh_name": "Empty011"
+  },
+  "part_3": {
+   "part_name": "Landing Gear Door",
+   "assembly": "Landing Gear",
+   "description": "Covers the landing gear when retracted",
+   "material_dependency": "Aluminum alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 35,
+   "disassembly_order": 8,
+   "confidence": "medium",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), on the centreline plane",
+   "mesh_name": "Empty014"
+  },
+  "Empty014": {
+   "part_name": "Landing Gear Door",
+   "assembly": "Landing Gear",
+   "description": "Covers the landing gear when retracted",
+   "material_dependency": "Aluminum alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 35,
+   "disassembly_order": 8,
+   "confidence": "medium",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), on the centreline plane",
+   "mesh_name": "Empty014"
+  },
+  "part_4": {
+   "part_name": "Fuselage",
+   "assembly": "Fuselage",
+   "description": "Provides the main structural support for the aircraft",
+   "material_dependency": "Aluminum alloy",
+   "risk_tier": "CRITICAL",
+   "risk_score": 95,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "centre, on the centreline, on the centreline plane, bulky, *** LARGEST VOLUME \u2014 the main structural body ***",
+   "mesh_name": "Plane"
+  },
+  "Plane": {
+   "part_name": "Fuselage",
+   "assembly": "Fuselage",
+   "description": "Provides the main structural support for the aircraft",
+   "material_dependency": "Aluminum alloy",
+   "risk_tier": "CRITICAL",
+   "risk_score": 95,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "centre, on the centreline, on the centreline plane, bulky, *** LARGEST VOLUME \u2014 the main structural body ***",
+   "mesh_name": "Plane"
+  },
+  "part_5": {
+   "part_name": "Right Wing Tip",
+   "assembly": "Wings",
+   "description": "Provides additional lift and stability",
+   "material_dependency": "Carbon fiber",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 4,
+   "confidence": "high",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), offset to the right, MIRRORED PAIR with part_1, small fitting",
+   "mesh_name": "Empty013"
+  },
+  "Empty013": {
+   "part_name": "Right Wing Tip",
+   "assembly": "Wings",
+   "description": "Provides additional lift and stability",
+   "material_dependency": "Carbon fiber",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 4,
+   "confidence": "high",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), offset to the right, MIRRORED PAIR with part_1, small fitting",
+   "mesh_name": "Empty013"
+  },
+  "part_6": {
+   "part_name": "Left Aileron",
+   "assembly": "Wings",
+   "description": "Controls roll during flight",
+   "material_dependency": "Carbon fiber",
+   "risk_tier": "ELEVATED",
+   "risk_score": 65,
+   "disassembly_order": 7,
+   "confidence": "medium",
+   "geometry_cue": "centre, on the TOPLINE (upper surface), offset to the left, MIRRORED PAIR with part_5, small fitting",
+   "mesh_name": "Empty008"
+  },
+  "Empty008": {
+   "part_name": "Left Aileron",
+   "assembly": "Wings",
+   "description": "Controls roll during flight",
+   "material_dependency": "Carbon fiber",
+   "risk_tier": "ELEVATED",
+   "risk_score": 65,
+   "disassembly_order": 7,
+   "confidence": "medium",
+   "geometry_cue": "centre, on the TOPLINE (upper surface), offset to the left, MIRRORED PAIR with part_5, small fitting",
+   "mesh_name": "Empty008"
+  },
+  "part_7": {
+   "part_name": "Radar Antenna",
+   "assembly": "Avionics Bay",
+   "description": "Provides radar capabilities for the aircraft",
+   "material_dependency": "Electronic components",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 9,
+   "confidence": "medium",
+   "geometry_cue": "front-end, on the centreline, on the centreline plane, small fitting",
+   "mesh_name": "Empty002"
+  },
+  "Empty002": {
+   "part_name": "Radar Antenna",
+   "assembly": "Avionics Bay",
+   "description": "Provides radar capabilities for the aircraft",
+   "material_dependency": "Electronic components",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 9,
+   "confidence": "medium",
+   "geometry_cue": "front-end, on the centreline, on the centreline plane, small fitting",
+   "mesh_name": "Empty002"
+  }
+ }
+}

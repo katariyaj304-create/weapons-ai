@@ -1,0 +1,391 @@
+{
+ "name": "Thompson M1928A1 \u2014 Internals (Cutaway)",
+ "url": "/models/tommy-gun-internals/model.glb",
+ "designation": "Thompson M1928A1 .45 ACP submachine gun",
+ "platform": "firearm",
+ "axis_orientation": "muzzle at +X, buttstock at -X",
+ "operating_principle": "Blowback, open-bolt action: the heavy bolt is held to the rear by the sear, and on firing the .45 ACP cartridge blows it back against the recoil spring; a finned barrel sheds heat and a Cutts compensator tames climb.",
+ "identified": 13,
+ "part_count": 13,
+ "components": [
+  {
+   "part_name": "Drum Magazine",
+   "description": "Iconic 50-round rotary drum magazine for .45 ACP.",
+   "material_dependency": "Stamped steel",
+   "risk_tier": "STABLE",
+   "risk_score": 32
+  },
+  {
+   "part_name": "Bolt",
+   "description": "Heavy blowback bolt (with Blish H-piece on early guns).",
+   "material_dependency": "Machined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 82
+  },
+  {
+   "part_name": "Recoil Spring Assembly",
+   "description": "Return spring behind the bolt.",
+   "material_dependency": "Spring steel",
+   "risk_tier": "STABLE",
+   "risk_score": 34
+  },
+  {
+   "part_name": "Actuator Knob",
+   "description": "Top-mounted cocking knob riding in the receiver slot.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 30
+  },
+  {
+   "part_name": "Finned Barrel",
+   "description": "Radially finned barrel for air cooling \u2014 a Thompson hallmark.",
+   "material_dependency": "Steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90
+  },
+  {
+   "part_name": "Cutts Compensator",
+   "description": "Slotted muzzle compensator reducing climb in full-auto.",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 50
+  },
+  {
+   "part_name": "Front Sight",
+   "description": "Blade front sight.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 22
+  },
+  {
+   "part_name": "Rear Sight",
+   "description": "Adjustable aperture rear sight (Lyman).",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 22
+  },
+  {
+   "part_name": "Vertical Foregrip",
+   "description": "Front vertical grip (the classic Tommy-gun foregrip).",
+   "material_dependency": "Walnut",
+   "risk_tier": "STABLE",
+   "risk_score": 20
+  },
+  {
+   "part_name": "Buttstock",
+   "description": "Detachable wood shoulder stock.",
+   "material_dependency": "Walnut",
+   "risk_tier": "STABLE",
+   "risk_score": 20
+  },
+  {
+   "part_name": "Pistol Grip",
+   "description": "Wood firing grip.",
+   "material_dependency": "Walnut",
+   "risk_tier": "STABLE",
+   "risk_score": 20
+  },
+  {
+   "part_name": "Trigger",
+   "description": "Trip for the open-bolt sear.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 54
+  },
+  {
+   "part_name": "Sear",
+   "description": "Holds and releases the bolt in open-bolt firing.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 56
+  }
+ ],
+ "intel": {
+  "Inner_Part_1": {
+   "part_name": "Drum Magazine",
+   "assembly": "Feed system",
+   "description": "Iconic 50-round rotary drum magazine for .45 ACP.",
+   "material_dependency": "Stamped steel",
+   "risk_tier": "STABLE",
+   "risk_score": 32,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Drum Magazine": {
+   "part_name": "Drum Magazine",
+   "assembly": "Feed system",
+   "description": "Iconic 50-round rotary drum magazine for .45 ACP.",
+   "material_dependency": "Stamped steel",
+   "risk_tier": "STABLE",
+   "risk_score": 32,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_2": {
+   "part_name": "Bolt",
+   "assembly": "Bolt group",
+   "description": "Heavy blowback bolt (with Blish H-piece on early guns).",
+   "material_dependency": "Machined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 82,
+   "disassembly_order": 2,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Bolt": {
+   "part_name": "Bolt",
+   "assembly": "Bolt group",
+   "description": "Heavy blowback bolt (with Blish H-piece on early guns).",
+   "material_dependency": "Machined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 82,
+   "disassembly_order": 2,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_3": {
+   "part_name": "Recoil Spring Assembly",
+   "assembly": "Recoil system",
+   "description": "Return spring behind the bolt.",
+   "material_dependency": "Spring steel",
+   "risk_tier": "STABLE",
+   "risk_score": 34,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Recoil Spring Assembly": {
+   "part_name": "Recoil Spring Assembly",
+   "assembly": "Recoil system",
+   "description": "Return spring behind the bolt.",
+   "material_dependency": "Spring steel",
+   "risk_tier": "STABLE",
+   "risk_score": 34,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_4": {
+   "part_name": "Actuator Knob",
+   "assembly": "Bolt group",
+   "description": "Top-mounted cocking knob riding in the receiver slot.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 4,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Actuator Knob": {
+   "part_name": "Actuator Knob",
+   "assembly": "Bolt group",
+   "description": "Top-mounted cocking knob riding in the receiver slot.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 4,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_5": {
+   "part_name": "Finned Barrel",
+   "assembly": "Barrel group",
+   "description": "Radially finned barrel for air cooling \u2014 a Thompson hallmark.",
+   "material_dependency": "Steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Finned Barrel": {
+   "part_name": "Finned Barrel",
+   "assembly": "Barrel group",
+   "description": "Radially finned barrel for air cooling \u2014 a Thompson hallmark.",
+   "material_dependency": "Steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 90,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_6": {
+   "part_name": "Cutts Compensator",
+   "assembly": "Muzzle device",
+   "description": "Slotted muzzle compensator reducing climb in full-auto.",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 50,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Cutts Compensator": {
+   "part_name": "Cutts Compensator",
+   "assembly": "Muzzle device",
+   "description": "Slotted muzzle compensator reducing climb in full-auto.",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 50,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_7": {
+   "part_name": "Front Sight",
+   "assembly": "Sights",
+   "description": "Blade front sight.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 22,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Front Sight": {
+   "part_name": "Front Sight",
+   "assembly": "Sights",
+   "description": "Blade front sight.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 22,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_8": {
+   "part_name": "Rear Sight",
+   "assembly": "Sights",
+   "description": "Adjustable aperture rear sight (Lyman).",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 22,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Rear Sight": {
+   "part_name": "Rear Sight",
+   "assembly": "Sights",
+   "description": "Adjustable aperture rear sight (Lyman).",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 22,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_9": {
+   "part_name": "Vertical Foregrip",
+   "assembly": "Furniture",
+   "description": "Front vertical grip (the classic Tommy-gun foregrip).",
+   "material_dependency": "Walnut",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 9,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Vertical Foregrip": {
+   "part_name": "Vertical Foregrip",
+   "assembly": "Furniture",
+   "description": "Front vertical grip (the classic Tommy-gun foregrip).",
+   "material_dependency": "Walnut",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 9,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_10": {
+   "part_name": "Buttstock",
+   "assembly": "Furniture",
+   "description": "Detachable wood shoulder stock.",
+   "material_dependency": "Walnut",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 10,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Buttstock": {
+   "part_name": "Buttstock",
+   "assembly": "Furniture",
+   "description": "Detachable wood shoulder stock.",
+   "material_dependency": "Walnut",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 10,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_11": {
+   "part_name": "Pistol Grip",
+   "assembly": "Furniture",
+   "description": "Wood firing grip.",
+   "material_dependency": "Walnut",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 11,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Pistol Grip": {
+   "part_name": "Pistol Grip",
+   "assembly": "Furniture",
+   "description": "Wood firing grip.",
+   "material_dependency": "Walnut",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 11,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_12": {
+   "part_name": "Trigger",
+   "assembly": "Fire-control group",
+   "description": "Trip for the open-bolt sear.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 54,
+   "disassembly_order": 12,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Trigger": {
+   "part_name": "Trigger",
+   "assembly": "Fire-control group",
+   "description": "Trip for the open-bolt sear.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 54,
+   "disassembly_order": 12,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_13": {
+   "part_name": "Sear",
+   "assembly": "Fire-control group",
+   "description": "Holds and releases the bolt in open-bolt firing.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 56,
+   "disassembly_order": 13,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Sear": {
+   "part_name": "Sear",
+   "assembly": "Fire-control group",
+   "description": "Holds and releases the bolt in open-bolt firing.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 56,
+   "disassembly_order": 13,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  }
+ }
+}

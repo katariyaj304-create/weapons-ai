@@ -1,0 +1,262 @@
+{
+ "name": "Sukhoi Su 57 Felon Fighter Jet Free",
+ "url": "/models/sukhoi-su-57-felon-fighter-jet-free/model.glb",
+ "designation": "Sukhoi Su-57 Felon",
+ "platform": "aircraft",
+ "axis_orientation": "nose at +1, tail at -1",
+ "operating_principle": "The Sukhoi Su-57 Felon is a twin-engine stealth multirole fighter aircraft that uses thrust vectoring nozzles and advanced flight control systems to achieve high maneuverability and departure resistance. It is designed with stealth technology to reduce its radar cross-section.",
+ "identified": 8,
+ "part_count": 8,
+ "components": [
+  {
+   "part_name": "Fuselage",
+   "description": "The main structural body of the aircraft",
+   "material_dependency": "Aluminum alloy",
+   "risk_score": 80,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Cockpit",
+   "description": "The compartment where the pilot sits",
+   "material_dependency": "Glass and metal",
+   "risk_score": 60,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Wing",
+   "description": "The lifting surface of the aircraft",
+   "material_dependency": "Aluminum alloy",
+   "risk_score": 70,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Landing Gear",
+   "description": "The system that supports the aircraft on the ground",
+   "material_dependency": "Steel",
+   "risk_score": 40,
+   "risk_tier": "STABLE"
+  },
+  {
+   "part_name": "Engine",
+   "description": "The powerplant that propels the aircraft",
+   "material_dependency": "Titanium alloy",
+   "risk_score": 90,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Avionics",
+   "description": "The electronic systems that control the aircraft",
+   "material_dependency": "Electronic components",
+   "risk_score": 50,
+   "risk_tier": "ELEVATED"
+  },
+  {
+   "part_name": "Armament",
+   "description": "The weapons systems of the aircraft",
+   "material_dependency": "Steel and explosives",
+   "risk_score": 80,
+   "risk_tier": "CRITICAL"
+  },
+  {
+   "part_name": "Airframe",
+   "description": "The structural components of the aircraft",
+   "material_dependency": "Aluminum alloy",
+   "risk_score": 70,
+   "risk_tier": "ELEVATED"
+  }
+ ],
+ "intel": {
+  "part_0": {
+   "part_name": "Fuselage",
+   "assembly": "Airframe",
+   "description": "Provides the main structural support for the aircraft",
+   "material_dependency": "Aluminum alloy",
+   "risk_tier": "CRITICAL",
+   "risk_score": 80,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "centre, on the centreline, on the centreline plane, bulky, LARGEST VOLUME, LONGEST part, REAR-MOST part",
+   "mesh_name": "SU57 airframe"
+  },
+  "SU57 airframe": {
+   "part_name": "Fuselage",
+   "assembly": "Airframe",
+   "description": "Provides the main structural support for the aircraft",
+   "material_dependency": "Aluminum alloy",
+   "risk_tier": "CRITICAL",
+   "risk_score": 80,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "centre, on the centreline, on the centreline plane, bulky, LARGEST VOLUME, LONGEST part, REAR-MOST part",
+   "mesh_name": "SU57 airframe"
+  },
+  "part_1": {
+   "part_name": "Instrument Glass",
+   "assembly": "Cockpit",
+   "description": "Provides a transparent surface for the pilot to view instruments",
+   "material_dependency": "Glass",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 5,
+   "confidence": "medium",
+   "geometry_cue": "centre, on the TOPLINE (upper surface), offset to the left, long and thin",
+   "mesh_name": "SU57 instrGlass"
+  },
+  "SU57 instrGlass": {
+   "part_name": "Instrument Glass",
+   "assembly": "Cockpit",
+   "description": "Provides a transparent surface for the pilot to view instruments",
+   "material_dependency": "Glass",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 5,
+   "confidence": "medium",
+   "geometry_cue": "centre, on the TOPLINE (upper surface), offset to the left, long and thin",
+   "mesh_name": "SU57 instrGlass"
+  },
+  "part_2": {
+   "part_name": "Landing Gear Strut",
+   "assembly": "Landing Gear",
+   "description": "Supports the aircraft on the ground",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 40,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), on the centreline plane, bulky, LOWEST part",
+   "mesh_name": "SU57 landingOn"
+  },
+  "SU57 landingOn": {
+   "part_name": "Landing Gear Strut",
+   "assembly": "Landing Gear",
+   "description": "Supports the aircraft on the ground",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 40,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "centre, hangs BELOW the centreline (underside), on the centreline plane, bulky, LOWEST part",
+   "mesh_name": "SU57 landingOn"
+  },
+  "part_3": {
+   "part_name": "Landing Gear Door",
+   "assembly": "Landing Gear",
+   "description": "Covers the landing gear when retracted",
+   "material_dependency": "Aluminum alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 4,
+   "confidence": "medium",
+   "geometry_cue": "centre, just below the centreline, on the centreline plane, long and thin",
+   "mesh_name": "SU57 landingOff"
+  },
+  "SU57 landingOff": {
+   "part_name": "Landing Gear Door",
+   "assembly": "Landing Gear",
+   "description": "Covers the landing gear when retracted",
+   "material_dependency": "Aluminum alloy",
+   "risk_tier": "STABLE",
+   "risk_score": 30,
+   "disassembly_order": 4,
+   "confidence": "medium",
+   "geometry_cue": "centre, just below the centreline, on the centreline plane, long and thin",
+   "mesh_name": "SU57 landingOff"
+  },
+  "part_4": {
+   "part_name": "Landing Gear Light",
+   "assembly": "Landing Gear",
+   "description": "Provides illumination for the landing gear",
+   "material_dependency": "Electronic components",
+   "risk_tier": "STABLE",
+   "risk_score": 10,
+   "disassembly_order": 6,
+   "confidence": "low",
+   "geometry_cue": "forward-of-centre, just below the centreline, on the centreline plane, small fitting",
+   "mesh_name": "SU57 landingOnLight"
+  },
+  "SU57 landingOnLight": {
+   "part_name": "Landing Gear Light",
+   "assembly": "Landing Gear",
+   "description": "Provides illumination for the landing gear",
+   "material_dependency": "Electronic components",
+   "risk_tier": "STABLE",
+   "risk_score": 10,
+   "disassembly_order": 6,
+   "confidence": "low",
+   "geometry_cue": "forward-of-centre, just below the centreline, on the centreline plane, small fitting",
+   "mesh_name": "SU57 landingOnLight"
+  },
+  "part_5": {
+   "part_name": "Cockpit Section",
+   "assembly": "Cockpit",
+   "description": "Provides a compartment for the pilot",
+   "material_dependency": "Aluminum alloy",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 2,
+   "confidence": "high",
+   "geometry_cue": "front-end, on the TOPLINE (upper surface), on the centreline plane, small fitting",
+   "mesh_name": "SU57 cockpit"
+  },
+  "SU57 cockpit": {
+   "part_name": "Cockpit Section",
+   "assembly": "Cockpit",
+   "description": "Provides a compartment for the pilot",
+   "material_dependency": "Aluminum alloy",
+   "risk_tier": "ELEVATED",
+   "risk_score": 60,
+   "disassembly_order": 2,
+   "confidence": "high",
+   "geometry_cue": "front-end, on the TOPLINE (upper surface), on the centreline plane, small fitting",
+   "mesh_name": "SU57 cockpit"
+  },
+  "part_6": {
+   "part_name": "Canopy",
+   "assembly": "Cockpit",
+   "description": "Provides a transparent surface for the pilot to view the surroundings",
+   "material_dependency": "Glass",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "front-end, on the TOPLINE (upper surface), on the centreline plane, small fitting",
+   "mesh_name": "SU57 canopy"
+  },
+  "SU57 canopy": {
+   "part_name": "Canopy",
+   "assembly": "Cockpit",
+   "description": "Provides a transparent surface for the pilot to view the surroundings",
+   "material_dependency": "Glass",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "front-end, on the TOPLINE (upper surface), on the centreline plane, small fitting",
+   "mesh_name": "SU57 canopy"
+  },
+  "part_7": {
+   "part_name": "Head-Up Display",
+   "assembly": "Avionics",
+   "description": "Provides critical flight information to the pilot",
+   "material_dependency": "Electronic components",
+   "risk_tier": "ELEVATED",
+   "risk_score": 50,
+   "disassembly_order": 7,
+   "confidence": "medium",
+   "geometry_cue": "front-end, on the TOPLINE (upper surface), on the centreline plane, small fitting, FRONT-MOST part",
+   "mesh_name": "SU57 hud"
+  },
+  "SU57 hud": {
+   "part_name": "Head-Up Display",
+   "assembly": "Avionics",
+   "description": "Provides critical flight information to the pilot",
+   "material_dependency": "Electronic components",
+   "risk_tier": "ELEVATED",
+   "risk_score": 50,
+   "disassembly_order": 7,
+   "confidence": "medium",
+   "geometry_cue": "front-end, on the TOPLINE (upper surface), on the centreline plane, small fitting, FRONT-MOST part",
+   "mesh_name": "SU57 hud"
+  }
+ }
+}

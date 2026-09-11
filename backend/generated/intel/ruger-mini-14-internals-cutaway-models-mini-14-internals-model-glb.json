@@ -1,0 +1,362 @@
+{
+ "name": "Ruger Mini-14 \u2014 Internals (Cutaway)",
+ "url": "/models/mini-14-internals/model.glb",
+ "designation": "Ruger Mini-14 .223 gas-operated semi-automatic rifle",
+ "platform": "firearm",
+ "axis_orientation": "muzzle at +X, buttstock at -X",
+ "operating_principle": "A scaled-down M1 Garand / M14 action: a fixed gas block drives a side-mounted operating rod and slide that cam a rotating bolt, cycling .223 Remington from a detachable box magazine.",
+ "identified": 12,
+ "part_count": 12,
+ "components": [
+  {
+   "part_name": "Wood Stock",
+   "description": "One-piece wood rifle stock the barreled action beds into.",
+   "material_dependency": "Hardwood",
+   "risk_tier": "STABLE",
+   "risk_score": 20
+  },
+  {
+   "part_name": "Magazine",
+   "description": "Detachable 20-round box magazine for .223 Remington.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 28
+  },
+  {
+   "part_name": "Bolt",
+   "description": "Rotating bolt with dual locking lugs (Garand-type).",
+   "material_dependency": "Machined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 86
+  },
+  {
+   "part_name": "Bolt Carrier / Slide",
+   "description": "Slide that cams the bolt, driven by the operating rod.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 84
+  },
+  {
+   "part_name": "Operating Rod",
+   "description": "Garand-style op-rod on the right side, driven by the gas piston.",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 62
+  },
+  {
+   "part_name": "Recoil Spring",
+   "description": "Op-rod return spring.",
+   "material_dependency": "Spring steel",
+   "risk_tier": "STABLE",
+   "risk_score": 32
+  },
+  {
+   "part_name": "Barrel",
+   "description": "Rifled .223 barrel.",
+   "material_dependency": "Chrome-moly steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 92
+  },
+  {
+   "part_name": "Gas Block",
+   "description": "Fixed gas block under the barrel tapping gas to the op-rod piston.",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 58
+  },
+  {
+   "part_name": "Front Sight",
+   "description": "Winged front sight.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 24
+  },
+  {
+   "part_name": "Rear Aperture Sight",
+   "description": "Ghost-ring aperture rear sight.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 24
+  },
+  {
+   "part_name": "Trigger",
+   "description": "Releases the hammer.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 54
+  },
+  {
+   "part_name": "Hammer",
+   "description": "Spring-driven hammer in the trigger housing.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 58
+  }
+ ],
+ "intel": {
+  "Inner_Part_1": {
+   "part_name": "Wood Stock",
+   "assembly": "Furniture",
+   "description": "One-piece wood rifle stock the barreled action beds into.",
+   "material_dependency": "Hardwood",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Wood Stock": {
+   "part_name": "Wood Stock",
+   "assembly": "Furniture",
+   "description": "One-piece wood rifle stock the barreled action beds into.",
+   "material_dependency": "Hardwood",
+   "risk_tier": "STABLE",
+   "risk_score": 20,
+   "disassembly_order": 1,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_2": {
+   "part_name": "Magazine",
+   "assembly": "Feed system",
+   "description": "Detachable 20-round box magazine for .223 Remington.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 28,
+   "disassembly_order": 2,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Magazine": {
+   "part_name": "Magazine",
+   "assembly": "Feed system",
+   "description": "Detachable 20-round box magazine for .223 Remington.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 28,
+   "disassembly_order": 2,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_3": {
+   "part_name": "Bolt",
+   "assembly": "Bolt group",
+   "description": "Rotating bolt with dual locking lugs (Garand-type).",
+   "material_dependency": "Machined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 86,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Bolt": {
+   "part_name": "Bolt",
+   "assembly": "Bolt group",
+   "description": "Rotating bolt with dual locking lugs (Garand-type).",
+   "material_dependency": "Machined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 86,
+   "disassembly_order": 3,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_4": {
+   "part_name": "Bolt Carrier / Slide",
+   "assembly": "Bolt group",
+   "description": "Slide that cams the bolt, driven by the operating rod.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 84,
+   "disassembly_order": 4,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Bolt Carrier / Slide": {
+   "part_name": "Bolt Carrier / Slide",
+   "assembly": "Bolt group",
+   "description": "Slide that cams the bolt, driven by the operating rod.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 84,
+   "disassembly_order": 4,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_5": {
+   "part_name": "Operating Rod",
+   "assembly": "Gas system",
+   "description": "Garand-style op-rod on the right side, driven by the gas piston.",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 62,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Operating Rod": {
+   "part_name": "Operating Rod",
+   "assembly": "Gas system",
+   "description": "Garand-style op-rod on the right side, driven by the gas piston.",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 62,
+   "disassembly_order": 5,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_6": {
+   "part_name": "Recoil Spring",
+   "assembly": "Recoil system",
+   "description": "Op-rod return spring.",
+   "material_dependency": "Spring steel",
+   "risk_tier": "STABLE",
+   "risk_score": 32,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Recoil Spring": {
+   "part_name": "Recoil Spring",
+   "assembly": "Recoil system",
+   "description": "Op-rod return spring.",
+   "material_dependency": "Spring steel",
+   "risk_tier": "STABLE",
+   "risk_score": 32,
+   "disassembly_order": 6,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_7": {
+   "part_name": "Barrel",
+   "assembly": "Barrel group",
+   "description": "Rifled .223 barrel.",
+   "material_dependency": "Chrome-moly steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 92,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Barrel": {
+   "part_name": "Barrel",
+   "assembly": "Barrel group",
+   "description": "Rifled .223 barrel.",
+   "material_dependency": "Chrome-moly steel",
+   "risk_tier": "CRITICAL",
+   "risk_score": 92,
+   "disassembly_order": 7,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_8": {
+   "part_name": "Gas Block",
+   "assembly": "Gas system",
+   "description": "Fixed gas block under the barrel tapping gas to the op-rod piston.",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 58,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Gas Block": {
+   "part_name": "Gas Block",
+   "assembly": "Gas system",
+   "description": "Fixed gas block under the barrel tapping gas to the op-rod piston.",
+   "material_dependency": "Steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 58,
+   "disassembly_order": 8,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_9": {
+   "part_name": "Front Sight",
+   "assembly": "Sights",
+   "description": "Winged front sight.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 24,
+   "disassembly_order": 9,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Front Sight": {
+   "part_name": "Front Sight",
+   "assembly": "Sights",
+   "description": "Winged front sight.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 24,
+   "disassembly_order": 9,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_10": {
+   "part_name": "Rear Aperture Sight",
+   "assembly": "Sights",
+   "description": "Ghost-ring aperture rear sight.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 24,
+   "disassembly_order": 10,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Rear Aperture Sight": {
+   "part_name": "Rear Aperture Sight",
+   "assembly": "Sights",
+   "description": "Ghost-ring aperture rear sight.",
+   "material_dependency": "Steel",
+   "risk_tier": "STABLE",
+   "risk_score": 24,
+   "disassembly_order": 10,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_11": {
+   "part_name": "Trigger",
+   "assembly": "Fire-control group",
+   "description": "Releases the hammer.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 54,
+   "disassembly_order": 11,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Trigger": {
+   "part_name": "Trigger",
+   "assembly": "Fire-control group",
+   "description": "Releases the hammer.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 54,
+   "disassembly_order": 11,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Inner_Part_12": {
+   "part_name": "Hammer",
+   "assembly": "Fire-control group",
+   "description": "Spring-driven hammer in the trigger housing.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 58,
+   "disassembly_order": 12,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  },
+  "Hammer": {
+   "part_name": "Hammer",
+   "assembly": "Fire-control group",
+   "description": "Spring-driven hammer in the trigger housing.",
+   "material_dependency": "Machined steel",
+   "risk_tier": "ELEVATED",
+   "risk_score": 58,
+   "disassembly_order": 12,
+   "confidence": "high",
+   "geometry_cue": "procedurally modelled to spec"
+  }
+ }
+}

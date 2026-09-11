@@ -1,0 +1,4580 @@
+{
+ "/models/abandoned_soviet_btr_-_80/scene.gltf": {
+  "id": "abandoned_soviet_btr_-_80",
+  "name": "Abandoned Soviet Btr   80",
+  "axis": "Z",
+  "part_count": 6,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Wheels",
+    "axis_position": -0.05,
+    "vertical_position": -0.68,
+    "lateral_position": 0,
+    "length_fraction": 0.75,
+    "size_fraction": 0.23,
+    "faces": 45568
+   },
+   {
+    "key": "part_1",
+    "label": "MainFrame Details 0",
+    "axis_position": -0.01,
+    "vertical_position": 0.16,
+    "lateral_position": 0,
+    "length_fraction": 0.99,
+    "size_fraction": 0.79,
+    "faces": 31710
+   },
+   {
+    "key": "part_2",
+    "label": "MainFrame MetalBase 0",
+    "axis_position": 0.01,
+    "vertical_position": -0.38,
+    "lateral_position": 0,
+    "length_fraction": 0.97,
+    "size_fraction": 0.34,
+    "faces": 2092
+   },
+   {
+    "key": "part_3",
+    "label": "MainFrame Lights 0",
+    "axis_position": 0.03,
+    "vertical_position": -0.18,
+    "lateral_position": 0,
+    "length_fraction": 0.97,
+    "size_fraction": 0.17,
+    "faces": 10010
+   },
+   {
+    "key": "part_4",
+    "label": "Turret MetalBase 0",
+    "axis_position": 0.24,
+    "vertical_position": 0.04,
+    "lateral_position": 0,
+    "length_fraction": 0.25,
+    "size_fraction": 0.02,
+    "faces": 1853
+   },
+   {
+    "key": "part_5",
+    "label": "Turret Details 0",
+    "axis_position": 0.32,
+    "vertical_position": 0.16,
+    "lateral_position": 0.2,
+    "length_fraction": 0.26,
+    "size_fraction": 0.03,
+    "faces": 16498
+   }
+  ]
+ },
+ "/models/ak-47/model.glb": {
+  "id": "ak-47",
+  "name": "Ak 47",
+  "axis": "X",
+  "part_count": 12,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Section 12",
+    "axis_position": -0.87,
+    "vertical_position": -0.05,
+    "lateral_position": -0.22,
+    "length_fraction": 0,
+    "size_fraction": 0,
+    "faces": 480
+   },
+   {
+    "key": "part_1",
+    "label": "Section 5",
+    "axis_position": -0.73,
+    "vertical_position": 0.31,
+    "lateral_position": -0.22,
+    "length_fraction": 0.27,
+    "size_fraction": 0.06,
+    "faces": 860
+   },
+   {
+    "key": "part_2",
+    "label": "Section 7",
+    "axis_position": -0.37,
+    "vertical_position": -0.09,
+    "lateral_position": -0.22,
+    "length_fraction": 0.09,
+    "size_fraction": 0.02,
+    "faces": 730
+   },
+   {
+    "key": "part_3",
+    "label": "Section 9",
+    "axis_position": -0.21,
+    "vertical_position": 0.44,
+    "lateral_position": -0.59,
+    "length_fraction": 0.22,
+    "size_fraction": 0.01,
+    "faces": 880
+   },
+   {
+    "key": "part_4",
+    "label": "Section 6",
+    "axis_position": -0.21,
+    "vertical_position": 0.48,
+    "lateral_position": 0.25,
+    "length_fraction": 0.22,
+    "size_fraction": 0.01,
+    "faces": 1626
+   },
+   {
+    "key": "part_5",
+    "label": "Section 2",
+    "axis_position": -0.18,
+    "vertical_position": 0.48,
+    "lateral_position": -0.22,
+    "length_fraction": 0.34,
+    "size_fraction": 0.08,
+    "faces": 2931
+   },
+   {
+    "key": "part_6",
+    "label": "Section 1",
+    "axis_position": 0.03,
+    "vertical_position": -0.24,
+    "lateral_position": -0.22,
+    "length_fraction": 0.15,
+    "size_fraction": 0.05,
+    "faces": 2216
+   },
+   {
+    "key": "part_7",
+    "label": "Section 3",
+    "axis_position": 0.08,
+    "vertical_position": 0.65,
+    "lateral_position": 0.63,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 168
+   },
+   {
+    "key": "part_8",
+    "label": "Section 10",
+    "axis_position": 0.1,
+    "vertical_position": 0.73,
+    "lateral_position": -0.66,
+    "length_fraction": 0.12,
+    "size_fraction": 0,
+    "faces": 578
+   },
+   {
+    "key": "part_9",
+    "label": "Section 11",
+    "axis_position": 0.14,
+    "vertical_position": 0.74,
+    "lateral_position": 0.23,
+    "length_fraction": 0.08,
+    "size_fraction": 0,
+    "faces": 644
+   },
+   {
+    "key": "part_10",
+    "label": "Section 8",
+    "axis_position": 0.29,
+    "vertical_position": 0.67,
+    "lateral_position": -0.3,
+    "length_fraction": 0.22,
+    "size_fraction": 0.05,
+    "faces": 3340
+   },
+   {
+    "key": "part_11",
+    "label": "Section 4",
+    "axis_position": 0.74,
+    "vertical_position": 0.72,
+    "lateral_position": -0.21,
+    "length_fraction": 0.26,
+    "size_fraction": 0.02,
+    "faces": 2944
+   }
+  ]
+ },
+ "/models/arx-apc/model.glb": {
+  "id": "arx-apc",
+  "name": "Arx Apc",
+  "axis": "Z",
+  "part_count": 21,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Body Parts042",
+    "axis_position": -0.92,
+    "vertical_position": 0.06,
+    "lateral_position": -0.64,
+    "length_fraction": 0.03,
+    "size_fraction": 0,
+    "faces": 732
+   },
+   {
+    "key": "part_1",
+    "label": "Body Parts043",
+    "axis_position": -0.31,
+    "vertical_position": 0.45,
+    "lateral_position": 0.07,
+    "length_fraction": 0.58,
+    "size_fraction": 0.15,
+    "faces": 10520
+   },
+   {
+    "key": "part_2",
+    "label": "shield connectors001",
+    "axis_position": -0.19,
+    "vertical_position": -0.11,
+    "lateral_position": 0,
+    "length_fraction": 0.63,
+    "size_fraction": 0.01,
+    "faces": 100
+   },
+   {
+    "key": "part_3",
+    "label": "shield cage 1 001",
+    "axis_position": -0.07,
+    "vertical_position": -0.13,
+    "lateral_position": 0,
+    "length_fraction": 0.93,
+    "size_fraction": 0.22,
+    "faces": 5556
+   },
+   {
+    "key": "part_4",
+    "label": "shield cage 1 003",
+    "axis_position": -0.05,
+    "vertical_position": -0.38,
+    "lateral_position": 0,
+    "length_fraction": 0.8,
+    "size_fraction": 0.01,
+    "faces": 360
+   },
+   {
+    "key": "part_5",
+    "label": "APC003",
+    "axis_position": -0.04,
+    "vertical_position": -0.57,
+    "lateral_position": 0,
+    "length_fraction": 0.8,
+    "size_fraction": 0.14,
+    "faces": 328
+   },
+   {
+    "key": "part_6",
+    "label": "Body Parts045",
+    "axis_position": -0.02,
+    "vertical_position": 0.51,
+    "lateral_position": -0.21,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 1084
+   },
+   {
+    "key": "part_7",
+    "label": "Body021",
+    "axis_position": -0.01,
+    "vertical_position": 0.41,
+    "lateral_position": -0.33,
+    "length_fraction": 0.07,
+    "size_fraction": 0.01,
+    "faces": 6711
+   },
+   {
+    "key": "part_8",
+    "label": "Body Parts037",
+    "axis_position": 0.01,
+    "vertical_position": 0.14,
+    "lateral_position": 0,
+    "length_fraction": 0.99,
+    "size_fraction": 0.85,
+    "faces": 36289
+   },
+   {
+    "key": "part_9",
+    "label": "Body Parts044",
+    "axis_position": 0.02,
+    "vertical_position": 0.07,
+    "lateral_position": 0.87,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 238
+   },
+   {
+    "key": "part_10",
+    "label": "Wheels003",
+    "axis_position": 0.02,
+    "vertical_position": -0.65,
+    "lateral_position": 0,
+    "length_fraction": 0.67,
+    "size_fraction": 0.2,
+    "faces": 27104
+   },
+   {
+    "key": "part_11",
+    "label": "Body Parts040",
+    "axis_position": 0.03,
+    "vertical_position": -0.29,
+    "lateral_position": 0,
+    "length_fraction": 0.91,
+    "size_fraction": 0.13,
+    "faces": 736
+   },
+   {
+    "key": "part_12",
+    "label": "Body017",
+    "axis_position": 0.03,
+    "vertical_position": -0.19,
+    "lateral_position": 0,
+    "length_fraction": 0.93,
+    "size_fraction": 0.28,
+    "faces": 864
+   },
+   {
+    "key": "part_13",
+    "label": "Body Parts038",
+    "axis_position": 0.04,
+    "vertical_position": -0.26,
+    "lateral_position": 0,
+    "length_fraction": 0.94,
+    "size_fraction": 0.33,
+    "faces": 730
+   },
+   {
+    "key": "part_14",
+    "label": "Bolts041",
+    "axis_position": 0.05,
+    "vertical_position": -0.24,
+    "lateral_position": 0,
+    "length_fraction": 0.93,
+    "size_fraction": 0.3,
+    "faces": 6314
+   },
+   {
+    "key": "part_15",
+    "label": "Undercarriage004",
+    "axis_position": 0.1,
+    "vertical_position": -0.49,
+    "lateral_position": 0,
+    "length_fraction": 0.63,
+    "size_fraction": 0.1,
+    "faces": 5086
+   },
+   {
+    "key": "part_16",
+    "label": "Body020",
+    "axis_position": 0.55,
+    "vertical_position": 0.32,
+    "lateral_position": -0.01,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 3996
+   },
+   {
+    "key": "part_17",
+    "label": "Body Parts039",
+    "axis_position": 0.71,
+    "vertical_position": -0.39,
+    "lateral_position": 0,
+    "length_fraction": 0.14,
+    "size_fraction": 0.02,
+    "faces": 4
+   },
+   {
+    "key": "part_18",
+    "label": "Body Parts034",
+    "axis_position": 0.79,
+    "vertical_position": -0.18,
+    "lateral_position": -0.88,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 96
+   },
+   {
+    "key": "part_19",
+    "label": "Body Parts041",
+    "axis_position": 0.79,
+    "vertical_position": -0.18,
+    "lateral_position": 0.88,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 96
+   },
+   {
+    "key": "part_20",
+    "label": "Lights005",
+    "axis_position": 0.91,
+    "vertical_position": -0.15,
+    "lateral_position": 0,
+    "length_fraction": 0.04,
+    "size_fraction": 0,
+    "faces": 1920
+   }
+  ]
+ },
+ "/models/arx-pounder/model.glb": {
+  "id": "arx-pounder",
+  "name": "Arx Pounder",
+  "axis": "Z",
+  "part_count": 14,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Lights",
+    "axis_position": -0.9,
+    "vertical_position": -0.24,
+    "lateral_position": 0,
+    "length_fraction": 0.04,
+    "size_fraction": 0,
+    "faces": 1920
+   },
+   {
+    "key": "part_1",
+    "label": "Body Parts080",
+    "axis_position": -0.79,
+    "vertical_position": -0.27,
+    "lateral_position": 0.89,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 96
+   },
+   {
+    "key": "part_2",
+    "label": "Body Parts097",
+    "axis_position": -0.79,
+    "vertical_position": -0.27,
+    "lateral_position": -0.89,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 96
+   },
+   {
+    "key": "part_3",
+    "label": "Body Parts086",
+    "axis_position": -0.71,
+    "vertical_position": -0.46,
+    "lateral_position": 0,
+    "length_fraction": 0.14,
+    "size_fraction": 0.02,
+    "faces": 4
+   },
+   {
+    "key": "part_4",
+    "label": "Canvas",
+    "axis_position": -0.08,
+    "vertical_position": 0.22,
+    "lateral_position": -0.02,
+    "length_fraction": 0.11,
+    "size_fraction": 0,
+    "faces": 1075
+   },
+   {
+    "key": "part_5",
+    "label": "Undercarriage",
+    "axis_position": -0.08,
+    "vertical_position": -0.54,
+    "lateral_position": 0,
+    "length_fraction": 0.64,
+    "size_fraction": 0.09,
+    "faces": 5086
+   },
+   {
+    "key": "part_6",
+    "label": "Turret",
+    "axis_position": -0.05,
+    "vertical_position": 0.21,
+    "lateral_position": -0.02,
+    "length_fraction": 0.95,
+    "size_fraction": 0.14,
+    "faces": 3428
+   },
+   {
+    "key": "part_7",
+    "label": "Bolts",
+    "axis_position": -0.04,
+    "vertical_position": -0.15,
+    "lateral_position": 0,
+    "length_fraction": 0.93,
+    "size_fraction": 0.41,
+    "faces": 7380
+   },
+   {
+    "key": "part_8",
+    "label": "Body Parts085",
+    "axis_position": -0.03,
+    "vertical_position": -0.34,
+    "lateral_position": 0,
+    "length_fraction": 0.94,
+    "size_fraction": 0.3,
+    "faces": 806
+   },
+   {
+    "key": "part_9",
+    "label": "Body007",
+    "axis_position": -0.02,
+    "vertical_position": -0.27,
+    "lateral_position": 0,
+    "length_fraction": 0.93,
+    "size_fraction": 0.25,
+    "faces": 784
+   },
+   {
+    "key": "part_10",
+    "label": "Wheels",
+    "axis_position": -0.02,
+    "vertical_position": -0.69,
+    "lateral_position": 0,
+    "length_fraction": 0.67,
+    "size_fraction": 0.18,
+    "faces": 27104
+   },
+   {
+    "key": "part_11",
+    "label": "Body Parts096",
+    "axis_position": -0.02,
+    "vertical_position": -0.36,
+    "lateral_position": 0,
+    "length_fraction": 0.92,
+    "size_fraction": 0.12,
+    "faces": 736
+   },
+   {
+    "key": "part_12",
+    "label": "Body Parts083",
+    "axis_position": 0,
+    "vertical_position": 0.12,
+    "lateral_position": 0,
+    "length_fraction": 1,
+    "size_fraction": 0.87,
+    "faces": 50715
+   },
+   {
+    "key": "part_13",
+    "label": "Body Parts084",
+    "axis_position": 0.93,
+    "vertical_position": -0.06,
+    "lateral_position": 0.65,
+    "length_fraction": 0.03,
+    "size_fraction": 0,
+    "faces": 732
+   }
+  ]
+ },
+ "/models/as_val/scene.gltf": {
+  "id": "as_val",
+  "name": "As Val",
+  "axis": "X",
+  "part_count": 21,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "stock low",
+    "axis_position": -0.73,
+    "vertical_position": 0.15,
+    "lateral_position": -0.3,
+    "length_fraction": 0.27,
+    "size_fraction": 0.09,
+    "faces": 4259
+   },
+   {
+    "key": "part_1",
+    "label": "grip low",
+    "axis_position": -0.4,
+    "vertical_position": -0.05,
+    "lateral_position": -0.28,
+    "length_fraction": 0.06,
+    "size_fraction": 0.01,
+    "faces": 1468
+   },
+   {
+    "key": "part_2",
+    "label": "sear02 low",
+    "axis_position": -0.34,
+    "vertical_position": 0.52,
+    "lateral_position": -0.17,
+    "length_fraction": 0.03,
+    "size_fraction": 0,
+    "faces": 80
+   },
+   {
+    "key": "part_3",
+    "label": "sear spring",
+    "axis_position": -0.34,
+    "vertical_position": 0.5,
+    "lateral_position": -0.28,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 152
+   },
+   {
+    "key": "part_4",
+    "label": "trigger02 low",
+    "axis_position": -0.33,
+    "vertical_position": 0.5,
+    "lateral_position": -0.42,
+    "length_fraction": 0.04,
+    "size_fraction": 0,
+    "faces": 236
+   },
+   {
+    "key": "part_5",
+    "label": "selector switch low",
+    "axis_position": -0.32,
+    "vertical_position": 0.3,
+    "lateral_position": -0.27,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 350
+   },
+   {
+    "key": "part_6",
+    "label": "trigger01 low",
+    "axis_position": -0.3,
+    "vertical_position": 0.35,
+    "lateral_position": -0.28,
+    "length_fraction": 0.03,
+    "size_fraction": 0,
+    "faces": 338
+   },
+   {
+    "key": "part_7",
+    "label": "trigger spring02",
+    "axis_position": -0.3,
+    "vertical_position": 0.51,
+    "lateral_position": -0.08,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 128
+   },
+   {
+    "key": "part_8",
+    "label": "trigger spring01",
+    "axis_position": -0.29,
+    "vertical_position": 0.51,
+    "lateral_position": -0.57,
+    "length_fraction": 0.05,
+    "size_fraction": 0,
+    "faces": 158
+   },
+   {
+    "key": "part_9",
+    "label": "trigger03 low",
+    "axis_position": -0.29,
+    "vertical_position": 0.55,
+    "lateral_position": -0.56,
+    "length_fraction": 0.09,
+    "size_fraction": 0,
+    "faces": 228
+   },
+   {
+    "key": "part_10",
+    "label": "safety low",
+    "axis_position": -0.28,
+    "vertical_position": 0.56,
+    "lateral_position": -0.13,
+    "length_fraction": 0.07,
+    "size_fraction": 0,
+    "faces": 582
+   },
+   {
+    "key": "part_11",
+    "label": "reciever cover low",
+    "axis_position": -0.26,
+    "vertical_position": 0.75,
+    "lateral_position": -0.25,
+    "length_fraction": 0.19,
+    "size_fraction": 0.02,
+    "faces": 2292
+   },
+   {
+    "key": "part_12",
+    "label": "recoill spring base01 low",
+    "axis_position": -0.22,
+    "vertical_position": 0.7,
+    "lateral_position": -0.28,
+    "length_fraction": 0.24,
+    "size_fraction": 0.02,
+    "faces": 1530
+   },
+   {
+    "key": "part_13",
+    "label": "magazine latch pin low",
+    "axis_position": -0.21,
+    "vertical_position": 0.21,
+    "lateral_position": -0.28,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 346
+   },
+   {
+    "key": "part_14",
+    "label": "gunbase low M externals 0",
+    "axis_position": -0.2,
+    "vertical_position": 0.51,
+    "lateral_position": -0.34,
+    "length_fraction": 0.28,
+    "size_fraction": 0.07,
+    "faces": 2926
+   },
+   {
+    "key": "part_15",
+    "label": "magazine low",
+    "axis_position": -0.1,
+    "vertical_position": -0.2,
+    "lateral_position": -0.28,
+    "length_fraction": 0.1,
+    "size_fraction": 0.05,
+    "faces": 2188
+   },
+   {
+    "key": "part_16",
+    "label": "bolt carrier low",
+    "axis_position": -0.07,
+    "vertical_position": 0.73,
+    "lateral_position": 0.15,
+    "length_fraction": 0.16,
+    "size_fraction": 0.02,
+    "faces": 3100
+   },
+   {
+    "key": "part_17",
+    "label": "handguard low",
+    "axis_position": 0.03,
+    "vertical_position": 0.62,
+    "lateral_position": -0.28,
+    "length_fraction": 0.1,
+    "size_fraction": 0.02,
+    "faces": 1110
+   },
+   {
+    "key": "part_18",
+    "label": "barrel low",
+    "axis_position": 0.13,
+    "vertical_position": 0.7,
+    "lateral_position": -0.28,
+    "length_fraction": 0.24,
+    "size_fraction": 0.03,
+    "faces": 2640
+   },
+   {
+    "key": "part_19",
+    "label": "silencer low",
+    "axis_position": 0.45,
+    "vertical_position": 0.74,
+    "lateral_position": -0.28,
+    "length_fraction": 0.32,
+    "size_fraction": 0.06,
+    "faces": 6668
+   },
+   {
+    "key": "part_20",
+    "label": "magazine",
+    "axis_position": 0.95,
+    "vertical_position": -0.03,
+    "lateral_position": -0.28,
+    "length_fraction": 0.05,
+    "size_fraction": 0,
+    "faces": 446
+   }
+  ]
+ },
+ "/models/basic_missle/scene.gltf": {
+  "id": "basic_missle",
+  "name": "Basic Missle",
+  "axis": "Z",
+  "part_count": 9,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Segment 3",
+    "axis_position": -0.82,
+    "vertical_position": -0.61,
+    "lateral_position": 0,
+    "length_fraction": 0.12,
+    "size_fraction": 0,
+    "faces": 20
+   },
+   {
+    "key": "part_1",
+    "label": "Segment 4",
+    "axis_position": -0.82,
+    "vertical_position": 0,
+    "lateral_position": 0.61,
+    "length_fraction": 0.12,
+    "size_fraction": 0,
+    "faces": 20
+   },
+   {
+    "key": "part_2",
+    "label": "Segment 5",
+    "axis_position": -0.82,
+    "vertical_position": 0.61,
+    "lateral_position": 0,
+    "length_fraction": 0.12,
+    "size_fraction": 0,
+    "faces": 20
+   },
+   {
+    "key": "part_3",
+    "label": "Segment 2",
+    "axis_position": -0.82,
+    "vertical_position": 0,
+    "lateral_position": -0.61,
+    "length_fraction": 0.12,
+    "size_fraction": 0,
+    "faces": 20
+   },
+   {
+    "key": "part_4",
+    "label": "Segment 1",
+    "axis_position": 0,
+    "vertical_position": 0,
+    "lateral_position": 0,
+    "length_fraction": 1,
+    "size_fraction": 0.19,
+    "faces": 830
+   },
+   {
+    "key": "part_5",
+    "label": "Segment 6",
+    "axis_position": 0.4,
+    "vertical_position": -0.65,
+    "lateral_position": 0,
+    "length_fraction": 0.14,
+    "size_fraction": 0,
+    "faces": 16
+   },
+   {
+    "key": "part_6",
+    "label": "Segment 7",
+    "axis_position": 0.4,
+    "vertical_position": 0,
+    "lateral_position": -0.65,
+    "length_fraction": 0.14,
+    "size_fraction": 0,
+    "faces": 16
+   },
+   {
+    "key": "part_7",
+    "label": "Segment 8",
+    "axis_position": 0.4,
+    "vertical_position": 0,
+    "lateral_position": 0.65,
+    "length_fraction": 0.14,
+    "size_fraction": 0,
+    "faces": 16
+   },
+   {
+    "key": "part_8",
+    "label": "Segment 9",
+    "axis_position": 0.4,
+    "vertical_position": 0.65,
+    "lateral_position": 0,
+    "length_fraction": 0.14,
+    "size_fraction": 0,
+    "faces": 16
+   }
+  ]
+ },
+ "/models/boeing-kc-46a/model.glb": {
+  "id": "boeing-kc-46a",
+  "name": "Boeing Kc 46A",
+  "axis": "Z",
+  "part_count": 7,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Object 3",
+    "axis_position": -0.06,
+    "vertical_position": -0.63,
+    "lateral_position": 0,
+    "length_fraction": 0.93,
+    "size_fraction": 0.22,
+    "faces": 48679
+   },
+   {
+    "key": "part_1",
+    "label": "Object 5",
+    "axis_position": 0,
+    "vertical_position": 0.08,
+    "lateral_position": 0,
+    "length_fraction": 1,
+    "size_fraction": 0.4,
+    "faces": 29873
+   },
+   {
+    "key": "part_2",
+    "label": "Object 4",
+    "axis_position": 0.05,
+    "vertical_position": -0.6,
+    "lateral_position": 0,
+    "length_fraction": 0.34,
+    "size_fraction": 0.09,
+    "faces": 13364
+   },
+   {
+    "key": "part_3",
+    "label": "Object 8",
+    "axis_position": 0.27,
+    "vertical_position": -0.42,
+    "lateral_position": 0,
+    "length_fraction": 0.68,
+    "size_fraction": 0.11,
+    "faces": 1978
+   },
+   {
+    "key": "part_4",
+    "label": "Object 6",
+    "axis_position": 0.28,
+    "vertical_position": -0.43,
+    "lateral_position": 0,
+    "length_fraction": 0.64,
+    "size_fraction": 0.02,
+    "faces": 14370
+   },
+   {
+    "key": "part_5",
+    "label": "Object 2",
+    "axis_position": 0.42,
+    "vertical_position": -0.83,
+    "lateral_position": 0,
+    "length_fraction": 0.43,
+    "size_fraction": 0.02,
+    "faces": 45774
+   },
+   {
+    "key": "part_6",
+    "label": "Object 7",
+    "axis_position": 0.9,
+    "vertical_position": -0.32,
+    "lateral_position": 0,
+    "length_fraction": 0.05,
+    "size_fraction": 0,
+    "faces": 14350
+   }
+  ]
+ },
+ "/models/call-of-duty-black-ops-6-as-val/model.glb": {
+  "id": "call-of-duty-black-ops-6-as-val",
+  "name": "Call Of Duty Black Ops 6 As Val",
+  "axis": "Z",
+  "part_count": 9,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "other\\stocksmd",
+    "axis_position": -0.7,
+    "vertical_position": 0.61,
+    "lateral_position": -0.38,
+    "length_fraction": 0.3,
+    "size_fraction": 0.02,
+    "faces": 10884
+   },
+   {
+    "key": "part_1",
+    "label": "other\\grip mainsmd",
+    "axis_position": -0.34,
+    "vertical_position": 0.49,
+    "lateral_position": -0.39,
+    "length_fraction": 0.07,
+    "size_fraction": 0,
+    "faces": 1638
+   },
+   {
+    "key": "part_2",
+    "label": "other\\bullet insidesmd",
+    "axis_position": -0.25,
+    "vertical_position": 0.87,
+    "lateral_position": 0.91,
+    "length_fraction": 0.06,
+    "size_fraction": 0,
+    "faces": 512
+   },
+   {
+    "key": "part_3",
+    "label": "other\\bulletssmd",
+    "axis_position": -0.04,
+    "vertical_position": 0.75,
+    "lateral_position": -0.38,
+    "length_fraction": 0.06,
+    "size_fraction": 0,
+    "faces": 2048
+   },
+   {
+    "key": "part_4",
+    "label": "other\\ASValsmd",
+    "axis_position": -0.01,
+    "vertical_position": 0.77,
+    "lateral_position": -0.54,
+    "length_fraction": 0.4,
+    "size_fraction": 0.04,
+    "faces": 25660
+   },
+   {
+    "key": "part_5",
+    "label": "other\\magsmd",
+    "axis_position": 0.01,
+    "vertical_position": 0.42,
+    "lateral_position": -0.39,
+    "length_fraction": 0.13,
+    "size_fraction": 0.01,
+    "faces": 6101
+   },
+   {
+    "key": "part_6",
+    "label": "other\\mag extendedsmd",
+    "axis_position": 0.02,
+    "vertical_position": -0.54,
+    "lateral_position": -0.39,
+    "length_fraction": 0.13,
+    "size_fraction": 0.02,
+    "faces": 6045
+   },
+   {
+    "key": "part_7",
+    "label": "other\\barrel beltssmd",
+    "axis_position": 0.47,
+    "vertical_position": 0.83,
+    "lateral_position": -0.33,
+    "length_fraction": 0.1,
+    "size_fraction": 0,
+    "faces": 5416
+   },
+   {
+    "key": "part_8",
+    "label": "other\\barrelsmd",
+    "axis_position": 0.52,
+    "vertical_position": 0.83,
+    "lateral_position": -0.39,
+    "length_fraction": 0.48,
+    "size_fraction": 0.03,
+    "faces": 8792
+   }
+  ]
+ },
+ "/models/drdo-rustom-2-uav/model.glb": {
+  "id": "drdo-rustom-2-uav",
+  "name": "Drdo Rustom 2 Uav",
+  "axis": "Z",
+  "part_count": 8,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Empty003",
+    "axis_position": -0.8,
+    "vertical_position": -0.03,
+    "lateral_position": 0.07,
+    "length_fraction": 0.2,
+    "size_fraction": 0,
+    "faces": 47616
+   },
+   {
+    "key": "part_1",
+    "label": "Empty007",
+    "axis_position": -0.14,
+    "vertical_position": 0.95,
+    "lateral_position": -0.86,
+    "length_fraction": 0.1,
+    "size_fraction": 0,
+    "faces": 22016
+   },
+   {
+    "key": "part_2",
+    "label": "Empty011",
+    "axis_position": 0,
+    "vertical_position": 0.45,
+    "lateral_position": -0.84,
+    "length_fraction": 0.06,
+    "size_fraction": 0,
+    "faces": 15616
+   },
+   {
+    "key": "part_3",
+    "label": "Empty014",
+    "axis_position": 0,
+    "vertical_position": -0.63,
+    "lateral_position": 0.11,
+    "length_fraction": 0.24,
+    "size_fraction": 0.01,
+    "faces": 423936
+   },
+   {
+    "key": "part_4",
+    "label": "Plane",
+    "axis_position": 0,
+    "vertical_position": 0.13,
+    "lateral_position": 0.05,
+    "length_fraction": 1,
+    "size_fraction": 0.83,
+    "faces": 1379648
+   },
+   {
+    "key": "part_5",
+    "label": "Empty013",
+    "axis_position": 0.01,
+    "vertical_position": -0.74,
+    "lateral_position": 0.77,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 68544
+   },
+   {
+    "key": "part_6",
+    "label": "Empty008",
+    "axis_position": 0.14,
+    "vertical_position": 0.95,
+    "lateral_position": -0.86,
+    "length_fraction": 0.1,
+    "size_fraction": 0,
+    "faces": 22016
+   },
+   {
+    "key": "part_7",
+    "label": "Empty002",
+    "axis_position": 0.8,
+    "vertical_position": -0.03,
+    "lateral_position": 0.07,
+    "length_fraction": 0.2,
+    "size_fraction": 0,
+    "faces": 47616
+   }
+  ]
+ },
+ "/models/japanese-type-87-rcv/model.glb": {
+  "id": "japanese-type-87-rcv",
+  "name": "Japanese Type 87 Rcv",
+  "axis": "X",
+  "part_count": 20,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "1",
+    "axis_position": -0.75,
+    "vertical_position": 0.52,
+    "lateral_position": -0.11,
+    "length_fraction": 0.25,
+    "size_fraction": 0,
+    "faces": 1770
+   },
+   {
+    "key": "part_1",
+    "label": "8003",
+    "axis_position": -0.42,
+    "vertical_position": -0.58,
+    "lateral_position": 0.76,
+    "length_fraction": 0.19,
+    "size_fraction": 0.02,
+    "faces": 5584
+   },
+   {
+    "key": "part_2",
+    "label": "8",
+    "axis_position": -0.42,
+    "vertical_position": -0.58,
+    "lateral_position": -0.81,
+    "length_fraction": 0.19,
+    "size_fraction": 0.01,
+    "faces": 5584
+   },
+   {
+    "key": "part_3",
+    "label": "2",
+    "axis_position": -0.26,
+    "vertical_position": 0.47,
+    "lateral_position": -0.16,
+    "length_fraction": 0.25,
+    "size_fraction": 0.02,
+    "faces": 1928
+   },
+   {
+    "key": "part_4",
+    "label": "9",
+    "axis_position": -0.19,
+    "vertical_position": 0.06,
+    "lateral_position": -0.85,
+    "length_fraction": 0.13,
+    "size_fraction": 0,
+    "faces": 1381
+   },
+   {
+    "key": "part_5",
+    "label": "3",
+    "axis_position": -0.04,
+    "vertical_position": 0.38,
+    "lateral_position": -0.03,
+    "length_fraction": 0.38,
+    "size_fraction": 0.18,
+    "faces": 28934
+   },
+   {
+    "key": "part_6",
+    "label": "8001",
+    "axis_position": 0.05,
+    "vertical_position": -0.58,
+    "lateral_position": -0.81,
+    "length_fraction": 0.19,
+    "size_fraction": 0.01,
+    "faces": 5584
+   },
+   {
+    "key": "part_7",
+    "label": "8004",
+    "axis_position": 0.06,
+    "vertical_position": -0.58,
+    "lateral_position": 0.76,
+    "length_fraction": 0.19,
+    "size_fraction": 0.01,
+    "faces": 5584
+   },
+   {
+    "key": "part_8",
+    "label": "body",
+    "axis_position": 0.07,
+    "vertical_position": -0.15,
+    "lateral_position": 0,
+    "length_fraction": 0.93,
+    "size_fraction": 0.56,
+    "faces": 85893
+   },
+   {
+    "key": "part_9",
+    "label": "4",
+    "axis_position": 0.14,
+    "vertical_position": 0.86,
+    "lateral_position": 0.24,
+    "length_fraction": 0.08,
+    "size_fraction": 0,
+    "faces": 778
+   },
+   {
+    "key": "part_10",
+    "label": "5",
+    "axis_position": 0.15,
+    "vertical_position": 0.9,
+    "lateral_position": -0.3,
+    "length_fraction": 0.08,
+    "size_fraction": 0,
+    "faces": 998
+   },
+   {
+    "key": "part_11",
+    "label": "6",
+    "axis_position": 0.26,
+    "vertical_position": 0.71,
+    "lateral_position": -0.06,
+    "length_fraction": 0.08,
+    "size_fraction": 0,
+    "faces": 570
+   },
+   {
+    "key": "part_12",
+    "label": "13",
+    "axis_position": 0.29,
+    "vertical_position": 0.08,
+    "lateral_position": 0.85,
+    "length_fraction": 0.14,
+    "size_fraction": 0,
+    "faces": 2768
+   },
+   {
+    "key": "part_13",
+    "label": "10",
+    "axis_position": 0.3,
+    "vertical_position": -0.13,
+    "lateral_position": -0.97,
+    "length_fraction": 0.08,
+    "size_fraction": 0,
+    "faces": 316
+   },
+   {
+    "key": "part_14",
+    "label": "14",
+    "axis_position": 0.51,
+    "vertical_position": 0.41,
+    "lateral_position": -0.68,
+    "length_fraction": 0.28,
+    "size_fraction": 0,
+    "faces": 4348
+   },
+   {
+    "key": "part_15",
+    "label": "15",
+    "axis_position": 0.51,
+    "vertical_position": 0.5,
+    "lateral_position": 0.63,
+    "length_fraction": 0.28,
+    "size_fraction": 0.01,
+    "faces": 4658
+   },
+   {
+    "key": "part_16",
+    "label": "8005",
+    "axis_position": 0.53,
+    "vertical_position": -0.58,
+    "lateral_position": 0.76,
+    "length_fraction": 0.19,
+    "size_fraction": 0.01,
+    "faces": 5584
+   },
+   {
+    "key": "part_17",
+    "label": "8002",
+    "axis_position": 0.53,
+    "vertical_position": -0.58,
+    "lateral_position": -0.81,
+    "length_fraction": 0.19,
+    "size_fraction": 0.01,
+    "faces": 5584
+   },
+   {
+    "key": "part_18",
+    "label": "11",
+    "axis_position": 0.84,
+    "vertical_position": -0.22,
+    "lateral_position": -0.35,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 374
+   },
+   {
+    "key": "part_19",
+    "label": "12",
+    "axis_position": 0.85,
+    "vertical_position": -0.06,
+    "lateral_position": 0.39,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 1108
+   }
+  ]
+ },
+ "/models/jet-fighter/model.glb": {
+  "id": "jet-fighter",
+  "name": "Jet Fighter",
+  "axis": "Z",
+  "part_count": 12,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Section 12",
+    "axis_position": -0.56,
+    "vertical_position": -0.02,
+    "lateral_position": -0.02,
+    "length_fraction": 0,
+    "size_fraction": 0,
+    "faces": 2
+   },
+   {
+    "key": "part_1",
+    "label": "Section 2",
+    "axis_position": -0.55,
+    "vertical_position": 0.26,
+    "lateral_position": -0.02,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 404
+   },
+   {
+    "key": "part_2",
+    "label": "Section 3",
+    "axis_position": -0.38,
+    "vertical_position": 0.18,
+    "lateral_position": -0.01,
+    "length_fraction": 0.16,
+    "size_fraction": 0.01,
+    "faces": 8012
+   },
+   {
+    "key": "part_3",
+    "label": "Section 11",
+    "axis_position": -0.34,
+    "vertical_position": -0.09,
+    "lateral_position": -0.01,
+    "length_fraction": 0.3,
+    "size_fraction": 0.02,
+    "faces": 17755
+   },
+   {
+    "key": "part_4",
+    "label": "Section 1",
+    "axis_position": 0,
+    "vertical_position": 0,
+    "lateral_position": 0,
+    "length_fraction": 1,
+    "size_fraction": 1,
+    "faces": 10053
+   },
+   {
+    "key": "part_5",
+    "label": "Section 10",
+    "axis_position": 0.17,
+    "vertical_position": -0.36,
+    "lateral_position": 0,
+    "length_fraction": 0.71,
+    "size_fraction": 0.17,
+    "faces": 4821
+   },
+   {
+    "key": "part_6",
+    "label": "Section 4",
+    "axis_position": 0.53,
+    "vertical_position": -0.14,
+    "lateral_position": 0.73,
+    "length_fraction": 0.07,
+    "size_fraction": 0,
+    "faces": 16
+   },
+   {
+    "key": "part_7",
+    "label": "Section 5",
+    "axis_position": 0.55,
+    "vertical_position": -0.16,
+    "lateral_position": -0.69,
+    "length_fraction": 0.06,
+    "size_fraction": 0,
+    "faces": 16
+   },
+   {
+    "key": "part_8",
+    "label": "Section 6",
+    "axis_position": 0.7,
+    "vertical_position": -0.18,
+    "lateral_position": 0.05,
+    "length_fraction": 0.24,
+    "size_fraction": 0.01,
+    "faces": 83
+   },
+   {
+    "key": "part_9",
+    "label": "Section 7",
+    "axis_position": 0.78,
+    "vertical_position": -0.21,
+    "lateral_position": -0.42,
+    "length_fraction": 0.17,
+    "size_fraction": 0,
+    "faces": 63
+   },
+   {
+    "key": "part_10",
+    "label": "Section 9",
+    "axis_position": 0.84,
+    "vertical_position": 0.22,
+    "lateral_position": 0.29,
+    "length_fraction": 0.04,
+    "size_fraction": 0,
+    "faces": 26
+   },
+   {
+    "key": "part_11",
+    "label": "Section 8",
+    "axis_position": 0.85,
+    "vertical_position": 0.22,
+    "lateral_position": -0.23,
+    "length_fraction": 0.04,
+    "size_fraction": 0,
+    "faces": 26
+   }
+  ]
+ },
+ "/models/kf-21a-boramae-fighter-jet/model.glb": {
+  "id": "kf-21a-boramae-fighter-jet",
+  "name": "Kf 21A Boramae Fighter Jet",
+  "axis": "Z",
+  "part_count": 5,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Object 5",
+    "axis_position": -0.19,
+    "vertical_position": -0.48,
+    "lateral_position": 0,
+    "length_fraction": 0.37,
+    "size_fraction": 0.08,
+    "faces": 13748
+   },
+   {
+    "key": "part_1",
+    "label": "Object 3",
+    "axis_position": -0.13,
+    "vertical_position": -0.48,
+    "lateral_position": 0,
+    "length_fraction": 0.71,
+    "size_fraction": 0.33,
+    "faces": 39125
+   },
+   {
+    "key": "part_2",
+    "label": "Object 2",
+    "axis_position": 0,
+    "vertical_position": 0.18,
+    "lateral_position": 0,
+    "length_fraction": 1,
+    "size_fraction": 0.82,
+    "faces": 21478
+   },
+   {
+    "key": "part_3",
+    "label": "Object 6",
+    "axis_position": 0.53,
+    "vertical_position": -0.17,
+    "lateral_position": -0.06,
+    "length_fraction": 0.22,
+    "size_fraction": 0.02,
+    "faces": 1282
+   },
+   {
+    "key": "part_4",
+    "label": "Object 4",
+    "axis_position": 0.59,
+    "vertical_position": 0.06,
+    "lateral_position": 0,
+    "length_fraction": 0.18,
+    "size_fraction": 0.01,
+    "faces": 15889
+   }
+  ]
+ },
+ "/models/kfir_c.10_block_60/scene.gltf": {
+  "id": "kfir_c.10_block_60",
+  "name": "Kfir C.10 Block 60",
+  "axis": "Z",
+  "part_count": 11,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Section 9",
+    "axis_position": -0.75,
+    "vertical_position": 0.06,
+    "lateral_position": 0.47,
+    "length_fraction": 0.22,
+    "size_fraction": 0.08,
+    "faces": 195
+   },
+   {
+    "key": "part_1",
+    "label": "Section 10",
+    "axis_position": -0.64,
+    "vertical_position": -0.37,
+    "lateral_position": 0,
+    "length_fraction": 0.22,
+    "size_fraction": 0.01,
+    "faces": 3810
+   },
+   {
+    "key": "part_2",
+    "label": "Section 1",
+    "axis_position": -0.58,
+    "vertical_position": -0.33,
+    "lateral_position": 0,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 208
+   },
+   {
+    "key": "part_3",
+    "label": "Section 2",
+    "axis_position": -0.55,
+    "vertical_position": -0.65,
+    "lateral_position": -0.93,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 171
+   },
+   {
+    "key": "part_4",
+    "label": "Section 6",
+    "axis_position": -0.27,
+    "vertical_position": -0.85,
+    "lateral_position": -0.55,
+    "length_fraction": 0.14,
+    "size_fraction": 0,
+    "faces": 50922
+   },
+   {
+    "key": "part_5",
+    "label": "Section 7",
+    "axis_position": -0.27,
+    "vertical_position": -0.85,
+    "lateral_position": 0.55,
+    "length_fraction": 0.14,
+    "size_fraction": 0,
+    "faces": 50922
+   },
+   {
+    "key": "part_6",
+    "label": "Section 8",
+    "axis_position": -0.25,
+    "vertical_position": -0.16,
+    "lateral_position": 0.18,
+    "length_fraction": 0.71,
+    "size_fraction": 0.49,
+    "faces": 50508
+   },
+   {
+    "key": "part_7",
+    "label": "Section 11",
+    "axis_position": -0.22,
+    "vertical_position": 0.11,
+    "lateral_position": 0,
+    "length_fraction": 0.78,
+    "size_fraction": 0.65,
+    "faces": 24495
+   },
+   {
+    "key": "part_8",
+    "label": "Section 4",
+    "axis_position": -0.12,
+    "vertical_position": -0.06,
+    "lateral_position": -0.01,
+    "length_fraction": 0.85,
+    "size_fraction": 0.8,
+    "faces": 114575
+   },
+   {
+    "key": "part_9",
+    "label": "Section 3",
+    "axis_position": 0.07,
+    "vertical_position": -0.46,
+    "lateral_position": 0,
+    "length_fraction": 0.93,
+    "size_fraction": 0.11,
+    "faces": 23065
+   },
+   {
+    "key": "part_10",
+    "label": "Section 5",
+    "axis_position": 0.11,
+    "vertical_position": -0.4,
+    "lateral_position": 0.17,
+    "length_fraction": 0.44,
+    "size_fraction": 0.05,
+    "faces": 29719
+   }
+  ]
+ },
+ "/models/koreanavy-_kss3_class_-_submarine/scene.gltf": {
+  "id": "koreanavy-_kss3_class_-_submarine",
+  "name": "Koreanavy  Kss3 Class   Submarine",
+  "axis": "Z",
+  "part_count": 14,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Kss3 Window",
+    "axis_position": -0.44,
+    "vertical_position": 0.16,
+    "lateral_position": 0,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 84
+   },
+   {
+    "key": "part_1",
+    "label": "Kss3 MainHull",
+    "axis_position": 0,
+    "vertical_position": 0,
+    "lateral_position": 0,
+    "length_fraction": 1,
+    "size_fraction": 1,
+    "faces": 274662
+   },
+   {
+    "key": "part_2",
+    "label": "VLS 6002",
+    "axis_position": 0.13,
+    "vertical_position": -0.03,
+    "lateral_position": 0.27,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 21648
+   },
+   {
+    "key": "part_3",
+    "label": "Missle 1",
+    "axis_position": 0.13,
+    "vertical_position": -0.37,
+    "lateral_position": 0.25,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 2128
+   },
+   {
+    "key": "part_4",
+    "label": "Missle 5",
+    "axis_position": 0.13,
+    "vertical_position": -0.37,
+    "lateral_position": -0.25,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 2128
+   },
+   {
+    "key": "part_5",
+    "label": "VLS 6005",
+    "axis_position": 0.13,
+    "vertical_position": -0.03,
+    "lateral_position": -0.27,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 21648
+   },
+   {
+    "key": "part_6",
+    "label": "VLS 6001",
+    "axis_position": 0.18,
+    "vertical_position": -0.03,
+    "lateral_position": 0.27,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 21648
+   },
+   {
+    "key": "part_7",
+    "label": "Missle 3",
+    "axis_position": 0.18,
+    "vertical_position": -0.37,
+    "lateral_position": 0.25,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 2128
+   },
+   {
+    "key": "part_8",
+    "label": "Missle 6",
+    "axis_position": 0.18,
+    "vertical_position": -0.37,
+    "lateral_position": -0.25,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 2128
+   },
+   {
+    "key": "part_9",
+    "label": "VLS 6004",
+    "axis_position": 0.18,
+    "vertical_position": -0.03,
+    "lateral_position": -0.27,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 21648
+   },
+   {
+    "key": "part_10",
+    "label": "VLS 6",
+    "axis_position": 0.22,
+    "vertical_position": -0.03,
+    "lateral_position": 0.27,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 21648
+   },
+   {
+    "key": "part_11",
+    "label": "Missle 4",
+    "axis_position": 0.22,
+    "vertical_position": -0.37,
+    "lateral_position": 0.25,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 2128
+   },
+   {
+    "key": "part_12",
+    "label": "Missle 7",
+    "axis_position": 0.22,
+    "vertical_position": -0.37,
+    "lateral_position": -0.25,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 2128
+   },
+   {
+    "key": "part_13",
+    "label": "VLS 6003",
+    "axis_position": 0.22,
+    "vertical_position": -0.03,
+    "lateral_position": -0.27,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 21648
+   }
+  ]
+ },
+ "/models/low-poly-ak-74m-zenitco/model.glb": {
+  "id": "low-poly-ak-74m-zenitco",
+  "name": "Low Poly Ak 74M Zenitco",
+  "axis": "X",
+  "part_count": 21,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "pt1 stock butt",
+    "axis_position": -0.8,
+    "vertical_position": 0.17,
+    "lateral_position": 0.02,
+    "length_fraction": 0.2,
+    "size_fraction": 0.04,
+    "faces": 2506
+   },
+   {
+    "key": "part_1",
+    "label": "pt1 cheek",
+    "axis_position": -0.76,
+    "vertical_position": 0.44,
+    "lateral_position": 0.1,
+    "length_fraction": 0.17,
+    "size_fraction": 0.01,
+    "faces": 470
+   },
+   {
+    "key": "part_2",
+    "label": "pt1 stock base",
+    "axis_position": -0.72,
+    "vertical_position": 0.3,
+    "lateral_position": -0.1,
+    "length_fraction": 0.21,
+    "size_fraction": 0.02,
+    "faces": 1998
+   },
+   {
+    "key": "part_3",
+    "label": "rk9 pistol grip",
+    "axis_position": -0.48,
+    "vertical_position": -0.09,
+    "lateral_position": -0.11,
+    "length_fraction": 0.09,
+    "size_fraction": 0.01,
+    "faces": 2018
+   },
+   {
+    "key": "part_4",
+    "label": "ak74m trigga",
+    "axis_position": -0.36,
+    "vertical_position": 0.26,
+    "lateral_position": -0.12,
+    "length_fraction": 0.05,
+    "size_fraction": 0,
+    "faces": 583
+   },
+   {
+    "key": "part_5",
+    "label": "ak74m selector",
+    "axis_position": -0.32,
+    "vertical_position": 0.32,
+    "lateral_position": -0.01,
+    "length_fraction": 0.13,
+    "size_fraction": 0.01,
+    "faces": 572
+   },
+   {
+    "key": "part_6",
+    "label": "ak74m recoil spring",
+    "axis_position": -0.3,
+    "vertical_position": 0.57,
+    "lateral_position": -0.1,
+    "length_fraction": 0.17,
+    "size_fraction": 0,
+    "faces": 972
+   },
+   {
+    "key": "part_7",
+    "label": "ak74m dust cover",
+    "axis_position": -0.28,
+    "vertical_position": 0.54,
+    "lateral_position": -0.08,
+    "length_fraction": 0.26,
+    "size_fraction": 0.01,
+    "faces": 334
+   },
+   {
+    "key": "part_8",
+    "label": "b13 bracket",
+    "axis_position": -0.27,
+    "vertical_position": 0.49,
+    "lateral_position": -0.42,
+    "length_fraction": 0.22,
+    "size_fraction": 0.03,
+    "faces": 3166
+   },
+   {
+    "key": "part_9",
+    "label": "ak74m mag release",
+    "axis_position": -0.25,
+    "vertical_position": 0.12,
+    "lateral_position": -0.11,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 236
+   },
+   {
+    "key": "part_10",
+    "label": "vzor1 red dot",
+    "axis_position": -0.25,
+    "vertical_position": 0.86,
+    "lateral_position": -0.08,
+    "length_fraction": 0.08,
+    "size_fraction": 0.01,
+    "faces": 2512
+   },
+   {
+    "key": "part_11",
+    "label": "ak74 30rnd mag (polymer)",
+    "axis_position": -0.1,
+    "vertical_position": -0.19,
+    "lateral_position": -0.11,
+    "length_fraction": 0.15,
+    "size_fraction": 0.04,
+    "faces": 2358
+   },
+   {
+    "key": "part_12",
+    "label": "ak74m receiver",
+    "axis_position": -0.02,
+    "vertical_position": 0.38,
+    "lateral_position": -0.17,
+    "length_fraction": 0.52,
+    "size_fraction": 0.1,
+    "faces": 5958
+   },
+   {
+    "key": "part_13",
+    "label": "ak74m bolt carrier",
+    "axis_position": 0.14,
+    "vertical_position": 0.49,
+    "lateral_position": 0.25,
+    "length_fraction": 0.39,
+    "size_fraction": 0.04,
+    "faces": 1662
+   },
+   {
+    "key": "part_14",
+    "label": "54539",
+    "axis_position": 0.14,
+    "vertical_position": -0.08,
+    "lateral_position": -0.11,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 300
+   },
+   {
+    "key": "part_15",
+    "label": "54539 case",
+    "axis_position": 0.18,
+    "vertical_position": -0.13,
+    "lateral_position": -0.11,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 252
+   },
+   {
+    "key": "part_16",
+    "label": "b10+b19 handguard",
+    "axis_position": 0.19,
+    "vertical_position": 0.48,
+    "lateral_position": -0.11,
+    "length_fraction": 0.18,
+    "size_fraction": 0.02,
+    "faces": 6404
+   },
+   {
+    "key": "part_17",
+    "label": "rk1 front grip",
+    "axis_position": 0.28,
+    "vertical_position": 0,
+    "lateral_position": -0.11,
+    "length_fraction": 0.05,
+    "size_fraction": 0.01,
+    "faces": 768
+   },
+   {
+    "key": "part_18",
+    "label": "ak74 30rnd empty mag (polymer)",
+    "axis_position": 0.3,
+    "vertical_position": -0.51,
+    "lateral_position": -0.11,
+    "length_fraction": 0.26,
+    "size_fraction": 0.05,
+    "faces": 1073
+   },
+   {
+    "key": "part_19",
+    "label": "ak74m barrel",
+    "axis_position": 0.39,
+    "vertical_position": 0.52,
+    "lateral_position": -0.11,
+    "length_fraction": 0.46,
+    "size_fraction": 0.04,
+    "faces": 2046
+   },
+   {
+    "key": "part_20",
+    "label": "dtk1 compensator",
+    "axis_position": 0.91,
+    "vertical_position": 0.43,
+    "lateral_position": -0.11,
+    "length_fraction": 0.09,
+    "size_fraction": 0,
+    "faces": 744
+   }
+  ]
+ },
+ "/models/m1a2-abrams/model.glb": {
+  "id": "m1a2-abrams",
+  "name": "M1A2 Abrams",
+  "axis": "Z",
+  "part_count": 15,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Section 6",
+    "axis_position": -0.76,
+    "vertical_position": -0.41,
+    "lateral_position": 0.38,
+    "length_fraction": 0.24,
+    "size_fraction": 0.02,
+    "faces": 6015
+   },
+   {
+    "key": "part_1",
+    "label": "Section 13",
+    "axis_position": -0.76,
+    "vertical_position": -0.38,
+    "lateral_position": -0.23,
+    "length_fraction": 0.24,
+    "size_fraction": 0.03,
+    "faces": 7165
+   },
+   {
+    "key": "part_2",
+    "label": "Section 12",
+    "axis_position": -0.71,
+    "vertical_position": -0.58,
+    "lateral_position": -0.76,
+    "length_fraction": 0.28,
+    "size_fraction": 0.03,
+    "faces": 12524
+   },
+   {
+    "key": "part_3",
+    "label": "Section 10",
+    "axis_position": -0.7,
+    "vertical_position": -0.58,
+    "lateral_position": 0.76,
+    "length_fraction": 0.29,
+    "size_fraction": 0.03,
+    "faces": 10706
+   },
+   {
+    "key": "part_4",
+    "label": "Section 1",
+    "axis_position": -0.61,
+    "vertical_position": 0.42,
+    "lateral_position": 0.58,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 240
+   },
+   {
+    "key": "part_5",
+    "label": "Section 5",
+    "axis_position": -0.28,
+    "vertical_position": -0.34,
+    "lateral_position": -0.04,
+    "length_fraction": 0.58,
+    "size_fraction": 0.21,
+    "faces": 37392
+   },
+   {
+    "key": "part_6",
+    "label": "Section 3",
+    "axis_position": -0.18,
+    "vertical_position": -0.45,
+    "lateral_position": 0,
+    "length_fraction": 0.81,
+    "size_fraction": 0.32,
+    "faces": 46166
+   },
+   {
+    "key": "part_7",
+    "label": "Section 7",
+    "axis_position": -0.17,
+    "vertical_position": -0.59,
+    "lateral_position": -0.8,
+    "length_fraction": 0.74,
+    "size_fraction": 0.06,
+    "faces": 13135
+   },
+   {
+    "key": "part_8",
+    "label": "Section 9",
+    "axis_position": -0.17,
+    "vertical_position": -0.59,
+    "lateral_position": 0.8,
+    "length_fraction": 0.74,
+    "size_fraction": 0.06,
+    "faces": 12679
+   },
+   {
+    "key": "part_9",
+    "label": "Section 4",
+    "axis_position": 0.09,
+    "vertical_position": -0.31,
+    "lateral_position": -0.03,
+    "length_fraction": 0.25,
+    "size_fraction": 0.02,
+    "faces": 4265
+   },
+   {
+    "key": "part_10",
+    "label": "Section 2",
+    "axis_position": 0.1,
+    "vertical_position": -0.41,
+    "lateral_position": 0.01,
+    "length_fraction": 0.3,
+    "size_fraction": 0.02,
+    "faces": 2067
+   },
+   {
+    "key": "part_11",
+    "label": "Section 11",
+    "axis_position": 0.29,
+    "vertical_position": -0.62,
+    "lateral_position": -0.77,
+    "length_fraction": 0.32,
+    "size_fraction": 0.02,
+    "faces": 7500
+   },
+   {
+    "key": "part_12",
+    "label": "Section 8",
+    "axis_position": 0.29,
+    "vertical_position": -0.62,
+    "lateral_position": 0.77,
+    "length_fraction": 0.32,
+    "size_fraction": 0.02,
+    "faces": 7504
+   },
+   {
+    "key": "part_13",
+    "label": "Section 14",
+    "axis_position": 0.57,
+    "vertical_position": -0.57,
+    "lateral_position": 0.49,
+    "length_fraction": 0.03,
+    "size_fraction": 0,
+    "faces": 976
+   },
+   {
+    "key": "part_14",
+    "label": "Section 15",
+    "axis_position": 0.61,
+    "vertical_position": -0.45,
+    "lateral_position": -0.23,
+    "length_fraction": 0.39,
+    "size_fraction": 0.02,
+    "faces": 3472
+   }
+  ]
+ },
+ "/models/mini-14_ranch_rifle/scene.gltf": {
+  "id": "mini-14_ranch_rifle",
+  "name": "Mini 14 Ranch Rifle",
+  "axis": "Z",
+  "part_count": 7,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "mini14",
+    "axis_position": -0.11,
+    "vertical_position": 0.68,
+    "lateral_position": -0.52,
+    "length_fraction": 0.26,
+    "size_fraction": 0.02,
+    "faces": 9220
+   },
+   {
+    "key": "part_1",
+    "label": "mini14",
+    "axis_position": 0,
+    "vertical_position": 0.03,
+    "lateral_position": -0.64,
+    "length_fraction": 1,
+    "size_fraction": 0.16,
+    "faces": 15307
+   },
+   {
+    "key": "part_2",
+    "label": "mini14",
+    "axis_position": 0.02,
+    "vertical_position": -0.21,
+    "lateral_position": 0.11,
+    "length_fraction": 0.1,
+    "size_fraction": 0.07,
+    "faces": 6466
+   },
+   {
+    "key": "part_3",
+    "label": "223 rem",
+    "axis_position": 0.02,
+    "vertical_position": 0.11,
+    "lateral_position": 0.11,
+    "length_fraction": 0.07,
+    "size_fraction": 0.02,
+    "faces": 8910
+   },
+   {
+    "key": "part_4",
+    "label": "leupold vx1 NONE",
+    "axis_position": 0.02,
+    "vertical_position": 0.83,
+    "lateral_position": -0.64,
+    "length_fraction": 0.3,
+    "size_fraction": 0.02,
+    "faces": 4460
+   },
+   {
+    "key": "part_5",
+    "label": "leupold vx1",
+    "axis_position": 0.03,
+    "vertical_position": 0.83,
+    "lateral_position": -0.64,
+    "length_fraction": 0.28,
+    "size_fraction": 0.02,
+    "faces": 2266
+   },
+   {
+    "key": "part_6",
+    "label": "mini14",
+    "axis_position": 0.19,
+    "vertical_position": 0.06,
+    "lateral_position": -0.64,
+    "length_fraction": 0.09,
+    "size_fraction": 0,
+    "faces": 616
+   }
+  ]
+ },
+ "/models/missle_game_ready_4k_pbr_textures_free/scene.gltf": {
+  "id": "missle_game_ready_4k_pbr_textures_free",
+  "name": "Missle Game Ready 4K Pbr Textures Free",
+  "axis": "X",
+  "part_count": 16,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Segment 10",
+    "axis_position": -0.63,
+    "vertical_position": -0.9,
+    "lateral_position": 0.63,
+    "length_fraction": 0.35,
+    "size_fraction": 0.01,
+    "faces": 80
+   },
+   {
+    "key": "part_1",
+    "label": "Segment 8",
+    "axis_position": -0.63,
+    "vertical_position": -0.9,
+    "lateral_position": -0.63,
+    "length_fraction": 0.35,
+    "size_fraction": 0.01,
+    "faces": 80
+   },
+   {
+    "key": "part_2",
+    "label": "Segment 6",
+    "axis_position": -0.61,
+    "vertical_position": -0.43,
+    "lateral_position": 0.61,
+    "length_fraction": 0.39,
+    "size_fraction": 0.05,
+    "faces": 122
+   },
+   {
+    "key": "part_3",
+    "label": "Segment 5",
+    "axis_position": -0.61,
+    "vertical_position": -0.43,
+    "lateral_position": -0.61,
+    "length_fraction": 0.39,
+    "size_fraction": 0.05,
+    "faces": 122
+   },
+   {
+    "key": "part_4",
+    "label": "Segment 2",
+    "axis_position": -0.43,
+    "vertical_position": -0.67,
+    "lateral_position": 0,
+    "length_fraction": 0.11,
+    "size_fraction": 0,
+    "faces": 140
+   },
+   {
+    "key": "part_5",
+    "label": "Segment 3",
+    "axis_position": -0.43,
+    "vertical_position": 0.24,
+    "lateral_position": 0,
+    "length_fraction": 0.11,
+    "size_fraction": 0,
+    "faces": 140
+   },
+   {
+    "key": "part_6",
+    "label": "Segment 13",
+    "axis_position": -0.33,
+    "vertical_position": -0.88,
+    "lateral_position": 0.33,
+    "length_fraction": 0.05,
+    "size_fraction": 0,
+    "faces": 56
+   },
+   {
+    "key": "part_7",
+    "label": "Segment 14",
+    "axis_position": -0.33,
+    "vertical_position": -0.88,
+    "lateral_position": -0.33,
+    "length_fraction": 0.05,
+    "size_fraction": 0,
+    "faces": 56
+   },
+   {
+    "key": "part_8",
+    "label": "Segment 1",
+    "axis_position": 0,
+    "vertical_position": 0,
+    "lateral_position": 0,
+    "length_fraction": 0.45,
+    "size_fraction": 0.2,
+    "faces": 636
+   },
+   {
+    "key": "part_9",
+    "label": "Segment 16",
+    "axis_position": 0.17,
+    "vertical_position": 0.17,
+    "lateral_position": -0.17,
+    "length_fraction": 0.3,
+    "size_fraction": 0,
+    "faces": 40
+   },
+   {
+    "key": "part_10",
+    "label": "Segment 15",
+    "axis_position": 0.33,
+    "vertical_position": -0.88,
+    "lateral_position": 0.33,
+    "length_fraction": 0.05,
+    "size_fraction": 0,
+    "faces": 56
+   },
+   {
+    "key": "part_11",
+    "label": "Segment 12",
+    "axis_position": 0.33,
+    "vertical_position": -0.88,
+    "lateral_position": -0.33,
+    "length_fraction": 0.05,
+    "size_fraction": 0,
+    "faces": 56
+   },
+   {
+    "key": "part_12",
+    "label": "Segment 7",
+    "axis_position": 0.61,
+    "vertical_position": -0.43,
+    "lateral_position": 0.61,
+    "length_fraction": 0.39,
+    "size_fraction": 0.05,
+    "faces": 122
+   },
+   {
+    "key": "part_13",
+    "label": "Segment 4",
+    "axis_position": 0.61,
+    "vertical_position": -0.43,
+    "lateral_position": -0.61,
+    "length_fraction": 0.39,
+    "size_fraction": 0.05,
+    "faces": 122
+   },
+   {
+    "key": "part_14",
+    "label": "Segment 11",
+    "axis_position": 0.63,
+    "vertical_position": -0.9,
+    "lateral_position": 0.63,
+    "length_fraction": 0.35,
+    "size_fraction": 0.01,
+    "faces": 80
+   },
+   {
+    "key": "part_15",
+    "label": "Segment 9",
+    "axis_position": 0.63,
+    "vertical_position": -0.9,
+    "lateral_position": -0.63,
+    "length_fraction": 0.35,
+    "size_fraction": 0.01,
+    "faces": 80
+   }
+  ]
+ },
+ "/models/mortar-60/model.glb": {
+  "id": "mortar-60",
+  "name": "Mortar 60",
+  "axis": "Z",
+  "part_count": 14,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Cylinder044",
+    "axis_position": -0.63,
+    "vertical_position": -0.2,
+    "lateral_position": -0.16,
+    "length_fraction": 0.22,
+    "size_fraction": 0.01,
+    "faces": 17140
+   },
+   {
+    "key": "part_1",
+    "label": "Cylinder046",
+    "axis_position": 0,
+    "vertical_position": -0.1,
+    "lateral_position": 0,
+    "length_fraction": 1,
+    "size_fraction": 0.9,
+    "faces": 156437
+   },
+   {
+    "key": "part_2",
+    "label": "Cylinder001",
+    "axis_position": 0.01,
+    "vertical_position": -0.14,
+    "lateral_position": 0.83,
+    "length_fraction": 0.17,
+    "size_fraction": 0,
+    "faces": 15084
+   },
+   {
+    "key": "part_3",
+    "label": "Cylinder024",
+    "axis_position": 0.03,
+    "vertical_position": 0.43,
+    "lateral_position": -0.16,
+    "length_fraction": 0.63,
+    "size_fraction": 0.04,
+    "faces": 15232
+   },
+   {
+    "key": "part_4",
+    "label": "Cylinder048",
+    "axis_position": 0.03,
+    "vertical_position": 0.43,
+    "lateral_position": -0.16,
+    "length_fraction": 0.64,
+    "size_fraction": 0.04,
+    "faces": 15716
+   },
+   {
+    "key": "part_5",
+    "label": "Cylinder014",
+    "axis_position": 0.09,
+    "vertical_position": -0.15,
+    "lateral_position": 0.5,
+    "length_fraction": 0.2,
+    "size_fraction": 0,
+    "faces": 16166
+   },
+   {
+    "key": "part_6",
+    "label": "Cylinder021",
+    "axis_position": 0.13,
+    "vertical_position": 0.52,
+    "lateral_position": -0.16,
+    "length_fraction": 0.13,
+    "size_fraction": 0,
+    "faces": 22742
+   },
+   {
+    "key": "part_7",
+    "label": "Cylinder042",
+    "axis_position": 0.22,
+    "vertical_position": 0.47,
+    "lateral_position": -0.16,
+    "length_fraction": 0.15,
+    "size_fraction": 0,
+    "faces": 9168
+   },
+   {
+    "key": "part_8",
+    "label": "Cylinder023",
+    "axis_position": 0.34,
+    "vertical_position": 0.62,
+    "lateral_position": 0.07,
+    "length_fraction": 0.21,
+    "size_fraction": 0,
+    "faces": 22314
+   },
+   {
+    "key": "part_9",
+    "label": "Cylinder041",
+    "axis_position": 0.36,
+    "vertical_position": 0.52,
+    "lateral_position": -0.38,
+    "length_fraction": 0.07,
+    "size_fraction": 0,
+    "faces": 8266
+   },
+   {
+    "key": "part_10",
+    "label": "Cylinder039",
+    "axis_position": 0.37,
+    "vertical_position": 0.51,
+    "lateral_position": -0.22,
+    "length_fraction": 0.04,
+    "size_fraction": 0,
+    "faces": 19334
+   },
+   {
+    "key": "part_11",
+    "label": "Cylinder026",
+    "axis_position": 0.49,
+    "vertical_position": 0.23,
+    "lateral_position": 0.03,
+    "length_fraction": 0.09,
+    "size_fraction": 0,
+    "faces": 16270
+   },
+   {
+    "key": "part_12",
+    "label": "Cylinder028",
+    "axis_position": 0.54,
+    "vertical_position": 0.12,
+    "lateral_position": -0.46,
+    "length_fraction": 0.41,
+    "size_fraction": 0.08,
+    "faces": 21109
+   },
+   {
+    "key": "part_13",
+    "label": "Cylinder027",
+    "axis_position": 0.55,
+    "vertical_position": 0.1,
+    "lateral_position": 0.31,
+    "length_fraction": 0.38,
+    "size_fraction": 0.04,
+    "faces": 15772
+   }
+  ]
+ },
+ "/models/sikorsky-ch-53e-sea-stallion/model.glb": {
+  "id": "sikorsky-ch-53e-sea-stallion",
+  "name": "Sikorsky Ch 53E Sea Stallion",
+  "axis": "Z",
+  "part_count": 28,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "cock2 10",
+    "axis_position": -0.68,
+    "vertical_position": -0.29,
+    "lateral_position": 0,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 2418
+   },
+   {
+    "key": "part_1",
+    "label": "cock2 12",
+    "axis_position": -0.66,
+    "vertical_position": -0.31,
+    "lateral_position": 0,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 2112
+   },
+   {
+    "key": "part_2",
+    "label": "cock 9",
+    "axis_position": -0.64,
+    "vertical_position": -0.26,
+    "lateral_position": 0.01,
+    "length_fraction": 0.04,
+    "size_fraction": 0,
+    "faces": 324
+   },
+   {
+    "key": "part_3",
+    "label": "cock 8",
+    "axis_position": -0.64,
+    "vertical_position": -0.27,
+    "lateral_position": 0,
+    "length_fraction": 0.03,
+    "size_fraction": 0,
+    "faces": 634
+   },
+   {
+    "key": "part_4",
+    "label": "cock2 11",
+    "axis_position": -0.64,
+    "vertical_position": -0.39,
+    "lateral_position": 0,
+    "length_fraction": 0.08,
+    "size_fraction": 0,
+    "faces": 2166
+   },
+   {
+    "key": "part_5",
+    "label": "cock 2",
+    "axis_position": -0.63,
+    "vertical_position": -0.27,
+    "lateral_position": 0,
+    "length_fraction": 0.05,
+    "size_fraction": 0,
+    "faces": 3827
+   },
+   {
+    "key": "part_6",
+    "label": "cock 1",
+    "axis_position": -0.63,
+    "vertical_position": -0.32,
+    "lateral_position": 0,
+    "length_fraction": 0.05,
+    "size_fraction": 0,
+    "faces": 1736
+   },
+   {
+    "key": "part_7",
+    "label": "chassis 5",
+    "axis_position": -0.62,
+    "vertical_position": -0.31,
+    "lateral_position": 0,
+    "length_fraction": 0.05,
+    "size_fraction": 0,
+    "faces": 760
+   },
+   {
+    "key": "part_8",
+    "label": "cock 7",
+    "axis_position": -0.62,
+    "vertical_position": -0.27,
+    "lateral_position": 0,
+    "length_fraction": 0.05,
+    "size_fraction": 0,
+    "faces": 3502
+   },
+   {
+    "key": "part_9",
+    "label": "glass 001",
+    "axis_position": -0.62,
+    "vertical_position": -0.1,
+    "lateral_position": 0,
+    "length_fraction": 0.03,
+    "size_fraction": 0,
+    "faces": 178
+   },
+   {
+    "key": "part_10",
+    "label": "cock 7",
+    "axis_position": -0.62,
+    "vertical_position": -0.26,
+    "lateral_position": 0,
+    "length_fraction": 0.03,
+    "size_fraction": 0,
+    "faces": 924
+   },
+   {
+    "key": "part_11",
+    "label": "cock 6",
+    "axis_position": -0.62,
+    "vertical_position": -0.27,
+    "lateral_position": 0,
+    "length_fraction": 0.04,
+    "size_fraction": 0,
+    "faces": 450
+   },
+   {
+    "key": "part_12",
+    "label": "interior 0",
+    "axis_position": -0.61,
+    "vertical_position": -0.36,
+    "lateral_position": 0.01,
+    "length_fraction": 0.08,
+    "size_fraction": 0,
+    "faces": 2796
+   },
+   {
+    "key": "part_13",
+    "label": "cock 3",
+    "axis_position": -0.6,
+    "vertical_position": -0.36,
+    "lateral_position": 0,
+    "length_fraction": 0.13,
+    "size_fraction": 0,
+    "faces": 3250
+   },
+   {
+    "key": "part_14",
+    "label": "chassis 2",
+    "axis_position": -0.4,
+    "vertical_position": -0.83,
+    "lateral_position": 0,
+    "length_fraction": 0.34,
+    "size_fraction": 0.01,
+    "faces": 5458
+   },
+   {
+    "key": "part_15",
+    "label": "interior 0",
+    "axis_position": -0.34,
+    "vertical_position": -0.42,
+    "lateral_position": 0,
+    "length_fraction": 0.38,
+    "size_fraction": 0.01,
+    "faces": 5752
+   },
+   {
+    "key": "part_16",
+    "label": "chassis 2",
+    "axis_position": -0.22,
+    "vertical_position": 0.29,
+    "lateral_position": 0,
+    "length_fraction": 0.78,
+    "size_fraction": 0.07,
+    "faces": 12150
+   },
+   {
+    "key": "part_17",
+    "label": "glass",
+    "axis_position": -0.22,
+    "vertical_position": -0.42,
+    "lateral_position": 0,
+    "length_fraction": 0.51,
+    "size_fraction": 0.02,
+    "faces": 1246
+   },
+   {
+    "key": "part_18",
+    "label": "chassis 4",
+    "axis_position": -0.18,
+    "vertical_position": -0.54,
+    "lateral_position": 0,
+    "length_fraction": 0.54,
+    "size_fraction": 0.02,
+    "faces": 1496
+   },
+   {
+    "key": "part_19",
+    "label": "chassis 3",
+    "axis_position": -0.12,
+    "vertical_position": -0.25,
+    "lateral_position": 0,
+    "length_fraction": 0.85,
+    "size_fraction": 0.15,
+    "faces": 5179
+   },
+   {
+    "key": "part_20",
+    "label": "interior 3",
+    "axis_position": -0.12,
+    "vertical_position": -0.47,
+    "lateral_position": 0.01,
+    "length_fraction": 0.48,
+    "size_fraction": 0.02,
+    "faces": 623
+   },
+   {
+    "key": "part_21",
+    "label": "chassis 5",
+    "axis_position": -0.02,
+    "vertical_position": -0.24,
+    "lateral_position": 0,
+    "length_fraction": 0.73,
+    "size_fraction": 0.11,
+    "faces": 5685
+   },
+   {
+    "key": "part_22",
+    "label": "chassis 0",
+    "axis_position": 0.02,
+    "vertical_position": -0.23,
+    "lateral_position": 0,
+    "length_fraction": 0.7,
+    "size_fraction": 0.05,
+    "faces": 2130
+   },
+   {
+    "key": "part_23",
+    "label": "chassis 1",
+    "axis_position": 0.04,
+    "vertical_position": -0.28,
+    "lateral_position": 0,
+    "length_fraction": 0.75,
+    "size_fraction": 0.11,
+    "faces": 3728
+   },
+   {
+    "key": "part_24",
+    "label": "chassis 2",
+    "axis_position": 0.07,
+    "vertical_position": -0.13,
+    "lateral_position": 0.06,
+    "length_fraction": 0.8,
+    "size_fraction": 0.14,
+    "faces": 7329
+   },
+   {
+    "key": "part_25",
+    "label": "chassis 1",
+    "axis_position": 0.08,
+    "vertical_position": -0.27,
+    "lateral_position": 0,
+    "length_fraction": 0.7,
+    "size_fraction": 0.14,
+    "faces": 4968
+   },
+   {
+    "key": "part_26",
+    "label": "chassis 3",
+    "axis_position": 0.13,
+    "vertical_position": 0.08,
+    "lateral_position": -0.08,
+    "length_fraction": 0.87,
+    "size_fraction": 0.09,
+    "faces": 336
+   },
+   {
+    "key": "part_27",
+    "label": "chassis 2",
+    "axis_position": 0.79,
+    "vertical_position": 0.28,
+    "lateral_position": -0.19,
+    "length_fraction": 0.03,
+    "size_fraction": 0,
+    "faces": 848
+   }
+  ]
+ },
+ "/models/simple-tank/model.glb": {
+  "id": "simple-tank",
+  "name": "Simple Tank",
+  "axis": "Z",
+  "part_count": 10,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "C1 3",
+    "axis_position": -0.39,
+    "vertical_position": -0.09,
+    "lateral_position": 0,
+    "length_fraction": 0.43,
+    "size_fraction": 0.09,
+    "faces": 1981
+   },
+   {
+    "key": "part_1",
+    "label": "C1 2",
+    "axis_position": -0.38,
+    "vertical_position": 0.65,
+    "lateral_position": 0.49,
+    "length_fraction": 0,
+    "size_fraction": 0,
+    "faces": 50
+   },
+   {
+    "key": "part_2",
+    "label": "C1 9",
+    "axis_position": -0.22,
+    "vertical_position": 0.08,
+    "lateral_position": 0,
+    "length_fraction": 0.5,
+    "size_fraction": 0.14,
+    "faces": 12539
+   },
+   {
+    "key": "part_3",
+    "label": "C1 6",
+    "axis_position": -0.18,
+    "vertical_position": -0.46,
+    "lateral_position": 0,
+    "length_fraction": 0.82,
+    "size_fraction": 0.23,
+    "faces": 13239
+   },
+   {
+    "key": "part_4",
+    "label": "C1 7",
+    "axis_position": -0.17,
+    "vertical_position": -0.69,
+    "lateral_position": 0,
+    "length_fraction": 0.71,
+    "size_fraction": 0.16,
+    "faces": 15406
+   },
+   {
+    "key": "part_5",
+    "label": "C1 8",
+    "axis_position": -0.16,
+    "vertical_position": -0.7,
+    "lateral_position": 0,
+    "length_fraction": 0.72,
+    "size_fraction": 0.18,
+    "faces": 2752
+   },
+   {
+    "key": "part_6",
+    "label": "C1 4",
+    "axis_position": -0.1,
+    "vertical_position": -0.53,
+    "lateral_position": 0,
+    "length_fraction": 0.71,
+    "size_fraction": 0.1,
+    "faces": 2796
+   },
+   {
+    "key": "part_7",
+    "label": "C1 5",
+    "axis_position": 0.03,
+    "vertical_position": -0.09,
+    "lateral_position": 0,
+    "length_fraction": 0.93,
+    "size_fraction": 0.29,
+    "faces": 316
+   },
+   {
+    "key": "part_8",
+    "label": "C1 1",
+    "axis_position": 0.11,
+    "vertical_position": -0.28,
+    "lateral_position": 0,
+    "length_fraction": 0.38,
+    "size_fraction": 0.16,
+    "faces": 6616
+   },
+   {
+    "key": "part_9",
+    "label": "C1",
+    "axis_position": 0.57,
+    "vertical_position": -0.06,
+    "lateral_position": 0,
+    "length_fraction": 0.43,
+    "size_fraction": 0.01,
+    "faces": 800
+   }
+  ]
+ },
+ "/models/submarine-kss3/scene.gltf": {
+  "id": "submarine-kss3",
+  "name": "Submarine Kss3",
+  "axis": "Z",
+  "part_count": 14,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Kss3 Window",
+    "axis_position": -0.44,
+    "vertical_position": 0.16,
+    "lateral_position": 0,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 84
+   },
+   {
+    "key": "part_1",
+    "label": "Kss3 MainHull",
+    "axis_position": 0,
+    "vertical_position": 0,
+    "lateral_position": 0,
+    "length_fraction": 1,
+    "size_fraction": 1,
+    "faces": 274662
+   },
+   {
+    "key": "part_2",
+    "label": "VLS 6002",
+    "axis_position": 0.13,
+    "vertical_position": -0.03,
+    "lateral_position": 0.27,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 21648
+   },
+   {
+    "key": "part_3",
+    "label": "Missle 1",
+    "axis_position": 0.13,
+    "vertical_position": -0.37,
+    "lateral_position": 0.25,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 2128
+   },
+   {
+    "key": "part_4",
+    "label": "Missle 5",
+    "axis_position": 0.13,
+    "vertical_position": -0.37,
+    "lateral_position": -0.25,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 2128
+   },
+   {
+    "key": "part_5",
+    "label": "VLS 6005",
+    "axis_position": 0.13,
+    "vertical_position": -0.03,
+    "lateral_position": -0.27,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 21648
+   },
+   {
+    "key": "part_6",
+    "label": "VLS 6001",
+    "axis_position": 0.18,
+    "vertical_position": -0.03,
+    "lateral_position": 0.27,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 21648
+   },
+   {
+    "key": "part_7",
+    "label": "Missle 3",
+    "axis_position": 0.18,
+    "vertical_position": -0.37,
+    "lateral_position": 0.25,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 2128
+   },
+   {
+    "key": "part_8",
+    "label": "Missle 6",
+    "axis_position": 0.18,
+    "vertical_position": -0.37,
+    "lateral_position": -0.25,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 2128
+   },
+   {
+    "key": "part_9",
+    "label": "VLS 6004",
+    "axis_position": 0.18,
+    "vertical_position": -0.03,
+    "lateral_position": -0.27,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 21648
+   },
+   {
+    "key": "part_10",
+    "label": "VLS 6",
+    "axis_position": 0.22,
+    "vertical_position": -0.03,
+    "lateral_position": 0.27,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 21648
+   },
+   {
+    "key": "part_11",
+    "label": "Missle 4",
+    "axis_position": 0.22,
+    "vertical_position": -0.37,
+    "lateral_position": 0.25,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 2128
+   },
+   {
+    "key": "part_12",
+    "label": "Missle 7",
+    "axis_position": 0.22,
+    "vertical_position": -0.37,
+    "lateral_position": -0.25,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 2128
+   },
+   {
+    "key": "part_13",
+    "label": "VLS 6003",
+    "axis_position": 0.22,
+    "vertical_position": -0.03,
+    "lateral_position": -0.27,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 21648
+   }
+  ]
+ },
+ "/models/sukhoi-su-57-felon-fighter-jet-free/model.glb": {
+  "id": "sukhoi-su-57-felon-fighter-jet-free",
+  "name": "Sukhoi Su 57 Felon Fighter Jet Free",
+  "axis": "X",
+  "part_count": 8,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "SU57 airframe",
+    "axis_position": 0,
+    "vertical_position": 0.32,
+    "lateral_position": 0,
+    "length_fraction": 1,
+    "size_fraction": 0.68,
+    "faces": 16780
+   },
+   {
+    "key": "part_1",
+    "label": "SU57 instrGlass",
+    "axis_position": 0.02,
+    "vertical_position": 0.55,
+    "lateral_position": -0.21,
+    "length_fraction": 0.76,
+    "size_fraction": 0.04,
+    "faces": 298
+   },
+   {
+    "key": "part_2",
+    "label": "SU57 landingOn",
+    "axis_position": 0.12,
+    "vertical_position": -0.43,
+    "lateral_position": 0,
+    "length_fraction": 0.44,
+    "size_fraction": 0.11,
+    "faces": 10620
+   },
+   {
+    "key": "part_3",
+    "label": "SU57 landingOff",
+    "axis_position": 0.13,
+    "vertical_position": -0.16,
+    "lateral_position": 0,
+    "length_fraction": 0.43,
+    "size_fraction": 0.02,
+    "faces": 376
+   },
+   {
+    "key": "part_4",
+    "label": "SU57 landingOnLight",
+    "axis_position": 0.39,
+    "vertical_position": -0.24,
+    "lateral_position": 0,
+    "length_fraction": 0,
+    "size_fraction": 0,
+    "faces": 32
+   },
+   {
+    "key": "part_5",
+    "label": "SU57 cockpit",
+    "axis_position": 0.62,
+    "vertical_position": 0.36,
+    "lateral_position": 0,
+    "length_fraction": 0.12,
+    "size_fraction": 0,
+    "faces": 3193
+   },
+   {
+    "key": "part_6",
+    "label": "SU57 canopy",
+    "axis_position": 0.62,
+    "vertical_position": 0.49,
+    "lateral_position": 0,
+    "length_fraction": 0.12,
+    "size_fraction": 0,
+    "faces": 612
+   },
+   {
+    "key": "part_7",
+    "label": "SU57 hud",
+    "axis_position": 0.63,
+    "vertical_position": 0.52,
+    "lateral_position": 0,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 18
+   }
+  ]
+ },
+ "/models/sukhoi-su-57-felon-p-fighter-jet-free/model.glb": {
+  "id": "sukhoi-su-57-felon-p-fighter-jet-free",
+  "name": "Sukhoi Su 57 Felon P Fighter Jet Free",
+  "axis": "X",
+  "part_count": 8,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "SU57 instrGlass",
+    "axis_position": -0.05,
+    "vertical_position": 0.55,
+    "lateral_position": -0.21,
+    "length_fraction": 0.7,
+    "size_fraction": 0.04,
+    "faces": 298
+   },
+   {
+    "key": "part_1",
+    "label": "SU57 airframe",
+    "axis_position": 0,
+    "vertical_position": 0.32,
+    "lateral_position": 0,
+    "length_fraction": 1,
+    "size_fraction": 0.68,
+    "faces": 17030
+   },
+   {
+    "key": "part_2",
+    "label": "SU57 landingOn",
+    "axis_position": 0.05,
+    "vertical_position": -0.43,
+    "lateral_position": 0,
+    "length_fraction": 0.41,
+    "size_fraction": 0.1,
+    "faces": 10620
+   },
+   {
+    "key": "part_3",
+    "label": "SU57 landingOff",
+    "axis_position": 0.05,
+    "vertical_position": -0.16,
+    "lateral_position": 0,
+    "length_fraction": 0.4,
+    "size_fraction": 0.02,
+    "faces": 376
+   },
+   {
+    "key": "part_4",
+    "label": "SU57 landingOnLight",
+    "axis_position": 0.29,
+    "vertical_position": -0.24,
+    "lateral_position": 0,
+    "length_fraction": 0,
+    "size_fraction": 0,
+    "faces": 32
+   },
+   {
+    "key": "part_5",
+    "label": "SU57 cockpit",
+    "axis_position": 0.5,
+    "vertical_position": 0.36,
+    "lateral_position": 0,
+    "length_fraction": 0.11,
+    "size_fraction": 0,
+    "faces": 3193
+   },
+   {
+    "key": "part_6",
+    "label": "SU57 canopy",
+    "axis_position": 0.51,
+    "vertical_position": 0.49,
+    "lateral_position": 0,
+    "length_fraction": 0.11,
+    "size_fraction": 0,
+    "faces": 612
+   },
+   {
+    "key": "part_7",
+    "label": "SU57 hud",
+    "axis_position": 0.51,
+    "vertical_position": 0.52,
+    "lateral_position": 0,
+    "length_fraction": 0,
+    "size_fraction": 0,
+    "faces": 18
+   }
+  ]
+ },
+ "/models/t-72a-obr-1980/model.glb": {
+  "id": "t-72a-obr-1980",
+  "name": "T 72A Obr 1980",
+  "axis": "X",
+  "part_count": 12,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Section 3",
+    "axis_position": -0.73,
+    "vertical_position": -0.5,
+    "lateral_position": 0.01,
+    "length_fraction": 0.27,
+    "size_fraction": 0.08,
+    "faces": 2426
+   },
+   {
+    "key": "part_1",
+    "label": "Section 6",
+    "axis_position": -0.69,
+    "vertical_position": -0.62,
+    "lateral_position": 0.77,
+    "length_fraction": 0.21,
+    "size_fraction": 0.02,
+    "faces": 786
+   },
+   {
+    "key": "part_2",
+    "label": "Section 2",
+    "axis_position": -0.69,
+    "vertical_position": -0.62,
+    "lateral_position": -0.74,
+    "length_fraction": 0.21,
+    "size_fraction": 0.02,
+    "faces": 864
+   },
+   {
+    "key": "part_3",
+    "label": "Section 4",
+    "axis_position": -0.57,
+    "vertical_position": -0.26,
+    "lateral_position": -0.14,
+    "length_fraction": 0.06,
+    "size_fraction": 0,
+    "faces": 104
+   },
+   {
+    "key": "part_4",
+    "label": "Section 1",
+    "axis_position": -0.21,
+    "vertical_position": -0.57,
+    "lateral_position": 0.01,
+    "length_fraction": 0.69,
+    "size_fraction": 0.19,
+    "faces": 3709
+   },
+   {
+    "key": "part_5",
+    "label": "Section 9",
+    "axis_position": -0.19,
+    "vertical_position": -0.66,
+    "lateral_position": 0.81,
+    "length_fraction": 0.62,
+    "size_fraction": 0.04,
+    "faces": 1093
+   },
+   {
+    "key": "part_6",
+    "label": "Section 7",
+    "axis_position": -0.19,
+    "vertical_position": -0.63,
+    "lateral_position": -0.74,
+    "length_fraction": 0.62,
+    "size_fraction": 0.05,
+    "faces": 972
+   },
+   {
+    "key": "part_7",
+    "label": "Section 8",
+    "axis_position": 0.1,
+    "vertical_position": -0.31,
+    "lateral_position": 0.04,
+    "length_fraction": 0.04,
+    "size_fraction": 0,
+    "faces": 74
+   },
+   {
+    "key": "part_8",
+    "label": "Section 12",
+    "axis_position": 0.17,
+    "vertical_position": 0.34,
+    "lateral_position": -0.04,
+    "length_fraction": 0.83,
+    "size_fraction": 0.52,
+    "faces": 4028
+   },
+   {
+    "key": "part_9",
+    "label": "Section 10",
+    "axis_position": 0.23,
+    "vertical_position": -0.66,
+    "lateral_position": 0.81,
+    "length_fraction": 0.23,
+    "size_fraction": 0.01,
+    "faces": 762
+   },
+   {
+    "key": "part_10",
+    "label": "Section 11",
+    "axis_position": 0.23,
+    "vertical_position": -0.66,
+    "lateral_position": -0.78,
+    "length_fraction": 0.23,
+    "size_fraction": 0.01,
+    "faces": 764
+   },
+   {
+    "key": "part_11",
+    "label": "Section 5",
+    "axis_position": 0.3,
+    "vertical_position": -0.48,
+    "lateral_position": -0.03,
+    "length_fraction": 0.11,
+    "size_fraction": 0.01,
+    "faces": 214
+   }
+  ]
+ },
+ "/models/tommy-gun/model.glb": {
+  "id": "tommy-gun",
+  "name": "Tommy Gun",
+  "axis": "X",
+  "part_count": 11,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Section 10",
+    "axis_position": -0.65,
+    "vertical_position": -0.28,
+    "lateral_position": -0.48,
+    "length_fraction": 0.35,
+    "size_fraction": 0.03,
+    "faces": 916
+   },
+   {
+    "key": "part_1",
+    "label": "Section 3",
+    "axis_position": -0.51,
+    "vertical_position": 0.52,
+    "lateral_position": -0.48,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 88
+   },
+   {
+    "key": "part_2",
+    "label": "Section 2",
+    "axis_position": -0.23,
+    "vertical_position": 0.47,
+    "lateral_position": -0.48,
+    "length_fraction": 0.31,
+    "size_fraction": 0.01,
+    "faces": 2291
+   },
+   {
+    "key": "part_3",
+    "label": "Section 9",
+    "axis_position": -0.19,
+    "vertical_position": 0.57,
+    "lateral_position": -0.56,
+    "length_fraction": 0.2,
+    "size_fraction": 0,
+    "faces": 774
+   },
+   {
+    "key": "part_4",
+    "label": "Section 6",
+    "axis_position": -0.16,
+    "vertical_position": -0.17,
+    "lateral_position": -0.48,
+    "length_fraction": 0.1,
+    "size_fraction": 0,
+    "faces": 450
+   },
+   {
+    "key": "part_5",
+    "label": "Section 5",
+    "axis_position": 0.09,
+    "vertical_position": 0.43,
+    "lateral_position": -0.58,
+    "length_fraction": 0.08,
+    "size_fraction": 0,
+    "faces": 862
+   },
+   {
+    "key": "part_6",
+    "label": "Section 1",
+    "axis_position": 0.11,
+    "vertical_position": 0.19,
+    "lateral_position": -0.47,
+    "length_fraction": 0.61,
+    "size_fraction": 0.09,
+    "faces": 3944
+   },
+   {
+    "key": "part_7",
+    "label": "Section 11",
+    "axis_position": 0.13,
+    "vertical_position": -0.54,
+    "lateral_position": 0.96,
+    "length_fraction": 0.04,
+    "size_fraction": 0,
+    "faces": 488
+   },
+   {
+    "key": "part_8",
+    "label": "Section 8",
+    "axis_position": 0.14,
+    "vertical_position": -0.09,
+    "lateral_position": -0.48,
+    "length_fraction": 0.07,
+    "size_fraction": 0.03,
+    "faces": 2372
+   },
+   {
+    "key": "part_9",
+    "label": "Section 7",
+    "axis_position": 0.32,
+    "vertical_position": -0.16,
+    "lateral_position": -0.55,
+    "length_fraction": 0.13,
+    "size_fraction": 0,
+    "faces": 962
+   },
+   {
+    "key": "part_10",
+    "label": "Section 4",
+    "axis_position": 0.64,
+    "vertical_position": 0.7,
+    "lateral_position": -0.48,
+    "length_fraction": 0.36,
+    "size_fraction": 0.01,
+    "faces": 5100
+   }
+  ]
+ },
+ "/models/type87_arv/scene.gltf": {
+  "id": "type87_arv",
+  "name": "Type87 Arv",
+  "axis": "Z",
+  "part_count": 28,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Section 15",
+    "axis_position": -0.89,
+    "vertical_position": -0.15,
+    "lateral_position": -0.3,
+    "length_fraction": 0.08,
+    "size_fraction": 0.01,
+    "faces": 1036
+   },
+   {
+    "key": "part_1",
+    "label": "Section 16",
+    "axis_position": -0.76,
+    "vertical_position": 0.14,
+    "lateral_position": 0.01,
+    "length_fraction": 0.24,
+    "size_fraction": 0.05,
+    "faces": 2905
+   },
+   {
+    "key": "part_2",
+    "label": "Section 3",
+    "axis_position": -0.69,
+    "vertical_position": -0.24,
+    "lateral_position": 0.7,
+    "length_fraction": 0.23,
+    "size_fraction": 0.02,
+    "faces": 3497
+   },
+   {
+    "key": "part_3",
+    "label": "Section 17",
+    "axis_position": -0.68,
+    "vertical_position": 0.1,
+    "lateral_position": 0.68,
+    "length_fraction": 0.2,
+    "size_fraction": 0,
+    "faces": 2134
+   },
+   {
+    "key": "part_4",
+    "label": "Section 21",
+    "axis_position": -0.67,
+    "vertical_position": -0.12,
+    "lateral_position": -0.66,
+    "length_fraction": 0.31,
+    "size_fraction": 0.02,
+    "faces": 780
+   },
+   {
+    "key": "part_5",
+    "label": "Section 2",
+    "axis_position": -0.64,
+    "vertical_position": -0.49,
+    "lateral_position": 0.02,
+    "length_fraction": 0.28,
+    "size_fraction": 0.12,
+    "faces": 23090
+   },
+   {
+    "key": "part_6",
+    "label": "Section 22",
+    "axis_position": -0.61,
+    "vertical_position": 0.12,
+    "lateral_position": -0.17,
+    "length_fraction": 0.37,
+    "size_fraction": 0.01,
+    "faces": 2872
+   },
+   {
+    "key": "part_7",
+    "label": "Section 14",
+    "axis_position": -0.57,
+    "vertical_position": 0.05,
+    "lateral_position": -0.58,
+    "length_fraction": 0.35,
+    "size_fraction": 0.01,
+    "faces": 2289
+   },
+   {
+    "key": "part_8",
+    "label": "Section 28",
+    "axis_position": -0.28,
+    "vertical_position": 0.12,
+    "lateral_position": -0.6,
+    "length_fraction": 0.2,
+    "size_fraction": 0,
+    "faces": 1128
+   },
+   {
+    "key": "part_9",
+    "label": "Section 13",
+    "axis_position": -0.24,
+    "vertical_position": 0.2,
+    "lateral_position": 0.64,
+    "length_fraction": 0.26,
+    "size_fraction": 0.01,
+    "faces": 1516
+   },
+   {
+    "key": "part_10",
+    "label": "Section 23",
+    "axis_position": -0.23,
+    "vertical_position": 0.54,
+    "lateral_position": 0.02,
+    "length_fraction": 0.38,
+    "size_fraction": 0.12,
+    "faces": 6233
+   },
+   {
+    "key": "part_11",
+    "label": "Section 5",
+    "axis_position": -0.22,
+    "vertical_position": -0.27,
+    "lateral_position": 0.7,
+    "length_fraction": 0.22,
+    "size_fraction": 0.02,
+    "faces": 1688
+   },
+   {
+    "key": "part_12",
+    "label": "Section 26",
+    "axis_position": -0.19,
+    "vertical_position": 0.33,
+    "lateral_position": -0.03,
+    "length_fraction": 0.36,
+    "size_fraction": 0.06,
+    "faces": 5290
+   },
+   {
+    "key": "part_13",
+    "label": "Section 24",
+    "axis_position": -0.17,
+    "vertical_position": -0.26,
+    "lateral_position": -0.81,
+    "length_fraction": 0.17,
+    "size_fraction": 0,
+    "faces": 404
+   },
+   {
+    "key": "part_14",
+    "label": "Section 1",
+    "axis_position": -0.04,
+    "vertical_position": -0.42,
+    "lateral_position": 0.02,
+    "length_fraction": 0.85,
+    "size_fraction": 0.42,
+    "faces": 19051
+   },
+   {
+    "key": "part_15",
+    "label": "Section 27",
+    "axis_position": 0.11,
+    "vertical_position": -0.04,
+    "lateral_position": 0.82,
+    "length_fraction": 0.17,
+    "size_fraction": 0,
+    "faces": 252
+   },
+   {
+    "key": "part_16",
+    "label": "Section 8",
+    "axis_position": 0.2,
+    "vertical_position": 0.15,
+    "lateral_position": 0.02,
+    "length_fraction": 0.39,
+    "size_fraction": 0.13,
+    "faces": 3759
+   },
+   {
+    "key": "part_17",
+    "label": "Section 9",
+    "axis_position": 0.2,
+    "vertical_position": -0.12,
+    "lateral_position": -0.68,
+    "length_fraction": 0.18,
+    "size_fraction": 0.01,
+    "faces": 1022
+   },
+   {
+    "key": "part_18",
+    "label": "Section 7",
+    "axis_position": 0.22,
+    "vertical_position": 0.36,
+    "lateral_position": -0.16,
+    "length_fraction": 0.29,
+    "size_fraction": 0.03,
+    "faces": 5844
+   },
+   {
+    "key": "part_19",
+    "label": "Section 18",
+    "axis_position": 0.24,
+    "vertical_position": 0.22,
+    "lateral_position": 0.64,
+    "length_fraction": 0.26,
+    "size_fraction": 0.01,
+    "faces": 1360
+   },
+   {
+    "key": "part_20",
+    "label": "Section 19",
+    "axis_position": 0.25,
+    "vertical_position": 0.12,
+    "lateral_position": -0.62,
+    "length_fraction": 0.14,
+    "size_fraction": 0,
+    "faces": 804
+   },
+   {
+    "key": "part_21",
+    "label": "Section 25",
+    "axis_position": 0.28,
+    "vertical_position": -0.32,
+    "lateral_position": 0.02,
+    "length_fraction": 0.53,
+    "size_fraction": 0.31,
+    "faces": 21796
+   },
+   {
+    "key": "part_22",
+    "label": "Section 10",
+    "axis_position": 0.52,
+    "vertical_position": 0.07,
+    "lateral_position": 0.74,
+    "length_fraction": 0.06,
+    "size_fraction": 0,
+    "faces": 940
+   },
+   {
+    "key": "part_23",
+    "label": "Section 4",
+    "axis_position": 0.53,
+    "vertical_position": 0,
+    "lateral_position": 0.02,
+    "length_fraction": 0.39,
+    "size_fraction": 0.2,
+    "faces": 1373
+   },
+   {
+    "key": "part_24",
+    "label": "Section 12",
+    "axis_position": 0.56,
+    "vertical_position": -0.06,
+    "lateral_position": -0.01,
+    "length_fraction": 0.44,
+    "size_fraction": 0.27,
+    "faces": 931
+   },
+   {
+    "key": "part_25",
+    "label": "Section 20",
+    "axis_position": 0.57,
+    "vertical_position": -0.05,
+    "lateral_position": 0,
+    "length_fraction": 0.43,
+    "size_fraction": 0.25,
+    "faces": 9488
+   },
+   {
+    "key": "part_26",
+    "label": "Section 11",
+    "axis_position": 0.67,
+    "vertical_position": -0.07,
+    "lateral_position": 0.73,
+    "length_fraction": 0.14,
+    "size_fraction": 0,
+    "faces": 716
+   },
+   {
+    "key": "part_27",
+    "label": "Section 6",
+    "axis_position": 0.68,
+    "vertical_position": 0.13,
+    "lateral_position": -0.11,
+    "length_fraction": 0.27,
+    "size_fraction": 0.01,
+    "faces": 2641
+   }
+  ]
+ },
+ "/models/us-super-battleship-rhodeisland/model.glb": {
+  "id": "us-super-battleship-rhodeisland",
+  "name": "Us Super Battleship Rhodeisland",
+  "axis": "Z",
+  "part_count": 22,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Section 14",
+    "axis_position": -0.75,
+    "vertical_position": -0.56,
+    "lateral_position": -0.26,
+    "length_fraction": 0.24,
+    "size_fraction": 0.03,
+    "faces": 10591
+   },
+   {
+    "key": "part_1",
+    "label": "Section 13",
+    "axis_position": -0.71,
+    "vertical_position": -0.61,
+    "lateral_position": 0,
+    "length_fraction": 0.29,
+    "size_fraction": 0.11,
+    "faces": 51665
+   },
+   {
+    "key": "part_2",
+    "label": "Section 15",
+    "axis_position": -0.69,
+    "vertical_position": -0.67,
+    "lateral_position": 0.58,
+    "length_fraction": 0.16,
+    "size_fraction": 0.01,
+    "faces": 4985
+   },
+   {
+    "key": "part_3",
+    "label": "Section 16",
+    "axis_position": -0.69,
+    "vertical_position": -0.67,
+    "lateral_position": -0.58,
+    "length_fraction": 0.16,
+    "size_fraction": 0.01,
+    "faces": 4985
+   },
+   {
+    "key": "part_4",
+    "label": "Section 18",
+    "axis_position": -0.24,
+    "vertical_position": -0.35,
+    "lateral_position": 0.69,
+    "length_fraction": 0.25,
+    "size_fraction": 0.01,
+    "faces": 16879
+   },
+   {
+    "key": "part_5",
+    "label": "Section 17",
+    "axis_position": -0.24,
+    "vertical_position": -0.35,
+    "lateral_position": -0.69,
+    "length_fraction": 0.25,
+    "size_fraction": 0.01,
+    "faces": 18327
+   },
+   {
+    "key": "part_6",
+    "label": "Section 19",
+    "axis_position": -0.21,
+    "vertical_position": -0.25,
+    "lateral_position": 0,
+    "length_fraction": 0.29,
+    "size_fraction": 0.22,
+    "faces": 89631
+   },
+   {
+    "key": "part_7",
+    "label": "Section 20",
+    "axis_position": -0.2,
+    "vertical_position": -0.34,
+    "lateral_position": -0.06,
+    "length_fraction": 0.21,
+    "size_fraction": 0.04,
+    "faces": 40447
+   },
+   {
+    "key": "part_8",
+    "label": "Section 21",
+    "axis_position": -0.16,
+    "vertical_position": 0.23,
+    "lateral_position": 0.09,
+    "length_fraction": 0.08,
+    "size_fraction": 0.01,
+    "faces": 2388
+   },
+   {
+    "key": "part_9",
+    "label": "Section 22",
+    "axis_position": -0.13,
+    "vertical_position": 0.24,
+    "lateral_position": -0.12,
+    "length_fraction": 0.06,
+    "size_fraction": 0,
+    "faces": 1998
+   },
+   {
+    "key": "part_10",
+    "label": "Section 8",
+    "axis_position": 0.12,
+    "vertical_position": 0.45,
+    "lateral_position": 0.61,
+    "length_fraction": 0,
+    "size_fraction": 0,
+    "faces": 130
+   },
+   {
+    "key": "part_11",
+    "label": "Section 7",
+    "axis_position": 0.12,
+    "vertical_position": 0.45,
+    "lateral_position": -0.61,
+    "length_fraction": 0,
+    "size_fraction": 0,
+    "faces": 128
+   },
+   {
+    "key": "part_12",
+    "label": "Section 2",
+    "axis_position": 0.16,
+    "vertical_position": 0.44,
+    "lateral_position": -0.21,
+    "length_fraction": 0.12,
+    "size_fraction": 0.02,
+    "faces": 12392
+   },
+   {
+    "key": "part_13",
+    "label": "Section 1",
+    "axis_position": 0.17,
+    "vertical_position": 0.47,
+    "lateral_position": 0.13,
+    "length_fraction": 0.12,
+    "size_fraction": 0.02,
+    "faces": 19141
+   },
+   {
+    "key": "part_14",
+    "label": "Section 4",
+    "axis_position": 0.17,
+    "vertical_position": -0.05,
+    "lateral_position": 0,
+    "length_fraction": 0.31,
+    "size_fraction": 0.29,
+    "faces": 81090
+   },
+   {
+    "key": "part_15",
+    "label": "Section 5",
+    "axis_position": 0.23,
+    "vertical_position": -0.28,
+    "lateral_position": 0.7,
+    "length_fraction": 0.23,
+    "size_fraction": 0.01,
+    "faces": 19053
+   },
+   {
+    "key": "part_16",
+    "label": "Section 6",
+    "axis_position": 0.23,
+    "vertical_position": -0.28,
+    "lateral_position": -0.7,
+    "length_fraction": 0.23,
+    "size_fraction": 0.01,
+    "faces": 18705
+   },
+   {
+    "key": "part_17",
+    "label": "Section 3",
+    "axis_position": 0.26,
+    "vertical_position": -0.22,
+    "lateral_position": -0.04,
+    "length_fraction": 0.24,
+    "size_fraction": 0.03,
+    "faces": 31137
+   },
+   {
+    "key": "part_18",
+    "label": "Section 11",
+    "axis_position": 0.5,
+    "vertical_position": -0.43,
+    "lateral_position": 0.71,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 86
+   },
+   {
+    "key": "part_19",
+    "label": "Section 12",
+    "axis_position": 0.5,
+    "vertical_position": -0.43,
+    "lateral_position": -0.71,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 86
+   },
+   {
+    "key": "part_20",
+    "label": "Section 10",
+    "axis_position": 0.71,
+    "vertical_position": -0.37,
+    "lateral_position": -0.02,
+    "length_fraction": 0.26,
+    "size_fraction": 0.01,
+    "faces": 7612
+   },
+   {
+    "key": "part_21",
+    "label": "Section 9",
+    "axis_position": 0.72,
+    "vertical_position": -0.56,
+    "lateral_position": 0,
+    "length_fraction": 0.28,
+    "size_fraction": 0.1,
+    "faces": 30673
+   }
+  ]
+ },
+ "/models/t90a-vladimir-mbt/model.glb": {
+  "id": "t90a-vladimir-mbt",
+  "name": "T-90A Vladimir MBT",
+  "axis": "Z",
+  "part_count": 12,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "desirefxme 006",
+    "axis_position": -0.26,
+    "vertical_position": -0.2,
+    "lateral_position": 0.79,
+    "length_fraction": 0.14,
+    "size_fraction": 0,
+    "faces": 340
+   },
+   {
+    "key": "part_1",
+    "label": "desirefxme 009",
+    "axis_position": -0.25,
+    "vertical_position": -0.24,
+    "lateral_position": 0,
+    "length_fraction": 0.75,
+    "size_fraction": 0.28,
+    "faces": 27383
+   },
+   {
+    "key": "part_2",
+    "label": "desirefxme 004",
+    "axis_position": -0.23,
+    "vertical_position": -0.57,
+    "lateral_position": -0.01,
+    "length_fraction": 0.6,
+    "size_fraction": 0.23,
+    "faces": 4602
+   },
+   {
+    "key": "part_3",
+    "label": "desirefxme 008",
+    "axis_position": -0.23,
+    "vertical_position": -0.59,
+    "lateral_position": -0.02,
+    "length_fraction": 0.66,
+    "size_fraction": 0.24,
+    "faces": 2460
+   },
+   {
+    "key": "part_4",
+    "label": "desirefxme 007",
+    "axis_position": -0.23,
+    "vertical_position": -0.57,
+    "lateral_position": 0,
+    "length_fraction": 0.66,
+    "size_fraction": 0.26,
+    "faces": 3442
+   },
+   {
+    "key": "part_5",
+    "label": "desirefxme 003",
+    "axis_position": -0.23,
+    "vertical_position": -0.57,
+    "lateral_position": 0,
+    "length_fraction": 0.66,
+    "size_fraction": 0.26,
+    "faces": 54924
+   },
+   {
+    "key": "part_6",
+    "label": "desirefxme 002",
+    "axis_position": -0.2,
+    "vertical_position": -0.45,
+    "lateral_position": 0,
+    "length_fraction": 0.67,
+    "size_fraction": 0.16,
+    "faces": 28809
+   },
+   {
+    "key": "part_7",
+    "label": "desirefxme 011",
+    "axis_position": -0.17,
+    "vertical_position": -0.69,
+    "lateral_position": 0.77,
+    "length_fraction": 0.63,
+    "size_fraction": 0.03,
+    "faces": 44368
+   },
+   {
+    "key": "part_8",
+    "label": "desirefxme 012",
+    "axis_position": -0.17,
+    "vertical_position": -0.69,
+    "lateral_position": -0.77,
+    "length_fraction": 0.63,
+    "size_fraction": 0.03,
+    "faces": 44368
+   },
+   {
+    "key": "part_9",
+    "label": "desirefxme 005",
+    "axis_position": -0.1,
+    "vertical_position": -0.21,
+    "lateral_position": 0.79,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 29
+   },
+   {
+    "key": "part_10",
+    "label": "desirefxme 010",
+    "axis_position": 0.07,
+    "vertical_position": -0.06,
+    "lateral_position": 0.04,
+    "length_fraction": 0.26,
+    "size_fraction": 0.05,
+    "faces": 32
+   },
+   {
+    "key": "part_11",
+    "label": "desirefxme 001",
+    "axis_position": 0.27,
+    "vertical_position": 0.37,
+    "lateral_position": 0,
+    "length_fraction": 0.73,
+    "size_fraction": 0.42,
+    "faces": 51443
+   }
+  ]
+ },
+ "/models/scud-missile-launcher/model.glb": {
+  "id": "scud-missile-launcher",
+  "name": "SCUD Missile Launcher TEL",
+  "axis": "Z",
+  "part_count": 22,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "1031",
+    "axis_position": -0.6,
+    "vertical_position": 0.22,
+    "lateral_position": 0.13,
+    "length_fraction": 0.37,
+    "size_fraction": 0.18,
+    "faces": 6556
+   },
+   {
+    "key": "part_1",
+    "label": "1041",
+    "axis_position": -0.52,
+    "vertical_position": 0.14,
+    "lateral_position": 0.1,
+    "length_fraction": 0.27,
+    "size_fraction": 0.08,
+    "faces": 5230
+   },
+   {
+    "key": "part_2",
+    "label": "1032",
+    "axis_position": -0.48,
+    "vertical_position": 0.1,
+    "lateral_position": -0.05,
+    "length_fraction": 0.52,
+    "size_fraction": 0.38,
+    "faces": 13364
+   },
+   {
+    "key": "part_3",
+    "label": "1022",
+    "axis_position": -0.41,
+    "vertical_position": -0.18,
+    "lateral_position": 0.13,
+    "length_fraction": 0.31,
+    "size_fraction": 0.06,
+    "faces": 612
+   },
+   {
+    "key": "part_4",
+    "label": "1033",
+    "axis_position": -0.15,
+    "vertical_position": -0.34,
+    "lateral_position": -0.01,
+    "length_fraction": 0.55,
+    "size_fraction": 0.2,
+    "faces": 1792
+   },
+   {
+    "key": "part_5",
+    "label": "1023",
+    "axis_position": -0.12,
+    "vertical_position": -0.11,
+    "lateral_position": 0.1,
+    "length_fraction": 0.75,
+    "size_fraction": 0.37,
+    "faces": 18088
+   },
+   {
+    "key": "part_6",
+    "label": "1023",
+    "axis_position": -0.1,
+    "vertical_position": 0.07,
+    "lateral_position": 0.12,
+    "length_fraction": 0.76,
+    "size_fraction": 0.43,
+    "faces": 60076
+   },
+   {
+    "key": "part_7",
+    "label": "1012",
+    "axis_position": -0.07,
+    "vertical_position": 0.42,
+    "lateral_position": 0.12,
+    "length_fraction": 0.9,
+    "size_fraction": 0.22,
+    "faces": 24082
+   },
+   {
+    "key": "part_8",
+    "label": "1021",
+    "axis_position": -0.03,
+    "vertical_position": -0.27,
+    "lateral_position": -0.07,
+    "length_fraction": 0.05,
+    "size_fraction": 0.02,
+    "faces": 1902
+   },
+   {
+    "key": "part_9",
+    "label": "1013",
+    "axis_position": -0.02,
+    "vertical_position": 0.6,
+    "lateral_position": 0.12,
+    "length_fraction": 0.84,
+    "size_fraction": 0.09,
+    "faces": 5764
+   },
+   {
+    "key": "part_10",
+    "label": "1014",
+    "axis_position": -0.02,
+    "vertical_position": -0.16,
+    "lateral_position": 0.13,
+    "length_fraction": 0.21,
+    "size_fraction": 0.09,
+    "faces": 4202
+   },
+   {
+    "key": "part_11",
+    "label": "1023",
+    "axis_position": 0,
+    "vertical_position": 0.13,
+    "lateral_position": 0.16,
+    "length_fraction": 0.86,
+    "size_fraction": 0.47,
+    "faces": 77088
+   },
+   {
+    "key": "part_12",
+    "label": "1051",
+    "axis_position": 0.02,
+    "vertical_position": -0.57,
+    "lateral_position": 0.12,
+    "length_fraction": 0.67,
+    "size_fraction": 0.08,
+    "faces": 46672
+   },
+   {
+    "key": "part_13",
+    "label": "1043",
+    "axis_position": 0.02,
+    "vertical_position": -0.57,
+    "lateral_position": 0.12,
+    "length_fraction": 0.6,
+    "size_fraction": 0,
+    "faces": 1932
+   },
+   {
+    "key": "part_14",
+    "label": "1042",
+    "axis_position": 0.02,
+    "vertical_position": -0.57,
+    "lateral_position": 0.12,
+    "length_fraction": 0.71,
+    "size_fraction": 0.23,
+    "faces": 39168
+   },
+   {
+    "key": "part_15",
+    "label": "1034",
+    "axis_position": 0.02,
+    "vertical_position": -0.57,
+    "lateral_position": 0.12,
+    "length_fraction": 0.65,
+    "size_fraction": 0.1,
+    "faces": 33600
+   },
+   {
+    "key": "part_16",
+    "label": "1002",
+    "axis_position": 0.09,
+    "vertical_position": -0.09,
+    "lateral_position": 0.12,
+    "length_fraction": 0.89,
+    "size_fraction": 0.56,
+    "faces": 6152
+   },
+   {
+    "key": "part_17",
+    "label": "1011",
+    "axis_position": 0.09,
+    "vertical_position": 0.13,
+    "lateral_position": 0.04,
+    "length_fraction": 0.9,
+    "size_fraction": 0.31,
+    "faces": 4320
+   },
+   {
+    "key": "part_18",
+    "label": "1043",
+    "axis_position": 0.1,
+    "vertical_position": -0.47,
+    "lateral_position": 0.12,
+    "length_fraction": 0.83,
+    "size_fraction": 0.03,
+    "faces": 42878
+   },
+   {
+    "key": "part_19",
+    "label": "1004",
+    "axis_position": 0.43,
+    "vertical_position": 0.25,
+    "lateral_position": 0.12,
+    "length_fraction": 0.2,
+    "size_fraction": 0.05,
+    "faces": 1228
+   },
+   {
+    "key": "part_20",
+    "label": "1003",
+    "axis_position": 0.57,
+    "vertical_position": -0.3,
+    "lateral_position": 0.12,
+    "length_fraction": 0.43,
+    "size_fraction": 0.09,
+    "faces": 29106
+   },
+   {
+    "key": "part_21",
+    "label": "1030",
+    "axis_position": 0.8,
+    "vertical_position": 0.14,
+    "lateral_position": 0.12,
+    "length_fraction": 0.17,
+    "size_fraction": 0.06,
+    "faces": 26048
+   }
+  ]
+ },
+ "/models/d30-howitzer/model.glb": {
+  "id": "d30-howitzer",
+  "name": "D-30 122mm Howitzer",
+  "axis": "Z",
+  "part_count": 16,
+  "parts": [
+   {
+    "key": "part_0",
+    "label": "Segment 11",
+    "axis_position": -0.92,
+    "vertical_position": 0.06,
+    "lateral_position": -0.01,
+    "length_fraction": 0.08,
+    "size_fraction": 0,
+    "faces": 144
+   },
+   {
+    "key": "part_1",
+    "label": "Segment 9",
+    "axis_position": -0.44,
+    "vertical_position": -0.46,
+    "lateral_position": 0,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 168
+   },
+   {
+    "key": "part_2",
+    "label": "Segment 3",
+    "axis_position": -0.23,
+    "vertical_position": 0.22,
+    "lateral_position": 0,
+    "length_fraction": 0.65,
+    "size_fraction": 0,
+    "faces": 580
+   },
+   {
+    "key": "part_3",
+    "label": "Segment 5",
+    "axis_position": -0.12,
+    "vertical_position": 0.17,
+    "lateral_position": 0.02,
+    "length_fraction": 0.65,
+    "size_fraction": 0.01,
+    "faces": 266
+   },
+   {
+    "key": "part_4",
+    "label": "Segment 16",
+    "axis_position": 0.03,
+    "vertical_position": 0.02,
+    "lateral_position": 0,
+    "length_fraction": 0.97,
+    "size_fraction": 0.94,
+    "faces": 3103
+   },
+   {
+    "key": "part_5",
+    "label": "Segment 1",
+    "axis_position": 0.06,
+    "vertical_position": -0.06,
+    "lateral_position": 0,
+    "length_fraction": 0.93,
+    "size_fraction": 0.86,
+    "faces": 1776
+   },
+   {
+    "key": "part_6",
+    "label": "Segment 2",
+    "axis_position": 0.2,
+    "vertical_position": 0.17,
+    "lateral_position": -0.34,
+    "length_fraction": 0.16,
+    "size_fraction": 0,
+    "faces": 620
+   },
+   {
+    "key": "part_7",
+    "label": "Segment 6",
+    "axis_position": 0.25,
+    "vertical_position": 0.26,
+    "lateral_position": 0,
+    "length_fraction": 0.05,
+    "size_fraction": 0.01,
+    "faces": 240
+   },
+   {
+    "key": "part_8",
+    "label": "Segment 8",
+    "axis_position": 0.37,
+    "vertical_position": 0.14,
+    "lateral_position": 0,
+    "length_fraction": 0.17,
+    "size_fraction": 0.01,
+    "faces": 196
+   },
+   {
+    "key": "part_9",
+    "label": "Segment 13",
+    "axis_position": 0.43,
+    "vertical_position": 0.47,
+    "lateral_position": -0.21,
+    "length_fraction": 0.05,
+    "size_fraction": 0,
+    "faces": 140
+   },
+   {
+    "key": "part_10",
+    "label": "Segment 14",
+    "axis_position": 0.44,
+    "vertical_position": 0.76,
+    "lateral_position": -0.19,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 134
+   },
+   {
+    "key": "part_11",
+    "label": "Segment 10",
+    "axis_position": 0.44,
+    "vertical_position": 0.47,
+    "lateral_position": 0.02,
+    "length_fraction": 0.09,
+    "size_fraction": 0,
+    "faces": 152
+   },
+   {
+    "key": "part_12",
+    "label": "Segment 15",
+    "axis_position": 0.45,
+    "vertical_position": 0.24,
+    "lateral_position": -0.27,
+    "length_fraction": 0.06,
+    "size_fraction": 0,
+    "faces": 128
+   },
+   {
+    "key": "part_13",
+    "label": "Segment 4",
+    "axis_position": 0.47,
+    "vertical_position": 0.61,
+    "lateral_position": -0.19,
+    "length_fraction": 0.02,
+    "size_fraction": 0,
+    "faces": 278
+   },
+   {
+    "key": "part_14",
+    "label": "Segment 12",
+    "axis_position": 0.5,
+    "vertical_position": 0.58,
+    "lateral_position": -0.12,
+    "length_fraction": 0.01,
+    "size_fraction": 0,
+    "faces": 144
+   },
+   {
+    "key": "part_15",
+    "label": "Segment 7",
+    "axis_position": 0.58,
+    "vertical_position": 0.24,
+    "lateral_position": -0.07,
+    "length_fraction": 0.07,
+    "size_fraction": 0,
+    "faces": 198
+   }
+  ]
+ }
+}

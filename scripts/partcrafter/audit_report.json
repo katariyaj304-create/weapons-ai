@@ -1,0 +1,48 @@
+{
+  "usable": [
+    "backend\\uploads\\kits\\2577a4eccbc74b2da6dba5bfd09b7511\\model.glb",
+    "backend\\uploads\\kits\\890d1d62a0a74a58ba00d6e38b8ac13c\\model.glb",
+    "frontend\\public\\models\\arx-pounder\\model.glb",
+    "frontend\\public\\models\\as-val-internals\\model.glb",
+    "frontend\\public\\models\\boeing-kc-46a-pegasus\\model.glb",
+    "frontend\\public\\models\\boeing-kc-46a\\model.glb",
+    "frontend\\public\\models\\call-of-duty-black-ops-6-as-val\\model.glb",
+    "frontend\\public\\models\\kf-21a-boramae-fighter-jet\\model.glb",
+    "frontend\\public\\models\\mini-14-internals\\model.glb",
+    "frontend\\public\\models\\simple-tank\\model.glb",
+    "frontend\\public\\models\\simple-tank\\simple_tank.glb",
+    "frontend\\public\\models\\sukhoi-su-57-felon-fighter-jet-free\\model.glb",
+    "frontend\\public\\models\\sukhoi-su-57-felon-p-fighter-jet-free\\model.glb",
+    "frontend\\public\\models\\tommy-gun-internals\\model.glb"
+  ],
+  "single": [
+    "frontend\\public\\models\\mortar-60\\model.glb",
+    "frontend\\public\\models\\mortar-60\\source\\mortar 60.glb"
+  ],
+  "over16": [
+    "backend\\uploads\\a0833ba9_free_-_m4_modular_kit_gun.glb",
+    "backend\\uploads\\kits\\384565b1779c450b90397232163e4e6d\\model.glb",
+    "backend\\uploads\\kits\\cabde59f5cf24effaf80536e35d04e95\\model.glb",
+    "frontend\\public\\models\\ak-47-internals\\model.glb",
+    "frontend\\public\\models\\ak-47\\model.glb",
+    "frontend\\public\\models\\ak-74m-internals\\model.glb",
+    "frontend\\public\\models\\arx-apc\\model.glb",
+    "frontend\\public\\models\\drdo-rustom-2-uav\\model.glb",
+    "frontend\\public\\models\\japanese-type-87-rcv\\model.glb",
+    "frontend\\public\\models\\jet-fighter\\model.glb",
+    "frontend\\public\\models\\low-poly-ak-74m-zenitco\\model.glb",
+    "frontend\\public\\models\\m1a2-abrams\\model.glb",
+    "frontend\\public\\models\\m1a2-sepv2-abrams-main-battle-tank-dc\\model.glb",
+    "frontend\\public\\models\\sikorsky-ch-53e-sea-stallion\\model.glb",
+    "frontend\\public\\models\\t-72a-obr-1980\\model.glb",
+    "frontend\\public\\models\\tommy-gun\\model.glb",
+    "frontend\\public\\models\\us-super-battleship-rhodeisland\\model.glb"
+  ],
+  "errors": [],
+  "counts": {
+    "usable": 14,
+    "single": 2,
+    "over16": 17,
+    "errors": 0
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "weapon": "FN SCAR",
+  "profile": {
+    "designer": "FN Herstal",
+    "origin": "Belgium/United States",
+    "weapon_class": "gas-operated short-stroke piston automatic rifles",
+    "concept_year": "2003",
+    "service_year": "2009",
+    "span": "2009-present",
+    "units": "unknown",
+    "status": "In service"
+  },
+  "through_line": "The design idea of a modular, gas-operated, short-stroke piston rifle with ergonomic commonality and parts commonality has survived every revision of the FN SCAR.",
+  "stages": [
+    {
+      "id": 1,
+      "stage": "CONCEPT",
+      "designation": "SCAR",
+      "year": "2003",
+      "title": "Initial Concept",
+      "summary": "The US Special Operations Command (SOCOM) issued a specification for a new family of weapons with ergonomic commonality and parts commonality. FN Herstal began designing the SCAR to meet these requirements.",
+      "driver": "Combat feedback and the need for a modular rifle system",
+      "impact": "The SCAR concept was born, aiming to provide a versatile and reliable rifle platform for special operations forces.",
+      "changes": [
+        {
+          "type": "ADDED",
+          "part": "modular design",
+          "detail": "allowing for easy caliber changes and configuration",
+          "sources": [
+            5
+          ]
+        }
+      ],
+      "sources": [
+        1,
+        5
+      ],
+      "image": "https://navyseals.com/wp-content/uploads/2013/01/FN_SCAR_rifle.jpg"
+    },
+    {
+      "id": 2,
+      "stage": "PROTOTYPE",
+      "designation": "SCAR-L and SCAR-H",
+      "year": "2004",
+      "title": "Prototype Development",
+      "summary": "FN Herstal developed the SCAR-L (light) and SCAR-H (heavy) prototypes, chambered in 5.56x45mm NATO and 7.62x51mm NATO, respectively.",
+      "driver": "The need for a rifle that could adapt to different combat scenarios and environments",
+      "impact": "The SCAR prototypes demonstrated the potential for a versatile and reliable rifle system.",
+      "changes": [
+        {
+          "type": "ADDED",
+          "part": "gas-operated short-stroke piston system",
+          "detail": "providing a reliable and durable operating system",
+          "sources": [
+            1
+          ]
+        },
+        {
+          "type": "ADDED",
+          "part": "modular rapid-change barrel",
+          "detail": "allowing operators to switch calibers in the field",
+          "sources": [
+            1
+          ]
+        }
+      ],
+      "sources": [
+        1,
+        2
+      ],
+      "image": "https://i.pinimg.com/736x/d6/b3/c9/d6b3c97c34fbdc6f712005ab331a92db--fn-scar-top.jpg"
+    },
+    {
+      "id": 3,
+      "stage": "TRIALS",
+      "designation": "SCAR-L and SCAR-H",
+      "year": "2006",
+      "title": "Trials and Testing",
+      "summary": "The SCAR prototypes underwent extensive testing and evaluation by SOCOM and other military units.",
+      "driver": "The need for a rifle that could meet the rigorous demands of special operations forces",
+      "impact": "The SCAR prototypes demonstrated their reliability, durability, and accuracy in various combat scenarios.",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "ergonomics",
+          "detail": "refining the rifle's ergonomics for improved user comfort and handling",
+          "sources": [
+            5
+          ]
+        }
+      ],
+      "sources": [
+        1,
+        5
+      ],
+      "image": "http://www.armyrecognition.com/images/stories/europe/belgium/weapons/scar/Scar_L_assault_rifle_FN_Herstal_Belgium_Belgian_weapon_view_technical_Data_2011_002.jpg"
+    },
+    {
+      "id": 4,
+      "stage": "ADOPTION",
+      "designation": "SCAR-L and SCAR-H",
+      "year": "2009",
+      "title": "Initial Fielding",
+      "summary": "The SCAR was first fielded to US troops in April 2009, with the 75th Ranger Regiment being among the first units to receive the rifle.",
+      "driver": "The need for a reliable and versatile rifle system for special operations forces",
+      "impact": "The SCAR was adopted by US special operations forces, providing them with a reliable and adaptable rifle platform.",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "production process",
+          "detail": "refining the manufacturing process to improve quality and reduce costs",
+          "sources": [
+            1
+          ]
+        }
+      ],
+      "sources": [
+        1
+      ],
+      "image": "http://www.armyrecognition.com/images/stories/europe/belgium/weapons/scar/Scar_L_assault_rifle_FN_Herstal_Belgium_Belgian_weapon_view_technical_Data_2011_002.jpg"
+    },
+    {
+      "id": 5,
+      "stage": "VARIANT",
+      "designation": "SCAR 16S and SCAR 17S",
+      "year": "2010",
+      "title": "Commercial Variants",
+      "summary": "FN Herstal introduced the SCAR 16S and SCAR 17S, commercial variants of the SCAR-L and SCAR-H, respectively.",
+      "driver": "The demand for a civilian version of the SCAR rifle",
+      "impact": "The SCAR 16S and SCAR 17S provided civilians with access to a reliable and versatile rifle platform.",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "stock design",
+          "detail": "introducing a new stock design for improved ergonomics and adjustability",
+          "sources": [
+            9
+          ]
+        }
+      ],
+      "sources": [
+        1,
+        9
+      ],
+      "image": "https://www.arizonaresponsesystems.com/images/resources/fal-rev-scar/scar-16-01.jpg"
+    },
+    {
+      "id": 6,
+      "stage": "MODERNIZATION",
+      "designation": "SCAR Gen 3",
+      "year": "2026",
+      "title": "Next-Generation SCAR",
+      "summary": "FN Herstal introduced the SCAR Gen 3, featuring improved ergonomics, a new rail system, and enhanced suppressor capability.",
+      "driver": "The need for a modernized rifle platform that could adapt to evolving combat scenarios and technologies",
+      "impact": "The SCAR Gen 3 provided users with a refined and improved rifle platform, addressing previous criticisms and limitations.",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "rail system",
+          "detail": "introducing a new M-LOK rail system for improved accessory mounting and compatibility",
+          "sources": [
+            6,
+            9
+          ]
+        },
+        {
+          "type": "CHANGED",
+          "part": "ergonomics",
+          "detail": "refining the rifle's ergonomics for improved user comfort and handling",
+          "sources": [
+            6,
+            9
+          ]
+        }
+      ],
+      "sources": [
+        6,
+        9
+      ],
+      "image": "https://fragoutmag.com/wp-content/uploads/2026/01/fn-scar-next-gen-01-1381x1214.jpg"
+    },
+    {
+      "id": 7,
+      "stage": "CURRENT",
+      "designation": "SCAR Gen 3",
+      "year": "2026",
+      "title": "Current Production",
+      "summary": "The SCAR Gen 3 is currently in production, with FN Herstal continuing to refine and improve the rifle platform.",
+      "driver": "The ongoing need for a reliable and versatile rifle system for special operations forces and civilian users",
+      "impact": "The SCAR Gen 3 remains a popular and highly-regarded rifle platform, known for its reliability, durability, and adaptability.",
+      "changes": [
+        {
+          "type": "CHANGED",
+          "part": "production process",
+          "detail": "continuously refining the manufacturing process to improve quality and reduce costs",
+          "sources": [
+            1
+          ]
+        }
+      ],
+      "sources": [
+        1,
+        6,
+        9
+      ],
+      "image": "https://fragoutmag.com/wp-content/uploads/2026/01/fn-scar-next-gen-01-1381x1214.jpg"
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "NRA Blog | Smooth Operator: A Brief History of the FN SCAR",
+      "url": "https://www.nrablog.com/articles/2016/10/smooth-operator-a-brief-history-of-the-fn-scar",
+      "domain": "nrablog.com"
+    },
+    {
+      "id": 2,
+      "title": "FN SCAR - Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/FN_SCAR",
+      "domain": "en.wikipedia.org"
+    },
+    {
+      "id": 5,
+      "title": "FN SCAR-SC Full Breakdown: Compact 5.56 Carbine Explained with firearms expert Jonathan Ferguson",
+      "url": "https://www.youtube.com/watch?v=UYD09F-Exh8",
+      "domain": "youtube.com"
+    },
+    {
+      "id": 6,
+      "title": "FN SCAR Gen 3: Enhanced Features for Modern Warfare - Ronin's Grips",
+      "url": "https://blog.roninsgrips.com/fn-scar-gen-3-enhanced-features-for-modern-warfare",
+      "domain": "blog.roninsgrips.com"
+    },
+    {
+      "id": 9,
+      "title": "New FN Scar 17s First Shots",
+      "url": "https://www.youtube.com/watch?v=XIA73jTYWqQ",
+      "domain": "youtube.com"
+    }
+  ]
+}

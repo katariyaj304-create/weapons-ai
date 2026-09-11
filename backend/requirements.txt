@@ -1,0 +1,17 @@
+tavily-python
+fastapi
+uvicorn[standard]
+python-dotenv
+huggingface-hub
+gradio_client
+Pillow
+sse-starlette
+pydantic
+langchain
+langgraph
+httpx
+duckduckgo-search
+ddgs
+rembg
+trimesh
+numpy
