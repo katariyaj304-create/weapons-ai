@@ -1,0 +1,11 @@
+Model Information:
+* title:	Type87 ARV
+* source:	https://sketchfab.com/3d-models/type87-arv-c99364afb13d4e3d8f4fb83c66dd8c12
+* author:	Mikhail_Zelenov (https://sketchfab.com/Mikhail_Zelenov)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Type87 ARV" (https://sketchfab.com/3d-models/type87-arv-c99364afb13d4e3d8f4fb83c66dd8c12) by Mikhail_Zelenov (https://sketchfab.com/Mikhail_Zelenov) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
