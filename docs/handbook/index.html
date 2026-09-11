@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ivory Command — The Complete Engineering Handbook</title>
+<style>
+  :root{
+    --ink:#141821; --ink-soft:#3c4356; --ink-faint:#707a92;
+    --paper:#f7f7f4; --card:#ffffff; --line:#dcdfe6;
+    --accent:#0f4c81; --accent-soft:#e3edf7;
+    --amber:#b45309; --amber-soft:#fdf1e0;
+    --green:#0f7a4d; --green-soft:#e2f4ea;
+    --red:#b3213b; --red-soft:#fbe7ea;
+    --violet:#5b3fa8; --violet-soft:#efe9fb;
+    --mono:'Cascadia Code','Consolas','SF Mono',ui-monospace,monospace;
+    --sans:'Segoe UI',system-ui,-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.65;font-size:16.5px}
+  .page{max-width:980px;margin:0 auto;padding:0 28px 120px}
+
+  /* ---------- cover ---------- */
+  .cover{min-height:92vh;display:flex;flex-direction:column;justify-content:center;position:relative;border-bottom:3px solid var(--ink);padding:70px 0 50px}
+  .cover .kicker{font-family:var(--mono);font-size:13px;letter-spacing:.28em;color:var(--accent);text-transform:uppercase;margin-bottom:22px}
+  .cover h1{font-size:clamp(42px,7vw,76px);line-height:1.02;letter-spacing:-.02em;font-weight:800}
+  .cover h1 span{color:var(--accent)}
+  .cover .sub{font-size:20px;color:var(--ink-soft);max-width:640px;margin-top:26px}
+  .cover .meta{margin-top:44px;display:flex;gap:34px;flex-wrap:wrap;font-family:var(--mono);font-size:12.5px;color:var(--ink-faint)}
+  .cover .meta b{display:block;color:var(--ink);font-size:14px;margin-bottom:2px}
+  .cover .blueprint{position:absolute;right:0;top:60px;opacity:.55}
+
+  /* ---------- structure ---------- */
+  section{padding-top:66px}
+  .chap{border-top:3px solid var(--ink);margin-top:70px}
+  .chapnum{font-family:var(--mono);font-size:13px;letter-spacing:.3em;color:var(--accent);text-transform:uppercase;margin-bottom:8px;padding-top:26px}
+  h2{font-size:36px;letter-spacing:-.015em;line-height:1.12;margin-bottom:18px;font-weight:800}
+  h3{font-size:23px;margin:44px 0 12px;letter-spacing:-.01em;font-weight:750}
+  h4{font-size:17.5px;margin:28px 0 8px;font-weight:700}
+  p{margin:0 0 15px;color:var(--ink-soft)}
+  p b, li b{color:var(--ink)}
+  ul,ol{margin:0 0 16px 24px;color:var(--ink-soft)}
+  li{margin-bottom:7px}
+  .lead{font-size:19px;color:var(--ink);max-width:760px}
+  code{font-family:var(--mono);font-size:.86em;background:#eef0f4;border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:#243356;white-space:nowrap}
+  pre{background:#161b26;color:#dbe4f5;font-family:var(--mono);font-size:13px;line-height:1.6;border-radius:12px;padding:18px 20px;overflow-x:auto;margin:14px 0 20px}
+  pre code{background:none;border:none;color:inherit;padding:0;white-space:pre}
+  a{color:var(--accent)}
+  hr.thin{border:none;border-top:1px solid var(--line);margin:34px 0}
+
+  /* ---------- callouts ---------- */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0 26px}
+  @media(max-width:760px){.duo{grid-template-columns:1fr}}
+  .box{border:1.5px solid var(--line);border-radius:14px;background:var(--card);padding:18px 20px}
+  .box .tag{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;display:inline-block;padding:3px 10px;border-radius:99px;margin-bottom:10px}
+  .box p{font-size:15px;margin-bottom:10px}
+  .box p:last-child{margin-bottom:0}
+  .box.simple{border-color:#bcd6ee;background:linear-gradient(180deg,#f4f9ff, #fff)}
+  .box.simple .tag{background:var(--accent-soft);color:var(--accent)}
+  .box.deep{border-color:#d8cfee;background:linear-gradient(180deg,#faf7ff,#fff)}
+  .box.deep .tag{background:var(--violet-soft);color:var(--violet)}
+  .voice{border-left:5px solid var(--amber);background:var(--amber-soft);border-radius:0 14px 14px 0;padding:16px 20px;margin:18px 0 26px}
+  .voice .vt{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--amber);text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+  .voice p{font-size:15.5px;color:#5d4a22;margin:0;font-style:italic}
+  .warn{border-left:5px solid var(--red);background:var(--red-soft);border-radius:0 14px 14px 0;padding:14px 18px;margin:16px 0}
+  .warn p{margin:0;font-size:15px;color:#6e2231}
+  .note{border-left:5px solid var(--green);background:var(--green-soft);border-radius:0 14px 14px 0;padding:14px 18px;margin:16px 0}
+  .note p{margin:0;font-size:15px;color:#134f35}
+
+  /* ---------- figures ---------- */
+  figure{margin:26px 0 34px}
+  figure img{width:100%;border:1.5px solid var(--line);border-radius:14px;box-shadow:0 14px 40px rgba(20,24,33,.10);display:block}
+  figcaption{font-size:13.5px;color:var(--ink-faint);margin-top:10px;padding-left:4px}
+  figcaption b{color:var(--ink-soft);font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-right:8px}
+
+  /* ---------- tables ---------- */
+  table{width:100%;border-collapse:collapse;margin:16px 0 26px;font-size:14.5px;background:var(--card);border:1.5px solid var(--line);border-radius:12px;overflow:hidden}
+  th{background:#eef1f6;text-align:left;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);padding:10px 14px;border-bottom:2px solid var(--line)}
+  td{padding:10px 14px;border-bottom:1px solid #e9ebf0;vertical-align:top;color:var(--ink-soft)}
+  tr:last-child td{border-bottom:none}
+  td b{color:var(--ink)}
+  .tablewrap{overflow-x:auto}
+
+  /* ---------- TOC ---------- */
+  .toc{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:30px 34px;margin-top:30px;columns:2;column-gap:44px}
+  @media(max-width:760px){.toc{columns:1}}
+  .toc a{display:block;text-decoration:none;color:var(--ink-soft);padding:5px 0;font-size:15px;break-inside:avoid;border-bottom:1px dotted #e3e5ea}
+  .toc a:hover{color:var(--accent)}
+  .toc a .n{font-family:var(--mono);font-size:11.5px;color:var(--accent);margin-right:10px}
+
+  /* ---------- pipeline diagrams ---------- */
+  .flow{display:flex;flex-direction:column;gap:0;margin:22px 0 30px}
+  .fstep{display:flex;gap:16px;align-items:stretch}
+  .fnum{width:44px;display:flex;flex-direction:column;align-items:center;flex-shrink:0}
+  .fnum .dot{width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font-family:var(--mono);font-size:13px;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+  .fnum .stem{flex:1;width:2.5px;background:var(--line);min-height:14px}
+  .fstep:last-child .stem{display:none}
+  .fbody{padding:0 0 22px;flex:1}
+  .fbody h5{font-size:16.5px;margin:5px 0 4px;font-weight:750}
+  .fbody p{font-size:14.5px;margin-bottom:6px}
+  .fbody .chip{font-family:var(--mono);font-size:11px;background:#eef0f4;border:1px solid var(--line);border-radius:6px;padding:2px 8px;color:#3b4763;margin-right:6px;white-space:nowrap;display:inline-block;margin-bottom:4px}
+  .fstep.alt .dot{background:var(--accent)}
+  .fstep.warnstep .dot{background:var(--red)}
+
+  /* ---------- arch svg ---------- */
+  .diagram{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:20px;margin:22px 0 30px;overflow-x:auto}
+  .diagram svg{display:block;min-width:640px;width:100%;height:auto}
+  .dcap{font-size:13.5px;color:var(--ink-faint);margin-top:8px;text-align:center}
+
+  /* ---------- Q&A ---------- */
+  details{background:var(--card);border:1.5px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+  summary{cursor:pointer;padding:16px 20px;font-weight:700;font-size:16px;color:var(--ink);list-style:none;display:flex;gap:12px}
+  summary::before{content:'Q';font-family:var(--mono);color:#fff;background:var(--accent);border-radius:8px;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+  details[open] summary{border-bottom:1.5px solid var(--line);background:#fafbfd}
+  details .a{padding:16px 20px 18px 58px}
+  details .a p{font-size:15px}
+
+  /* ---------- misc ---------- */
+  .pill{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;border-radius:99px;padding:3px 12px;margin:0 6px 6px 0}
+  .pill.b{background:var(--accent-soft);color:var(--accent)}
+  .pill.g{background:var(--green-soft);color:var(--green)}
+  .pill.r{background:var(--red-soft);color:var(--red)}
+  .pill.a{background:var(--amber-soft);color:var(--amber)}
+  .pill.v{background:var(--violet-soft);color:var(--violet)}
+  .bigstat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:24px 0}
+  .stat{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;text-align:center}
+  .stat .v{font-size:30px;font-weight:800;letter-spacing:-.02em;color:var(--accent)}
+  .stat .l{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-top:4px}
+  .story-card{background:var(--card);border:1.5px solid var(--line);border-left:6px solid var(--red);border-radius:14px;padding:20px 24px;margin:0 0 18px}
+  .story-card h4{margin:0 0 8px;font-size:17px}
+  .story-card .sc-row{display:grid;grid-template-columns:96px 1fr;gap:10px;font-size:14.5px;margin-bottom:8px}
+  .story-card .sc-row:last-child{margin-bottom:0}
+  .story-card .sc-k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);padding-top:3px}
+  .story-card .sc-v{color:var(--ink-soft)}
+  .story-card .sc-v b{color:var(--ink)}
+  @media print{
+    body{font-size:12.5px}
+    .cover{min-height:auto}
+    figure img{box-shadow:none}
+    details{page-break-inside:avoid}
+    .story-card{page-break-inside:avoid}
+    a{color:inherit;text-decoration:none}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ============================ COVER ============================ -->
+<header class="cover">
+  <svg class="blueprint" width="220" height="220" viewBox="0 0 220 220" fill="none" aria-hidden="true">
+    <circle cx="110" cy="110" r="100" stroke="#0f4c81" stroke-width="1" stroke-dasharray="4 6"/>
+    <circle cx="110" cy="110" r="66" stroke="#0f4c81" stroke-width="1"/>
+    <path d="M110 10v40M110 170v40M10 110h40M170 110h40" stroke="#0f4c81" stroke-width="1"/>
+    <rect x="80" y="98" width="90" height="14" rx="3" stroke="#0f4c81" stroke-width="1.4"/>
+    <rect x="52" y="100" width="28" height="10" rx="2" stroke="#0f4c81" stroke-width="1.4"/>
+    <path d="M96 112l-8 26h12l4-14" stroke="#0f4c81" stroke-width="1.4"/>
+    <rect x="120" y="112" width="18" height="30" rx="3" transform="rotate(8 120 112)" stroke="#0f4c81" stroke-width="1.4"/>
+  </svg>
+  <div class="kicker">Weapons.ai · Project Handbook · Rev 1.0</div>
+  <h1>IVORY<br>COMMAND<span>.</span></h1>
+  <p class="sub">The complete story, science, and engineering of an AI-powered
+  3D weapons-intelligence platform — written so a 10th-grader can follow every page,
+  and an engineer can rebuild the whole system from it.</p>
+  <div class="meta">
+    <div><b>Codename</b>Weapons.ai / Ivory Command</div>
+    <div><b>Stack</b>React · Three.js · FastAPI · Python</div>
+    <div><b>Date</b>July 2026</div>
+    <div><b>Audience</b>Everyone — zero code required</div>
+  </div>
+</header>
+
+<!-- ============================ HOW TO READ ============================ -->
+<section id="howto">
+  <div class="chapnum">Before you begin</div>
+  <h2>How to read this handbook</h2>
+  <p class="lead">Every chapter speaks two languages at once, so nobody gets left behind.</p>
+  <div class="duo">
+    <div class="box simple">
+      <span class="tag">In simple words</span>
+      <p>Blue boxes like this explain the idea with everyday examples — no jargon,
+      no code. If you only read these boxes, you will still understand the entire
+      application: what it does, why it exists, and how it works inside.</p>
+    </div>
+    <div class="box deep">
+      <span class="tag">Engineer's depth</span>
+      <p>Purple boxes carry the precise technical detail — file names, algorithms,
+      API contracts, trade-offs. Read these and you can maintain, extend, or
+      re-implement the system, and answer any interview question about it.</p>
+    </div>
+  </div>
+  <div class="voice">
+    <div class="vt">🎙 Voice note — 60-second briefing</div>
+    <p>Amber boxes like this one are "voice notes": short, conversational summaries
+    written the way you would explain the chapter out loud to a friend. Read one
+    before each chapter — or literally read it aloud — and you have the chapter's
+    story in under a minute.</p>
+  </div>
+  <p>Screenshots are captured live from the running application. Flow diagrams show
+  every pipeline step-by-step. Chapter 8 ("War Stories") is the honest engineering
+  diary — every problem we hit and exactly how we solved it. Chapter 12 is a full
+  interview preparation kit built from this project.</p>
+
+  <h3>Table of contents</h3>
+  <nav class="toc">
+    <a href="#ch1"><span class="n">01</span>The Story — why we built this</a>
+    <a href="#ch2"><span class="n">02</span>First Principles — the science you need</a>
+    <a href="#ch3"><span class="n">03</span>Grand Tour — every feature, with screenshots</a>
+    <a href="#ch4"><span class="n">04</span>System Architecture — the full map</a>
+    <a href="#ch5"><span class="n">05</span>Pipeline I — Name → 3D Model</a>
+    <a href="#ch6"><span class="n">06</span>Pipeline II — Fetch &amp; Explode (zero AI)</a>
+    <a href="#ch7"><span class="n">07</span>Pipeline III — AI Exploded Assembly</a>
+    <a href="#ch8"><span class="n">08</span>War Stories — problems &amp; how we beat them</a>
+    <a href="#ch9"><span class="n">09</span>Resources — every model, API &amp; library</a>
+    <a href="#ch10"><span class="n">10</span>The Repository — folder-by-folder</a>
+    <a href="#ch11"><span class="n">11</span>API Reference — every endpoint</a>
+    <a href="#ch12"><span class="n">12</span>Interview Q&amp;A — 20 real questions</a>
+    <a href="#ch13"><span class="n">13</span>Glossary — every term in plain words</a>
+    <a href="#ch14"><span class="n">14</span>Roadmap — what comes next</a>
+  </nav>
+</section>
+
+<!-- ============================ CH 1 STORY ============================ -->
+<section class="chap" id="ch1">
+  <div class="chapnum">Chapter 01</div>
+  <h2>The Story — why we built this</h2>
+  <div class="voice">
+    <div class="vt">🎙 Voice note</div>
+    <p>Imagine you could type the name of any weapon — "AK-47" — and thirty seconds
+    later you're holding a 3D model of it on your screen, pulling it apart piece by
+    piece, with every part labeled, its material explained, its history traced, and
+    an AI you can literally talk to about it. That's Ivory Command. We built it
+    because that experience did not exist anywhere — not in museums, not in
+    textbooks, not in any app.</p>
+  </div>
+
+  <h3>The problem in the real world</h3>
+  <p>Understanding how a weapon system actually works — what parts it has, how they
+  fit together, what they are made of, why the design evolved — today requires
+  scattering your attention across armorer's manuals, museum visits, YouTube
+  disassembly videos, Wikipedia, and materials-science textbooks. The knowledge
+  exists, but it is <b>fragmented, flat (2D), and slow to assemble</b>.</p>
+  <p>Three groups feel this pain daily:</p>
+  <ul>
+    <li><b>Defense students &amp; trainees</b> — need to learn field-stripping and
+    part functions from static diagrams.</li>
+    <li><b>Researchers, journalists &amp; analysts</b> — need quick, sourced,
+    visual answers about weapon systems.</li>
+    <li><b>Engineers &amp; designers</b> — need material data, design-evolution
+    history, and interactive references in one place.</li>
+  </ul>
+
+  <div class="duo">
+    <div class="box simple">
+      <span class="tag">In simple words</span>
+      <p>Think of a science museum where you can pick up any machine, pull it apart
+      with your hands, and a guide explains each piece. Now imagine that museum has
+      <b>every weapon ever made</b>, lives in your browser, and builds new exhibits
+      on demand when you type a name. That is the product.</p>
+    </div>
+    <div class="box deep">
+      <span class="tag">Engineer's depth</span>
+      <p>The product thesis: combine <b>curated 3D assets</b> (artist-made, CC-licensed),
+      <b>generative 3D AI</b> (image-to-3D diffusion models) and <b>LLM research
+      pipelines</b> (web-grounded, citation-backed) behind one React interface, with a
+      deterministic geometry engine that can explode <i>any</i> GLB into labeled parts
+      without calling an AI at all.</p>
+    </div>
+  </div>
+
+  <h3>The one-sentence pitch</h3>
+  <p class="lead"><b>Ivory Command turns a weapon's name into an interactive,
+  labeled, exploding 3D model with an AI research layer on top — in under a
+  minute, mostly on free infrastructure.</b></p>
+
+  <div class="bigstat">
+    <div class="stat"><div class="v">31</div><div class="l">Library assets</div></div>
+    <div class="stat"><div class="v">388</div><div class="l">Parts identified</div></div>
+    <div class="stat"><div class="v">~43s</div><div class="l">Name → 3D model</div></div>
+    <div class="stat"><div class="v">9</div><div class="l">AI models used</div></div>
+    <div class="stat"><div class="v">$0</div><div class="l">Infra cost (free tiers)</div></div>
+  </div>
+
+  <h3>Design principles we committed to</h3>
+  <ol>
+    <li><b>Instant beats clever.</b> When a deterministic algorithm can do the job
+    (part detection, labeling, explosion math), never make the user wait for an AI
+    call. AI is reserved for what only AI can do.</li>
+    <li><b>Quality has a bar, and the bar is artist-made.</b> Generated 3D is
+    graded against a rubric extracted from the best hand-made models; if a real
+    artist model exists on Sketchfab under a CC license, we fetch that instead of
+    generating.</li>
+    <li><b>Free infrastructure, seriously engineered.</b> The entire GPU workload
+    runs on Kaggle's free T4s and Hugging Face Spaces; the app survives their
+    quotas, outages and quirks through layered fallbacks.</li>
+    <li><b>Every fact carries a source.</b> Evolution timelines and material
+    dossiers cite numbered references resolved from live web research.</li>
+    <li><b>Honest engineering.</b> When a model's parts can't be identified with
+    confidence, the UI says <i>inferred</i> — it never fakes certainty.</li>
+  </ol>
+</section>
+
+<!-- ============================ CH 2 FIRST PRINCIPLES ============================ -->
+<section class="chap" id="ch2">
+  <div class="chapnum">Chapter 02</div>
+  <h2>First Principles — the science you need</h2>
+  <div class="voice">
+    <div class="vt">🎙 Voice note</div>
+    <p>Before touring the app, five ideas make everything else obvious: what a 3D
+    model actually is, how a computer can "imagine" a 3D shape from one photo, what
+    a large language model does, how a browser draws 3D, and how a server streams
+    live progress. Each takes one minute. Master these five and the whole system
+    reads like a story.</p>
+  </div>
+
+  <h3>2.1 · What is a 3D model? (triangles all the way down)</h3>
+  <div class="duo">
+    <div class="box simple">
+      <span class="tag">In simple words</span>
+      <p>A 3D model is like papier-mâché: thousands of tiny <b>triangles</b> glued
+      edge-to-edge form the shape (the <b>mesh</b>), and a printed picture (the
+      <b>texture</b>) is wrapped around it like gift paper so it looks real. Our
+      models are stored in a file format called <b>GLB</b> — a single file holding
+      the shape, the wrapping pictures, and the list of named parts.</p>
+    </div>
+    <div class="box deep">
+      <span class="tag">Engineer's depth</span>
+      <p><b>GLB</b> = binary glTF 2.0: a JSON scene graph (nodes → meshes →
+      primitives) plus binary buffers (positions, normals, UVs, indices) and
+      embedded images. Materials follow <b>PBR</b> (physically based rendering):
+      base-color, metallic-roughness, normal maps. Node names in the scene graph are
+      how we later label parts. Our library assets range from ~340 to ~262,000
+      triangles; the AK-47 exploded kit carries 84.4k.</p>
+    </div>
+  </div>
+
+  <h3>2.2 · How can AI build 3D from one photo?</h3>
+  <div class="duo">
+    <div class="box simple">
+      <span class="tag">In simple words</span>
+      <p>You can look at a photo of a rifle and imagine its back side, because you
+      have seen thousands of rifles. Image-to-3D AI does the same: it studied
+      millions of objects and their 3D shapes, so from one photo it can
+      <b>hallucinate the hidden sides</b> in a sensible way, then sculpt a mesh to
+      match. It is not measurement — it is educated imagination, which is why input
+      photo quality matters so much.</p>
+    </div>
+    <div class="box deep">
+      <span class="tag">Engineer's depth</span>
+      <p>We use <b>Hunyuan3D-2.1</b> (Tencent): a flow-matching diffusion
+      transformer generates a latent 3D shape conditioned on the image, decoded by
+      marching cubes over an octree grid (we use octree resolution 256); a second
+      <b>paint pipeline</b> renders the mesh from multiple views and diffuses
+      PBR textures (albedo + metallic-roughness + normal) back onto the UV atlas.
+      Fallback chain: TRELLIS.2 → Hunyuan3D-2 → TripoSR (fastest, weakest —
+      untextured). Quality ceiling is set by the model, not by parameters — a
+      lesson we learned the hard way (Chapter 8).</p>
+    </div>
+  </div>
+
+  <h3>2.3 · What is a large language model doing in this app?</h3>
+  <div class="duo">
+    <div class="box simple">
+      <span class="tag">In simple words</span>
+      <p>A large language model (LLM) is a very well-read assistant that can read
+      web pages we hand it and write structured answers. We use it as a
+      <b>researcher</b> (read sources → produce a weapon's history with citations),
+      an <b>engineer</b> (break a weapon into its 5 major components), and an
+      <b>inspector</b> (look at an image and judge "is this actually an AK-47
+      part?"). We never let it block the fast paths of the app.</p>
+    </div>
+    <div class="box deep">
+      <span class="tag">Engineer's depth</span>
+      <p>Text reasoning: <b>DeepSeek-R1</b> and <b>Llama-3.3-70B-Instruct</b> via
+      Hugging Face Inference. Vision QC: <b>Qwen2.5-VL-72B</b>, <b>Llama-4-Scout</b>,
+      <b>gemma-3-27b</b> (probed at runtime; all best-effort with heuristic
+      fallbacks). Web grounding: <b>Tavily</b> search API feeds source snippets into
+      prompts; answers must return strict JSON with numbered citation ids that map
+      back to the source list. All research endpoints cache to disk so repeat
+      queries are instant.</p>
+    </div>
+  </div>
+
+  <h3>2.4 · How does a browser show 3D?</h3>
+  <div class="duo">
+    <div class="box simple">
+      <span class="tag">In simple words</span>
+      <p>Your browser contains a tiny graphics engine (<b>WebGL</b>) that talks to
+      the same graphics chip games use. A library called <b>Three.js</b> tells it
+      what triangles to draw each frame — 60 times a second — which is how you can
+      spin, zoom, and explode models smoothly with a mouse.</p>
+    </div>
+    <div class="box deep">
+      <span class="tag">Engineer's depth</span>
+      <p>Frontend is <b>React 18 + Vite</b>, 3D via <b>React Three Fiber</b> (R3F)
+      — Three.js expressed as React components — plus <code>@react-three/drei</code>
+      helpers. GLBs load through <code>GLTFLoader</code>; annotations are HTML
+      portals projected into 3D space; the exploded viewer clones materials per
+      part for hover/isolate effects and animates world-space offsets converted to
+      parent-local coordinates (the Y-up gotcha, Chapter 8).</p>
+    </div>
+  </div>
+
+  <h3>2.5 · How does the app show live progress?</h3>
+  <div class="duo">
+    <div class="box simple">
+      <span class="tag">In simple words</span>
+      <p>Generating a 3D assembly takes minutes, so the server sends a running
+      commentary — "found the photo… checking it… building part 3…" — like a live
+      sports ticker. The technology is called <b>Server-Sent Events</b>: a one-way
+      news feed from server to browser over a single connection.</p>
+    </div>
+    <div class="box deep">
+      <span class="tag">Engineer's depth</span>
+      <p>FastAPI endpoints return <code>StreamingResponse</code> with
+      <code>text/event-stream</code>; the React hooks
+      (<code>useExplodedGeneration</code>, <code>useDirect3DGeneration</code>)
+      consume phases (<code>research → images → 3d → assembly → complete</code>)
+      and per-step QC verdicts, rendering them as a live progress screen. Every
+      long pipeline is SSE-streamed; only short calls are plain JSON.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CH 3 GRAND TOUR ============================ -->
+<section class="chap" id="ch3">
+  <div class="chapnum">Chapter 03</div>
+  <h2>Grand Tour — every feature, with screenshots</h2>
+  <div class="voice">
+    <div class="vt">🎙 Voice note</div>
+    <p>The app has three floors. The ground floor is the <b>Library</b> — thirty-one
+    real, textured 3D weapons you can open and explode instantly. The first floor is
+    <b>Generation</b> — type any name and the system fetches or builds a model for
+    you. The top floor is <b>Intelligence</b> — history timelines, materials
+    dossiers, live news, and a voice assistant. This chapter walks every room.</p>
+  </div>
+
+  <h3>3.1 · The command deck (home screen)</h3>
+  <figure>
+    <img src="shots/01_library.png" alt="Ivory Command home screen with generators and settings panels">
+    <figcaption><b>Fig 3.1</b> The Assets screen: three generator cards (Generate 3D
+    Asset, 3D Model Generator, Exploded Assembly Generator), the Sketchfab library
+    connection panel (CONNECTED) and the Kaggle GPU endpoint panel (showing OFFLINE —
+    the pasted share URL has expired, which the live probe correctly detected).</figcaption>
+  </figure>
+  <p>The left rail (<b>STRATCOM</b>) navigates the whole product: Library,
+  Evolution, Materials, Live Ops (the 3D viewer), Field News, Tech Stack, and
+  Archive. The <b>Call AI</b> button at the bottom launches the voice assistant.
+  The two settings panels are worth pausing on — they are how non-technical users
+  manage infrastructure:</p>
+  <ul>
+    <li><b>3D Asset Library panel</b> — paste a free Sketchfab API token once and
+    the app can download artist-made models automatically. The chip shows
+    CONNECTED with the logged-in account name.</li>
+    <li><b>Kaggle GPU Endpoint panel</b> — paste the <code>gradio.live</code> URL
+    printed by our Kaggle notebook and every 3D generation instantly reroutes to
+    your own free GPU. The panel <i>live-probes</i> the URL before saving and
+    shows CONNECTED / OFFLINE / NOT SET honestly.</li>
+  </ul>
+  <div class="box deep">
+    <span class="tag">Engineer's depth</span>
+    <p>Both panels talk to runtime settings endpoints
+    (<code>GET/POST /api/settings/kaggle-endpoint</code>,
+    <code>/api/settings/sketchfab-token</code>). A POST validates against the live
+    service (Gradio config probe / Sketchfab <code>/v3/me</code>), applies via
+    <code>os.environ</code> immediately — no restart — and persists into
+    <code>backend/.env</code>. Bad URL → 422; dead endpoint → 502. The token is
+    never echoed back to the client.</p>
+  </div>
+
+  <h3>3.2 · The Asset Library</h3>
+  <figure>
+    <img src="shots/02_library_cards.png" alt="Asset library card grid">
+    <figcaption><b>Fig 3.2</b> Library cards with serials, verified status, and an
+    <i>Explode</i> shortcut on every card. A drag-and-drop slot ingests the user's
+    own GLB files.</figcaption>
+  </figure>
+  <p>Thirty-one curated assets spanning rifles, pistols, tanks, howitzers, a
+  battleship, fighter jets, helicopters, UAVs and missiles. Each card opens the 3D
+  viewer; the <b>Explode</b> button jumps straight to the exploded assembly view.
+  Every asset was normalized to GLB with textures embedded, and CC-licensed models
+  carry author + license credit rows.</p>
+  <div class="box deep">
+    <span class="tag">Engineer's depth</span>
+    <p>The library began as a mixed bag of FBX / OBJ / .blend sources — only 9 of 30
+    folders even had a loadable glTF. We installed Blender 5.1 and wrote
+    <code>scripts/convert_library_models.py</code> +
+    <code>blender_export_glb.py</code>: batch-import each source inside headless
+    Blender, run <code>find_missing_files</code>, auto-relink textures (repairing
+    wrong-extension image references and name-matching loose texture files to
+    materials with longest-match scoring), then export GLB with transforms applied.
+    <code>update_assets_data.py</code> rescans folders and regenerates the frontend
+    catalog (<code>assets_data.js</code>).</p>
+  </div>
+
+  <h3>3.3 · Live Ops — the 3D viewer & AI intelligence sweep</h3>
+  <figure>
+    <img src="shots/03_viewer.png" alt="3D viewer showing BTR-80">
+    <figcaption><b>Fig 3.3</b> A BTR-80 armored personnel carrier in the viewer.
+    Right panel: the AI agent ASTRA offering a full intelligence sweep; buttons for
+    Library return and Exploded View. Bottom bar shows the orbit / zoom / pan help.</figcaption>
+  </figure>
+  <p>Click any card and its model loads into a full 3D stage — rotate, zoom, pan.
+  Press <b>RUN FULL INTELLIGENCE SWEEP</b> and the research pipeline fires: the AI
+  researches the weapon on the live web, maps its findings onto the model's actual
+  named parts, and returns floating annotations, a clickable parts list (camera
+  flies to each part), and a Research tab with the full dossier.</p>
+  <div class="box deep">
+    <span class="tag">Engineer's depth</span>
+    <p><code>POST /api/research</code> runs a <b>LangGraph</b> three-node graph
+    (<code>backend/app/graph.py</code>): <code>user_input</code> normalizes the
+    request → <code>research</code> (Tavily deep search + LLM synthesis) →
+    <code>mapping</code> aligns researched components to the GLB's real mesh names
+    so annotations attach to actual geometry. Uploads go through
+    <code>POST /api/upload-model</code> (served back from <code>/uploads/</code>).
+    The camera fly-to is a spring animation in <code>useCameraFocus</code>.</p>
+  </div>
+
+  <h3>3.4 · The Exploded Assembly Viewer — the crown jewel</h3>
+  <figure>
+    <img src="shots/04_exploded_m4.png" alt="M4 modular kit exploded into 26 labeled parts">
+    <figcaption><b>Fig 3.4</b> An M4 carbine kit blown apart into <b>26 labeled
+    components</b> — Stock, Pistol Grip, Trigger, Upper/Lower Receiver, Magazine,
+    Cartridge… Assembly Specification balloons on the right; the Component Sheet
+    lists triangles and relative dimensions <i>measured from geometry</i>. Note the
+    right panel: "computed from the model file, no AI".</figcaption>
+  </figure>
+  <figure>
+    <img src="shots/05_exploded_t90.png" alt="T-90A tank exploded into 12 labeled parts">
+    <figcaption><b>Fig 3.5</b> The same engine handles vehicles: a T-90A main battle
+    tank explodes into Hull, Turret Assembly, Track Assemblies (Left/Right), Running
+    Gear — labels the system <i>inferred from pure geometry</i> because the artist's
+    file contained only watermark junk names. The amber <i>inferred</i> tags are the
+    honesty indicator.</figcaption>
+  </figure>
+  <p>Drag the slider or hit <b>DISASSEMBLE</b> and the weapon flies apart along its
+  long axis into evenly spaced slots — like a CAD exploded drawing, with numbered
+  balloon callouts, hover-to-highlight, and click-to-isolate. This entire
+  experience — detection, naming, explosion — is <b>100% deterministic geometry
+  code. No AI is called, so it is instant and it never fails.</b> How it works is
+  Chapter 6.</p>
+
+  <h3>3.5 · Fetch &amp; Explode — paste anything</h3>
+  <p>The paste box on the Assets screen accepts three kinds of input and produces
+  the same result — an exploded, labeled model:</p>
+  <ul>
+    <li><b>A weapon name</b> ("Desert Eagle") → searches Sketchfab's CC library,
+    ranks candidates for realism, downloads the best, explodes it. ~5–20 seconds.</li>
+    <li><b>A Sketchfab page URL</b> → downloads that exact model.</li>
+    <li><b>A direct .glb link</b> → downloads and opens it.</li>
+  </ul>
+  <p>If a plain name finds nothing in the library, the UI offers the AI generation
+  pipeline as an explicit fallback. A <b>Search Sketchfab</b> button also shows a
+  browsable result strip with texture-quality chips so the user can pick manually.</p>
+
+  <h3>3.6 · 3D Model Generator — type a name, get a model</h3>
+  <p>The direct generator turns a bare weapon name into a textured 3D model with
+  zero further input: it finds the best reference photo on the web, cleans it,
+  sends it to the image-to-3D model on our Kaggle GPU, quality-checks the result,
+  and loads it into the viewer. A progress screen shows the chosen source photo,
+  the preprocessed cut-out, and each generation phase. Full pipeline in Chapter 5.</p>
+
+  <h3>3.7 · Exploded Assembly Generator — AI builds the whole assembly</h3>
+  <p>The most ambitious pipeline: type a name and the system <i>researches</i> the
+  weapon's five major internal components, finds a real photo of each, generates a
+  3D mesh per part, anatomically arranges them inside the weapon's outer shell, and
+  delivers an interactive exploded assembly — with a vision-model inspector
+  checking every intermediate step. Full pipeline in Chapter 7.</p>
+
+  <h3>3.8 · Generate 3D Asset — BOM & supply-chain risk</h3>
+  <p>The third generator card targets analysts: DeepSeek-R1 deconstructs an asset
+  into a five-part <b>Bill of Materials</b> with per-component material
+  dependencies and supply-chain risk scores, FLUX.1-dev draws clean orthographic
+  component images, 3D models are generated per component, and a <b>Risk
+  Dashboard</b> renders animated risk bars (STABLE / ELEVATED / CRITICAL) with an
+  overall score counter.</p>
+
+  <h3>3.9 · Evolution — concept to current, with citations</h3>
+  <figure>
+    <img src="shots/06_evolution.png" alt="Evolution timeline of AK-47">
+    <figcaption><b>Fig 3.6</b> The AK-47 traced from 1946 concept to the present:
+    stage-typed timeline nodes (Concept, Prototype, Trials, Adoption, Variant,
+    Modernization, Current), each design change tagged <i>+ added / ~ reworked /
+    − removed</i>, and every claim carrying numbered citation chips that jump to the
+    source list.</figcaption>
+  </figure>
+  <div class="box deep">
+    <span class="tag">Engineer's depth</span>
+    <p><code>GET /api/evolution?weapon=</code> → Tavily research → Llama-3.3-70B
+    forced into a strict JSON schema (stages, changes, drivers, impacts, citation
+    ids) → disk cache (<code>generated/evolution/</code>) so presets return
+    instantly. The frontend renders framer-motion staggered nodes; DDGS-thumbnail
+    stage photos self-hide on hotlink failure rather than showing broken boxes.</p>
+  </div>
+
+  <h3>3.10 · Materials — a chief-engineer's dossier</h3>
+  <figure>
+    <img src="shots/07_materials.png" alt="Materials and strength analysis for AK-47">
+    <figcaption><b>Fig 3.7</b> Materials &amp; Strength Analysis for the AK-47:
+    per-component cards (Barrel — chrome-lined 4150 chrome-moly steel; Receiver —
+    stamped steel…) with tensile/yield/hardness/density figures, operating loads,
+    temperature ranges, factor-of-safety notes and failure modes. A second mode
+    assays any single material the army builds with.</figcaption>
+  </figure>
+  <p>Below the component grid (off-screen): a strength-of-materials comparison, the
+  army's cost/selection trade-off matrix, and best-in-class material
+  recommendations — all citation-backed. The <b>By Material</b> toggle flips to a
+  deep single-material assay (e.g. "Ti-6Al-4V Titanium").</p>
+
+  <h3>3.11 · Field News — live intelligence feed</h3>
+  <figure>
+    <img src="shots/08_news.png" alt="Field news page">
+    <figcaption><b>Fig 3.8</b> Live defense reporting filtered by topic (Small Arms,
+    Missiles &amp; Drones, Armor, Air, Naval) — every story compressed to a one-line
+    <i>bottom line</i>.</figcaption>
+  </figure>
+
+  <h3>3.12 · Tech Stack — the app documents itself</h3>
+  <figure>
+    <img src="shots/09_stack.png" alt="Tech stack page">
+    <figcaption><b>Fig 3.9</b> The in-app engineering page: pipeline chains and
+    every AI model with its role — useful for demos and, frankly, for interviews.</figcaption>
+  </figure>
+
+  <h3>3.13 · Voice Agent — talk to the platform</h3>
+  <p>The <b>Call AI</b> orb opens a hands-free assistant: your speech is
+  transcribed in the browser (Web Speech API), sent to <code>POST /api/chat</code>
+  (LLM), and the answer is spoken back with speech synthesis. A toggle swaps in an
+  <b>ElevenLabs Conversational AI</b> widget for studio-grade voices.</p>
+
+  <h3>3.14 · The procedural internals builder (bonus system)</h3>
+  <figure>
+    <img src="shots/04_exploded_ak47.png" alt="AK-47 procedural internals exploded">
+    <figcaption><b>Fig 3.10</b> The AK-47 "Internals (Cutaway)" asset exploding into
+    its 19 hand-specified internal parts + outer shell — note the coil recoil spring
+    (center), built as swept-helix geometry. Every one of these parts was
+    <i>manufactured by our own Blender code</i>, not downloaded.</figcaption>
+  </figure>
+  <p>Artist models only contain the parts you can see from outside. To show true
+  internals — bolt carrier, gas piston, recoil spring, hammer, trigger — we wrote a
+  parametric weapon factory: a hand-authored table of 19 real AK-47 parts (with
+  dimensions in metres, materials and field-strip order) drives headless Blender
+  through 20 geometry "archetype" builders (receiver, barrel, spring, banana
+  magazine…), assigns PBR materials from our own procedurally generated seamless
+  textures (FFT-based noise → phosphate steel, walnut, bakelite…), UV-unwraps,
+  and exports a viewer-ready GLB where node names encode the disassembly order.</p>
+</section>
+<!-- ============================ CH 4 ARCHITECTURE ============================ -->
+<section class="chap" id="ch4">
+  <div class="chapnum">Chapter 04</div>
+  <h2>System Architecture — the full map</h2>
+  <div class="voice">
+    <div class="vt">🎙 Voice note</div>
+    <p>Picture a restaurant. The dining room is the React app in your browser — it
+    presents everything beautifully. The kitchen is a Python FastAPI server on your
+    machine — it does the cooking. And the specialty suppliers are outside
+    services: Kaggle lends us a free GPU stove, Hugging Face lends AI chefs,
+    Sketchfab is the premium ingredients market, and Tavily delivers fresh
+    information. The kitchen always has a backup supplier for everything.</p>
+  </div>
+
+  <div class="diagram">
+    <svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Consolas,monospace">
+      <defs>
+        <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0 0L10 5L0 10z" fill="#707a92"/>
+        </marker>
+      </defs>
+      <!-- Browser tier -->
+      <rect x="20" y="20" width="860" height="150" rx="14" fill="#e3edf7" stroke="#0f4c81" stroke-width="1.6"/>
+      <text x="40" y="48" font-size="15" font-weight="bold" fill="#0f4c81">BROWSER — React 18 + Vite + React Three Fiber (localhost:5173)</text>
+      <g font-size="12" fill="#243356">
+        <rect x="40" y="64" width="150" height="40" rx="8" fill="#fff" stroke="#9db8d4"/><text x="52" y="88">Asset Library</text>
+        <rect x="200" y="64" width="150" height="40" rx="8" fill="#fff" stroke="#9db8d4"/><text x="212" y="82">3D Viewer</text><text x="212" y="96">(Canvas3D)</text>
+        <rect x="360" y="64" width="180" height="40" rx="8" fill="#fff" stroke="#9db8d4"/><text x="372" y="82">ExplodedAssemblyViewer</text><text x="372" y="96">(no-AI geometry engine)</text>
+        <rect x="550" y="64" width="150" height="40" rx="8" fill="#fff" stroke="#9db8d4"/><text x="562" y="82">Generators + SSE</text><text x="562" y="96">progress screens</text>
+        <rect x="710" y="64" width="150" height="40" rx="8" fill="#fff" stroke="#9db8d4"/><text x="722" y="82">Evolution · Materials</text><text x="722" y="96">News · Voice</text>
+        <rect x="40" y="114" width="820" height="36" rx="8" fill="#fff" stroke="#9db8d4"/>
+        <text x="52" y="137">Hooks: useResearch · useDirect3DGeneration · useExplodedGeneration · useAssetGeneration · useCameraFocus</text>
+      </g>
+      <!-- arrows -->
+      <line x1="450" y1="170" x2="450" y2="212" stroke="#707a92" stroke-width="1.6" marker-end="url(#ar)"/>
+      <text x="462" y="196" font-size="12" fill="#707a92">REST + Server-Sent Events (JSON)</text>
+      <!-- Backend tier -->
+      <rect x="20" y="214" width="860" height="176" rx="14" fill="#efe9fb" stroke="#5b3fa8" stroke-width="1.6"/>
+      <text x="40" y="242" font-size="15" font-weight="bold" fill="#5b3fa8">BACKEND — FastAPI · Python 3.14 (localhost:8000)</text>
+      <g font-size="12" fill="#33285c">
+        <rect x="40" y="256" width="190" height="52" rx="8" fill="#fff" stroke="#b9a8e0"/><text x="52" y="276">app/main.py</text><text x="52" y="292">30+ endpoints, SSE, settings</text>
+        <rect x="240" y="256" width="190" height="52" rx="8" fill="#fff" stroke="#b9a8e0"/><text x="252" y="276">LangGraph pipeline</text><text x="252" y="292">input → research → mapping</text>
+        <rect x="440" y="256" width="200" height="52" rx="8" fill="#fff" stroke="#b9a8e0"/><text x="452" y="276">nodes/: direct3d · exploded</text><text x="452" y="292">pipeline · research · mapping</text>
+        <rect x="650" y="256" width="210" height="52" rx="8" fill="#fff" stroke="#b9a8e0"/><text x="662" y="276">tools/: 16 clients &amp; engines</text><text x="662" y="292">sketchfab · kaggle · monitor…</text>
+        <rect x="40" y="318" width="400" height="52" rx="8" fill="#fff" stroke="#b9a8e0"/><text x="52" y="338">assembly_builder.py — anatomical placement,</text><text x="52" y="354">silhouette clamp, trimesh GLB export</text>
+        <rect x="450" y="318" width="410" height="52" rx="8" fill="#fff" stroke="#b9a8e0"/><text x="462" y="338">pipeline_monitor.py — vision QC (image/mesh/assembly)</text><text x="462" y="354">+ quality rubric grading (bar 0.62, gold = artist models)</text>
+      </g>
+      <line x1="450" y1="390" x2="450" y2="428" stroke="#707a92" stroke-width="1.6" marker-end="url(#ar)"/>
+      <!-- External tier -->
+      <rect x="20" y="430" width="860" height="112" rx="14" fill="#e2f4ea" stroke="#0f7a4d" stroke-width="1.6"/>
+      <text x="40" y="458" font-size="15" font-weight="bold" fill="#0f7a4d">EXTERNAL SERVICES — all free tiers</text>
+      <g font-size="12" fill="#134f35">
+        <rect x="40" y="470" width="150" height="56" rx="8" fill="#fff" stroke="#93cfae"/><text x="50" y="490">Kaggle 2×T4 GPU</text><text x="50" y="506">Hunyuan3D-2.1</text><text x="50" y="520">via gradio.live</text>
+        <rect x="200" y="470" width="150" height="56" rx="8" fill="#fff" stroke="#93cfae"/><text x="210" y="490">HF Spaces + Inference</text><text x="210" y="506">TRELLIS.2 · TripoSR</text><text x="210" y="520">R1 · Llama · FLUX · VL</text>
+        <rect x="360" y="470" width="140" height="56" rx="8" fill="#fff" stroke="#93cfae"/><text x="370" y="490">Sketchfab API</text><text x="370" y="506">CC model search</text><text x="370" y="520">+ download</text>
+        <rect x="510" y="470" width="120" height="56" rx="8" fill="#fff" stroke="#93cfae"/><text x="520" y="490">Tavily</text><text x="520" y="506">web research</text>
+        <rect x="640" y="470" width="110" height="56" rx="8" fill="#fff" stroke="#93cfae"/><text x="650" y="490">DDGS</text><text x="650" y="506">image search</text>
+        <rect x="760" y="470" width="100" height="56" rx="8" fill="#fff" stroke="#93cfae"/><text x="770" y="490">ElevenLabs</text><text x="770" y="506">voice (opt.)</text>
+      </g>
+    </svg>
+    <div class="dcap">Three tiers. The browser never talks to external services directly (except the optional voice widget) — the backend brokers, caches, and falls back.</div>
+  </div>
+
+  <h3>Where things live at runtime</h3>
+  <table>
+    <tr><th>Path</th><th>What it holds</th></tr>
+    <tr><td><code>frontend/public/models/&lt;id&gt;/</code></td><td>Library GLBs + license.txt, served statically</td></tr>
+    <tr><td><code>backend/uploads/</code></td><td>User uploads + direct-URL downloads (magic-byte checked, 400&nbsp;MB cap)</td></tr>
+    <tr><td><code>backend/uploads/kits/&lt;uid&gt;/</code></td><td>Downloaded Sketchfab kits, cached by model UID — re-fetch is instant</td></tr>
+    <tr><td><code>backend/generated/models/</code></td><td>AI-generated GLBs and assemblies</td></tr>
+    <tr><td><code>backend/generated/{evolution,materials,intel}/</code></td><td>JSON research caches — every LLM answer is cached to disk</td></tr>
+    <tr><td><code>backend/.env</code></td><td>Keys: <code>HF_API_KEY</code>, <code>TAVILY_API_KEY</code>, <code>SKETCHFAB_API_TOKEN</code>, <code>KAGGLE_3D_ENDPOINT</code></td></tr>
+  </table>
+
+  <div class="note"><p><b>The one non-obvious architectural decision:</b> heavy GPU work
+  lives <i>outside</i> the app on disposable free infrastructure (Kaggle notebook →
+  temporary gradio.live URL), and the app treats that endpoint as a hot-swappable,
+  probe-verified setting. The product survives the endpoint dying mid-day — the
+  panel shows OFFLINE and generation falls back to HF Spaces automatically.</p></div>
+</section>
+
+<!-- ============================ CH 5 PIPELINE I ============================ -->
+<section class="chap" id="ch5">
+  <div class="chapnum">Chapter 05</div>
+  <h2>Pipeline I — Name → 3D Model (Direct Generator)</h2>
+  <div class="voice">
+    <div class="vt">🎙 Voice note</div>
+    <p>You type "AK-47". The system googles it like a careful human: it skips the
+    birthday-cake images and memes, picks a clean studio photo on a white
+    background, cuts the weapon out, ships it to a free GPU we borrowed from
+    Kaggle, and an AI sculptor builds the 3D shape. A quality inspector grades the
+    result against our best artist-made models before you ever see it. Total time:
+    about forty-three seconds.</p>
+  </div>
+
+  <div class="flow">
+    <div class="fstep"><div class="fnum"><div class="dot">1</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Find candidate photos — <code>image_finder.py</code></h5>
+      <p>DDGS image search for <code>"&lt;name&gt; real firearm"</code>. <b>Two-pass ranking:</b>
+      pass 1 scores metadata — resolution, aspect ratio, and <i>title relevance</i>
+      (name-token overlap + weapon keywords, minus junk keywords like
+      <i>birthday, clipart, meme, cartoon, logo</i>). Pass 2 downloads the top 6 and
+      <b>pixel-verifies</b> them: white border + darker center = a studio cut-out with
+      a subject actually present. Early-exits at combined score ≥ 0.75. Returns the
+      top 3 candidates, not just one.</p>
+      <span class="chip">ddgs</span><span class="chip">PIL + numpy</span><span class="chip">_white_bg_score</span></div></div>
+    <div class="fstep"><div class="fnum"><div class="dot">2</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Vision QC on the photo — <code>pipeline_monitor.qc_image</code></h5>
+      <p>A vision LLM confirms the photo shows the intended weapon, not a diagram,
+      meme, or the wrong gun (it once rejected an AR-15 posing as an AK-47).
+      Reject → try next candidate. All QC is best-effort: if the vision model is
+      down, a heuristic approves and the pipeline never blocks.</p>
+      <span class="chip">Qwen2.5-VL-72B</span><span class="chip">fallback: heuristic</span></div></div>
+    <div class="fstep"><div class="fnum"><div class="dot">3</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Preprocess — <code>image_preprocess.py</code></h5>
+      <p>Background removal (optional locally — the GPU side re-does it), tight
+      crop to subject, square padding, contrast/sharpen. Output: a clean white-background
+      square image, the format image-to-3D models are trained on.</p></div></div>
+    <div class="fstep alt"><div class="fnum"><div class="dot">4</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Generate 3D — Kaggle first, Spaces fallback — <code>direct3d.generate_best_3d</code></h5>
+      <p>The generator chain tries <b>our Kaggle endpoint</b> (Hunyuan3D-2.1 on dual
+      T4s, ~130 s full quality, same-contract Gradio API <code>/generate_3d</code>)
+      first, then HF Spaces: TRELLIS.2 → Hunyuan3D-2 → TripoSR. Every candidate GLB
+      is <b>graded</b> (step 5) and the chain <i>early-stops the moment one clears the
+      quality bar</i> — a good Kaggle result costs zero extra calls.</p>
+      <span class="chip">kaggle_client.py</span><span class="chip">gradio_client</span><span class="chip">octree_resolution=256</span></div></div>
+    <div class="fstep alt"><div class="fnum"><div class="dot">5</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Quality gate — <code>qc_quality</code></h5>
+      <p>The GLB is rendered from 4 views (our own numpy+PIL software renderer — no
+      GPU needed) and graded against a <b>rubric extracted from gold artist models</b>
+      per weapon class (firearm / aircraft / vehicle). Auto-fail conditions:
+      cutaway look, untextured when texture is required, fewer than 1,500 faces, or
+      score below the 0.62 bar. Geometric backstop runs even if vision is offline.</p>
+      <span class="chip">quality_rubric.json</span><span class="chip">QUALITY_BAR=0.62</span></div></div>
+    <div class="fstep"><div class="fnum"><div class="dot">6</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Deliver</h5>
+      <p>Winner copied to <code>generated/models/</code>, streamed to the browser via
+      SSE with <code>model_source</code> labeling (e.g. <code>kaggle-hunyuan3d</code>),
+      and loaded straight into the 3D viewer.</p></div></div>
+  </div>
+
+  <div class="warn"><p><b>Why so much machinery for "just download a photo"?</b> Because
+  the first naive version ranked images by resolution alone and proudly picked a
+  high-res <i>birthday-wishes greeting card</i> as the AK-47 reference. Garbage
+  photo in → garbage 3D out. The ranking, pixel check, and vision QC each exist
+  because a specific failure taught us they must.</p></div>
+</section>
+
+<!-- ============================ CH 6 PIPELINE II ============================ -->
+<section class="chap" id="ch6">
+  <div class="chapnum">Chapter 06</div>
+  <h2>Pipeline II — Fetch &amp; Explode (zero AI)</h2>
+  <div class="voice">
+    <div class="vt">🎙 Voice note</div>
+    <p>This is the pipeline we are proudest of, and it contains no AI at all. Give
+    it any 3D file and it figures out — from pure geometry and file metadata — what
+    the parts are, what to call them, and how to fly them apart like an engineering
+    drawing. It's a chain of small, careful rules, each one earned by a real model
+    that broke the previous rule. It runs in milliseconds and never has a bad day.</p>
+  </div>
+
+  <h3>6.1 · Getting the model — Sketchfab acquisition</h3>
+  <div class="flow">
+    <div class="fstep"><div class="fnum"><div class="dot">1</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Pooled concurrent search</h5>
+      <p><code>sketchfab_client.search_models_pooled</code> fires all query-variant ×
+      sort-order jobs concurrently (ThreadPoolExecutor) with a 10-minute result
+      cache — pooled search returns in ~1 s. Tokenization splits letter/digit
+      boundaries so "AK47" ≡ "AK-47".</p></div></div>
+    <div class="fstep"><div class="fnum"><div class="dot">2</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Realism-aware ranking</h5>
+      <p><code>rank_candidates</code> scores each result:
+      <b>0.50</b> name-token overlap · <b>0.18</b> log-likes · <b>0.12</b> geometric
+      detail · <b>0.15</b> texture signal (texture count + max resolution from the
+      archive metadata) · small realism-keyword bonus — and multiplies by
+      <b>×0.35</b> if the title matches a stylized-content pattern
+      (<i>low poly, cartoon, voxel, toy…</i>). Result: "AK-47" reliably picks a
+      4K-textured realistic model over a cute low-poly one.</p></div></div>
+    <div class="fstep"><div class="fnum"><div class="dot">3</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Top-3 download with cache</h5>
+      <p><code>acquire()</code> tries the top 3 candidates in order (skipping dead
+      downloads), prefers native GLB else extracts a glTF zip, stores under
+      <code>uploads/kits/&lt;uid&gt;/</code> keyed by model UID — refetching the same
+      model is instant. License + author metadata rides along for the credit badge
+      (CC attribution is a legal requirement, and the UI honors it).</p></div></div>
+  </div>
+  <div class="warn"><p><b>The WAF story:</b> Sketchfab's firewall blocks Python's
+  standard HTTP libraries (<code>requests</code>/<code>httpx</code>) by <b>TLS
+  fingerprint</b> — it returns an empty HTTP 202 no matter what headers you fake.
+  The stdlib <code>urllib</code> has a different TLS fingerprint and sails through.
+  Rule burned into the codebase: <i>all Sketchfab HTTP goes through urllib</i>.</p></div>
+
+  <h3>6.2 · Part detection — finding the pieces</h3>
+  <p>A GLB's scene graph rarely matches its logical parts, so the viewer runs a
+  multi-pass detector:</p>
+  <ol>
+    <li><b>Wrapper descent</b> — skip single-child wrapper chains
+    (<code>Sketchfab_model → root → …</code>) to the first node that actually owns
+    geometry-bearing children.</li>
+    <li><b>Structural repair</b> — a Mesh that <i>parents</i> other meshes gets its
+    children detached properly (a pattern from FBX exports); glued single-mesh
+    models are split by <b>union-find connected components</b> (vertices welded at
+    1e-4, dust shells folded back, capped at 16 pieces).</li>
+    <li><b>Over-segmentation control</b> — models with &gt;32 fragments are
+    clustered into a 4×2×4 spatial grid of "Sections"; fetched (non-library) models
+    with 2–9 detected parts get an extra rich split up to 14 parts.</li>
+  </ol>
+  <p>Result across the whole library: 31 assets, 5–28 parts each, zero failures —
+  verified by an automated headless regression
+  (<code>frontend/scripts/verify_explode_parts.mjs</code>).</p>
+
+  <h3>6.3 · Part naming — deterministic intelligence</h3>
+  <div class="duo">
+    <div class="box simple">
+      <span class="tag">In simple words</span>
+      <p>The system names parts like a detective with three tools. First it
+      <b>reads the file's own labels</b>, cleaning up messy artist names ("bcg" →
+      "Bolt Carrier Group"). If the labels are junk (some files just say
+      "Section 12" everywhere, or repeat the artist's watermark), it <b>measures the
+      shapes</b> — the long thin tube at the front of a rifle is the barrel; the big
+      box under a tank's turret is the hull. And it always <b>tells you when it
+      guessed</b>, with an amber "inferred" tag.</p>
+    </div>
+    <div class="box deep">
+      <span class="tag">Engineer's depth</span>
+      <p>Layered resolution in <code>ExplodedAssemblyViewer.jsx</code>:
+      (1) <b>name recovery</b> — glTF mesh names that GLTFLoader discards are
+      recovered via <code>parser.json</code> + associations;
+      (2) <b>canonicalization</b> — camelCase split, junk-word strip, glued-digit
+      split ("Wheel15"), pipeline-suffix strip, trailing-index strip;
+      (3) <b>alias dictionaries</b> — ordered regex → engineering-term maps per
+      weapon class (FIREARM / VEHICLE / AIRCRAFT / SHIP / MISSILE / ARTILLERY);
+      (4) <b>meaninglessness tests</b> — the <i>watermark rule</i> (same canonical
+      label on ≥3 parts and ≥60% of the model = artist watermark, ignore) and the
+      <i>name-echo rule</i> (label ≈ the asset's own name = useless);
+      (5) <b>class router</b> — <code>weaponClassFromName</code> (ordered regex,
+      firearm short-circuits first) else <code>weaponClassFromShape</code>
+      (e.g. missile = one dimension ≥4.5× the next and roundish);
+      (6) <b>geometry classifiers</b> per class over shared
+      <code>partMetrics</code> (axis position, height, signed laterality → "(Left)/(Right)",
+      volume, elongation, flatness) — with hard-won rules like <i>one Main Gun
+      Barrel per tank</i> and rotor-vs-wing span-ratio tests;
+      (7) duplicates numbered, inferred labels tagged amber. Groups are named after
+      their <b>dominant descendant by world-bbox volume</b> (vertex count famously
+      elected a coil spring once), with alias-term priority so a sling strap can't
+      outrank an Upper Receiver.</p>
+    </div>
+  </div>
+
+  <h3>6.4 · The explosion — CAD mathematics</h3>
+  <div class="flow">
+    <div class="fstep"><div class="fnum"><div class="dot">1</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Find the long axis</h5><p>From the assembly's bounding box —
+      X or Z, never Y (nothing explodes "upward along" a rifle).</p></div></div>
+    <div class="fstep"><div class="fnum"><div class="dot">2</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Assign slots</h5><p>Parts fly to <b>evenly spaced slots in
+      left-to-right order of their rest positions</b> — no crossing paths. The outer
+      shell lifts +Y first. Authored kits with natural spread use a radial layout
+      instead; dense assemblies use grid slots; central parts get a normalized
+      outward push so nothing stays hidden.</p></div></div>
+    <div class="fstep"><div class="fnum"><div class="dot">3</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Cascade animation</h5><p>Per-part cubic easing, staggered
+      with overlap so the disassembly reads like a film sequence, not a bomb.
+      Balloon callouts with leader lines ride portals attached to the moving
+      parts.</p></div></div>
+    <div class="fstep warnstep"><div class="fnum"><div class="dot">!</div><div class="stem"></div></div>
+      <div class="fbody"><h5>The coordinate trap</h5><p>trimesh-exported GLBs carry a
+      Y-up <b>root rotation</b> — offsets computed in world space must be converted
+      to each part's <b>parent-local</b> space (quaternion + scale) or parts fly in
+      wrong directions. <code>worldOffsetToParentLocal</code> is the guard. The
+      standalone <code>public/exploded.html</code> viewer keeps the same math in
+      vanilla Three.js.</p></div></div>
+  </div>
+  <div class="note"><p><b>Why "no AI" is a feature, not a limitation:</b> an earlier
+  version enriched every fetched model with a 90-second LLM research call — it
+  often timed out and blocked the viewer. The rewrite made everything
+  deterministic: labels from file metadata + geometry, spec sheet measured from
+  triangles, realism from ranking signals. Instant, free, and reliable. The AI
+  assembly generator remains available as a separate, opt-in pipeline.</p></div>
+</section>
+
+<!-- ============================ CH 7 PIPELINE III ============================ -->
+<section class="chap" id="ch7">
+  <div class="chapnum">Chapter 07</div>
+  <h2>Pipeline III — AI Exploded Assembly (the moonshot)</h2>
+  <div class="voice">
+    <div class="vt">🎙 Voice note</div>
+    <p>This pipeline attempts something genuinely hard: build an exploded view of a
+    weapon's <b>insides</b> from nothing but its name. An AI engineer lists the five
+    major components. For each one we find a real photo, check it, sculpt it into
+    3D, check it again, and then — the hardest part — place all five parts
+    anatomically <i>inside</i> the outer shell, so the magazine sits under the
+    receiver and the bolt sits in the middle, before the whole thing explodes
+    apart. A vision model watches every step like a site inspector.</p>
+  </div>
+
+  <div class="flow">
+    <div class="fstep"><div class="fnum"><div class="dot">1</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Research — <code>exploded.py</code></h5>
+      <p>The LLM returns the weapon's 5 major components <i>with placement
+      metadata</i>: axis position (front/center/rear), vertical position,
+      length-fraction of the shell, and orientation. A keyword fallback table
+      (<code>barrel → front-top, magazine → bottom-vertical, stock → rear…</code>)
+      validates every answer.</p>
+      <span class="chip">Llama-3.3-70B / DeepSeek-R1</span></div></div>
+    <div class="fstep"><div class="fnum"><div class="dot">2</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Sequential per-part loop, monitored</h5>
+      <p>For the shell and each part: find 3 photo candidates → vision QC
+      (reject → next candidate) → preprocess → 3D generation → <b>mesh QC</b>
+      (≥1,500 faces, aspect ratio &lt; 30; reject → next). Sequential because one
+      Kaggle GPU makes parallelism fake — an earlier semaphore-3 version just
+      overwhelmed the free Space and everything failed. Every verdict streams to
+      the UI live.</p></div></div>
+    <div class="fstep alt"><div class="fnum"><div class="dot">3</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Anatomical assembly — <code>assembly_builder.py</code></h5>
+      <p>The builder slices the shell into <b>48 bins along its long axis</b>,
+      measuring the real silhouette (min/max height, half-thickness per bin). Each
+      part is rotated by 90° permutations to its intended orientation, scaled to
+      its researched length-fraction, and anchored <i>inside the tightest silhouette
+      window over its span</i> (margin 0.86) — because a rifle's bounding box is
+      mostly air under the barrel, and bbox containment once left parts poking out
+      of the gun's outline. A relax pass pushes same-band parts apart. Exports one
+      hierarchical GLB: <code>Outer_Shell</code> + <code>Inner_Part_1..5</code>
+      (slot = field-strip order).</p>
+      <span class="chip">trimesh</span><span class="chip">_shell_profile()</span></div></div>
+    <div class="fstep alt"><div class="fnum"><div class="dot">4</div><div class="stem"></div></div>
+      <div class="fbody"><h5>Assembly QC + one retry</h5>
+      <p><code>qc_assembly</code> renders 4 views and asks the vision model: "single
+      coherent weapon, nothing sticking out?" On a protrusion flag the assembly
+      <b>rebuilds once at 0.78 scale</b>. Then the exploded viewer takes over with
+      its strict field-strip mode.</p></div></div>
+  </div>
+
+  <div class="box deep">
+    <span class="tag">Engineer's depth — the prompt-engineering lesson</span>
+    <p>Early versions fed the LLM raw part coordinates; it ignored the numbers and
+    recited a textbook parts list (calling the front-most part a "dust cover").
+    The fix that worked: translate geometry into <b>English cues</b> —
+    <i>"FRONT-MOST, on the TOPLINE, long and thin", "*** LARGEST VOLUME ***",
+    "MIRRORED PAIR with part_7"</i> — and force a required <code>geometry_cue</code>
+    field so the model must cite its evidence. Identification went from
+    textbook-recital to 388/388 parts across the library, with honest
+    medium/low confidence flags on the 11 models whose mesh names are pure junk.</p>
+  </div>
+</section>
+
+<!-- ============================ CH 8 WAR STORIES ============================ -->
+<section class="chap" id="ch8">
+  <div class="chapnum">Chapter 08</div>
+  <h2>War Stories — problems &amp; how we beat them</h2>
+  <div class="voice">
+    <div class="vt">🎙 Voice note</div>
+    <p>Every engineering project has a polished demo and a scarred logbook. This is
+    the logbook. Ten real battles: a free-GPU quota wall, a two-week fight with
+    numpy on Kaggle, a firewall that fingerprints your TLS handshake, an AI that
+    picked a birthday card as a rifle photo, and more. Each entry: what broke, why
+    it broke, and the exact fix. This chapter is where the deepest learning lives.</p>
+  </div>
+
+  <div class="story-card">
+    <h4>① The free-GPU quota wall</h4>
+    <div class="sc-row"><div class="sc-k">Problem</div><div class="sc-v">All 3D generation ran on Hugging Face's free ZeroGPU. Each generation needs 60–135 s of GPU; the free daily allowance died after ~a dozen runs, then <i>everything</i> failed with "exceeded your free ZeroGPU quota".</div></div>
+    <div class="sc-row"><div class="sc-k">Insight</div><div class="sc-v">The speed ceiling was never the code — it was the quota. Optimizing the pipeline could not fix an infrastructure limit.</div></div>
+    <div class="sc-row"><div class="sc-k">Fix</div><div class="sc-v"><b>Self-host the model on Kaggle's free 2×T4 GPUs.</b> A single-cell notebook stands up Hunyuan3D-2.1 behind a temporary <code>gradio.live</code> URL; the app takes that URL as a hot-swappable setting, probes it before saving, and keeps HF Spaces as automatic fallback. Result: ~43 s per model, no quota.</div></div>
+  </div>
+
+  <div class="story-card">
+    <h4>② The Kaggle numpy saga (10 versions of one cell)</h4>
+    <div class="sc-row"><div class="sc-k">Problem</div><div class="sc-v">The Kaggle setup cell died in ever-new ways: <code>numpy.dtype size changed (Expected 96, got 88)</code>, then <code>cannot import name '_center'</code>, then <code>No module named 'rembg'</code>.</div></div>
+    <div class="sc-row"><div class="sc-k">Root causes</div><div class="sc-v">(a) Kaggle's 2026 image is built on numpy 2.x with an ABI-matched scipy/torch — <b>any</b> attempt to pin numpy down (even <code>--force-reinstall</code>) creates a mixed install; (b) pip installs <b>survive kernel restarts</b> on Kaggle, so a polluted disk poisoned every retry; (c) the <code>rembg</code> dependency chain (→ pymatting → numba → scipy) was the thing dragging scipy around in the first place.</div></div>
+    <div class="sc-row"><div class="sc-k">Fix</div><div class="sc-v">Three commandments now encoded in <code>kaggle/ONE_CELL_paste_into_kaggle.py</code>: <b>never touch numpy</b> (freeze base versions via a pip constraints file); <b>always start from a brand-new notebook</b>, not a restarted one; <b>never install rembg</b> — inject a stub module into <code>sys.modules</code> (the pipeline keys backgrounds out in pure PIL, so the stub is functionally complete). Verified end-to-end on the tenth iteration.</div></div>
+    <div class="sc-row"><div class="sc-k">Lesson</div><div class="sc-v">On managed platforms, fight <i>with</i> the base image, never against it. And a "self-heal" line that reinstalls a core library is itself the bug.</div></div>
+  </div>
+
+  <div class="story-card">
+    <h4>③ TripoSR's quality ceiling</h4>
+    <div class="sc-row"><div class="sc-k">Problem</div><div class="sc-v">First Kaggle deployment used TripoSR (lightest install). Output: untextured gray blobs. No parameter could fix it — the model itself is the ceiling.</div></div>
+    <div class="sc-row"><div class="sc-k">Fix</div><div class="sc-v">Swapped the notebook to <b>Hunyuan3D-2</b> (night-and-day geometry: a clean, recognizable AK-47 at 40k faces), then to <b>Hunyuan3D-2.1</b> for PBR texturing — placing the 3.3B shape model on GPU 0 and the 2B paint model on GPU 1 with CPU offload, because peak memory (~21 GB) exceeds a single T4's 16 GB. Defensive design: if the CUDA texture-rasterizer build fails, the endpoint auto-falls back to shape-only rather than erroring.</div></div>
+    <div class="sc-row"><div class="sc-k">Lesson</div><div class="sc-v">Know when you're tuning versus when you need a better model. And keep API contracts stable across upgrades — the endpoint kept the same <code>/generate_3d</code> signature through all three model swaps, so the backend never changed.</div></div>
+  </div>
+
+  <div class="story-card">
+    <h4>④ The TLS-fingerprinting firewall</h4>
+    <div class="sc-row"><div class="sc-k">Problem</div><div class="sc-v">Every Sketchfab API call from Python returned an empty HTTP 202 — with browser-perfect headers, cookies, everything.</div></div>
+    <div class="sc-row"><div class="sc-k">Root cause</div><div class="sc-v">The WAF fingerprints the <b>TLS handshake itself</b> (the JA3 signature of requests/httpx), not the HTTP layer. Headers are irrelevant.</div></div>
+    <div class="sc-row"><div class="sc-k">Fix</div><div class="sc-v">Python's stdlib <code>urllib</code> presents a different TLS fingerprint and passes. Project rule: all Sketchfab HTTP uses urllib, forever.</div></div>
+  </div>
+
+  <div class="story-card">
+    <h4>⑤ The birthday-card AK-47</h4>
+    <div class="sc-row"><div class="sc-k">Problem</div><div class="sc-v">The image finder ranked photos only by resolution + aspect — and confidently selected a high-resolution <i>birthday-wishes card</i> as the AK-47 reference.</div></div>
+    <div class="sc-row"><div class="sc-k">Fix</div><div class="sc-v">Relevance scoring (name-token overlap + weapon keywords − junk keywords), then pixel verification that the image is a studio cut-out (white border, darker subject center), then a vision-LLM identity check as the final gate.</div></div>
+    <div class="sc-row"><div class="sc-k">Lesson</div><div class="sc-v">In multi-stage AI pipelines, the cheapest stage (a web search) can silently poison every expensive stage after it. Validate at the source.</div></div>
+  </div>
+
+  <div class="story-card">
+    <h4>⑥ Parts flying the wrong way</h4>
+    <div class="sc-row"><div class="sc-k">Problem</div><div class="sc-v">In the exploded viewer, parts of generated assemblies drifted in bizarre directions.</div></div>
+    <div class="sc-row"><div class="sc-k">Root cause</div><div class="sc-v">trimesh exports GLBs with a Y-up <b>rotation on the root node</b>. Explosion offsets computed in world space were being applied in local space — every offset was silently rotated.</div></div>
+    <div class="sc-row"><div class="sc-k">Fix</div><div class="sc-v"><code>worldOffsetToParentLocal()</code> — convert each offset through the parent's inverse world quaternion and scale before applying. The math was then verified <i>headlessly in Node</i> against real assemblies (even spacing, shell clearance, both axis branches) so regressions are caught by script, not by eyeballs.</div></div>
+  </div>
+
+  <div class="story-card">
+    <h4>⑦ The AI that ignored numbers</h4>
+    <div class="sc-row"><div class="sc-k">Problem</div><div class="sc-v">Feeding an LLM raw part coordinates for identification produced textbook recitals — it labeled the front-most part a "dust cover" because AK-47 articles mention dust covers.</div></div>
+    <div class="sc-row"><div class="sc-k">Fix</div><div class="sc-v">Translate geometry into words the model can't ignore ("FRONT-MOST, on the TOPLINE, long and thin"; "*** LARGEST VOLUME ***"; "MIRRORED PAIR with part_7") and require a <code>geometry_cue</code> field citing the evidence. 388/388 parts identified across the library.</div></div>
+    <div class="sc-row"><div class="sc-k">Lesson</div><div class="sc-v">LLMs reason over language. If your data matters, narrate it.</div></div>
+  </div>
+
+  <div class="story-card">
+    <h4>⑧ The 90-second "enrichment" that killed UX</h4>
+    <div class="sc-row"><div class="sc-k">Problem</div><div class="sc-v">Fetched models were AI-enriched (part research + mapping) before display — up to 90 s, frequent timeouts, blocked viewer.</div></div>
+    <div class="sc-row"><div class="sc-k">Fix</div><div class="sc-v">A hard product decision: the fetch-and-explode path became <b>100% AI-free</b> (Chapter 6). Deterministic naming + geometry measurement deliver instantly; AI analysis remains a separate opt-in. Latency is a feature.</div></div>
+  </div>
+
+  <div class="story-card">
+    <h4>⑨ The phantom port 8000</h4>
+    <div class="sc-row"><div class="sc-k">Problem</div><div class="sc-v">After editing <code>.env</code>, the backend "restart" silently served stale settings.</div></div>
+    <div class="sc-row"><div class="sc-k">Root cause</div><div class="sc-v">uvicorn's <code>reload=True</code> spawns a worker whose process name is <code>multiprocessing.spawn</code> — killing by script name left an orphan worker holding port 8000 and serving the old environment.</div></div>
+    <div class="sc-row"><div class="sc-k">Fix</div><div class="sc-v">Kill by <i>port owner</i> (<code>Get-NetTCPConnection -LocalPort 8000</code>) or run production-style without reload. Better: the settings API (Chapter 3.1) applies env changes live, so most restarts became unnecessary.</div></div>
+  </div>
+
+  <div class="story-card">
+    <h4>⑩ Death by a thousand platform quirks</h4>
+    <div class="sc-row"><div class="sc-k">Assorted</div><div class="sc-v">
+      <b>Windows console is cp1252</b> — printing ✓/✗ inside pipeline threads crashed them; stdout is reconfigured to UTF-8 at import.
+      <b>duckduckgo_search deprecated</b> → the working fork is <code>ddgs</code> (and it returns image sizes as strings).
+      <b>gradio_client 2.x renamed</b> <code>hf_token=</code> → <code>token=</code>; compat shims in all three 3D clients.
+      <b>Python 3.14 has no rembg wheel</b> — background removal is gracefully optional locally.
+      <b>Vite 6 binds ::1</b> — health-check localhost, not 127.0.0.1.
+      <b>np.convolve is O(N·k)</b> — a 0.6 s audio-ducking kernel over 19M samples hung for hours during the promo-film render; replaced with a cumsum box filter.
+      <b>Background dev servers die with the session</b> — long batch jobs are run in resumable, idempotent foreground chunks.</div></div>
+    <div class="sc-row"><div class="sc-k">Lesson</div><div class="sc-v">Real engineering time goes to the environment, not the algorithm. Write every quirk down the day you pay for it.</div></div>
+  </div>
+</section>
+
+<!-- ============================ CH 9 RESOURCES ============================ -->
+<section class="chap" id="ch9">
+  <div class="chapnum">Chapter 09</div>
+  <h2>Resources — every model, API &amp; library</h2>
+  <div class="voice">
+    <div class="vt">🎙 Voice note</div>
+    <p>Nine AI models, four external APIs, two GPU sources, and a handful of
+    open-source libraries — all on free tiers. This chapter is the complete
+    shopping list with each item's exact job.</p>
+  </div>
+
+  <h3>AI models</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Model</th><th>Kind</th><th>Job in this app</th></tr>
+    <tr><td><b>Hunyuan3D-2.1</b> (Tencent)</td><td>Image → 3D, self-hosted on Kaggle 2×T4</td><td>Primary 3D generator: 3.3B shape model + 2B PBR paint model (albedo, metallic-roughness, normal)</td></tr>
+    <tr><td><b>TRELLIS.2-4B</b> (Microsoft)</td><td>Image → 3D, HF Space</td><td>Textured fallback generator</td></tr>
+    <tr><td><b>Hunyuan3D-2</b> (Tencent)</td><td>Image → 3D, HF Space</td><td>Second fallback (2.1's public Space is often paused)</td></tr>
+    <tr><td><b>TripoSR</b> (Stability AI)</td><td>Image → 3D, HF Space</td><td>Last-resort fallback — fast but untextured</td></tr>
+    <tr><td><b>DeepSeek-R1</b></td><td>Reasoning LLM, HF Inference</td><td>BOM deconstruction with supply-chain risk scoring</td></tr>
+    <tr><td><b>Llama-3.3-70B-Instruct</b></td><td>LLM, HF Inference</td><td>Component research, evolution timelines, materials dossiers, part-intel mapping — strict-JSON outputs with citations</td></tr>
+    <tr><td><b>Qwen2.5-VL-72B / Llama-4-Scout / gemma-3-27b</b></td><td>Vision LLMs, HF Inference</td><td>Pipeline inspection: photo identity QC, assembly protrusion QC, quality grading (probed at runtime, heuristic fallback)</td></tr>
+    <tr><td><b>FLUX.1-dev</b> (Black Forest Labs)</td><td>Text → Image, HF Inference</td><td>Orthographic component images for the BOM pipeline</td></tr>
+  </table></div>
+
+  <h3>External services</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Service</th><th>Job</th><th>Cost</th></tr>
+    <tr><td><b>Kaggle</b></td><td>Free 2×T4 GPU sessions hosting our Hunyuan3D-2.1 endpoint via gradio.live share URLs (~12 h lifetime)</td><td>Free</td></tr>
+    <tr><td><b>Hugging Face</b></td><td>Spaces (3D fallbacks) + serverless Inference (all LLMs/vision) under one <code>HF_API_KEY</code></td><td>Free tier</td></tr>
+    <tr><td><b>Sketchfab API</b></td><td>CC-licensed model search + download (public search unauthenticated; downloads need a free token)</td><td>Free</td></tr>
+    <tr><td><b>Tavily</b></td><td>Web research grounding for every citation-backed feature</td><td>Free tier</td></tr>
+    <tr><td><b>DDGS</b> (DuckDuckGo)</td><td>Reference-photo and news search — no key needed</td><td>Free</td></tr>
+    <tr><td><b>ElevenLabs</b> (optional)</td><td>Studio-grade conversational voice widget</td><td>Optional</td></tr>
+  </table></div>
+
+  <h3>Key libraries</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Library</th><th>Side</th><th>Job</th></tr>
+    <tr><td><b>React 18 + Vite</b></td><td>Frontend</td><td>UI framework + dev server/bundler</td></tr>
+    <tr><td><b>Three.js + React Three Fiber + drei</b></td><td>Frontend</td><td>All 3D rendering, loaders, controls, portals</td></tr>
+    <tr><td><b>framer-motion</b></td><td>Frontend</td><td>UI animation (timelines, cards, counters)</td></tr>
+    <tr><td><b>Puppeteer</b></td><td>Frontend tooling</td><td>Headless E2E verification + screenshots — the 3D features are regression-tested by scripts that read the rendered UI back</td></tr>
+    <tr><td><b>FastAPI + uvicorn</b></td><td>Backend</td><td>API server, SSE streaming, static file serving</td></tr>
+    <tr><td><b>LangGraph</b></td><td>Backend</td><td>The research pipeline graph (input → research → mapping)</td></tr>
+    <tr><td><b>trimesh</b></td><td>Backend</td><td>Mesh loading, normalization, assembly building, GLB export</td></tr>
+    <tr><td><b>numpy + PIL</b></td><td>Backend</td><td>Image scoring/preprocessing + our zero-dependency software GLB renderer (previews & QC views without a GPU)</td></tr>
+    <tr><td><b>gradio_client</b></td><td>Backend</td><td>Typed client for the Kaggle endpoint and HF Spaces</td></tr>
+    <tr><td><b>Blender 5.1 (headless)</b></td><td>Tooling</td><td>Library format conversion + the procedural internals factory</td></tr>
+    <tr><td><b>edge-tts / ffmpeg</b></td><td>Tooling</td><td>Promo film: narration synthesis + assembly/mux</td></tr>
+  </table></div>
+</section>
+
+<!-- ============================ CH 10 REPO ============================ -->
+<section class="chap" id="ch10">
+  <div class="chapnum">Chapter 10</div>
+  <h2>The Repository — folder-by-folder</h2>
+<pre><code>Weapons.ai/
+├─ frontend/                  React app (localhost:5173)
+│  ├─ src/App.jsx             Shell: views, routing, deep links (?glb=…), paste box
+│  ├─ src/assets_data.js      Generated library catalog (31 assets)
+│  ├─ src/components/         30 components — viewers, pages, panels, progress UIs
+│  │   ├─ ExplodedAssemblyViewer.jsx   ★ the deterministic explode engine
+│  │   ├─ Canvas3D / ModelViewer / Annotation   the research viewer
+│  │   ├─ EvolutionPage / MaterialsPage / NewsPage / TechStackPage
+│  │   ├─ RiskDashboard / BOMTable / DetectedPartsTable
+│  │   ├─ GpuEndpointPanel / AssetLibraryPanel / SketchfabSearchResults
+│  │   └─ VoiceAgent.jsx      speech in/out + /api/chat
+│  ├─ src/hooks/              SSE consumers + camera focus
+│  ├─ public/models/&lt;id&gt;/     Library GLBs + license.txt
+│  ├─ public/exploded.html    Standalone vanilla-Three viewer (same math)
+│  └─ scripts/                20 Puppeteer verify/screenshot/E2E tools
+├─ backend/                   FastAPI app (localhost:8000)
+│  ├─ app/main.py             All endpoints (research, generators, settings, news…)
+│  ├─ app/graph.py            LangGraph research pipeline
+│  ├─ app/nodes/              direct3d · exploded · research · mapping · pipeline
+│  ├─ app/tools/              16 modules: sketchfab_client ★ kaggle_client ★
+│  │                          image_finder · image_preprocess · assembly_builder ★
+│  │                          pipeline_monitor ★ engineering_intel · llm · search
+│  │                          hunyuan3d/trellis/triposr clients · evolution
+│  │                          materials · material_profile · flux_client
+│  ├─ generated/              Models + JSON research caches
+│  └─ uploads/                User uploads + Sketchfab kit cache
+├─ kaggle/
+│  └─ ONE_CELL_paste_into_kaggle.py   ★ v10: the entire GPU server in one cell
+├─ scripts/                   Blender automation: convert_library_models,
+│  │                          blender_build_weapon (internals factory),
+│  │                          gen_pbr_textures (FFT seamless textures),
+│  │                          build_library_intel, render_glb_preview
+│  └─ quality/extract_rubric.py       Gold-model rubric extraction
+├─ video/                     Promo-film pipeline (assemble.py, finish.py)
+└─ docs/handbook/             ← you are here</code></pre>
+  <p>Files marked ★ are the five that a new engineer should read first — together
+  they contain every load-bearing idea in the system.</p>
+</section>
+
+<!-- ============================ CH 11 API ============================ -->
+<section class="chap" id="ch11">
+  <div class="chapnum">Chapter 11</div>
+  <h2>API Reference — every endpoint</h2>
+  <div class="tablewrap"><table>
+    <tr><th>Endpoint</th><th>What it does</th></tr>
+    <tr><td><code>GET /api/health</code></td><td>Liveness check</td></tr>
+    <tr><td><code>POST /api/research</code></td><td>LangGraph sweep: Tavily research + LLM → part-mapped annotations</td></tr>
+    <tr><td><code>POST /api/upload-model</code></td><td>Ingest a user GLB → served from /uploads/</td></tr>
+    <tr><td><code>POST /api/open-model</code></td><td>The paste box: direct .glb URL | Sketchfab page URL | weapon name → downloaded model (409/404/422/502 error contract)</td></tr>
+    <tr><td><code>GET /api/sketchfab-search?q=</code></td><td>Browsable ranked results with texture chips</td></tr>
+    <tr><td><code>POST /api/asset-intel</code></td><td>Opt-in deep part research for a library asset (cached per slug)</td></tr>
+    <tr><td><code>POST /api/generate-3d-direct</code> + <code>GET …/stream/{name}</code></td><td>Pipeline I with SSE progress</td></tr>
+    <tr><td><code>GET /api/generate-exploded/stream/{name}</code></td><td>Pipeline III with SSE progress + QC verdict stream</td></tr>
+    <tr><td><code>POST /api/generate-asset</code> + <code>GET …/stream/{name}</code></td><td>BOM pipeline (DeepSeek-R1 → FLUX → 3D) with SSE</td></tr>
+    <tr><td><code>POST /api/chat</code></td><td>Voice/text assistant backend</td></tr>
+    <tr><td><code>GET /api/news?q=</code></td><td>Live defense news with one-line bottom lines</td></tr>
+    <tr><td><code>GET /api/evolution?weapon=</code></td><td>Citation-backed design-history timeline (cached)</td></tr>
+    <tr><td><code>GET /api/materials?weapon=</code> · <code>GET /api/material-analysis?material=</code></td><td>Materials dossier / single-material assay (cached)</td></tr>
+    <tr><td><code>GET/POST /api/settings/kaggle-endpoint</code></td><td>Probe + hot-apply + persist the GPU URL</td></tr>
+    <tr><td><code>GET/POST /api/settings/sketchfab-token</code></td><td>Validate + persist the library token (never echoed)</td></tr>
+    <tr><td><code>POST /api/save-image/{model}</code></td><td>Store viewer snapshots</td></tr>
+  </table></div>
+</section>
+
+<!-- ============================ CH 12 INTERVIEW ============================ -->
+<section class="chap" id="ch12">
+  <div class="chapnum">Chapter 12</div>
+  <h2>Interview Q&amp;A — 20 real questions</h2>
+  <div class="voice">
+    <div class="vt">🎙 Voice note</div>
+    <p>These are the questions a real interviewer would ask about this project —
+    system design, AI engineering, debugging depth, and product judgment — with the
+    answers this handbook has already earned you. Practice saying each answer out
+    loud in under a minute.</p>
+  </div>
+
+  <details><summary>Give me the 30-second overview of the project.</summary><div class="a"><p>Ivory Command is a 3D weapons-intelligence platform: type any weapon's name and it delivers an interactive, labeled, exploding 3D model in under a minute. It layers three acquisition strategies — a curated CC-licensed library, automatic Sketchfab fetch with realism ranking, and generative image-to-3D on a self-hosted free Kaggle GPU — under one deterministic geometry engine that detects, names, and explodes parts without any AI call. On top sits an LLM research layer: citation-backed design-evolution timelines, materials dossiers, live news, and a voice assistant. React/Three.js frontend, FastAPI backend, all free infrastructure.</p></div></details>
+
+  <details><summary>Why do you have three ways to get a 3D model? Isn't one enough?</summary><div class="a"><p>Because they trade off quality, coverage and cost differently. Artist-made models (library, Sketchfab) beat any 2026 image-to-3D model on quality — so they're always preferred. But they only exist for popular weapons. Generation covers the long tail at lower fidelity. The router is quality-first with graceful degradation: library → ranked Sketchfab fetch → AI generation, each an automatic fallback of the previous, with the user explicitly told which source they got.</p></div></details>
+
+  <details><summary>Walk me through what happens when a user types a name and hits "Fetch &amp; Explode".</summary><div class="a"><p>The backend runs a pooled concurrent Sketchfab search (~1 s, cached), ranks candidates with a realism-aware score — 0.50 name-token overlap, 0.18 log-likes, 0.12 detail, 0.15 texture signal, ×0.35 stylized penalty — downloads the best GLB into a UID-keyed cache, and returns it with license metadata. The frontend loads it into the exploded viewer, which detects parts (wrapper descent, connected-component splitting, clustering), names them (alias dictionaries → junk filters → per-class geometry classifiers), and animates a CAD-style explosion. No AI anywhere, typically 5–20 seconds end-to-end.</p></div></details>
+
+  <details><summary>How does part naming work without AI?</summary><div class="a"><p>It's a layered deterministic resolver. First trust the file: recover glTF mesh names the loader discards, canonicalize them, and map through ordered regex alias dictionaries per weapon class ("bcg" → Bolt Carrier Group). Then distrust the file: a watermark rule (same label on ≥3 parts and ≥60% of the model) and a name-echo rule mark junk. For junk, measure: a class router picks firearm/tank/aircraft/etc. from the name or shape, and a per-class geometry classifier names parts from normalized metrics — axis position, elongation, flatness, mirrored pairs. Guessed labels are displayed with an "inferred" tag. The whole thing runs in milliseconds and is regression-tested headlessly across all 31 library assets.</p></div></details>
+
+  <details><summary>What was your hardest bug?</summary><div class="a"><p>The Kaggle numpy ABI saga. Symptom: <code>numpy.dtype size changed, Expected 96 got 88</code>. Root cause chain: rembg's dependency tree pinned a numpy-2-ABI scipy while we pinned numpy 1.26 → mixed ABI; then we discovered pip installs survive Kaggle kernel restarts, so pollution persisted invisibly; then our own "self-heal" numpy reinstall corrupted a second run. The durable fix was philosophical: never touch numpy — freeze base-image versions via a constraints file, install only pure-Python extras, start from genuinely fresh notebooks, and stub rembg out of existence in sys.modules since our pipeline pre-keys backgrounds anyway. Ten iterations of one cell, and every rule is documented inline in it.</p></div></details>
+
+  <details><summary>How do you control quality of AI-generated 3D?</summary><div class="a"><p>A verifier-guided loop with an explicit bar. We extracted a grading rubric from gold artist-made models per weapon class. Every generator candidate is rendered from four views by our software renderer and graded — auto-fail for cutaway look, missing textures, or under 1,500 faces; otherwise scored against the rubric with a 0.62 bar. The generator chain grades every candidate, keeps the best, and early-stops the moment one clears the bar. Vision grading is best-effort with a geometric backstop, so an offline vision model degrades the check, never blocks the pipeline.</p></div></details>
+
+  <details><summary>Why did you make the exploded view AI-free? You're an AI product.</summary><div class="a"><p>Product judgment from data: the AI enrichment took up to 90 seconds, often timed out, and blocked the core interaction. Users open an exploded view to <i>explore</i> — instant response matters more than richer labels. Deterministic geometry gives correct-enough labels in milliseconds with zero cost and zero failure modes; AI research remains available as an explicit opt-in. The lesson I'd generalize: use AI where it's uniquely capable, not where an algorithm is faster and more reliable.</p></div></details>
+
+  <details><summary>How does the explosion animation actually work?</summary><div class="a"><p>Detect the assembly's longitudinal axis from its bounding box (X or Z, never Y). Sort parts by rest position along that axis and assign evenly spaced slot targets so paths never cross; lift the outer shell vertically first; run a staggered per-part cubic-eased cascade. Kits with authored spread use radial layout; dense assemblies use grid slots. The subtle part is coordinate spaces: GLBs often carry a Y-up root rotation, so world-space offsets must be converted to each part's parent-local frame via the inverse world quaternion — otherwise parts fly diagonally. We verify the math headlessly in Node against real assemblies.</p></div></details>
+
+  <details><summary>Tell me about a time an external service actively fought you.</summary><div class="a"><p>Sketchfab's WAF blocked every Python request with an empty HTTP 202 regardless of headers — it fingerprints the TLS handshake (JA3), not the HTTP layer. requests and httpx share a known fingerprint; stdlib urllib presents a different one and passes. Diagnosis required isolating variables down to the HTTP client itself. The fix is one line; knowing why is the engineering.</p></div></details>
+
+  <details><summary>How do you handle long-running operations in the UX?</summary><div class="a"><p>Server-Sent Events end-to-end. Every generator streams named phases and per-step inspector verdicts ("photo rejected: shows AR-15, not AK-47 — trying candidate 2") to dedicated progress screens, so a two-minute pipeline feels like watching work happen rather than staring at a spinner. Short operations stay plain JSON. Errors arrive as typed SSE events with the failing phase attached.</p></div></details>
+
+  <details><summary>What's your fallback strategy? Walk me through failure modes.</summary><div class="a"><p>Every external dependency has a layered fallback: 3D generation — Kaggle endpoint → TRELLIS.2 → Hunyuan3D-2 → TripoSR; vision QC — three probed models → heuristic approval; part naming — file names → alias dictionary → geometry classifier; model acquisition — library → Sketchfab top-3 → AI generation (offered, not forced); background removal — local rembg if present → GPU-side. The design rule: a degraded answer beats a blocked pipeline, and the UI labels the source honestly so degradation is visible.</p></div></details>
+
+  <details><summary>How did you get textured, high-quality 3D on zero budget?</summary><div class="a"><p>Self-hosting on Kaggle's free dual-T4 tier. One paste-able notebook cell clones Hunyuan3D-2.1, freezes the base image's numpy/torch/scipy via a constraints file, compiles the two CUDA texture rasterizers with captured build logs, places the 3.3B shape model on GPU 0 and the 2B paint model on GPU 1 with CPU offload (peak ~21 GB exceeds one T4's 16 GB), and exposes a Gradio endpoint through a gradio.live tunnel. The app hot-swaps that URL via a settings panel that live-probes before saving. Cost: zero. The price is ephemerality — URLs die in ~12 h — which the product absorbs with the OFFLINE chip and automatic fallback.</p></div></details>
+
+  <details><summary>How do you stop the LLM from hallucinating in research features?</summary><div class="a"><p>Three constraints: ground it — Tavily search snippets are injected as the source material; structure it — answers must be strict JSON matching a schema, with numbered citation ids that resolve to the provided sources, rendered as clickable chips; cache it — responses are cached to disk, so a reviewed answer stays stable. For geometry identification we additionally force a <code>geometry_cue</code> evidence field, which measurably stopped textbook-recital hallucination.</p></div></details>
+
+  <details><summary>What does your testing story look like for 3D features you can't unit-test?</summary><div class="a"><p>Headless E2E with Puppeteer reading the real rendered UI: scripts open the app via ?glb= deep links, click Disassemble, wait for "N components tracked", read the Component Sheet rows back off the screen, and screenshot. A detection-parity script mirrors the viewer's algorithm in Node and dumps per-asset part topology, so any change is regression-checked across all 31 assets in one run. The explode math is verified numerically headlessly. When the render itself matters, the screenshot is the assertion.</p></div></details>
+
+  <details><summary>Why FastAPI? Why LangGraph? Justify the stack.</summary><div class="a"><p>FastAPI: first-class async (the pipelines are I/O-bound orchestration of external services), native SSE via StreamingResponse, pydantic validation, and Python — the language of every AI SDK we call. LangGraph structures the research flow as an explicit graph (input → research → mapping), which keeps multi-step LLM state inspectable and extensible. React Three Fiber: declarative Three.js that composes with React state — the exploded viewer is state-driven animation, which R3F expresses naturally. Each choice minimizes glue between the AI ecosystem and the product.</p></div></details>
+
+  <details><summary>What would you do differently if you rebuilt it?</summary><div class="a"><p>Four things. Add a job queue (Redis/RQ) instead of in-process pipelines so generations survive restarts. Introduce typed contracts (OpenAPI-generated client) between frontend hooks and SSE payloads — those drifted twice. Move part-detection heuristics into a shared package consumed by both the viewer and the Node verification scripts instead of manually mirroring them. And version the research caches from day one — we later had to invent staleness markers retroactively.</p></div></details>
+
+  <details><summary>How does the anatomical assembly builder place parts inside the shell?</summary><div class="a"><p>The LLM research includes per-part placement metadata — axis position, vertical position, length fraction, orientation — validated against keyword defaults. The builder slices the shell into 48 bins along its long axis and measures the real silhouette per bin, because a rifle's bounding box is mostly empty air. Each part is rotated by 90° permutations, scaled to its length fraction, anchored inside the tightest silhouette window over its span with a 0.86 margin, and a relax pass separates same-band parts. A vision QC renders four views; a protrusion flag triggers one rebuild at 0.78 scale.</p></div></details>
+
+  <details><summary>What are the system's honest limitations?</summary><div class="a"><p>Image-to-3D still can't match artist models — that's why acquisition is quality-first. Kaggle URLs are ephemeral (~12 h) and need a manual re-run. Geometry-inferred part names are educated guesses on models with junk metadata — flagged, but still guesses. Welded single-mesh geometry can't be cut into true parts. The texture-paint CUDA build on Kaggle is fragile (auto-falls back to shape-only). And the research features inherit web-source quality, mitigated but not eliminated by citations.</p></div></details>
+
+  <details><summary>How do you respect licensing for downloaded models?</summary><div class="a"><p>Only CC-licensed models are fetched; author, license and source page ride with every download; the viewer displays a CREDIT badge with an author link and license name (CC Attribution requires it); license.txt files live beside each library asset; and models under NoDerivs were excluded from the library rebuild. Attribution is a feature, not an afterthought.</p></div></details>
+
+  <details><summary>Scale this to 10,000 users tomorrow. What breaks first?</summary><div class="a"><p>Order of failure: the single Kaggle endpoint (one GPU, ~43 s/job — needs a pool of endpoints or a paid GPU service behind a queue); in-process SSE pipelines (need a job queue + worker fleet); disk caches (move to object storage + CDN for GLBs, Redis for research JSON); free API rate limits (Tavily/HF need paid tiers or degradation to cache-only). The frontend and the deterministic explode engine scale for free — they're static assets and client-side compute. The architecture already isolates every scarce resource behind a client module, so each swap is local.</p></div></details>
+</section>
+
+<!-- ============================ CH 13 GLOSSARY ============================ -->
+<section class="chap" id="ch13">
+  <div class="chapnum">Chapter 13</div>
+  <h2>Glossary — every term in plain words</h2>
+  <div class="tablewrap"><table>
+    <tr><th>Term</th><th>Plain meaning</th></tr>
+    <tr><td><b>Mesh / Triangle</b></td><td>The 3D shape, built from thousands of tiny triangles glued edge to edge</td></tr>
+    <tr><td><b>Texture / PBR</b></td><td>Pictures wrapped around the mesh; PBR adds "how shiny/metallic/bumpy" maps so light behaves realistically</td></tr>
+    <tr><td><b>GLB / glTF</b></td><td>The file format holding mesh + textures + named part tree in one file — the "JPEG of 3D"</td></tr>
+    <tr><td><b>Node / Scene graph</b></td><td>The family tree inside a 3D file: which part is attached to which</td></tr>
+    <tr><td><b>LLM</b></td><td>Large Language Model — AI that reads and writes text (our researcher and inspector)</td></tr>
+    <tr><td><b>Vision model</b></td><td>An LLM that can also look at images and answer questions about them</td></tr>
+    <tr><td><b>Diffusion model</b></td><td>AI that creates images/shapes by refining noise step-by-step toward the answer</td></tr>
+    <tr><td><b>Image-to-3D</b></td><td>AI that imagines a full 3D shape from one photo, using learned experience of similar objects</td></tr>
+    <tr><td><b>Marching cubes / Octree</b></td><td>The method that converts AI's "cloud of shape probability" into actual triangles, on a grid that is finer where detail lives</td></tr>
+    <tr><td><b>Inference / HF Space</b></td><td>Running an AI model; Hugging Face Spaces are free hosted apps wrapping models</td></tr>
+    <tr><td><b>GPU / T4 / VRAM</b></td><td>The graphics chip AI runs on; T4 is Kaggle's free model; VRAM is its onboard memory (16 GB)</td></tr>
+    <tr><td><b>Quota</b></td><td>A free service's daily allowance — the wall Chapter 8 is about</td></tr>
+    <tr><td><b>SSE</b></td><td>Server-Sent Events — a one-way live news ticker from server to browser</td></tr>
+    <tr><td><b>REST API / Endpoint</b></td><td>A named URL the frontend calls to ask the backend to do something</td></tr>
+    <tr><td><b>WebGL / Three.js / R3F</b></td><td>The browser's 3D drawing engine, the library that drives it, and its React wrapper</td></tr>
+    <tr><td><b>Bounding box</b></td><td>The smallest box a shape fits into — the start of all our geometry reasoning</td></tr>
+    <tr><td><b>Union-find / Connected components</b></td><td>The algorithm that discovers separate solid pieces inside one glued-together mesh</td></tr>
+    <tr><td><b>Exploded view</b></td><td>The engineering drawing style where parts float apart along an axis, showing how they assemble</td></tr>
+    <tr><td><b>BOM</b></td><td>Bill of Materials — the parts list with what each part is made of</td></tr>
+    <tr><td><b>Field strip</b></td><td>The standard partial disassembly of a firearm for cleaning — our explosion order mirrors it</td></tr>
+    <tr><td><b>CC license</b></td><td>Creative Commons — artists share models free, usually requiring visible credit (we always show it)</td></tr>
+    <tr><td><b>Cache</b></td><td>Saving an expensive answer so asking again is instant</td></tr>
+    <tr><td><b>Fallback</b></td><td>Plan B (and C, and D) that activates automatically when Plan A fails</td></tr>
+    <tr><td><b>Deterministic</b></td><td>Same input → same output, every time, instantly — the opposite of asking an AI</td></tr>
+    <tr><td><b>WAF / TLS fingerprint</b></td><td>A website's bouncer, and the "accent" of your connection's handshake that can betray automation</td></tr>
+    <tr><td><b>ABI</b></td><td>The binary handshake between compiled libraries — mismatch it (numpy vs scipy) and Python crashes in cryptic ways</td></tr>
+    <tr><td><b>Headless / E2E / Puppeteer</b></td><td>Running a browser invisibly by script to test the real app exactly as a user would</td></tr>
+  </table></div>
+</section>
+
+<!-- ============================ CH 14 ROADMAP ============================ -->
+<section class="chap" id="ch14">
+  <div class="chapnum">Chapter 14</div>
+  <h2>Roadmap — what comes next</h2>
+  <ul>
+    <li><b>Kaggle texture build hardening</b> — the CUDA rasterizer compile for PBR painting still fails on some sessions (auto-falls back to shape-only); the build logs now captured per-run are the path to a permanent fix.</li>
+    <li><b>Rubric regeneration</b> — the quality rubric should be re-extracted from the new whole-weapon gold set so per-class grading text fully matches the current bar.</li>
+    <li><b>More procedural internals</b> — the AK-47 internals factory extends to other firearms cheaply (one part-table each); vehicle/aircraft internals are a larger modelling lift.</li>
+    <li><b>Job queue + multi-endpoint GPU pool</b> — the scale path from Chapter 12's final question.</li>
+    <li><b>AR/VR export</b> — GLB is already the AR-ready format; a "view in your room" button is small.</li>
+    <li><b>Voice agent deep-integration</b> — let the assistant drive the viewer ("show me the bolt carrier") by mapping speech to part isolation.</li>
+  </ul>
+
+  <hr class="thin">
+  <p style="text-align:center;color:var(--ink-faint);font-family:var(--mono);font-size:12.5px;letter-spacing:.14em">
+    IVORY COMMAND · WEAPONS.AI — ENGINEERING HANDBOOK REV 1.0 · JULY 2026<br>
+    Written from the living codebase. Every screenshot captured from the running application.
+  </p>
+</section>
+
+</div>
+</body>
+</html>
