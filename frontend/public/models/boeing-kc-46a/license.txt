@@ -1,0 +1,6 @@
+﻿Model: Boeing KC-46A Pegasus
+Author: Muhamad Mirza Arrafi
+License: CC Attribution (CC BY 4.0)
+Source: https://sketchfab.com/3d-models/boeing-kc-46a-pegasus-e6520680689c47f58e1c742b3bb11150
+Downloaded via Sketchfab; converted/repacked for this app.
+
