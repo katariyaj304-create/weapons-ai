@@ -1,0 +1,11 @@
+Model Information:
+* title:	AS Val
+* source:	https://sketchfab.com/3d-models/as-val-19866d2cb0bb45099185c93fee408f0a
+* author:	Adrian Kozioł (https://sketchfab.com/adrian.koziol23041999)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "AS Val" (https://sketchfab.com/3d-models/as-val-19866d2cb0bb45099185c93fee408f0a) by Adrian Kozioł (https://sketchfab.com/adrian.koziol23041999) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
