@@ -1,0 +1,6 @@
+﻿Model: Sikorsky CH-53E Sea Stallion
+Author: Muhamad Mirza Arrafi
+License: CC Attribution (CC BY 4.0)
+Source: https://sketchfab.com/3d-models/sikorsky-ch-53e-sea-stallion-6246617aeb874e4793b21d5861eea8c9
+Downloaded via Sketchfab; converted/repacked for this app.
+
