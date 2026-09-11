@@ -1,0 +1,6 @@
+﻿Model: D-30 howitzer
+Author: 42manako
+License: CC Attribution (CC BY 4.0)
+Source: https://sketchfab.com/3d-models/d-30-howitzer-0f37641766054d9c9ff0666158b26426
+Downloaded via Sketchfab; converted/repacked for this app.
+
