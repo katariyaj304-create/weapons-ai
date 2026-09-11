@@ -1,0 +1,11 @@
+Model Information:
+* title:	KoreaNavy- KSS3 Class - Submarine
+* source:	https://sketchfab.com/3d-models/koreanavy-kss3-class-submarine-f73452611de348cd9190a07a01d29f07
+* author:	Artech (https://sketchfab.com/ArtechStudio)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "KoreaNavy- KSS3 Class - Submarine" (https://sketchfab.com/3d-models/koreanavy-kss3-class-submarine-f73452611de348cd9190a07a01d29f07) by Artech (https://sketchfab.com/ArtechStudio) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
