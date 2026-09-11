@@ -1,0 +1,6 @@
+﻿Model: Desert SCUD Missile Launcher
+Author: JacobGroneman
+License: CC Attribution (CC BY 4.0)
+Source: https://sketchfab.com/3d-models/desert-scud-missile-launcher-fe6d547e73694367ab47f663413dd5d1
+Downloaded via Sketchfab; converted/repacked for this app.
+
