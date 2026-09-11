@@ -17,4 +17,5 @@ backend/generated/models/*
 backend/generated/images/*
 frontend/public/models/**/source/
 scripts/_spec_tmp/
+*.bak
 
