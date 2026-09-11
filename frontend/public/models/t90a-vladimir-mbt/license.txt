@@ -1,0 +1,6 @@
+﻿Model: Uralvagonzavod T-90A Vladimir Main Battle Tank
+Author: Muhamad Mirza Arrafi
+License: CC Attribution (CC BY 4.0)
+Source: https://sketchfab.com/3d-models/uralvagonzavod-t-90a-vladimir-main-battle-tank-66e1ac73b0d940edb232335248bb3a2b
+Downloaded via Sketchfab; converted/repacked for this app.
+
