@@ -1,0 +1,6 @@
+﻿Model: KF-21A Boramae Fighter Jet
+Author: Muhamad Mirza Arrafi
+License: CC Attribution (CC BY 4.0)
+Source: https://sketchfab.com/3d-models/kf-21a-boramae-fighter-jet-f4f82afcfe5a41bfab790418f9b94ba2
+Downloaded via Sketchfab; converted/repacked for this app.
+
