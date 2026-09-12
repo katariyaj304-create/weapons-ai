@@ -5,41 +5,64 @@ import os
 from tavily import TavilyClient
 
 
+def _ddgs_search(query: str, max_results: int = 5) -> list:
+    try:
+        try:
+            from ddgs import DDGS
+        except ImportError:
+            from duckduckgo_search import DDGS
+        results = []
+        for r in DDGS().text(query, max_results=max_results):
+            results.append({
+                "title": r.get("title", ""),
+                "content": r.get("body", "") or r.get("snippet", ""),
+                "url": r.get("href", "") or r.get("link", ""),
+            })
+        return results
+    except Exception as e:
+        print(f"[Search] DDGS fallback failed: {e}")
+        return []
+
+
 def search_web(query: str, max_results: int = 5) -> str:
     """
-    Search the web using Tavily API and return compiled results.
+    Search the web using Tavily API, falling back to DuckDuckGo if unconfigured.
     """
     api_key = os.getenv("TAVILY_API_KEY")
-    if not api_key:
-        return "Error: TAVILY_API_KEY not set in environment variables."
+    if api_key:
+        try:
+            client = TavilyClient(api_key=api_key)
+            response = client.search(
+                query=query,
+                search_depth="advanced",
+                max_results=max_results,
+                include_answer=True
+            )
 
-    client = TavilyClient(api_key=api_key)
+            results = []
+            if response.get("answer"):
+                results.append(f"## Summary\n{response['answer']}\n")
 
-    try:
-        response = client.search(
-            query=query,
-            search_depth="advanced",
-            max_results=max_results,
-            include_answer=True
-        )
+            for i, result in enumerate(response.get("results", []), 1):
+                title = result.get("title", "No title")
+                content = result.get("content", "No content")
+                url = result.get("url", "")
+                results.append(f"### Source {i}: {title}\n{content}\nURL: {url}\n")
 
+            if results:
+                return "\n".join(results)
+        except Exception as e:
+            print(f"[Search] Tavily search error, falling back to DDGS: {e}")
+
+    # Fallback to DuckDuckGo search
+    ddg_res = _ddgs_search(query, max_results=max_results)
+    if ddg_res:
         results = []
+        for i, item in enumerate(ddg_res, 1):
+            results.append(f"### Source {i}: {item['title']}\n{item['content']}\nURL: {item['url']}\n")
+        return "\n".join(results)
 
-        # Include the AI-generated answer if available
-        if response.get("answer"):
-            results.append(f"## Summary\n{response['answer']}\n")
-
-        # Include individual search results
-        for i, result in enumerate(response.get("results", []), 1):
-            title = result.get("title", "No title")
-            content = result.get("content", "No content")
-            url = result.get("url", "")
-            results.append(f"### Source {i}: {title}\n{content}\nURL: {url}\n")
-
-        return "\n".join(results) if results else "No results found."
-
-    except Exception as e:
-        return f"Search error: {str(e)}"
+    return "No results found."
 
 
 def _queries(model_name: str) -> dict:
@@ -66,30 +89,34 @@ def search_structured(query: str, max_results: int = 4) -> dict:
     yields real, source-backed text rather than an error message.
     """
     api_key = os.getenv("TAVILY_API_KEY")
-    if not api_key:
-        return {"answer": "", "sources": []}
+    if api_key:
+        try:
+            response = TavilyClient(api_key=api_key).search(
+                query=query,
+                search_depth="advanced",
+                max_results=max_results,
+                include_answer=True,
+            )
+            sources = [
+                {
+                    "title": r.get("title", ""),
+                    "content": (r.get("content") or "").strip(),
+                    "url": r.get("url", ""),
+                }
+                for r in response.get("results", [])
+                if (r.get("content") or "").strip()
+            ]
+            return {"answer": (response.get("answer") or "").strip(), "sources": sources}
+        except Exception as e:
+            print(f"[Search] structured search failed, using DDGS: {e}")
 
-    try:
-        response = TavilyClient(api_key=api_key).search(
-            query=query,
-            search_depth="advanced",
-            max_results=max_results,
-            include_answer=True,
-        )
-    except Exception as e:
-        print(f"[Search] structured search failed: {e}")
-        return {"answer": "", "sources": []}
+    # Fallback to DDGS
+    ddg_res = _ddgs_search(query, max_results=max_results)
+    if ddg_res:
+        first_summary = ddg_res[0]["content"] if ddg_res else ""
+        return {"answer": first_summary, "sources": ddg_res}
 
-    sources = [
-        {
-            "title": r.get("title", ""),
-            "content": (r.get("content") or "").strip(),
-            "url": r.get("url", ""),
-        }
-        for r in response.get("results", [])
-        if (r.get("content") or "").strip()
-    ]
-    return {"answer": (response.get("answer") or "").strip(), "sources": sources}
+    return {"answer": "", "sources": []}
 
 
 def multi_search_structured(model_name: str) -> dict:

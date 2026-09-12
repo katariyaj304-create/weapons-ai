@@ -17,5 +17,10 @@ backend/generated/models/*
 backend/generated/images/*
 frontend/public/models/**/source/
 scripts/_spec_tmp/
+frontend/dist/models/
+frontend/dist/images/
 *.bak
+/*.png
+/frontend/scripts/
+scripts/*.ps1
 

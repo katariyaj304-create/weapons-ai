@@ -65,8 +65,6 @@ export default function ModelSelector({ onModelSelected, onUpload, onExplodeAsse
   return (
     <div className="main-content" id="asset-selection">
       <div className="main-content-inner">
-        {/* Generate Section (injected from App) */}
-        {generateSection}
         {/* Header */}
         <motion.div
           className="asset-header"
@@ -75,10 +73,9 @@ export default function ModelSelector({ onModelSelected, onUpload, onExplodeAsse
           transition={{ duration: 0.5 }}
         >
           <div className="asset-header-text">
-            <h1>Asset Library</h1>
+            <h1>Tactical Hardware Library</h1>
             <p>
-              Intelligence-driven inventory. Select verified
-              hardware assets or upload custom logistical telemetry.
+              Verified defense inventory ({PREDEFINED_ASSETS.length} operational models ready). Click any weapon to launch interactive 3D tactical analysis.
             </p>
           </div>
           {uploadedFile && modelName.trim() && (
@@ -98,7 +95,7 @@ export default function ModelSelector({ onModelSelected, onUpload, onExplodeAsse
           className="asset-grid"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ delay: 0.1, duration: 0.5 }}
         >
           {/* Upload Zone */}
           <div
@@ -224,6 +221,20 @@ export default function ModelSelector({ onModelSelected, onUpload, onExplodeAsse
             </motion.article>
           ))}
         </motion.div>
+
+        {/* AI Generation Pipelines Section */}
+        <div style={{ marginTop: 60, paddingTop: 40, borderTop: '1px solid var(--outline-variant, rgba(255,255,255,0.1))' }}>
+          <div style={{ marginBottom: 24 }}>
+            <h2 style={{ fontSize: 22, fontWeight: 700, margin: '0 0 6px 0', color: 'var(--on-surface, #fff)', display: 'flex', alignItems: 'center', gap: 10 }}>
+              <span className="material-symbols-outlined" style={{ color: 'var(--primary, #00d4ff)' }}>auto_awesome</span>
+              AI Weapon Generation & Custom Ingestion
+            </h2>
+            <p style={{ margin: 0, color: 'var(--outline, #888)', fontSize: 13.5 }}>
+              Create custom 3D hardware assets, multi-part CAD assemblies, or import community models.
+            </p>
+          </div>
+          {generateSection}
+        </div>
 
         {/* Footer */}
         <footer className="ivory-footer">
