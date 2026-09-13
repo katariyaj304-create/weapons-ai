@@ -29,7 +29,6 @@ def detect_freecad() -> Dict[str, Any]:
     Searches standard Windows/Linux/MacOS installation paths and environment variables.
     """
     candidates = [
-        r"C:\Program Files\FreeCAD 1.1\bin\FreeCADCmd.exe",
         r"C:\Program Files\FreeCAD 1.0\bin\FreeCADCmd.exe",
         r"C:\Program Files\FreeCAD 0.21\bin\FreeCADCmd.exe",
         r"C:\Program Files\FreeCAD 0.20\bin\FreeCADCmd.exe",

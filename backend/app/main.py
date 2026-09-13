@@ -597,10 +597,7 @@ async def save_image(model_name: str, data: ImageData):
 class ChatRequest(BaseModel):
     message: str
 
-try:
-    from ddgs import DDGS
-except ImportError:
-    from duckduckgo_search import DDGS
+from duckduckgo_search import DDGS
 
 @app.post("/api/chat")
 async def chat_with_ai(request: ChatRequest):
@@ -608,13 +605,12 @@ async def chat_with_ai(request: ChatRequest):
 
     # Ground the answer in a quick web search
     search_results = ""
-    results = []
     try:
         with DDGS() as ddgs:
             results = list(ddgs.text(request.message, max_results=3))
             if results:
                 search_results = "\nWeb Search Results:\n" + "\n".join(
-                    f"- {r.get('title', '')}: {r.get('body', '') or r.get('snippet', '')}" for r in results
+                    f"- {r['title']}: {r['body']}" for r in results
                 )
     except Exception as e:
         print(f"[DDG Search Error] {e}")
@@ -636,13 +632,8 @@ async def chat_with_ai(request: ChatRequest):
         )
         return {"response": response}
     except Exception as e:
-        print(f"[Chat API] LLM synthesis unavailable, using search fallback: {e}")
-        if results:
-            top_body = results[0].get("body") or results[0].get("snippet") or results[0].get("title", "")
-            return {"response": f"[Ivory Intel] {top_body}"}
-        return {
-            "response": f"Ivory Command online. Request '{request.message}' logged. Connect an OpenRouter or HuggingFace API key in the environment to activate conversational synthesis."
-        }
+        print(f"[Chat API] Error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 # ============================================

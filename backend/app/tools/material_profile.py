@@ -228,88 +228,31 @@ def _coerce(doc: dict, sources: list, name: str) -> dict:
 
 def build_material_profile(name: str) -> dict:
     """Research `name` (a material) and return its full engineering assay.
-    Gracefully falls back to metallurgical specifications if LLM synthesis is unavailable.
+
+    Raises RuntimeError if research or synthesis produced nothing usable.
     """
     sources = _gather_sources(name)
     if not sources:
-        sources = [{
-            "id": 1,
-            "title": f"{name} Metallurgy & Engineering Properties",
-            "url": "https://en.wikipedia.org/wiki/" + name.replace(" ", "_"),
-            "domain": "wikipedia.org",
-            "content": f"Metallurgical composition, mechanical properties, and heat treatment for {name}."
-        }]
+        raise RuntimeError(f"No research sources found for '{name}'. Check TAVILY_API_KEY.")
 
     block = "\n\n".join(
         f"[{s['id']}] {s['title']} ({s['domain']})\n{s['content']}" for s in sources
     )
-
-    try:
-        raw = chat(
-            [
-                {"role": "system", "content": _SYSTEM},
-                {"role": "user", "content": f"MATERIAL: {name}\n\nSOURCES:\n{block}"},
-            ],
-            model=_SYNTH_MODEL,
-            max_tokens=4096,
-            temperature=0.2,
-        )
-
-        match = re.search(r"\{.*\}", raw, re.DOTALL)
-        if match:
-            doc = _coerce(json.loads(match.group()), sources, name)
-            if doc.get("properties") or doc.get("applications"):
-                return doc
-    except Exception as e:
-        print(f"[MaterialProfile] LLM synthesis failed ({e}); constructing metallurgical assay fallback")
-
-    return {
-        "material": name,
-        "overview": {
-            "family": "High-Strength Ordnance Alloy / Engineering Composite",
-            "designation": name,
-            "composition": "Fe / Cr-Mo-V / Mil-Spec Heat-Treated Matrix",
-            "military_use": "Critical pressure-bearing components, armor plate, and tactical mechanisms.",
-            "summary": f"{name} is selected for military systems requiring exceptional strength-to-weight ratio, fatigue resistance, and environmental durability.",
-        },
-        "properties": [
-            {"name": "Yield Strength", "value": "750 - 950", "unit": "MPa", "sources": [1]},
-            {"name": "Ultimate Tensile Strength", "value": "1000 - 1200", "unit": "MPa", "sources": [1]},
-            {"name": "Hardness", "value": "38 - 44", "unit": "HRC", "sources": [1]},
-            {"name": "Density", "value": "7.85", "unit": "g/cm³", "sources": [1]},
-            {"name": "Operating Temperature Limit", "value": "500", "unit": "°C", "sources": [1]},
+    raw = chat(
+        [
+            {"role": "system", "content": _SYSTEM},
+            {"role": "user", "content": f"MATERIAL: {name}\n\nSOURCES:\n{block}"},
         ],
-        "ratings": {
-            "tensile_strength": 9,
-            "hardness": 8,
-            "toughness": 8,
-            "corrosion_resistance": 7,
-            "machinability": 6,
-            "weldability": 5,
-            "thermal_resistance": 8,
-            "cost_effectiveness": 7,
-        },
-        "strength_analysis": {
-            "load_behaviour": "Elastic deformation under rated firing stress with high plastic reserve before yield.",
-            "failure_modes": ["High-cycle fatigue under cyclic shock", "Thermal stress erosion at propellant boundary"],
-            "fatigue": "Endurance limit approximately 45-50% of ultimate tensile strength at 10^7 cycles.",
-            "temperature": "Maintains structural yield up to 450°C before tempering onset.",
-            "narrative": "Engineered to prevent catastrophic failure modes under SAAMI/NATO proof test overpressures.",
-        },
-        "applications": [
-            {"component": "Pressure-Bearing Action", "examples": "Chambers, bolt faces, locking lugs", "why": "Prevents plastic yield during peak chamber combustion."},
-            {"component": "High-Stress Chassis", "examples": "Receiver trunnions, carriage pins", "why": "High shear and bearing strength."},
-        ],
-        "processing": {
-            "heat_treatment": "Austenitized at 860°C, oil-quenched, tempered at 540°C to achieve target toughness.",
-            "forming": "Precision closed-die drop forging followed by multi-axis CNC milling.",
-            "coating": "Manganese phosphate (Parkerizing) with baked phenolic dry-film lubricant.",
-        },
-        "pros": ["Superior shock and impact toughness", "Excellent fatigue life under cyclic recoil", "Well-established military machining supply chain"],
-        "cons": ["Requires surface conversion coating for marine corrosion protection", "Higher density than titanium or carbon-fiber composites"],
-        "alternatives": [
-            {"material": "Aerospace Grade 5 Titanium (Ti-6Al-4V)", "tradeoff": "40% mass reduction but 5x raw material cost and reduced wear hardness."},
-            {"material": "Precipitation-Hardened Stainless Steel (17-4 PH)", "tradeoff": "Immunity to saltwater corrosion but lower shock toughness at arctic temperatures."},
-        ],
-        "sources": [{k: s[k] for k in ("id", "title", "url", "domain")} for s in sources[:3]],
-    }
+        model=_SYNTH_MODEL,
+        max_tokens=4096,
+        temperature=0.2,
+    )
+
+    match = re.search(r"\{.*\}", raw, re.DOTALL)
+    if not match:
+        raise RuntimeError("The materials engineer model did not return an analysis.")
+    doc = _coerce(json.loads(match.group()), sources, name)
+
+    if not doc["properties"] and not doc["applications"]:
+        raise RuntimeError(f"Could not assemble a materials analysis for '{name}'.")
+    return doc

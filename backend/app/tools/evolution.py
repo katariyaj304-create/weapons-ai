@@ -198,84 +198,37 @@ def _attach_images(doc: dict):
 
 def build_evolution(name: str, with_images: bool = True) -> dict:
     """Research `name` and return its sourced concept-to-current evolution timeline.
-    Provides graceful extractive fallback if LLM synthesis is unavailable.
+
+    Raises RuntimeError if research or synthesis produced nothing usable.
     """
     sources = _gather_sources(name)
     if not sources:
-        sources = [{
-            "id": 1,
-            "title": f"{name} Technical Specifications",
-            "url": "https://en.wikipedia.org/wiki/" + name.replace(" ", "_"),
-            "domain": "wikipedia.org",
-            "content": f"The {name} is a military combat weapon system developed for tactical reliability and performance."
-        }]
+        raise RuntimeError(f"No research sources found for '{name}'. Check TAVILY_API_KEY.")
 
     block = "\n\n".join(
         f"[{s['id']}] {s['title']} ({s['domain']})\n{s['content']}" for s in sources
     )
+    raw = chat(
+        [
+            {"role": "system", "content": _SYSTEM},
+            {"role": "user", "content": f"WEAPON: {name}\n\nSOURCES:\n{block}"},
+        ],
+        model=_SYNTH_MODEL,
+        max_tokens=4096,
+        temperature=0.2,
+    )
 
-    try:
-        raw = chat(
-            [
-                {"role": "system", "content": _SYSTEM},
-                {"role": "user", "content": f"WEAPON: {name}\n\nSOURCES:\n{block}"},
-            ],
-            model=_SYNTH_MODEL,
-            max_tokens=4096,
-            temperature=0.2,
-        )
+    match = re.search(r"\{.*\}", raw, re.DOTALL)
+    if not match:
+        raise RuntimeError("The historian model did not return a timeline.")
+    doc = _coerce(json.loads(match.group()), sources, name)
 
-        match = re.search(r"\{.*\}", raw, re.DOTALL)
-        if match:
-            doc = _coerce(json.loads(match.group()), sources, name)
-            if doc.get("stages"):
-                if with_images:
-                    _attach_images(doc)
-                else:
-                    for stage in doc["stages"]:
-                        stage["image"] = ""
-                return doc
-    except Exception as e:
-        print(f"[Evolution] LLM synthesis failed ({e}); constructing extractive timeline")
+    if not doc["stages"]:
+        raise RuntimeError(f"Could not assemble an evolution timeline for '{name}'.")
 
-    # Extractive fallback from gathered sources
-    stages = []
-    for i, s in enumerate(sources[:5]):
-        stages.append({
-            "id": i + 1,
-            "stage": STAGES[min(i, len(STAGES) - 1)],
-            "designation": f"{name} Mark {i+1}",
-            "year": f"Era {i+1}",
-            "title": s.get("title", f"Design Evolution {i+1}"),
-            "summary": (s.get("content") or f"Historical development of the {name} architecture.")[:280],
-            "driver": "Operational battlefield doctrine and mission performance standards.",
-            "impact": "Field adoption and tactical combat effectiveness.",
-            "changes": [
-                {
-                    "type": "CHANGED",
-                    "part": "Mechanical Assembly",
-                    "detail": (s.get("content") or "Component optimization.")[:120],
-                    "sources": [s["id"]],
-                }
-            ],
-            "sources": [s["id"]],
-            "image": "",
-        })
-
-    doc = {
-        "weapon": name,
-        "profile": {
-            "designer": "Military Ordnance Bureau",
-            "origin": "Standard Issue",
-            "weapon_class": "Tactical Hardware",
-            "concept_year": "20th Century",
-            "service_year": "Active Service",
-            "span": "Combat Operations",
-            "units": "Global Deployment",
-            "status": "In Service",
-        },
-        "through_line": f"The core mechanical engineering and ergonomics of the {name} remain legendary.",
-        "stages": stages,
-        "sources": [{k: s[k] for k in ("id", "title", "url", "domain")} for s in sources[:5]],
-    }
+    if with_images:
+        _attach_images(doc)
+    else:
+        for stage in doc["stages"]:
+            stage["image"] = ""
     return doc

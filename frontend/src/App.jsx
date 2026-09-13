@@ -309,27 +309,6 @@ export default function App() {
     handleBack();
   }, [handleBack]);
 
-  const handleSectionChange = useCallback((section) => {
-    setActiveSection(section);
-    if (section === 'Assets') {
-      handleBack();
-    } else if (section === 'Intelligence') {
-      setView(VIEW.NEWS);
-      setActiveSideItem('news');
-    } else if (section === 'Deployment') {
-      setView(VIEW.FREECAD);
-      setActiveSideItem('freecad');
-    } else if (section === 'Tactical') {
-      if (modelUrl) {
-        setView(VIEW.VIEWER);
-        setActiveSideItem('live-ops');
-      } else {
-        setView(VIEW.SELECT);
-        setActiveSideItem('library');
-      }
-    }
-  }, [handleBack, modelUrl]);
-
   // Generation handler
   const handleGenerate = useCallback(async () => {
     if (!genAssetName.trim()) return;
@@ -367,7 +346,7 @@ export default function App() {
       {/* Top Navigation */}
       <TopNav
         activeSection={activeSection}
-        onSectionChange={handleSectionChange}
+        onSectionChange={setActiveSection}
         onBrandClick={handleBrandClick}
       />
 

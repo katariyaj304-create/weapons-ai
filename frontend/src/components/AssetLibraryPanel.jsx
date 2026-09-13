@@ -15,7 +15,7 @@ const STATUS_META = {
   checking:  { label: 'CHECKING…', color: '#b8860b', bg: 'rgba(184,134,11,0.10)' },
   connected: { label: 'CONNECTED', color: '#1a7f37', bg: 'rgba(26,127,55,0.10)' },
   offline:   { label: 'INVALID',   color: '#c62828', bg: 'rgba(198,40,40,0.10)' },
-  unset:     { label: 'OPTIONAL',  color: '#888888', bg: 'rgba(136,136,136,0.10)' },
+  unset:     { label: 'NOT SET',   color: '#888888', bg: 'rgba(136,136,136,0.10)' },
 };
 
 export default function AssetLibraryPanel() {
@@ -31,7 +31,7 @@ export default function AssetLibraryPanel() {
       const data = await res.json();
       if (!data.configured) {
         setStatus('unset');
-        setMessage('Built-in tactical library active (38 weapons). Optional: add free Sketchfab token to search external community models.');
+        setMessage('No library token — weapons are AI-generated. Add a free Sketchfab API token to use artist-made kit models.');
       } else if (data.probe?.ok) {
         setStatus('connected');
         setMessage(`Asset library connected (account: ${data.probe.username}). Library models are used automatically when available.`);
@@ -90,10 +90,10 @@ export default function AssetLibraryPanel() {
           inventory_2
         </span>
         <span style={{
-          fontFamily: 'var(--font-mono, monospace)', fontSize: 11, fontWeight: 700, letterSpacing: 1.2, textTransform: 'uppercase',
-          color: 'var(--on-surface, #fff)',
+          fontFamily: 'var(--font-mono, monospace)', fontSize: 11, letterSpacing: 2,
+          textTransform: 'uppercase', color: 'var(--on-surface, #222)', fontWeight: 600,
         }}>
-          Sketchfab Community Importer (Optional)
+          3D Asset Library
         </span>
         <span style={{
           fontFamily: 'var(--font-mono, monospace)', fontSize: 9, letterSpacing: 1.5,

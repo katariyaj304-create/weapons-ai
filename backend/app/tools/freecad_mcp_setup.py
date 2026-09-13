@@ -64,11 +64,11 @@ def install_mcp_addon():
         print(f"Failed to install MCP addon: {e}")
         return False
 
-def check_mcp_server_running(host="127.0.0.1", port=9875):
+def check_mcp_server_running(host="localhost", port=9875):
     try:
-        import socket
-        with socket.create_connection((host, port), timeout=0.4):
-            return True
+        client = xmlrpc.client.ServerProxy(f"http://{host}:{port}/")
+        client.system.listMethods()
+        return True
     except Exception:
         return False
 
